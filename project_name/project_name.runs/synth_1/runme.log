@@ -1,0 +1,402 @@
+
+*** Running vivado
+    with args -log demo.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source demo.tcl
+
+
+****** Vivado v2025.2 (64-bit)
+  **** SW Build 6299465 on Fri Nov 14 12:34:56 MST 2025
+  **** IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
+  **** SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
+  **** Start of session at: Thu Sep 17 13:31:49 2026
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+
+Sourcing tcl script '/home/rps/.Xilinx/Vivado/Vivado_init.tcl'
+source demo.tcl -notrace
+Command: read_checkpoint -auto_incremental -incremental /home/rps/fpga/project_name/project_name.srcs/utils_1/imports/synth_1/demo.dcp
+INFO: [Vivado 12-5825] Read reference checkpoint from /home/rps/fpga/project_name/project_name.srcs/utils_1/imports/synth_1/demo.dcp for incremental synthesis
+INFO: [Vivado 12-7989] Please ensure there are no constraint changes
+Command: synth_design -top demo -part xc7z007sclg400-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z007s'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z007s'
+INFO: [Device 21-403] Loading part xc7z007sclg400-1
+INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 7 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 77569
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 2207.004 ; gain = 485.156 ; free physical = 20449 ; free virtual = 33820
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'demo' [/home/rps/fpga/project_name/project_name.srcs/sources_1/new/new.sv:11]
+INFO: [Synth 8-6157] synthesizing module 'start_stop' [/home/rps/fpga/project_name/project_name.srcs/sources_1/new/new.sv:344]
+INFO: [Synth 8-6155] done synthesizing module 'start_stop' (0#1) [/home/rps/fpga/project_name/project_name.srcs/sources_1/new/new.sv:344]
+INFO: [Synth 8-6157] synthesizing module 'sw_to_sw' [/home/rps/fpga/project_name/project_name.srcs/sources_1/new/new.sv:149]
+INFO: [Synth 8-6157] synthesizing module 'tens_ones_time' [/home/rps/fpga/project_name/project_name.srcs/sources_1/new/new.sv:184]
+INFO: [Synth 8-6155] done synthesizing module 'tens_ones_time' (0#1) [/home/rps/fpga/project_name/project_name.srcs/sources_1/new/new.sv:184]
+INFO: [Synth 8-6155] done synthesizing module 'sw_to_sw' (0#1) [/home/rps/fpga/project_name/project_name.srcs/sources_1/new/new.sv:149]
+INFO: [Synth 8-6157] synthesizing module 'decTo8' [/home/rps/fpga/project_name/project_name.srcs/sources_1/new/new.sv:115]
+INFO: [Synth 8-6155] done synthesizing module 'decTo8' (0#1) [/home/rps/fpga/project_name/project_name.srcs/sources_1/new/new.sv:115]
+INFO: [Synth 8-6157] synthesizing module 'seven_seg' [/home/rps/fpga/project_name/project_name.srcs/sources_1/new/new.sv:477]
+INFO: [Synth 8-6157] synthesizing module 'NbitBinCount' [/home/rps/fpga/project_name/project_name.srcs/sources_1/new/new.sv:334]
+	Parameter N bound to: 24 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'NbitBinCount' (0#1) [/home/rps/fpga/project_name/project_name.srcs/sources_1/new/new.sv:334]
+INFO: [Synth 8-6157] synthesizing module 'FSM' [/home/rps/fpga/project_name/project_name.srcs/sources_1/new/new.sv:551]
+INFO: [Synth 8-6155] done synthesizing module 'FSM' (0#1) [/home/rps/fpga/project_name/project_name.srcs/sources_1/new/new.sv:551]
+INFO: [Synth 8-6157] synthesizing module 'Four2OneMux' [/home/rps/fpga/project_name/project_name.srcs/sources_1/new/new.sv:533]
+INFO: [Synth 8-6155] done synthesizing module 'Four2OneMux' (0#1) [/home/rps/fpga/project_name/project_name.srcs/sources_1/new/new.sv:533]
+INFO: [Synth 8-6155] done synthesizing module 'seven_seg' (0#1) [/home/rps/fpga/project_name/project_name.srcs/sources_1/new/new.sv:477]
+INFO: [Synth 8-6155] done synthesizing module 'demo' (0#1) [/home/rps/fpga/project_name/project_name.srcs/sources_1/new/new.sv:11]
+WARNING: [Synth 8-3917] design demo has port LED[9] driven by constant 0
+WARNING: [Synth 8-3917] design demo has port LED[8] driven by constant 0
+WARNING: [Synth 8-3917] design demo has port LED[7] driven by constant 0
+WARNING: [Synth 8-3917] design demo has port LED[6] driven by constant 0
+WARNING: [Synth 8-3917] design demo has port LED[5] driven by constant 0
+WARNING: [Synth 8-3917] design demo has port LED[4] driven by constant 0
+WARNING: [Synth 8-3917] design demo has port LED[3] driven by constant 0
+WARNING: [Synth 8-3917] design demo has port LED[2] driven by constant 0
+WARNING: [Synth 8-3917] design demo has port LED[1] driven by constant 0
+WARNING: [Synth 8-3917] design demo has port RGB0[2] driven by constant 0
+WARNING: [Synth 8-3917] design demo has port RGB0[1] driven by constant 0
+WARNING: [Synth 8-3917] design demo has port RGB0[0] driven by constant 0
+WARNING: [Synth 8-3917] design demo has port RGB1[2] driven by constant 0
+WARNING: [Synth 8-3917] design demo has port RGB1[1] driven by constant 0
+WARNING: [Synth 8-3917] design demo has port RGB1[0] driven by constant 0
+WARNING: [Synth 8-3917] design demo has port SERVO[3] driven by constant 0
+WARNING: [Synth 8-3917] design demo has port SERVO[2] driven by constant 0
+WARNING: [Synth 8-3917] design demo has port SERVO[1] driven by constant 0
+WARNING: [Synth 8-3917] design demo has port SERVO[0] driven by constant 0
+WARNING: [Synth 8-3917] design demo has port PDM_SPEAKER driven by constant 0
+WARNING: [Synth 8-3917] design demo has port PDM_MIC_CLK driven by constant 0
+WARNING: [Synth 8-3917] design demo has port ESP32_UART1_TXD driven by constant 0
+WARNING: [Synth 8-3917] design demo has port IMU_SCLK driven by constant 0
+WARNING: [Synth 8-3917] design demo has port IMU_SDI driven by constant 0
+WARNING: [Synth 8-3917] design demo has port IMU_CS_AG driven by constant 1
+WARNING: [Synth 8-3917] design demo has port IMU_CS_M driven by constant 1
+WARNING: [Synth 8-3917] design demo has port IMU_DEN_AG driven by constant 0
+WARNING: [Synth 8-7129] Port GPIO[23] in module demo is either unconnected or has no load
+WARNING: [Synth 8-7129] Port GPIO[22] in module demo is either unconnected or has no load
+WARNING: [Synth 8-7129] Port GPIO[21] in module demo is either unconnected or has no load
+WARNING: [Synth 8-7129] Port GPIO[20] in module demo is either unconnected or has no load
+WARNING: [Synth 8-7129] Port GPIO[19] in module demo is either unconnected or has no load
+WARNING: [Synth 8-7129] Port GPIO[18] in module demo is either unconnected or has no load
+WARNING: [Synth 8-7129] Port GPIO[17] in module demo is either unconnected or has no load
+WARNING: [Synth 8-7129] Port GPIO[16] in module demo is either unconnected or has no load
+WARNING: [Synth 8-7129] Port GPIO[15] in module demo is either unconnected or has no load
+WARNING: [Synth 8-7129] Port GPIO[14] in module demo is either unconnected or has no load
+WARNING: [Synth 8-7129] Port GPIO[13] in module demo is either unconnected or has no load
+WARNING: [Synth 8-7129] Port GPIO[12] in module demo is either unconnected or has no load
+WARNING: [Synth 8-7129] Port GPIO[11] in module demo is either unconnected or has no load
+WARNING: [Synth 8-7129] Port GPIO[10] in module demo is either unconnected or has no load
+WARNING: [Synth 8-7129] Port GPIO[9] in module demo is either unconnected or has no load
+WARNING: [Synth 8-7129] Port GPIO[8] in module demo is either unconnected or has no load
+WARNING: [Synth 8-7129] Port GPIO[7] in module demo is either unconnected or has no load
+WARNING: [Synth 8-7129] Port GPIO[6] in module demo is either unconnected or has no load
+WARNING: [Synth 8-7129] Port GPIO[5] in module demo is either unconnected or has no load
+WARNING: [Synth 8-7129] Port GPIO[4] in module demo is either unconnected or has no load
+WARNING: [Synth 8-7129] Port GPIO[3] in module demo is either unconnected or has no load
+WARNING: [Synth 8-7129] Port GPIO[2] in module demo is either unconnected or has no load
+WARNING: [Synth 8-7129] Port GPIO[1] in module demo is either unconnected or has no load
+WARNING: [Synth 8-7129] Port GPIO[0] in module demo is either unconnected or has no load
+WARNING: [Synth 8-7129] Port PDM_MIC_DATA in module demo is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ESP32_UART1_RXD in module demo is either unconnected or has no load
+WARNING: [Synth 8-7129] Port IMU_SDO_AG in module demo is either unconnected or has no load
+WARNING: [Synth 8-7129] Port IMU_SDO_M in module demo is either unconnected or has no load
+WARNING: [Synth 8-7129] Port IMU_DRDY_M in module demo is either unconnected or has no load
+WARNING: [Synth 8-7129] Port IMU_INT1_AG in module demo is either unconnected or has no load
+WARNING: [Synth 8-7129] Port IMU_INT_M in module demo is either unconnected or has no load
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 2292.973 ; gain = 571.125 ; free physical = 20336 ; free virtual = 33708
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 2307.816 ; gain = 585.969 ; free physical = 20336 ; free virtual = 33708
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 2307.816 ; gain = 585.969 ; free physical = 20336 ; free virtual = 33708
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2307.816 ; gain = 0.000 ; free physical = 20336 ; free virtual = 33708
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [/home/rps/fpga/project_name/project_name.srcs/constrs_1/new/blackboard.xdc]
+Finished Parsing XDC File [/home/rps/fpga/project_name/project_name.srcs/constrs_1/new/blackboard.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [/home/rps/fpga/project_name/project_name.srcs/constrs_1/new/blackboard.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/demo_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/demo_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2422.555 ; gain = 0.000 ; free physical = 20332 ; free virtual = 33704
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2422.590 ; gain = 0.000 ; free physical = 20332 ; free virtual = 33704
+INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 2422.590 ; gain = 700.742 ; free physical = 20349 ; free virtual = 33721
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z007sclg400-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 2430.559 ; gain = 708.711 ; free physical = 20349 ; free virtual = 33721
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 2430.559 ; gain = 708.711 ; free physical = 20349 ; free virtual = 33721
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'FSM'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                  iSTATE |                             0001 |                               00
+                 iSTATE0 |                             0010 |                               01
+                 iSTATE1 |                             0100 |                               10
+                 iSTATE2 |                             1000 |                               11
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'one-hot' in module 'FSM'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 2430.559 ; gain = 708.711 ; free physical = 20353 ; free virtual = 33726
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input   32 Bit       Adders := 1     
+	   2 Input    6 Bit       Adders := 2     
++---Registers : 
+	               32 Bit    Registers := 1     
+	                6 Bit    Registers := 2     
+	                1 Bit    Registers := 7     
++---Muxes : 
+	   4 Input    8 Bit        Muxes := 1     
+	   2 Input    6 Bit        Muxes := 2     
+	   4 Input    4 Bit        Muxes := 1     
+	   4 Input    2 Bit        Muxes := 1     
+	   2 Input    1 Bit        Muxes := 7     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 66 (col length:40)
+BRAMs: 100 (col length: RAMB18 40 RAMB36 20)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-3917] design demo has port LED[9] driven by constant 0
+WARNING: [Synth 8-3917] design demo has port LED[8] driven by constant 0
+WARNING: [Synth 8-3917] design demo has port LED[7] driven by constant 0
+WARNING: [Synth 8-3917] design demo has port LED[6] driven by constant 0
+WARNING: [Synth 8-3917] design demo has port LED[5] driven by constant 0
+WARNING: [Synth 8-3917] design demo has port LED[4] driven by constant 0
+WARNING: [Synth 8-3917] design demo has port LED[3] driven by constant 0
+WARNING: [Synth 8-3917] design demo has port LED[2] driven by constant 0
+WARNING: [Synth 8-3917] design demo has port LED[1] driven by constant 0
+WARNING: [Synth 8-3917] design demo has port RGB0[2] driven by constant 0
+WARNING: [Synth 8-3917] design demo has port RGB0[1] driven by constant 0
+WARNING: [Synth 8-3917] design demo has port RGB0[0] driven by constant 0
+WARNING: [Synth 8-3917] design demo has port RGB1[2] driven by constant 0
+WARNING: [Synth 8-3917] design demo has port RGB1[1] driven by constant 0
+WARNING: [Synth 8-3917] design demo has port RGB1[0] driven by constant 0
+WARNING: [Synth 8-3917] design demo has port SERVO[3] driven by constant 0
+WARNING: [Synth 8-3917] design demo has port SERVO[2] driven by constant 0
+WARNING: [Synth 8-3917] design demo has port SERVO[1] driven by constant 0
+WARNING: [Synth 8-3917] design demo has port SERVO[0] driven by constant 0
+WARNING: [Synth 8-3917] design demo has port PDM_SPEAKER driven by constant 0
+WARNING: [Synth 8-3917] design demo has port PDM_MIC_CLK driven by constant 0
+WARNING: [Synth 8-3917] design demo has port ESP32_UART1_TXD driven by constant 0
+WARNING: [Synth 8-3917] design demo has port IMU_SCLK driven by constant 0
+WARNING: [Synth 8-3917] design demo has port IMU_SDI driven by constant 0
+WARNING: [Synth 8-3917] design demo has port IMU_CS_AG driven by constant 1
+WARNING: [Synth 8-3917] design demo has port IMU_CS_M driven by constant 1
+WARNING: [Synth 8-3917] design demo has port IMU_DEN_AG driven by constant 0
+WARNING: [Synth 8-7129] Port GPIO[23] in module demo is either unconnected or has no load
+WARNING: [Synth 8-7129] Port GPIO[22] in module demo is either unconnected or has no load
+WARNING: [Synth 8-7129] Port GPIO[21] in module demo is either unconnected or has no load
+WARNING: [Synth 8-7129] Port GPIO[20] in module demo is either unconnected or has no load
+WARNING: [Synth 8-7129] Port GPIO[19] in module demo is either unconnected or has no load
+WARNING: [Synth 8-7129] Port GPIO[18] in module demo is either unconnected or has no load
+WARNING: [Synth 8-7129] Port GPIO[17] in module demo is either unconnected or has no load
+WARNING: [Synth 8-7129] Port GPIO[16] in module demo is either unconnected or has no load
+WARNING: [Synth 8-7129] Port GPIO[15] in module demo is either unconnected or has no load
+WARNING: [Synth 8-7129] Port GPIO[14] in module demo is either unconnected or has no load
+WARNING: [Synth 8-7129] Port GPIO[13] in module demo is either unconnected or has no load
+WARNING: [Synth 8-7129] Port GPIO[12] in module demo is either unconnected or has no load
+WARNING: [Synth 8-7129] Port GPIO[11] in module demo is either unconnected or has no load
+WARNING: [Synth 8-7129] Port GPIO[10] in module demo is either unconnected or has no load
+WARNING: [Synth 8-7129] Port GPIO[9] in module demo is either unconnected or has no load
+WARNING: [Synth 8-7129] Port GPIO[8] in module demo is either unconnected or has no load
+WARNING: [Synth 8-7129] Port GPIO[7] in module demo is either unconnected or has no load
+WARNING: [Synth 8-7129] Port GPIO[6] in module demo is either unconnected or has no load
+WARNING: [Synth 8-7129] Port GPIO[5] in module demo is either unconnected or has no load
+WARNING: [Synth 8-7129] Port GPIO[4] in module demo is either unconnected or has no load
+WARNING: [Synth 8-7129] Port GPIO[3] in module demo is either unconnected or has no load
+WARNING: [Synth 8-7129] Port GPIO[2] in module demo is either unconnected or has no load
+WARNING: [Synth 8-7129] Port GPIO[1] in module demo is either unconnected or has no load
+WARNING: [Synth 8-7129] Port GPIO[0] in module demo is either unconnected or has no load
+WARNING: [Synth 8-7129] Port PDM_MIC_DATA in module demo is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ESP32_UART1_RXD in module demo is either unconnected or has no load
+WARNING: [Synth 8-7129] Port IMU_SDO_AG in module demo is either unconnected or has no load
+WARNING: [Synth 8-7129] Port IMU_SDO_M in module demo is either unconnected or has no load
+WARNING: [Synth 8-7129] Port IMU_DRDY_M in module demo is either unconnected or has no load
+WARNING: [Synth 8-7129] Port IMU_INT1_AG in module demo is either unconnected or has no load
+WARNING: [Synth 8-7129] Port IMU_INT_M in module demo is either unconnected or has no load
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 2430.559 ; gain = 708.711 ; free physical = 20337 ; free virtual = 33714
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+ROM: Preliminary Mapping Report
++---------------+--------------------------+---------------+----------------+
+|Module Name    | RTL Object               | Depth x Width | Implemented As | 
++---------------+--------------------------+---------------+----------------+
+|tens_ones_time | th                       | 64x3          | LUT            | 
+|tens_ones_time | tl                       | 64x4          | LUT            | 
+|demo           | sw_to_sw_inst/minutes/th | 64x3          | LUT            | 
+|demo           | sw_to_sw_inst/minutes/tl | 64x4          | LUT            | 
+|demo           | sw_to_sw_inst/seconds/tl | 64x4          | LUT            | 
+|demo           | sw_to_sw_inst/seconds/th | 64x3          | LUT            | 
++---------------+--------------------------+---------------+----------------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 2482.559 ; gain = 760.711 ; free physical = 20261 ; free virtual = 33638
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 2514.605 ; gain = 792.758 ; free physical = 20229 ; free virtual = 33606
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 2514.605 ; gain = 792.758 ; free physical = 20229 ; free virtual = 33606
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:14 ; elapsed = 00:00:14 . Memory (MB): peak = 2680.418 ; gain = 958.570 ; free physical = 20113 ; free virtual = 33490
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:14 ; elapsed = 00:00:14 . Memory (MB): peak = 2680.418 ; gain = 958.570 ; free physical = 20113 ; free virtual = 33490
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:14 ; elapsed = 00:00:14 . Memory (MB): peak = 2680.418 ; gain = 958.570 ; free physical = 20113 ; free virtual = 33490
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:14 ; elapsed = 00:00:14 . Memory (MB): peak = 2680.418 ; gain = 958.570 ; free physical = 20113 ; free virtual = 33490
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:14 ; elapsed = 00:00:14 . Memory (MB): peak = 2680.418 ; gain = 958.570 ; free physical = 20113 ; free virtual = 33490
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:14 ; elapsed = 00:00:14 . Memory (MB): peak = 2680.418 ; gain = 958.570 ; free physical = 20113 ; free virtual = 33490
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-------+------+
+|      |Cell   |Count |
++------+-------+------+
+|1     |BUFG   |     1|
+|2     |CARRY4 |    13|
+|3     |LUT1   |    35|
+|4     |LUT2   |     7|
+|5     |LUT3   |    11|
+|6     |LUT4   |    17|
+|7     |LUT5   |    48|
+|8     |LUT6   |    32|
+|9     |MUXF7  |     4|
+|10    |FDCE   |    21|
+|11    |FDPE   |     1|
+|12    |FDRE   |    23|
+|13    |FDSE   |    28|
+|14    |IBUF   |    17|
+|15    |OBUF   |    40|
++------+-------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:14 ; elapsed = 00:00:14 . Memory (MB): peak = 2680.418 ; gain = 958.570 ; free physical = 20113 ; free virtual = 33490
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 58 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 2680.418 ; gain = 843.797 ; free physical = 20113 ; free virtual = 33490
+Synthesis Optimization Complete : Time (s): cpu = 00:00:14 ; elapsed = 00:00:14 . Memory (MB): peak = 2680.426 ; gain = 958.570 ; free physical = 20113 ; free virtual = 33490
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2680.426 ; gain = 0.000 ; free physical = 20113 ; free virtual = 33490
+INFO: [Netlist 29-17] Analyzing 17 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 2736.445 ; gain = 0.000 ; free physical = 20284 ; free virtual = 33661
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Synth Design complete | Checksum: 82885b61
+INFO: [Common 17-83] Releasing license: Synthesis
+41 Infos, 116 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:19 ; elapsed = 00:00:17 . Memory (MB): peak = 2736.480 ; gain = 1112.930 ; free physical = 20292 ; free virtual = 33669
+INFO: [Common 17-2834] synth_design peak Physical Memory [PSS] (MB): overall = 1791.044; main = 1791.044; forked = 273.561
+INFO: [Common 17-2834] synth_design peak Virtual Memory [VSS] (MB): overall = 3424.770; main = 2736.449; forked = 994.207
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2760.457 ; gain = 0.000 ; free physical = 20292 ; free virtual = 33669
+INFO: [Common 17-1381] The checkpoint '/home/rps/fpga/project_name/project_name.runs/synth_1/demo.dcp' has been generated.
+INFO: [Vivado 12-24828] Executing command : report_utilization -file demo_utilization_synth.rpt -pb demo_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Thu Sep 17 13:32:09 2026...
