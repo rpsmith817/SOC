@@ -7,7 +7,7 @@
 <Project Product="Vivado" Version="7" Minor="71" Path="/home/rps/fpga/gpio_project/gpio_project.tmp/gpio_v1_0_project/gpio_v1_0_project.xpr">
   <DefaultLaunch Dir="$PRUNDIR"/>
   <Configuration>
-    <Option Name="Id" Val="cfc0bfc6959b495d97fb1fed7851d409"/>
+    <Option Name="Id" Val="208eff41dc564904ac7b6b4d205accd5"/>
     <Option Name="Part" Val="xc7z007sclg400-1"/>
     <Option Name="CompiledLibDir" Val="$PCACHEDIR/compile_simlib"/>
     <Option Name="CompiledLibDirXSim" Val=""/>
@@ -48,6 +48,8 @@
     <Option Name="ActiveSimSet" Val="sim_1"/>
     <Option Name="DefaultLib" Val="xil_defaultlib"/>
     <Option Name="ProjectType" Val="Default"/>
+    <Option Name="IPRepoPath" Val="$PPRDIR/../../../ip_repo/My_SPI_1_0"/>
+    <Option Name="IPRepoPath" Val="$PPRDIR/../../../ip_repo/SPI_1_0"/>
     <Option Name="IPRepoPath" Val="$PPRDIR/../../../ip_repo/gpio_1_0"/>
     <Option Name="IPRepoPath" Val="$PPRDIR/../../../ip_repo/gpio_1_0"/>
     <Option Name="IPOutputRepo" Val="$PCACHEDIR/ip"/>

@@ -1,0 +1,352 @@
+#-----------------------------------------------------------
+# Vivado v2025.2 (64-bit)
+# SW Build 6299465 on Fri Nov 14 12:34:56 MST 2025
+# IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
+# SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
+# Start of session at: Tue Oct 13 10:38:03 2026
+# Process ID         : 3313
+# Current directory  : /home/rps/fpga
+# Command line       : vivado
+# Log file           : /home/rps/fpga/vivado.log
+# Journal file       : /home/rps/fpga/vivado.jou
+# Running On         : rps-ThinkPad-T16-Gen-4
+# Platform           : Ubuntu
+# Operating System   : Ubuntu 24.04.5 LTS
+# Processor Detail   : Intel(R) Core(TM) Ultra 7 265U
+# CPU Frequency      : 955.019 MHz
+# CPU Physical cores : 12
+# CPU Logical cores  : 14
+# Host memory        : 33044 MB
+# Swap memory        : 8589 MB
+# Total Virtual      : 41634 MB
+# Available Virtual  : 40350 MB
+#-----------------------------------------------------------
+start_gui
+open_project /home/rps/fpga/gpio_project/gpio_project.xpr
+update_compile_order -fileset sources_1
+create_ip -name SPI -vendor user.org -library user -version 1.0 -module_name SPI_0
+generate_target {instantiation_template} [get_files /home/rps/fpga/gpio_project/gpio_project.srcs/sources_1/ip/SPI_0/SPI_0.xci]
+update_compile_order -fileset sources_1
+export_ip_user_files -of_objects  [get_files /home/rps/fpga/gpio_project/gpio_project.srcs/sources_1/ip/SPI_0/SPI_0.xci] -no_script -reset -force -quiet
+remove_files  /home/rps/fpga/gpio_project/gpio_project.srcs/sources_1/ip/SPI_0/SPI_0.xci
+ipx::edit_ip_in_project -upgrade true -name SPI_v1_0_project -directory /home/rps/fpga/gpio_project/gpio_project.tmp/SPI_v1_0_project /home/rps/fpga/ip_repo/SPI_1_0/component.xml
+update_compile_order -fileset sources_1
+current_project gpio_project
+ipx::edit_ip_in_project -upgrade true -name gpio_v1_0_project -directory /home/rps/fpga/gpio_project/gpio_project.tmp/gpio_v1_0_project /home/rps/fpga/ip_repo/gpio_1_0/component.xml
+update_compile_order -fileset sources_1
+ipx::unload_core /home/rps/fpga/ip_repo/gpio_1_0/component.xml
+current_project SPI_v1_0_project
+set_property file_type SystemVerilog [get_files  /home/rps/fpga/ip_repo/SPI_1_0/hdl/SPI_slave_lite_v1_0_S00_AXI.v]
+current_project gpio_v1_0_project
+current_project gpio_project
+open_bd_design {/home/rps/fpga/gpio_project/gpio_project.srcs/sources_1/bd/system/system.bd}
+current_project SPI_v1_0_project
+close_project
+create_peripheral user.org user My_SPI 1.0 -dir /home/rps/fpga/ip_repo
+add_peripheral_interface AXI_Interface_SPI -interface_mode slave -axi_type lite [ipx::find_open_core user.org:user:My_SPI:1.0]
+generate_peripheral -driver -bfm_example_design -debug_hw_example_design [ipx::find_open_core user.org:user:My_SPI:1.0]
+write_peripheral [ipx::find_open_core user.org:user:My_SPI:1.0]
+current_project gpio_project
+set_property  ip_repo_paths  {/home/rps/fpga/ip_repo/My_SPI_1_0 /home/rps/fpga/ip_repo/SPI_1_0 /home/rps/fpga/ip_repo/gpio_1_0 /home/rps/fpga/ip_repo/gpio_1_0} [current_project]
+update_ip_catalog -rebuild
+update_ip_catalog -delete_ip user.org:user:SPI:1.0 -repo_path /home/rps/fpga/ip_repo/SPI_1_0
+ipx::edit_ip_in_project -upgrade true -name My_SPI_v1_0_project -directory /home/rps/fpga/gpio_project/gpio_project.tmp/My_SPI_v1_0_project /home/rps/fpga/ip_repo/My_SPI_1_0/component.xml
+update_compile_order -fileset sources_1
+set_property file_type SystemVerilog [get_files  /home/rps/fpga/ip_repo/My_SPI_1_0/hdl/My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v]
+current_project gpio_v1_0_project
+current_project My_SPI_v1_0_project
+close_project
+close_project
+ipx::edit_ip_in_project -upgrade true -name gpio_v1_0_project -directory /home/rps/fpga/gpio_project/gpio_project.tmp/gpio_v1_0_project /home/rps/fpga/ip_repo/gpio_1_0/component.xml
+update_compile_order -fileset sources_1
+ipx::unload_core /home/rps/fpga/ip_repo/gpio_1_0/component.xml
+current_project gpio_project
+ipx::edit_ip_in_project -upgrade true -name My_SPI_v1_0_project -directory /home/rps/fpga/gpio_project/gpio_project.tmp/My_SPI_v1_0_project /home/rps/fpga/ip_repo/My_SPI_1_0/component.xml
+update_compile_order -fileset sources_1
+ipx::unload_core /home/rps/fpga/ip_repo/My_SPI_1_0/component.xml
+set_property file_type SystemVerilog [get_files  /home/rps/fpga/ip_repo/My_SPI_1_0/hdl/My_SPI.v]
+add_files -norecurse /home/rps/fpga/gpio_project/gpio_project.srcs/sources_1/new/lab3.v
+update_compile_order -fileset sources_1
+set_property file_type SystemVerilog [get_files  /home/rps/fpga/gpio_project/gpio_project.srcs/sources_1/new/lab3.v]
+set_property file_type Verilog [get_files  /home/rps/fpga/gpio_project/gpio_project.srcs/sources_1/new/lab3.v]
+set_property file_type SystemVerilog [get_files  /home/rps/fpga/gpio_project/gpio_project.srcs/sources_1/new/lab3.v]
+set_property file_type Verilog [get_files  /home/rps/fpga/ip_repo/My_SPI_1_0/hdl/My_SPI.v]
+set_property file_type SystemVerilog [get_files  /home/rps/fpga/ip_repo/My_SPI_1_0/hdl/My_SPI.v]
+update_compile_order -fileset sources_1
+current_project gpio_v1_0_project
+current_project My_SPI_v1_0_project
+set_property file_type Verilog [get_files  /home/rps/fpga/ip_repo/My_SPI_1_0/hdl/My_SPI.v]
+set_property file_type SystemVerilog [get_files  /home/rps/fpga/ip_repo/My_SPI_1_0/hdl/My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v]
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+ipx::open_ipxact_file /home/rps/fpga/ip_repo/My_SPI_1_0/component.xml
+ipx::merge_project_changes ports [ipx::current_core]
+set_property base_address 0x20000 [ipx::get_address_blocks AXI_Interface_SPI_reg -of_objects [ipx::get_memory_maps AXI_Interface_SPI -of_objects [ipx::current_core]]]
+file mkdir /home/rps/fpga/gpio_project/gpio_project.tmp/My_SPI_v1_0_project/My_SPI_v1_0_project.srcs/sources_1/new
+close [ open /home/rps/fpga/gpio_project/gpio_project.tmp/My_SPI_v1_0_project/My_SPI_v1_0_project.srcs/sources_1/new/fifo.sv w ]
+add_files /home/rps/fpga/gpio_project/gpio_project.tmp/My_SPI_v1_0_project/My_SPI_v1_0_project.srcs/sources_1/new/fifo.sv
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+remove_files  /home/rps/fpga/gpio_project/gpio_project.srcs/sources_1/new/lab3.v
+update_compile_order -fileset sources_1
+ipx::merge_project_changes files [ipx::current_core]
+ipx::merge_project_changes ports [ipx::current_core]
+set_property core_revision 2 [ipx::current_core]
+ipx::create_xgui_files [ipx::current_core]
+ipx::update_checksums [ipx::current_core]
+ipx::check_integrity [ipx::current_core]
+ipx::save_core [ipx::current_core]
+update_ip_catalog -rebuild -repo_path /home/rps/fpga/ip_repo/My_SPI_1_0
+current_project gpio_v1_0_project
+close_project
+current_project gpio_project
+export_ip_user_files -of_objects  [get_files /home/rps/fpga/gpio_project/gpio_project.srcs/sources_1/new/lab3.v] -no_script -reset -force -quiet
+remove_files  /home/rps/fpga/gpio_project/gpio_project.srcs/sources_1/new/lab3.v
+create_bd_cell -type ip -vlnv user.org:user:My_SPI:1.0 My_SPI_0
+set_property location {3 893 161} [get_bd_cells My_SPI_0]
+apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {/processing_system7_0/FCLK_CLK0 (100 MHz)} Clk_slave {Auto} Clk_xbar {/processing_system7_0/FCLK_CLK0 (100 MHz)} Master {/processing_system7_0/M_AXI_GP0} Slave {/My_SPI_0/AXI_Interface_SPI} ddr_seg {Auto} intc_ip {/axi_smc} master_apm {0}}  [get_bd_intf_pins My_SPI_0/AXI_Interface_SPI]
+ipx::edit_ip_in_project -upgrade true -name gpio_v1_0_project -directory /home/rps/fpga/gpio_project/gpio_project.tmp/gpio_v1_0_project /home/rps/fpga/ip_repo/gpio_1_0/component.xml
+update_compile_order -fileset sources_1
+current_project gpio_project
+current_project My_SPI_v1_0_project
+ipx::merge_project_changes ports [ipx::current_core]
+set_property core_revision 3 [ipx::current_core]
+ipx::create_xgui_files [ipx::current_core]
+ipx::update_checksums [ipx::current_core]
+ipx::check_integrity [ipx::current_core]
+ipx::save_core [ipx::current_core]
+update_ip_catalog -rebuild -repo_path /home/rps/fpga/ip_repo/My_SPI_1_0
+current_project gpio_project
+regenerate_bd_layout
+delete_bd_objs [get_bd_intf_nets axi_smc_M01_AXI] [get_bd_cells My_SPI_0]
+create_bd_cell -type ip -vlnv user.org:user:My_SPI:1.0 My_SPI_0
+set_property location {5 1290 160} [get_bd_cells My_SPI_0]
+delete_bd_objs [get_bd_cells My_SPI_0]
+regenerate_bd_layout
+update_ip_catalog -rebuild
+create_bd_cell -type ip -vlnv user.org:user:My_SPI:1.0 My_SPI_0
+set_property location {5 1425 358} [get_bd_cells My_SPI_0]
+apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {/processing_system7_0/FCLK_CLK0 (100 MHz)} Clk_slave {Auto} Clk_xbar {/processing_system7_0/FCLK_CLK0 (100 MHz)} Master {/processing_system7_0/M_AXI_GP0} Slave {/My_SPI_0/AXI_Interface_SPI} ddr_seg {Auto} intc_ip {/axi_smc} master_apm {0}}  [get_bd_intf_pins My_SPI_0/AXI_Interface_SPI]
+startgroup
+make_bd_pins_external  [get_bd_pins My_SPI_0/wr_req]
+endgroup
+startgroup
+make_bd_pins_external  [get_bd_pins My_SPI_0/rd_req]
+endgroup
+startgroup
+make_bd_pins_external  [get_bd_pins My_SPI_0/clr_overflow]
+endgroup
+startgroup
+make_bd_pins_external  [get_bd_pins My_SPI_0/datain]
+endgroup
+startgroup
+make_bd_pins_external  [get_bd_pins My_SPI_0/dataout]
+endgroup
+startgroup
+make_bd_pins_external  [get_bd_pins My_SPI_0/empty]
+endgroup
+startgroup
+make_bd_pins_external  [get_bd_pins My_SPI_0/full]
+endgroup
+startgroup
+make_bd_pins_external  [get_bd_pins My_SPI_0/overflow]
+endgroup
+save_bd_design
+assign_bd_address -target_address_space /processing_system7_0/Data [get_bd_addr_segs My_SPI_0/AXI_Interface_SPI/AXI_Interface_SPI_reg] -force
+current_project My_SPI_v1_0_project
+ipx::merge_project_changes ports [ipx::current_core]
+ipx::merge_project_changes ports [ipx::current_core]
+current_project gpio_project
+set_property core_revision 4 [ipx::current_core]
+ipx::create_xgui_files [ipx::current_core]
+ipx::update_checksums [ipx::current_core]
+ipx::check_integrity [ipx::current_core]
+ipx::save_core [ipx::current_core]
+current_project My_SPI_v1_0_project
+update_ip_catalog -rebuild -repo_path /home/rps/fpga/ip_repo/My_SPI_1_0
+current_project gpio_project
+delete_bd_objs [get_bd_nets wr_req_0_1] [get_bd_nets My_SPI_0_empty] [get_bd_nets datain_0_1] [get_bd_nets clr_overflow_0_1] [get_bd_intf_nets axi_smc_M01_AXI] [get_bd_nets My_SPI_0_dataout] [get_bd_nets rd_req_0_1] [get_bd_nets My_SPI_0_full] [get_bd_nets My_SPI_0_overflow] [get_bd_cells My_SPI_0]
+update_ip_catalog -rebuild
+create_bd_cell -type ip -vlnv user.org:user:My_SPI:1.0 My_SPI_0
+set_property location {4 1480 366} [get_bd_cells My_SPI_0]
+apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {/processing_system7_0/FCLK_CLK0 (100 MHz)} Clk_slave {Auto} Clk_xbar {/processing_system7_0/FCLK_CLK0 (100 MHz)} Master {/processing_system7_0/M_AXI_GP0} Slave {/My_SPI_0/AXI_Interface_SPI} ddr_seg {Auto} intc_ip {/axi_smc} master_apm {0}}  [get_bd_intf_pins My_SPI_0/AXI_Interface_SPI]
+assign_bd_address -target_address_space /processing_system7_0/Data [get_bd_addr_segs My_SPI_0/AXI_Interface_SPI/AXI_Interface_SPI_reg] -force
+delete_bd_objs [get_bd_intf_nets axi_smc_M01_AXI] [get_bd_cells My_SPI_0]
+regenerate_bd_layout
+current_project My_SPI_v1_0_project
+set_property base_address 0x43C20000 [ipx::get_address_blocks AXI_Interface_SPI_reg -of_objects [ipx::get_memory_maps AXI_Interface_SPI -of_objects [ipx::current_core]]]
+set_property core_revision 5 [ipx::current_core]
+ipx::create_xgui_files [ipx::current_core]
+ipx::update_checksums [ipx::current_core]
+ipx::check_integrity [ipx::current_core]
+ipx::save_core [ipx::current_core]
+update_ip_catalog -rebuild -repo_path /home/rps/fpga/ip_repo/My_SPI_1_0
+current_project gpio_v1_0_project
+current_project My_SPI_v1_0_project
+current_project gpio_project
+set_property core_revision 6 [ipx::current_core]
+ipx::create_xgui_files [ipx::current_core]
+ipx::update_checksums [ipx::current_core]
+ipx::check_integrity [ipx::current_core]
+ipx::save_core [ipx::current_core]
+current_project My_SPI_v1_0_project
+update_ip_catalog -rebuild -repo_path /home/rps/fpga/ip_repo/My_SPI_1_0
+current_project gpio_project
+update_ip_catalog -rebuild
+create_bd_cell -type ip -vlnv user.org:user:My_SPI:1.0 My_SPI_0
+set_property location {4 1070 426} [get_bd_cells My_SPI_0]
+apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {/processing_system7_0/FCLK_CLK0 (100 MHz)} Clk_slave {Auto} Clk_xbar {/processing_system7_0/FCLK_CLK0 (100 MHz)} Master {/processing_system7_0/M_AXI_GP0} Slave {/My_SPI_0/AXI_Interface_SPI} ddr_seg {Auto} intc_ip {/axi_smc} master_apm {0}}  [get_bd_intf_pins My_SPI_0/AXI_Interface_SPI]
+assign_bd_address -target_address_space /processing_system7_0/Data [get_bd_addr_segs My_SPI_0/AXI_Interface_SPI/AXI_Interface_SPI_reg] -force
+set_property core_revision 7 [ipx::current_core]
+ipx::create_xgui_files [ipx::current_core]
+ipx::update_checksums [ipx::current_core]
+ipx::check_integrity [ipx::current_core]
+ipx::save_core [ipx::current_core]
+current_project My_SPI_v1_0_project
+update_ip_catalog -rebuild -repo_path /home/rps/fpga/ip_repo/My_SPI_1_0
+current_project gpio_project
+delete_bd_objs [get_bd_intf_nets axi_smc_M01_AXI] [get_bd_cells My_SPI_0]
+update_ip_catalog -rebuild
+create_bd_cell -type ip -vlnv user.org:user:My_SPI:1.0 My_SPI_0
+set_property location {4 1122 389} [get_bd_cells My_SPI_0]
+apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {/processing_system7_0/FCLK_CLK0 (100 MHz)} Clk_slave {Auto} Clk_xbar {/processing_system7_0/FCLK_CLK0 (100 MHz)} Master {/processing_system7_0/M_AXI_GP0} Slave {/My_SPI_0/AXI_Interface_SPI} ddr_seg {Auto} intc_ip {/axi_smc} master_apm {0}}  [get_bd_intf_pins My_SPI_0/AXI_Interface_SPI]
+assign_bd_address -target_address_space /processing_system7_0/Data [get_bd_addr_segs My_SPI_0/AXI_Interface_SPI/AXI_Interface_SPI_reg] -force
+current_project My_SPI_v1_0_project
+ipx::merge_project_changes hdl_parameters [ipx::current_core]
+current_project gpio_v1_0_project
+current_project My_SPI_v1_0_project
+current_project gpio_v1_0_project
+current_project My_SPI_v1_0_project
+current_project gpio_v1_0_project
+current_project My_SPI_v1_0_project
+current_project gpio_v1_0_project
+ipx::add_memory_map AXI_reg [ipx::current_core]
+current_project My_SPI_v1_0_project
+ipx::remove_memory_map AXI_reg [ipx::current_core]
+current_project gpio_project
+delete_bd_objs [get_bd_addr_segs processing_system7_0/Data/SEG_My_SPI_0_AXI_Interface_SPI_reg]
+assign_bd_address -target_address_space /processing_system7_0/Data [get_bd_addr_segs My_SPI_0/AXI_Interface_SPI/AXI_Interface_SPI_reg] -force
+delete_bd_objs [get_bd_addr_segs processing_system7_0/Data/SEG_My_SPI_0_AXI_Interface_SPI_reg]
+assign_bd_address -target_address_space /processing_system7_0/Data [get_bd_addr_segs My_SPI_0/AXI_Interface_SPI/AXI_Interface_SPI_reg] -force
+delete_bd_objs [get_bd_addr_segs processing_system7_0/Data/SEG_My_SPI_0_AXI_Interface_SPI_reg]
+delete_bd_objs [get_bd_intf_nets axi_smc_M01_AXI] [get_bd_cells My_SPI_0]
+current_project My_SPI_v1_0_project
+set_property base_address 0x20000 [ipx::get_address_blocks AXI_Interface_SPI_reg -of_objects [ipx::get_memory_maps AXI_Interface_SPI -of_objects [ipx::current_core]]]
+set_property core_revision 8 [ipx::current_core]
+ipx::create_xgui_files [ipx::current_core]
+ipx::update_checksums [ipx::current_core]
+ipx::check_integrity [ipx::current_core]
+ipx::save_core [ipx::current_core]
+update_ip_catalog -rebuild -repo_path /home/rps/fpga/ip_repo/My_SPI_1_0
+current_project gpio_project
+create_bd_cell -type ip -vlnv user.org:user:My_SPI:1.0 My_SPI_0
+set_property location {4 1056 353} [get_bd_cells My_SPI_0]
+apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {/processing_system7_0/FCLK_CLK0 (100 MHz)} Clk_slave {Auto} Clk_xbar {/processing_system7_0/FCLK_CLK0 (100 MHz)} Master {/processing_system7_0/M_AXI_GP0} Slave {/My_SPI_0/AXI_Interface_SPI} ddr_seg {Auto} intc_ip {/axi_smc} master_apm {0}}  [get_bd_intf_pins My_SPI_0/AXI_Interface_SPI]
+assign_bd_address -target_address_space /processing_system7_0/Data [get_bd_addr_segs My_SPI_0/AXI_Interface_SPI/AXI_Interface_SPI_reg] -force
+current_project My_SPI_v1_0_project
+ipx::merge_project_changes files [ipx::current_core]
+ipx::merge_project_changes ports [ipx::current_core]
+set_property core_revision 9 [ipx::current_core]
+ipx::create_xgui_files [ipx::current_core]
+ipx::update_checksums [ipx::current_core]
+ipx::check_integrity [ipx::current_core]
+ipx::save_core [ipx::current_core]
+update_ip_catalog -rebuild -repo_path /home/rps/fpga/ip_repo/My_SPI_1_0
+current_project gpio_project
+delete_bd_objs [get_bd_intf_nets axi_smc_M01_AXI] [get_bd_cells My_SPI_0]
+update_ip_catalog -rebuild
+create_bd_cell -type ip -vlnv user.org:user:My_SPI:1.0 My_SPI_0
+set_property location {4 1138 355} [get_bd_cells My_SPI_0]
+apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {/processing_system7_0/FCLK_CLK0 (100 MHz)} Clk_slave {Auto} Clk_xbar {/processing_system7_0/FCLK_CLK0 (100 MHz)} Master {/processing_system7_0/M_AXI_GP0} Slave {/My_SPI_0/AXI_Interface_SPI} ddr_seg {Auto} intc_ip {/axi_smc} master_apm {0}}  [get_bd_intf_pins My_SPI_0/AXI_Interface_SPI]
+assign_bd_address -target_address_space /processing_system7_0/Data [get_bd_addr_segs My_SPI_0/AXI_Interface_SPI/AXI_Interface_SPI_reg] -force
+delete_bd_objs [get_bd_addr_segs processing_system7_0/Data/SEG_My_SPI_0_AXI_Interface_SPI_reg]
+current_project My_SPI_v1_0_project
+set_property base_address 0x43C20000 [ipx::get_address_blocks AXI_Interface_SPI_reg -of_objects [ipx::get_memory_maps AXI_Interface_SPI -of_objects [ipx::current_core]]]
+set_property core_revision 10 [ipx::current_core]
+ipx::create_xgui_files [ipx::current_core]
+ipx::update_checksums [ipx::current_core]
+ipx::check_integrity [ipx::current_core]
+ipx::save_core [ipx::current_core]
+update_ip_catalog -rebuild -repo_path /home/rps/fpga/ip_repo/My_SPI_1_0
+current_project gpio_project
+delete_bd_objs [get_bd_intf_nets axi_smc_M01_AXI] [get_bd_cells My_SPI_0]
+update_ip_catalog -rebuild
+create_bd_cell -type ip -vlnv user.org:user:My_SPI:1.0 My_SPI_0
+set_property location {4 1094 392} [get_bd_cells My_SPI_0]
+apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {/processing_system7_0/FCLK_CLK0 (100 MHz)} Clk_slave {Auto} Clk_xbar {/processing_system7_0/FCLK_CLK0 (100 MHz)} Master {/processing_system7_0/M_AXI_GP0} Slave {/My_SPI_0/AXI_Interface_SPI} ddr_seg {Auto} intc_ip {/axi_smc} master_apm {0}}  [get_bd_intf_pins My_SPI_0/AXI_Interface_SPI]
+assign_bd_address
+assign_bd_address -target_address_space /processing_system7_0/Data [get_bd_addr_segs My_SPI_0/AXI_Interface_SPI/AXI_Interface_SPI_reg] -force
+delete_bd_objs [get_bd_addr_segs processing_system7_0/Data/SEG_My_SPI_0_AXI_Interface_SPI_reg]
+current_project My_SPI_v1_0_project
+current_project gpio_v1_0_project
+set_property base_address 0 [ipx::get_address_blocks AXI_Interface_SPI_reg -of_objects [ipx::get_memory_maps AXI_Interface_SPI -of_objects [ipx::current_core]]]
+current_project My_SPI_v1_0_project
+set_property core_revision 11 [ipx::current_core]
+ipx::create_xgui_files [ipx::current_core]
+ipx::update_checksums [ipx::current_core]
+ipx::check_integrity [ipx::current_core]
+ipx::save_core [ipx::current_core]
+update_ip_catalog -rebuild -repo_path /home/rps/fpga/ip_repo/My_SPI_1_0
+current_project gpio_project
+delete_bd_objs [get_bd_intf_nets axi_smc_M01_AXI] [get_bd_cells My_SPI_0]
+update_ip_catalog -rebuild
+create_bd_cell -type ip -vlnv user.org:user:My_SPI:1.0 My_SPI_0
+set_property location {4 1115 369} [get_bd_cells My_SPI_0]
+apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {/processing_system7_0/FCLK_CLK0 (100 MHz)} Clk_slave {Auto} Clk_xbar {/processing_system7_0/FCLK_CLK0 (100 MHz)} Master {/processing_system7_0/M_AXI_GP0} Slave {/My_SPI_0/AXI_Interface_SPI} ddr_seg {Auto} intc_ip {/axi_smc} master_apm {0}}  [get_bd_intf_pins My_SPI_0/AXI_Interface_SPI]
+set_property offset 0x43C20000 [get_bd_addr_segs {processing_system7_0/Data/SEG_My_SPI_0_AXI_Interface_SPI_reg}]
+set_property name datain [get_bd_ports datain_0]
+regenerate_bd_layout
+connect_bd_net [get_bd_ports datain] [get_bd_pins My_SPI_0/datain]
+set_property name clr_overflow [get_bd_ports clr_overflow_0]
+set_property name rd_req [get_bd_ports rd_req_0]
+set_property name wr_req [get_bd_ports wr_req_0]
+set_property name dataout [get_bd_ports dataout_0]
+set_property name empty [get_bd_ports empty_0]
+set_property name full [get_bd_ports full_0]
+set_property name overflow [get_bd_ports overflow_0]
+startgroup
+connect_bd_net [get_bd_ports empty] [get_bd_pins My_SPI_0/empty]
+connect_bd_net [get_bd_ports overflow] [get_bd_pins My_SPI_0/empty]
+endgroup
+connect_bd_net [get_bd_ports dataout] [get_bd_pins My_SPI_0/dataout]
+connect_bd_net [get_bd_ports full] [get_bd_pins My_SPI_0/full]
+delete_bd_objs [get_bd_nets My_SPI_0_empty]
+connect_bd_net [get_bd_ports empty] [get_bd_pins My_SPI_0/empty]
+connect_bd_net [get_bd_ports overflow] [get_bd_pins My_SPI_0/overflow]
+connect_bd_net [get_bd_ports clr_overflow] [get_bd_pins My_SPI_0/clr_overflow]
+connect_bd_net [get_bd_ports rd_req] [get_bd_pins My_SPI_0/rd_req]
+connect_bd_net [get_bd_ports wr_req] [get_bd_pins My_SPI_0/wr_req]
+regenerate_bd_layout
+set_property location {2 412 361} [get_bd_cells proc_sys_reset_0]
+set_property location {3 802 175} [get_bd_cells axi_smc]
+set_property location {3 753 296} [get_bd_cells proc_sys_reset_0]
+regenerate_bd_layout
+set_property location {3 682 603} [get_bd_cells proc_sys_reset_0]
+set_property location {3 763 152} [get_bd_cells axi_smc]
+set_property location {3 740 266} [get_bd_cells proc_sys_reset_0]
+regenerate_bd_layout
+current_project My_SPI_v1_0_project
+ipx::merge_project_changes files [ipx::current_core]
+ipx::merge_project_changes ports [ipx::current_core]
+set_property core_revision 12 [ipx::current_core]
+ipx::create_xgui_files [ipx::current_core]
+ipx::update_checksums [ipx::current_core]
+ipx::check_integrity [ipx::current_core]
+ipx::save_core [ipx::current_core]
+update_ip_catalog -rebuild -repo_path /home/rps/fpga/ip_repo/My_SPI_1_0
+current_project gpio_project
+regenerate_bd_layout
+delete_bd_objs [get_bd_nets datain_1] [get_bd_nets My_SPI_0_dataout] [get_bd_nets rd_req_1] [get_bd_nets wr_req_1] [get_bd_nets My_SPI_0_empty] [get_bd_nets My_SPI_0_full] [get_bd_intf_nets axi_smc_M01_AXI] [get_bd_nets clr_overflow_1] [get_bd_nets My_SPI_0_overflow] [get_bd_cells My_SPI_0]
+update_ip_catalog -rebuild -scan_changes
+report_ip_status -name ip_status
+create_bd_cell -type ip -vlnv user.org:user:My_SPI:1.0 My_SPI_0
+set_property location {4 1128 541} [get_bd_cells My_SPI_0]
+apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {/processing_system7_0/FCLK_CLK0 (100 MHz)} Clk_slave {Auto} Clk_xbar {/processing_system7_0/FCLK_CLK0 (100 MHz)} Master {/processing_system7_0/M_AXI_GP0} Slave {/My_SPI_0/AXI_Interface_SPI} ddr_seg {Auto} intc_ip {/axi_smc} master_apm {0}}  [get_bd_intf_pins My_SPI_0/AXI_Interface_SPI]
+connect_bd_net [get_bd_ports clr_overflow] [get_bd_pins My_SPI_0/clr_overflow]
+connect_bd_net [get_bd_ports datain] [get_bd_pins My_SPI_0/datain]
+connect_bd_net [get_bd_ports rd_req] [get_bd_pins My_SPI_0/rd_req]
+connect_bd_net [get_bd_ports wr_req] [get_bd_pins My_SPI_0/wr_req]
+connect_bd_net [get_bd_ports dataout] [get_bd_pins My_SPI_0/dataout]
+connect_bd_net [get_bd_ports empty] [get_bd_pins My_SPI_0/empty]
+connect_bd_net [get_bd_ports full] [get_bd_pins My_SPI_0/full]
+connect_bd_net [get_bd_ports overflow] [get_bd_pins My_SPI_0/overflow]

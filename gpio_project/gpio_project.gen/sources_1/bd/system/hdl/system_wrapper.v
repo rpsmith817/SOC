@@ -2,7 +2,7 @@
 //Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2025.2 (lin64) Build 6299465 Fri Nov 14 12:34:56 MST 2025
-//Date        : Tue Sep 22 15:07:54 2026
+//Date        : Thu Oct 22 14:29:07 2026
 //Host        : rps-ThinkPad-T16-Gen-4 running 64-bit Ubuntu 24.04.5 LTS
 //Command     : generate_target system_wrapper.bd
 //Design      : system_wrapper
@@ -32,10 +32,20 @@ module system_wrapper
     FIXED_IO_ps_clk,
     FIXED_IO_ps_porb,
     FIXED_IO_ps_srstb,
+    baud_clk,
+    clr_overflow,
+    datain,
+    dataout,
+    empty,
+    full,
     gpio_data_in,
     gpio_data_oe,
     gpio_data_out,
-    intr);
+    intr,
+    overflow,
+    rd_req,
+    status,
+    wr_req);
   inout [14:0]DDR_addr;
   inout [2:0]DDR_ba;
   inout DDR_cas_n;
@@ -57,10 +67,20 @@ module system_wrapper
   inout FIXED_IO_ps_clk;
   inout FIXED_IO_ps_porb;
   inout FIXED_IO_ps_srstb;
+  output baud_clk;
+  input clr_overflow;
+  input [31:0]datain;
+  output [31:0]dataout;
+  output empty;
+  output full;
   input [31:0]gpio_data_in;
   output [31:0]gpio_data_oe;
   output [31:0]gpio_data_out;
   output intr;
+  output overflow;
+  input rd_req;
+  output [31:0]status;
+  input wr_req;
 
   wire [14:0]DDR_addr;
   wire [2:0]DDR_ba;
@@ -83,10 +103,20 @@ module system_wrapper
   wire FIXED_IO_ps_clk;
   wire FIXED_IO_ps_porb;
   wire FIXED_IO_ps_srstb;
+  wire baud_clk;
+  wire clr_overflow;
+  wire [31:0]datain;
+  wire [31:0]dataout;
+  wire empty;
+  wire full;
   wire [31:0]gpio_data_in;
   wire [31:0]gpio_data_oe;
   wire [31:0]gpio_data_out;
   wire intr;
+  wire overflow;
+  wire rd_req;
+  wire [31:0]status;
+  wire wr_req;
 
   system system_i
        (.DDR_addr(DDR_addr),
@@ -110,8 +140,18 @@ module system_wrapper
         .FIXED_IO_ps_clk(FIXED_IO_ps_clk),
         .FIXED_IO_ps_porb(FIXED_IO_ps_porb),
         .FIXED_IO_ps_srstb(FIXED_IO_ps_srstb),
+        .baud_clk(baud_clk),
+        .clr_overflow(clr_overflow),
+        .datain(datain),
+        .dataout(dataout),
+        .empty(empty),
+        .full(full),
         .gpio_data_in(gpio_data_in),
         .gpio_data_oe(gpio_data_oe),
         .gpio_data_out(gpio_data_out),
-        .intr(intr));
+        .intr(intr),
+        .overflow(overflow),
+        .rd_req(rd_req),
+        .status(status),
+        .wr_req(wr_req));
 endmodule

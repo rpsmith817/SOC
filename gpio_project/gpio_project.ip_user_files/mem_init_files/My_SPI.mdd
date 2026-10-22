@@ -1,0 +1,10 @@
+
+
+OPTION psf_version = 2.1;
+
+BEGIN DRIVER My_SPI
+	OPTION supported_peripherals = (My_SPI);
+	OPTION copyfiles = all;
+	OPTION VERSION = 1.0;
+	OPTION NAME = My_SPI;
+END DRIVER

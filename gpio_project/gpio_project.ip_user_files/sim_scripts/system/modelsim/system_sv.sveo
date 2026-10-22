@@ -87,10 +87,20 @@ system_sv your_instance_name (
   .FIXED_IO_ps_srstb(FIXED_IO_ps_srstb), // inout wire FIXED_IO_ps_srstb
   .FIXED_IO_ps_clk(FIXED_IO_ps_clk), // inout wire FIXED_IO_ps_clk
   .FIXED_IO_ps_porb(FIXED_IO_ps_porb), // inout wire FIXED_IO_ps_porb
-  .gpio_data_in_0(gpio_data_in_0), // input wire [31:0] gpio_data_in_0
+  .gpio_data_in(gpio_data_in), // input wire [31:0] gpio_data_in
   .intr(intr), // output wire intr
   .gpio_data_out(gpio_data_out), // output wire [31:0] gpio_data_out
-  .gpio_data_oe(gpio_data_oe) // output wire [31:0] gpio_data_oe
+  .gpio_data_oe(gpio_data_oe), // output wire [31:0] gpio_data_oe
+  .wr_req(wr_req), // input wire wr_req
+  .rd_req(rd_req), // input wire rd_req
+  .clr_overflow(clr_overflow), // input wire clr_overflow
+  .datain(datain), // input wire [31:0] datain
+  .dataout(dataout), // output wire [31:0] dataout
+  .empty(empty), // output wire empty
+  .full(full), // output wire full
+  .overflow(overflow), // output wire overflow
+  .status(status), // output wire [31:0] status
+  .baud_clk(baud_clk) // output wire baud_clk
 );
 // INST_TAG_END ------  End cut for WRAPPER INSTANTIATION Template  ------
 

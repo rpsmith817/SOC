@@ -7,4 +7,4 @@
 # Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 #
 
-vivado -log gpio_system_top.vdi -applog -m64 -product Vivado -messageDb vivado.pb -mode batch -source gpio_system_top.tcl -notrace
+vivado -log the_system_top.vdi -applog -m64 -product Vivado -messageDb vivado.pb -mode batch -source the_system_top.tcl -notrace

@@ -77,7 +77,17 @@ COMPONENT system
     gpio_data_in : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
     intr : OUT STD_LOGIC;
     gpio_data_out : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
-    gpio_data_oe : OUT STD_LOGIC_VECTOR(31 DOWNTO 0)
+    gpio_data_oe : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
+    wr_req : IN STD_LOGIC;
+    rd_req : IN STD_LOGIC;
+    clr_overflow : IN STD_LOGIC;
+    datain : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
+    dataout : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
+    empty : OUT STD_LOGIC;
+    full : OUT STD_LOGIC;
+    overflow : OUT STD_LOGIC;
+    status : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
+    baud_clk : OUT STD_LOGIC
   );
 END COMPONENT;
 -- COMP_TAG_END ------  End cut for COMPONENT Declaration  ------
@@ -112,7 +122,17 @@ your_instance_name : system
     gpio_data_in => gpio_data_in,
     intr => intr,
     gpio_data_out => gpio_data_out,
-    gpio_data_oe => gpio_data_oe
+    gpio_data_oe => gpio_data_oe,
+    wr_req => wr_req,
+    rd_req => rd_req,
+    clr_overflow => clr_overflow,
+    datain => datain,
+    dataout => dataout,
+    empty => empty,
+    full => full,
+    overflow => overflow,
+    status => status,
+    baud_clk => baud_clk
   );
 -- INST_TAG_END ------  End cut for INSTANTIATION Template  ------
 

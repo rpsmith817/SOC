@@ -1,0 +1,296 @@
+#-----------------------------------------------------------
+# Vivado v2025.2 (64-bit)
+# SW Build 6299465 on Fri Nov 14 12:34:56 MST 2025
+# IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
+# SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
+# Start of session at: Thu Oct 22 14:29:16 2026
+# Process ID         : 15794
+# Current directory  : /home/rps/fpga/gpio_project/gpio_project.runs/system_My_SPI_0_4_synth_1
+# Command line       : vivado -log system_My_SPI_0_4.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source system_My_SPI_0_4.tcl
+# Log file           : /home/rps/fpga/gpio_project/gpio_project.runs/system_My_SPI_0_4_synth_1/system_My_SPI_0_4.vds
+# Journal file       : /home/rps/fpga/gpio_project/gpio_project.runs/system_My_SPI_0_4_synth_1/vivado.jou
+# Running On         : rps-ThinkPad-T16-Gen-4
+# Platform           : Ubuntu
+# Operating System   : Ubuntu 24.04.5 LTS
+# Processor Detail   : Intel(R) Core(TM) Ultra 7 265U
+# CPU Frequency      : 400.000 MHz
+# CPU Physical cores : 12
+# CPU Logical cores  : 14
+# Host memory        : 33044 MB
+# Swap memory        : 8589 MB
+# Total Virtual      : 41634 MB
+# Available Virtual  : 37498 MB
+#-----------------------------------------------------------
+Sourcing tcl script '/home/rps/.Xilinx/Vivado/Vivado_init.tcl'
+source system_My_SPI_0_4.tcl -notrace
+WARNING: [Common 17-1361] You have specified a new message control rule that is equivalent to an existing rule with attributes ' -id {17-179}  -suppress '. The existing rule will be replaced.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/rps/fpga/ip_repo/My_SPI_1_0'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/rps/fpga/ip_repo/SPI_1_0'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/rps/fpga/ip_repo/gpio_1_0'.
+WARNING: [IP_Flow 19-2207] Repository '/home/rps/fpga/ip_repo/gpio_1_0' already exists; ignoring attempt to add it again.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/rps/fpga/ip_repo/gpio_1_0'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/opt/Xilinx/2025.2/data/ip'.
+Command: synth_design -top system_My_SPI_0_4 -part xc7z007sclg400-1 -incremental_mode off -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z007s'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z007s'
+INFO: [Device 21-403] Loading part xc7z007sclg400-1
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 7 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+WARNING: [Common 17-1361] You have specified a new message control rule that is equivalent to an existing rule with attributes ' -id {17-179}  -suppress '. The existing rule will be replaced.
+INFO: [Synth 8-7075] Helper process launched with PID 15841
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 2210.914 ; gain = 484.156 ; free physical = 21212 ; free virtual = 34399
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'system_My_SPI_0_4' [/home/rps/fpga/gpio_project/gpio_project.gen/sources_1/bd/system/ip/system_My_SPI_0_4/synth/system_My_SPI_0_4.v:53]
+INFO: [Synth 8-6157] synthesizing module 'My_SPI' [/home/rps/fpga/gpio_project/gpio_project.gen/sources_1/bd/system/ipshared/4df6/hdl/My_SPI.v:4]
+INFO: [Synth 8-6157] synthesizing module 'My_SPI_slave_lite_v1_0_AXI_Interface_SPI' [/home/rps/fpga/gpio_project/gpio_project.gen/sources_1/bd/system/ipshared/4df6/hdl/My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v:11]
+INFO: [Synth 8-155] case statement is not full and has no default [/home/rps/fpga/gpio_project/gpio_project.gen/sources_1/bd/system/ipshared/4df6/hdl/My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v:253]
+INFO: [Synth 8-155] case statement is not full and has no default [/home/rps/fpga/gpio_project/gpio_project.gen/sources_1/bd/system/ipshared/4df6/hdl/My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v:370]
+INFO: [Synth 8-6157] synthesizing module 'fifo_fixed' [/home/rps/fpga/gpio_project/gpio_project.gen/sources_1/bd/system/ipshared/4df6/hdl/My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v:519]
+INFO: [Synth 8-6157] synthesizing module 'edge_detector' [/home/rps/fpga/gpio_project/gpio_project.gen/sources_1/bd/system/ipshared/4df6/hdl/My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v:648]
+INFO: [Synth 8-6155] done synthesizing module 'edge_detector' (0#1) [/home/rps/fpga/gpio_project/gpio_project.gen/sources_1/bd/system/ipshared/4df6/hdl/My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v:648]
+INFO: [Synth 8-6157] synthesizing module 'fifo15x32' [/home/rps/fpga/gpio_project/gpio_project.gen/sources_1/bd/system/ipshared/4df6/hdl/My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v:576]
+INFO: [Synth 8-6155] done synthesizing module 'fifo15x32' (0#1) [/home/rps/fpga/gpio_project/gpio_project.gen/sources_1/bd/system/ipshared/4df6/hdl/My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v:576]
+INFO: [Synth 8-6155] done synthesizing module 'fifo_fixed' (0#1) [/home/rps/fpga/gpio_project/gpio_project.gen/sources_1/bd/system/ipshared/4df6/hdl/My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v:519]
+INFO: [Synth 8-6157] synthesizing module 'the_brd' [/home/rps/fpga/gpio_project/gpio_project.gen/sources_1/bd/system/ipshared/4df6/hdl/My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v:672]
+INFO: [Synth 8-6155] done synthesizing module 'the_brd' (0#1) [/home/rps/fpga/gpio_project/gpio_project.gen/sources_1/bd/system/ipshared/4df6/hdl/My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v:672]
+INFO: [Synth 8-6155] done synthesizing module 'My_SPI_slave_lite_v1_0_AXI_Interface_SPI' (0#1) [/home/rps/fpga/gpio_project/gpio_project.gen/sources_1/bd/system/ipshared/4df6/hdl/My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v:11]
+INFO: [Synth 8-6155] done synthesizing module 'My_SPI' (0#1) [/home/rps/fpga/gpio_project/gpio_project.gen/sources_1/bd/system/ipshared/4df6/hdl/My_SPI.v:4]
+INFO: [Synth 8-6155] done synthesizing module 'system_My_SPI_0_4' (0#1) [/home/rps/fpga/gpio_project/gpio_project.gen/sources_1/bd/system/ip/system_My_SPI_0_4/synth/system_My_SPI_0_4.v:53]
+INFO: [Synth 8-7129] Port S_AXI_AWPROT[2] in module My_SPI_slave_lite_v1_0_AXI_Interface_SPI is either unconnected or has no load
+INFO: [Synth 8-7129] Port S_AXI_AWPROT[1] in module My_SPI_slave_lite_v1_0_AXI_Interface_SPI is either unconnected or has no load
+INFO: [Synth 8-7129] Port S_AXI_AWPROT[0] in module My_SPI_slave_lite_v1_0_AXI_Interface_SPI is either unconnected or has no load
+INFO: [Synth 8-7129] Port S_AXI_ARPROT[2] in module My_SPI_slave_lite_v1_0_AXI_Interface_SPI is either unconnected or has no load
+INFO: [Synth 8-7129] Port S_AXI_ARPROT[1] in module My_SPI_slave_lite_v1_0_AXI_Interface_SPI is either unconnected or has no load
+INFO: [Synth 8-7129] Port S_AXI_ARPROT[0] in module My_SPI_slave_lite_v1_0_AXI_Interface_SPI is either unconnected or has no load
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 2303.883 ; gain = 577.125 ; free physical = 21096 ; free virtual = 34285
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 2312.789 ; gain = 586.031 ; free physical = 21095 ; free virtual = 34285
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 2312.789 ; gain = 586.031 ; free physical = 21095 ; free virtual = 34285
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2312.789 ; gain = 0.000 ; free physical = 21095 ; free virtual = 34285
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2426.527 ; gain = 0.000 ; free physical = 21087 ; free virtual = 34290
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.07 ; elapsed = 00:00:00.03 . Memory (MB): peak = 2426.562 ; gain = 0.000 ; free physical = 21085 ; free virtual = 34289
+INFO: [Designutils 20-5008] Incremental synthesis strategy off
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 2426.562 ; gain = 699.805 ; free physical = 21145 ; free virtual = 34350
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z007sclg400-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 2434.531 ; gain = 707.773 ; free physical = 21145 ; free virtual = 34350
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 2434.531 ; gain = 707.773 ; free physical = 21145 ; free virtual = 34350
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 2434.531 ; gain = 707.773 ; free physical = 21140 ; free virtual = 34346
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input    8 Bit       Adders := 1     
+	   2 Input    7 Bit       Adders := 1     
+	   2 Input    5 Bit       Adders := 1     
+	   2 Input    4 Bit       Adders := 2     
+	   3 Input    4 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 22    
+	                8 Bit    Registers := 2     
+	                7 Bit    Registers := 1     
+	                6 Bit    Registers := 1     
+	                4 Bit    Registers := 2     
+	                2 Bit    Registers := 2     
+	                1 Bit    Registers := 23    
++---Muxes : 
+	   2 Input   32 Bit        Muxes := 7     
+	   4 Input   32 Bit        Muxes := 4     
+	   2 Input    1 Bit        Muxes := 24    
+	   4 Input    1 Bit        Muxes := 2     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 66 (col length:40)
+BRAMs: 100 (col length: RAMB18 40 RAMB36 20)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+INFO: [Synth 8-3917] design system_My_SPI_0_4 has port status[19] driven by constant 0
+INFO: [Synth 8-3917] design system_My_SPI_0_4 has port status[18] driven by constant 0
+INFO: [Synth 8-3917] design system_My_SPI_0_4 has port status[17] driven by constant 0
+INFO: [Synth 8-3917] design system_My_SPI_0_4 has port status[16] driven by constant 0
+INFO: [Synth 8-3917] design system_My_SPI_0_4 has port status[15] driven by constant 0
+INFO: [Synth 8-3917] design system_My_SPI_0_4 has port status[14] driven by constant 0
+INFO: [Synth 8-3917] design system_My_SPI_0_4 has port status[13] driven by constant 0
+INFO: [Synth 8-3917] design system_My_SPI_0_4 has port status[12] driven by constant 0
+INFO: [Synth 8-3917] design system_My_SPI_0_4 has port status[11] driven by constant 0
+INFO: [Synth 8-3917] design system_My_SPI_0_4 has port status[10] driven by constant 0
+INFO: [Synth 8-3917] design system_My_SPI_0_4 has port status[9] driven by constant 0
+INFO: [Synth 8-3917] design system_My_SPI_0_4 has port status[8] driven by constant 0
+INFO: [Synth 8-3917] design system_My_SPI_0_4 has port status[7] driven by constant 0
+INFO: [Synth 8-3917] design system_My_SPI_0_4 has port status[6] driven by constant 0
+INFO: [Synth 8-3917] design system_My_SPI_0_4 has port status[5] driven by constant 0
+INFO: [Synth 8-3917] design system_My_SPI_0_4 has port status[4] driven by constant 0
+INFO: [Synth 8-3917] design system_My_SPI_0_4 has port status[3] driven by constant 0
+INFO: [Synth 8-7129] Port axi_interface_spi_awprot[2] in module system_My_SPI_0_4 is either unconnected or has no load
+INFO: [Synth 8-7129] Port axi_interface_spi_awprot[1] in module system_My_SPI_0_4 is either unconnected or has no load
+INFO: [Synth 8-7129] Port axi_interface_spi_awprot[0] in module system_My_SPI_0_4 is either unconnected or has no load
+INFO: [Synth 8-7129] Port axi_interface_spi_arprot[2] in module system_My_SPI_0_4 is either unconnected or has no load
+INFO: [Synth 8-7129] Port axi_interface_spi_arprot[1] in module system_My_SPI_0_4 is either unconnected or has no load
+INFO: [Synth 8-7129] Port axi_interface_spi_arprot[0] in module system_My_SPI_0_4 is either unconnected or has no load
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:16 ; elapsed = 00:00:16 . Memory (MB): peak = 2434.531 ; gain = 707.773 ; free physical = 21144 ; free virtual = 34352
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:16 ; elapsed = 00:00:16 . Memory (MB): peak = 2434.531 ; gain = 707.773 ; free physical = 21144 ; free virtual = 34352
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 2434.531 ; gain = 707.773 ; free physical = 21144 ; free virtual = 34352
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 2530.344 ; gain = 803.586 ; free physical = 21038 ; free virtual = 34245
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 2530.344 ; gain = 803.586 ; free physical = 21038 ; free virtual = 34245
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 2530.344 ; gain = 803.586 ; free physical = 21039 ; free virtual = 34246
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 2530.344 ; gain = 803.586 ; free physical = 21039 ; free virtual = 34246
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 2530.344 ; gain = 803.586 ; free physical = 21039 ; free virtual = 34246
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 2530.344 ; gain = 803.586 ; free physical = 21039 ; free virtual = 34246
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-------+------+
+|      |Cell   |Count |
++------+-------+------+
+|1     |CARRY4 |    14|
+|2     |LUT1   |     3|
+|3     |LUT2   |    52|
+|4     |LUT3   |    46|
+|5     |LUT4   |    40|
+|6     |LUT5   |    36|
+|7     |LUT6   |   172|
+|8     |MUXF7  |    64|
+|9     |MUXF8  |    32|
+|10    |FDCE   |    47|
+|11    |FDRE   |   738|
+|12    |FDSE   |     1|
++------+-------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 2530.344 ; gain = 803.586 ; free physical = 21039 ; free virtual = 34246
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:18 ; elapsed = 00:00:18 . Memory (MB): peak = 2530.344 ; gain = 689.812 ; free physical = 21038 ; free virtual = 34246
+Synthesis Optimization Complete : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 2530.352 ; gain = 803.586 ; free physical = 21038 ; free virtual = 34246
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2546.188 ; gain = 0.000 ; free physical = 21023 ; free virtual = 34233
+INFO: [Netlist 29-17] Analyzing 110 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2697.809 ; gain = 0.000 ; free physical = 21135 ; free virtual = 34346
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Synth Design complete | Checksum: 1a4e5ecc
+INFO: [Common 17-83] Releasing license: Synthesis
+66 Infos, 3 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:26 ; elapsed = 00:00:24 . Memory (MB): peak = 2697.844 ; gain = 1074.352 ; free physical = 21135 ; free virtual = 34346
+INFO: [Common 17-2834] synth_design peak Physical Memory [PSS] (MB): overall = 1901.423; main = 1763.486; forked = 282.071
+INFO: [Common 17-2834] synth_design peak Virtual Memory [VSS] (MB): overall = 3540.398; main = 2697.812; forked = 994.223
+Write ShapeDB Complete: Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 2721.820 ; gain = 0.000 ; free physical = 21135 ; free virtual = 34346
+INFO: [Common 17-1381] The checkpoint '/home/rps/fpga/gpio_project/gpio_project.runs/system_My_SPI_0_4_synth_1/system_My_SPI_0_4.dcp' has been generated.
+INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP system_My_SPI_0_4, cache-ID = 8bbb38716ea68f57
+INFO: [Coretcl 2-1174] Renamed 8 cell refs.
+Write ShapeDB Complete: Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 2721.820 ; gain = 0.000 ; free physical = 21120 ; free virtual = 34332
+INFO: [Common 17-1381] The checkpoint '/home/rps/fpga/gpio_project/gpio_project.runs/system_My_SPI_0_4_synth_1/system_My_SPI_0_4.dcp' has been generated.
+INFO: [Vivado 12-24828] Executing command : report_utilization -file system_My_SPI_0_4_utilization_synth.rpt -pb system_My_SPI_0_4_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Thu Oct 22 14:29:46 2026...

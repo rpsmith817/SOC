@@ -2,7 +2,7 @@
 //Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2025.2 (lin64) Build 6299465 Fri Nov 14 12:34:56 MST 2025
-//Date        : Tue Sep 22 12:29:48 2026
+//Date        : Tue Oct 20 16:02:18 2026
 //Host        : rps-ThinkPad-T16-Gen-4 running 64-bit Ubuntu 24.04.5 LTS
 //Command     : generate_target system.bd
 //Design      : system
@@ -10,7 +10,7 @@
 //--------------------------------------------------------------------------------
 `timescale 1 ps / 1 ps
 
-(* CORE_GENERATION_INFO = "system,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=system,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=5,numReposBlks=5,numNonXlnxBlks=1,numHierBlks=0,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=0,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=1,da_board_cnt=1,da_clkrst_cnt=2,da_ps7_cnt=1,synth_mode=Hierarchical}" *) (* HW_HANDOFF = "system.hwdef" *) 
+(* CORE_GENERATION_INFO = "system,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=system,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=6,numReposBlks=6,numNonXlnxBlks=2,numHierBlks=0,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=0,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=5,da_board_cnt=1,da_clkrst_cnt=2,da_ps7_cnt=1,synth_mode=Hierarchical}" *) (* HW_HANDOFF = "system.hwdef" *) 
 module system
    (DDR_addr,
     DDR_ba,
@@ -33,10 +33,20 @@ module system
     FIXED_IO_ps_clk,
     FIXED_IO_ps_porb,
     FIXED_IO_ps_srstb,
-    gpio_data_in_0,
+    baud_clk,
+    clr_overflow,
+    datain,
+    dataout,
+    empty,
+    full,
+    gpio_data_in,
     gpio_data_oe,
     gpio_data_out,
-    intr);
+    intr,
+    overflow,
+    rd_req,
+    status,
+    wr_req);
   (* X_INTERFACE_INFO = "xilinx.com:interface:ddrx:1.0 DDR ADDR" *) (* X_INTERFACE_MODE = "Master" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME DDR, AXI_ARBITRATION_SCHEME TDM, BURST_LENGTH 8, CAN_DEBUG false, CAS_LATENCY 11, CAS_WRITE_LATENCY 11, CS_ENABLED true, DATA_MASK_ENABLED true, DATA_WIDTH 8, MEMORY_TYPE COMPONENTS, MEM_ADDR_MAP ROW_COLUMN_BANK, SLOT Single, TIMEPERIOD_PS 1250" *) inout [14:0]DDR_addr;
   (* X_INTERFACE_INFO = "xilinx.com:interface:ddrx:1.0 DDR BA" *) inout [2:0]DDR_ba;
   (* X_INTERFACE_INFO = "xilinx.com:interface:ddrx:1.0 DDR CAS_N" *) inout DDR_cas_n;
@@ -58,10 +68,20 @@ module system
   (* X_INTERFACE_INFO = "xilinx.com:display_processing_system7:fixedio:1.0 FIXED_IO PS_CLK" *) inout FIXED_IO_ps_clk;
   (* X_INTERFACE_INFO = "xilinx.com:display_processing_system7:fixedio:1.0 FIXED_IO PS_PORB" *) inout FIXED_IO_ps_porb;
   (* X_INTERFACE_INFO = "xilinx.com:display_processing_system7:fixedio:1.0 FIXED_IO PS_SRSTB" *) inout FIXED_IO_ps_srstb;
-  input [31:0]gpio_data_in_0;
+  (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 CLK.BAUD_CLK CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME CLK.BAUD_CLK, CLK_DOMAIN system_My_SPI_0_4_baud_clk, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, INSERT_VIP 0, PHASE 0.0" *) output baud_clk;
+  input clr_overflow;
+  input [31:0]datain;
+  output [31:0]dataout;
+  output empty;
+  output full;
+  input [31:0]gpio_data_in;
   output [31:0]gpio_data_oe;
   output [31:0]gpio_data_out;
   (* X_INTERFACE_INFO = "xilinx.com:signal:interrupt:1.0 INTR.INTR INTERRUPT" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME INTR.INTR, PortWidth 1, SENSITIVITY LEVEL_HIGH" *) output intr;
+  output overflow;
+  input rd_req;
+  output [31:0]status;
+  input wr_req;
 
   wire [14:0]DDR_addr;
   wire [2:0]DDR_ba;
@@ -103,10 +123,36 @@ module system
   wire axi_smc_M00_AXI_WREADY;
   wire [3:0]axi_smc_M00_AXI_WSTRB;
   wire axi_smc_M00_AXI_WVALID;
-  wire [31:0]gpio_data_in_0;
+  wire [7:0]axi_smc_M01_AXI_ARADDR;
+  wire [2:0]axi_smc_M01_AXI_ARPROT;
+  wire axi_smc_M01_AXI_ARREADY;
+  wire axi_smc_M01_AXI_ARVALID;
+  wire [7:0]axi_smc_M01_AXI_AWADDR;
+  wire [2:0]axi_smc_M01_AXI_AWPROT;
+  wire axi_smc_M01_AXI_AWREADY;
+  wire axi_smc_M01_AXI_AWVALID;
+  wire axi_smc_M01_AXI_BREADY;
+  wire [1:0]axi_smc_M01_AXI_BRESP;
+  wire axi_smc_M01_AXI_BVALID;
+  wire [31:0]axi_smc_M01_AXI_RDATA;
+  wire axi_smc_M01_AXI_RREADY;
+  wire [1:0]axi_smc_M01_AXI_RRESP;
+  wire axi_smc_M01_AXI_RVALID;
+  wire [31:0]axi_smc_M01_AXI_WDATA;
+  wire axi_smc_M01_AXI_WREADY;
+  wire [3:0]axi_smc_M01_AXI_WSTRB;
+  wire axi_smc_M01_AXI_WVALID;
+  wire baud_clk;
+  wire clr_overflow;
+  wire [31:0]datain;
+  wire [31:0]dataout;
+  wire empty;
+  wire full;
+  wire [31:0]gpio_data_in;
   wire [31:0]gpio_data_oe;
   wire [31:0]gpio_data_out;
   wire intr;
+  wire overflow;
   wire [0:0]proc_sys_reset_0_peripheral_aresetn;
   wire processing_system7_0_FCLK_CLK0;
   wire processing_system7_0_FCLK_RESET0_N;
@@ -148,8 +194,43 @@ module system
   wire processing_system7_0_M_AXI_GP0_WREADY;
   wire [3:0]processing_system7_0_M_AXI_GP0_WSTRB;
   wire processing_system7_0_M_AXI_GP0_WVALID;
+  wire rd_req;
+  wire [31:0]status;
+  wire wr_req;
   wire [2:0]xlconcat_0_dout;
 
+  system_My_SPI_0_4 My_SPI_0
+       (.axi_interface_spi_aclk(processing_system7_0_FCLK_CLK0),
+        .axi_interface_spi_araddr(axi_smc_M01_AXI_ARADDR),
+        .axi_interface_spi_aresetn(proc_sys_reset_0_peripheral_aresetn),
+        .axi_interface_spi_arprot(axi_smc_M01_AXI_ARPROT),
+        .axi_interface_spi_arready(axi_smc_M01_AXI_ARREADY),
+        .axi_interface_spi_arvalid(axi_smc_M01_AXI_ARVALID),
+        .axi_interface_spi_awaddr(axi_smc_M01_AXI_AWADDR),
+        .axi_interface_spi_awprot(axi_smc_M01_AXI_AWPROT),
+        .axi_interface_spi_awready(axi_smc_M01_AXI_AWREADY),
+        .axi_interface_spi_awvalid(axi_smc_M01_AXI_AWVALID),
+        .axi_interface_spi_bready(axi_smc_M01_AXI_BREADY),
+        .axi_interface_spi_bresp(axi_smc_M01_AXI_BRESP),
+        .axi_interface_spi_bvalid(axi_smc_M01_AXI_BVALID),
+        .axi_interface_spi_rdata(axi_smc_M01_AXI_RDATA),
+        .axi_interface_spi_rready(axi_smc_M01_AXI_RREADY),
+        .axi_interface_spi_rresp(axi_smc_M01_AXI_RRESP),
+        .axi_interface_spi_rvalid(axi_smc_M01_AXI_RVALID),
+        .axi_interface_spi_wdata(axi_smc_M01_AXI_WDATA),
+        .axi_interface_spi_wready(axi_smc_M01_AXI_WREADY),
+        .axi_interface_spi_wstrb(axi_smc_M01_AXI_WSTRB),
+        .axi_interface_spi_wvalid(axi_smc_M01_AXI_WVALID),
+        .baud_clk(baud_clk),
+        .clr_overflow(clr_overflow),
+        .datain(datain),
+        .dataout(dataout),
+        .empty(empty),
+        .full(full),
+        .overflow(overflow),
+        .rd_req(rd_req),
+        .status(status),
+        .wr_req(wr_req));
   system_axi_smc_0 axi_smc
        (.M00_AXI_araddr(axi_smc_M00_AXI_ARADDR),
         .M00_AXI_arprot(axi_smc_M00_AXI_ARPROT),
@@ -170,6 +251,25 @@ module system
         .M00_AXI_wready(axi_smc_M00_AXI_WREADY),
         .M00_AXI_wstrb(axi_smc_M00_AXI_WSTRB),
         .M00_AXI_wvalid(axi_smc_M00_AXI_WVALID),
+        .M01_AXI_araddr(axi_smc_M01_AXI_ARADDR),
+        .M01_AXI_arprot(axi_smc_M01_AXI_ARPROT),
+        .M01_AXI_arready(axi_smc_M01_AXI_ARREADY),
+        .M01_AXI_arvalid(axi_smc_M01_AXI_ARVALID),
+        .M01_AXI_awaddr(axi_smc_M01_AXI_AWADDR),
+        .M01_AXI_awprot(axi_smc_M01_AXI_AWPROT),
+        .M01_AXI_awready(axi_smc_M01_AXI_AWREADY),
+        .M01_AXI_awvalid(axi_smc_M01_AXI_AWVALID),
+        .M01_AXI_bready(axi_smc_M01_AXI_BREADY),
+        .M01_AXI_bresp(axi_smc_M01_AXI_BRESP),
+        .M01_AXI_bvalid(axi_smc_M01_AXI_BVALID),
+        .M01_AXI_rdata(axi_smc_M01_AXI_RDATA),
+        .M01_AXI_rready(axi_smc_M01_AXI_RREADY),
+        .M01_AXI_rresp(axi_smc_M01_AXI_RRESP),
+        .M01_AXI_rvalid(axi_smc_M01_AXI_RVALID),
+        .M01_AXI_wdata(axi_smc_M01_AXI_WDATA),
+        .M01_AXI_wready(axi_smc_M01_AXI_WREADY),
+        .M01_AXI_wstrb(axi_smc_M01_AXI_WSTRB),
+        .M01_AXI_wvalid(axi_smc_M01_AXI_WVALID),
         .S00_AXI_araddr(processing_system7_0_M_AXI_GP0_ARADDR),
         .S00_AXI_arburst(processing_system7_0_M_AXI_GP0_ARBURST),
         .S00_AXI_arcache(processing_system7_0_M_AXI_GP0_ARCACHE),
@@ -232,7 +332,7 @@ module system
         .axi_wready(axi_smc_M00_AXI_WREADY),
         .axi_wstrb(axi_smc_M00_AXI_WSTRB),
         .axi_wvalid(axi_smc_M00_AXI_WVALID),
-        .gpio_data_in(gpio_data_in_0),
+        .gpio_data_in(gpio_data_in),
         .gpio_data_oe(gpio_data_oe),
         .gpio_data_out(gpio_data_out),
         .intr(intr));

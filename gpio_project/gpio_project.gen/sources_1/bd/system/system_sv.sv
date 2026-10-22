@@ -102,7 +102,27 @@ module system_sv (
   (* X_INTERFACE_IGNORE = "true" *)
   output wire [31:0] gpio_data_out,
   (* X_INTERFACE_IGNORE = "true" *)
-  output wire [31:0] gpio_data_oe
+  output wire [31:0] gpio_data_oe,
+  (* X_INTERFACE_IGNORE = "true" *)
+  input wire wr_req,
+  (* X_INTERFACE_IGNORE = "true" *)
+  input wire rd_req,
+  (* X_INTERFACE_IGNORE = "true" *)
+  input wire clr_overflow,
+  (* X_INTERFACE_IGNORE = "true" *)
+  input wire [31:0] datain,
+  (* X_INTERFACE_IGNORE = "true" *)
+  output wire [31:0] dataout,
+  (* X_INTERFACE_IGNORE = "true" *)
+  output wire empty,
+  (* X_INTERFACE_IGNORE = "true" *)
+  output wire full,
+  (* X_INTERFACE_IGNORE = "true" *)
+  output wire overflow,
+  (* X_INTERFACE_IGNORE = "true" *)
+  output wire [31:0] status,
+  (* X_INTERFACE_IGNORE = "true" *)
+  output wire baud_clk
 );
 
   system inst (
@@ -130,7 +150,17 @@ module system_sv (
     .gpio_data_in(gpio_data_in),
     .intr(intr),
     .gpio_data_out(gpio_data_out),
-    .gpio_data_oe(gpio_data_oe)
+    .gpio_data_oe(gpio_data_oe),
+    .wr_req(wr_req),
+    .rd_req(rd_req),
+    .clr_overflow(clr_overflow),
+    .datain(datain),
+    .dataout(dataout),
+    .empty(empty),
+    .full(full),
+    .overflow(overflow),
+    .status(status),
+    .baud_clk(baud_clk)
   );
 
 endmodule

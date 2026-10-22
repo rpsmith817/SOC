@@ -211,6 +211,24 @@
                 "SV": "user.org:user:gpio:1.0",
                 "TM": "both",
                 "TU": "register"
+            },
+            "V4": {
+                "VT": "AC",
+                "BA": "0x43C20000",
+                "HA": "0x43C2FFFF",
+                "BP": "C_AXI_Interface_SPI_BASEADDR",
+                "HP": "C_AXI_Interface_SPI_HIGHADDR",
+                "MA": "Data",
+                "MX": "/processing_system7_0",
+                "MI": "M_AXI_GP0",
+                "MS": "SEG_My_SPI_0_AXI_Interface_SPI_reg",
+                "MV": "xilinx.com:ip:processing_system7:5.5",
+                "SX": "/My_SPI_0",
+                "SI": "AXI_Interface_SPI",
+                "SS": "AXI_Interface_SPI_reg",
+                "SV": "user.org:user:My_SPI:1.0",
+                "TM": "both",
+                "TU": "register"
             }
         },
         "edges": [
@@ -224,6 +242,11 @@
             },
             {
                 "src": "V3",
+                "trg": "V2",
+                "EH": "2"
+            },
+            {
+                "src": "V4",
                 "trg": "V2",
                 "EH": "2"
             }

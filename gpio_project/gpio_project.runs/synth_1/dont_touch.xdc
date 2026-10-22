@@ -21,4 +21,7 @@ set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==system_axi_
 # IP: bd/system/ip/system_xlconcat_0_0/system_xlconcat_0_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==system_xlconcat_0_0 || ORIG_REF_NAME==system_xlconcat_0_0} -quiet] -quiet
 
+# IP: bd/system/ip/system_My_SPI_0_4/system_My_SPI_0_4.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==system_My_SPI_0_4 || ORIG_REF_NAME==system_My_SPI_0_4} -quiet] -quiet
+
 # XDC: /home/rps/fpga/gpio_project/gpio_project.gen/sources_1/bd/system/system_ooc.xdc

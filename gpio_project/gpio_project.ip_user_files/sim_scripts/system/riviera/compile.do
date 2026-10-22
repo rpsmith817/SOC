@@ -76,57 +76,88 @@ vcom -work xil_defaultlib -93  -incr \
 
 vlog -work smartconnect_v1_0  -incr "+incdir+../../../../gpio_project.gen/sources_1/bd/system/ipshared/ec67/hdl" "+incdir+../../../../gpio_project.gen/sources_1/bd/system/ipshared/9a25/hdl" "+incdir+../../../../gpio_project.gen/sources_1/bd/system/ipshared/f0b6/hdl/verilog" "+incdir+../../../../gpio_project.gen/sources_1/bd/system/ipshared/00fe/hdl/verilog" "+incdir+../../../../../../../../opt/Xilinx/2025.2/data/rsb/busdef" "+incdir+/opt/Xilinx/2025.2/data/xilinx_vip/include" -l xilinx_vip -l xpm -l axi_infrastructure_v1_1_0 -l axi_vip_v1_1_22 -l processing_system7_vip_v1_0_24 -l xil_defaultlib -l proc_sys_reset_v5_0_17 -l smartconnect_v1_0 -l axi_register_slice_v2_1_36 -l xlconcat_v2_1_7 \
 "../../../../gpio_project.gen/sources_1/bd/system/ipshared/f0b6/hdl/sc_util_v1_0_vl_rfs.sv" \
-"../../../../gpio_project.gen/sources_1/bd/system/ipshared/3d9a/hdl/sc_mmu_v1_0_vl_rfs.sv" \
+"../../../../gpio_project.gen/sources_1/bd/system/ipshared/0848/hdl/sc_switchboard_v1_0_vl_rfs.sv" \
 
 vlog -work xil_defaultlib  -incr "+incdir+../../../../gpio_project.gen/sources_1/bd/system/ipshared/ec67/hdl" "+incdir+../../../../gpio_project.gen/sources_1/bd/system/ipshared/9a25/hdl" "+incdir+../../../../gpio_project.gen/sources_1/bd/system/ipshared/f0b6/hdl/verilog" "+incdir+../../../../gpio_project.gen/sources_1/bd/system/ipshared/00fe/hdl/verilog" "+incdir+../../../../../../../../opt/Xilinx/2025.2/data/rsb/busdef" "+incdir+/opt/Xilinx/2025.2/data/xilinx_vip/include" -l xilinx_vip -l xpm -l axi_infrastructure_v1_1_0 -l axi_vip_v1_1_22 -l processing_system7_vip_v1_0_24 -l xil_defaultlib -l proc_sys_reset_v5_0_17 -l smartconnect_v1_0 -l axi_register_slice_v2_1_36 -l xlconcat_v2_1_7 \
-"../../../bd/system/ip/system_axi_smc_0/bd_0/ip/ip_2/sim/bd_44e3_s00mmu_0.sv" \
-
-vlog -work smartconnect_v1_0  -incr "+incdir+../../../../gpio_project.gen/sources_1/bd/system/ipshared/ec67/hdl" "+incdir+../../../../gpio_project.gen/sources_1/bd/system/ipshared/9a25/hdl" "+incdir+../../../../gpio_project.gen/sources_1/bd/system/ipshared/f0b6/hdl/verilog" "+incdir+../../../../gpio_project.gen/sources_1/bd/system/ipshared/00fe/hdl/verilog" "+incdir+../../../../../../../../opt/Xilinx/2025.2/data/rsb/busdef" "+incdir+/opt/Xilinx/2025.2/data/xilinx_vip/include" -l xilinx_vip -l xpm -l axi_infrastructure_v1_1_0 -l axi_vip_v1_1_22 -l processing_system7_vip_v1_0_24 -l xil_defaultlib -l proc_sys_reset_v5_0_17 -l smartconnect_v1_0 -l axi_register_slice_v2_1_36 -l xlconcat_v2_1_7 \
-"../../../../gpio_project.gen/sources_1/bd/system/ipshared/7785/hdl/sc_transaction_regulator_v1_0_vl_rfs.sv" \
-
-vlog -work xil_defaultlib  -incr "+incdir+../../../../gpio_project.gen/sources_1/bd/system/ipshared/ec67/hdl" "+incdir+../../../../gpio_project.gen/sources_1/bd/system/ipshared/9a25/hdl" "+incdir+../../../../gpio_project.gen/sources_1/bd/system/ipshared/f0b6/hdl/verilog" "+incdir+../../../../gpio_project.gen/sources_1/bd/system/ipshared/00fe/hdl/verilog" "+incdir+../../../../../../../../opt/Xilinx/2025.2/data/rsb/busdef" "+incdir+/opt/Xilinx/2025.2/data/xilinx_vip/include" -l xilinx_vip -l xpm -l axi_infrastructure_v1_1_0 -l axi_vip_v1_1_22 -l processing_system7_vip_v1_0_24 -l xil_defaultlib -l proc_sys_reset_v5_0_17 -l smartconnect_v1_0 -l axi_register_slice_v2_1_36 -l xlconcat_v2_1_7 \
-"../../../bd/system/ip/system_axi_smc_0/bd_0/ip/ip_3/sim/bd_44e3_s00tr_0.sv" \
-
-vlog -work smartconnect_v1_0  -incr "+incdir+../../../../gpio_project.gen/sources_1/bd/system/ipshared/ec67/hdl" "+incdir+../../../../gpio_project.gen/sources_1/bd/system/ipshared/9a25/hdl" "+incdir+../../../../gpio_project.gen/sources_1/bd/system/ipshared/f0b6/hdl/verilog" "+incdir+../../../../gpio_project.gen/sources_1/bd/system/ipshared/00fe/hdl/verilog" "+incdir+../../../../../../../../opt/Xilinx/2025.2/data/rsb/busdef" "+incdir+/opt/Xilinx/2025.2/data/xilinx_vip/include" -l xilinx_vip -l xpm -l axi_infrastructure_v1_1_0 -l axi_vip_v1_1_22 -l processing_system7_vip_v1_0_24 -l xil_defaultlib -l proc_sys_reset_v5_0_17 -l smartconnect_v1_0 -l axi_register_slice_v2_1_36 -l xlconcat_v2_1_7 \
-"../../../../gpio_project.gen/sources_1/bd/system/ipshared/3051/hdl/sc_si_converter_v1_0_vl_rfs.sv" \
-
-vlog -work xil_defaultlib  -incr "+incdir+../../../../gpio_project.gen/sources_1/bd/system/ipshared/ec67/hdl" "+incdir+../../../../gpio_project.gen/sources_1/bd/system/ipshared/9a25/hdl" "+incdir+../../../../gpio_project.gen/sources_1/bd/system/ipshared/f0b6/hdl/verilog" "+incdir+../../../../gpio_project.gen/sources_1/bd/system/ipshared/00fe/hdl/verilog" "+incdir+../../../../../../../../opt/Xilinx/2025.2/data/rsb/busdef" "+incdir+/opt/Xilinx/2025.2/data/xilinx_vip/include" -l xilinx_vip -l xpm -l axi_infrastructure_v1_1_0 -l axi_vip_v1_1_22 -l processing_system7_vip_v1_0_24 -l xil_defaultlib -l proc_sys_reset_v5_0_17 -l smartconnect_v1_0 -l axi_register_slice_v2_1_36 -l xlconcat_v2_1_7 \
-"../../../bd/system/ip/system_axi_smc_0/bd_0/ip/ip_4/sim/bd_44e3_s00sic_0.sv" \
-
-vlog -work smartconnect_v1_0  -incr "+incdir+../../../../gpio_project.gen/sources_1/bd/system/ipshared/ec67/hdl" "+incdir+../../../../gpio_project.gen/sources_1/bd/system/ipshared/9a25/hdl" "+incdir+../../../../gpio_project.gen/sources_1/bd/system/ipshared/f0b6/hdl/verilog" "+incdir+../../../../gpio_project.gen/sources_1/bd/system/ipshared/00fe/hdl/verilog" "+incdir+../../../../../../../../opt/Xilinx/2025.2/data/rsb/busdef" "+incdir+/opt/Xilinx/2025.2/data/xilinx_vip/include" -l xilinx_vip -l xpm -l axi_infrastructure_v1_1_0 -l axi_vip_v1_1_22 -l processing_system7_vip_v1_0_24 -l xil_defaultlib -l proc_sys_reset_v5_0_17 -l smartconnect_v1_0 -l axi_register_slice_v2_1_36 -l xlconcat_v2_1_7 \
-"../../../../gpio_project.gen/sources_1/bd/system/ipshared/852f/hdl/sc_axi2sc_v1_0_vl_rfs.sv" \
-
-vlog -work xil_defaultlib  -incr "+incdir+../../../../gpio_project.gen/sources_1/bd/system/ipshared/ec67/hdl" "+incdir+../../../../gpio_project.gen/sources_1/bd/system/ipshared/9a25/hdl" "+incdir+../../../../gpio_project.gen/sources_1/bd/system/ipshared/f0b6/hdl/verilog" "+incdir+../../../../gpio_project.gen/sources_1/bd/system/ipshared/00fe/hdl/verilog" "+incdir+../../../../../../../../opt/Xilinx/2025.2/data/rsb/busdef" "+incdir+/opt/Xilinx/2025.2/data/xilinx_vip/include" -l xilinx_vip -l xpm -l axi_infrastructure_v1_1_0 -l axi_vip_v1_1_22 -l processing_system7_vip_v1_0_24 -l xil_defaultlib -l proc_sys_reset_v5_0_17 -l smartconnect_v1_0 -l axi_register_slice_v2_1_36 -l xlconcat_v2_1_7 \
-"../../../bd/system/ip/system_axi_smc_0/bd_0/ip/ip_5/sim/bd_44e3_s00a2s_0.sv" \
+"../../../bd/system/ip/system_axi_smc_0/bd_0/ip/ip_2/sim/bd_44e3_arinsw_0.sv" \
+"../../../bd/system/ip/system_axi_smc_0/bd_0/ip/ip_3/sim/bd_44e3_rinsw_0.sv" \
+"../../../bd/system/ip/system_axi_smc_0/bd_0/ip/ip_4/sim/bd_44e3_awinsw_0.sv" \
+"../../../bd/system/ip/system_axi_smc_0/bd_0/ip/ip_5/sim/bd_44e3_winsw_0.sv" \
+"../../../bd/system/ip/system_axi_smc_0/bd_0/ip/ip_6/sim/bd_44e3_binsw_0.sv" \
+"../../../bd/system/ip/system_axi_smc_0/bd_0/ip/ip_7/sim/bd_44e3_aroutsw_0.sv" \
+"../../../bd/system/ip/system_axi_smc_0/bd_0/ip/ip_8/sim/bd_44e3_routsw_0.sv" \
+"../../../bd/system/ip/system_axi_smc_0/bd_0/ip/ip_9/sim/bd_44e3_awoutsw_0.sv" \
+"../../../bd/system/ip/system_axi_smc_0/bd_0/ip/ip_10/sim/bd_44e3_woutsw_0.sv" \
+"../../../bd/system/ip/system_axi_smc_0/bd_0/ip/ip_11/sim/bd_44e3_boutsw_0.sv" \
 
 vlog -work smartconnect_v1_0  -incr "+incdir+../../../../gpio_project.gen/sources_1/bd/system/ipshared/ec67/hdl" "+incdir+../../../../gpio_project.gen/sources_1/bd/system/ipshared/9a25/hdl" "+incdir+../../../../gpio_project.gen/sources_1/bd/system/ipshared/f0b6/hdl/verilog" "+incdir+../../../../gpio_project.gen/sources_1/bd/system/ipshared/00fe/hdl/verilog" "+incdir+../../../../../../../../opt/Xilinx/2025.2/data/rsb/busdef" "+incdir+/opt/Xilinx/2025.2/data/xilinx_vip/include" -l xilinx_vip -l xpm -l axi_infrastructure_v1_1_0 -l axi_vip_v1_1_22 -l processing_system7_vip_v1_0_24 -l xil_defaultlib -l proc_sys_reset_v5_0_17 -l smartconnect_v1_0 -l axi_register_slice_v2_1_36 -l xlconcat_v2_1_7 \
 "../../../../gpio_project.gen/sources_1/bd/system/ipshared/00fe/hdl/sc_node_v1_0_vl_rfs.sv" \
 
 vlog -work xil_defaultlib  -incr "+incdir+../../../../gpio_project.gen/sources_1/bd/system/ipshared/ec67/hdl" "+incdir+../../../../gpio_project.gen/sources_1/bd/system/ipshared/9a25/hdl" "+incdir+../../../../gpio_project.gen/sources_1/bd/system/ipshared/f0b6/hdl/verilog" "+incdir+../../../../gpio_project.gen/sources_1/bd/system/ipshared/00fe/hdl/verilog" "+incdir+../../../../../../../../opt/Xilinx/2025.2/data/rsb/busdef" "+incdir+/opt/Xilinx/2025.2/data/xilinx_vip/include" -l xilinx_vip -l xpm -l axi_infrastructure_v1_1_0 -l axi_vip_v1_1_22 -l processing_system7_vip_v1_0_24 -l xil_defaultlib -l proc_sys_reset_v5_0_17 -l smartconnect_v1_0 -l axi_register_slice_v2_1_36 -l xlconcat_v2_1_7 \
-"../../../bd/system/ip/system_axi_smc_0/bd_0/ip/ip_6/sim/bd_44e3_sarn_0.sv" \
-"../../../bd/system/ip/system_axi_smc_0/bd_0/ip/ip_7/sim/bd_44e3_srn_0.sv" \
-"../../../bd/system/ip/system_axi_smc_0/bd_0/ip/ip_8/sim/bd_44e3_sawn_0.sv" \
-"../../../bd/system/ip/system_axi_smc_0/bd_0/ip/ip_9/sim/bd_44e3_swn_0.sv" \
-"../../../bd/system/ip/system_axi_smc_0/bd_0/ip/ip_10/sim/bd_44e3_sbn_0.sv" \
+"../../../bd/system/ip/system_axi_smc_0/bd_0/ip/ip_12/sim/bd_44e3_arni_0.sv" \
+"../../../bd/system/ip/system_axi_smc_0/bd_0/ip/ip_13/sim/bd_44e3_rni_0.sv" \
+"../../../bd/system/ip/system_axi_smc_0/bd_0/ip/ip_14/sim/bd_44e3_awni_0.sv" \
+"../../../bd/system/ip/system_axi_smc_0/bd_0/ip/ip_15/sim/bd_44e3_wni_0.sv" \
+"../../../bd/system/ip/system_axi_smc_0/bd_0/ip/ip_16/sim/bd_44e3_bni_0.sv" \
+
+vlog -work smartconnect_v1_0  -incr "+incdir+../../../../gpio_project.gen/sources_1/bd/system/ipshared/ec67/hdl" "+incdir+../../../../gpio_project.gen/sources_1/bd/system/ipshared/9a25/hdl" "+incdir+../../../../gpio_project.gen/sources_1/bd/system/ipshared/f0b6/hdl/verilog" "+incdir+../../../../gpio_project.gen/sources_1/bd/system/ipshared/00fe/hdl/verilog" "+incdir+../../../../../../../../opt/Xilinx/2025.2/data/rsb/busdef" "+incdir+/opt/Xilinx/2025.2/data/xilinx_vip/include" -l xilinx_vip -l xpm -l axi_infrastructure_v1_1_0 -l axi_vip_v1_1_22 -l processing_system7_vip_v1_0_24 -l xil_defaultlib -l proc_sys_reset_v5_0_17 -l smartconnect_v1_0 -l axi_register_slice_v2_1_36 -l xlconcat_v2_1_7 \
+"../../../../gpio_project.gen/sources_1/bd/system/ipshared/3d9a/hdl/sc_mmu_v1_0_vl_rfs.sv" \
+
+vlog -work xil_defaultlib  -incr "+incdir+../../../../gpio_project.gen/sources_1/bd/system/ipshared/ec67/hdl" "+incdir+../../../../gpio_project.gen/sources_1/bd/system/ipshared/9a25/hdl" "+incdir+../../../../gpio_project.gen/sources_1/bd/system/ipshared/f0b6/hdl/verilog" "+incdir+../../../../gpio_project.gen/sources_1/bd/system/ipshared/00fe/hdl/verilog" "+incdir+../../../../../../../../opt/Xilinx/2025.2/data/rsb/busdef" "+incdir+/opt/Xilinx/2025.2/data/xilinx_vip/include" -l xilinx_vip -l xpm -l axi_infrastructure_v1_1_0 -l axi_vip_v1_1_22 -l processing_system7_vip_v1_0_24 -l xil_defaultlib -l proc_sys_reset_v5_0_17 -l smartconnect_v1_0 -l axi_register_slice_v2_1_36 -l xlconcat_v2_1_7 \
+"../../../bd/system/ip/system_axi_smc_0/bd_0/ip/ip_17/sim/bd_44e3_s00mmu_0.sv" \
+
+vlog -work smartconnect_v1_0  -incr "+incdir+../../../../gpio_project.gen/sources_1/bd/system/ipshared/ec67/hdl" "+incdir+../../../../gpio_project.gen/sources_1/bd/system/ipshared/9a25/hdl" "+incdir+../../../../gpio_project.gen/sources_1/bd/system/ipshared/f0b6/hdl/verilog" "+incdir+../../../../gpio_project.gen/sources_1/bd/system/ipshared/00fe/hdl/verilog" "+incdir+../../../../../../../../opt/Xilinx/2025.2/data/rsb/busdef" "+incdir+/opt/Xilinx/2025.2/data/xilinx_vip/include" -l xilinx_vip -l xpm -l axi_infrastructure_v1_1_0 -l axi_vip_v1_1_22 -l processing_system7_vip_v1_0_24 -l xil_defaultlib -l proc_sys_reset_v5_0_17 -l smartconnect_v1_0 -l axi_register_slice_v2_1_36 -l xlconcat_v2_1_7 \
+"../../../../gpio_project.gen/sources_1/bd/system/ipshared/7785/hdl/sc_transaction_regulator_v1_0_vl_rfs.sv" \
+
+vlog -work xil_defaultlib  -incr "+incdir+../../../../gpio_project.gen/sources_1/bd/system/ipshared/ec67/hdl" "+incdir+../../../../gpio_project.gen/sources_1/bd/system/ipshared/9a25/hdl" "+incdir+../../../../gpio_project.gen/sources_1/bd/system/ipshared/f0b6/hdl/verilog" "+incdir+../../../../gpio_project.gen/sources_1/bd/system/ipshared/00fe/hdl/verilog" "+incdir+../../../../../../../../opt/Xilinx/2025.2/data/rsb/busdef" "+incdir+/opt/Xilinx/2025.2/data/xilinx_vip/include" -l xilinx_vip -l xpm -l axi_infrastructure_v1_1_0 -l axi_vip_v1_1_22 -l processing_system7_vip_v1_0_24 -l xil_defaultlib -l proc_sys_reset_v5_0_17 -l smartconnect_v1_0 -l axi_register_slice_v2_1_36 -l xlconcat_v2_1_7 \
+"../../../bd/system/ip/system_axi_smc_0/bd_0/ip/ip_18/sim/bd_44e3_s00tr_0.sv" \
+
+vlog -work smartconnect_v1_0  -incr "+incdir+../../../../gpio_project.gen/sources_1/bd/system/ipshared/ec67/hdl" "+incdir+../../../../gpio_project.gen/sources_1/bd/system/ipshared/9a25/hdl" "+incdir+../../../../gpio_project.gen/sources_1/bd/system/ipshared/f0b6/hdl/verilog" "+incdir+../../../../gpio_project.gen/sources_1/bd/system/ipshared/00fe/hdl/verilog" "+incdir+../../../../../../../../opt/Xilinx/2025.2/data/rsb/busdef" "+incdir+/opt/Xilinx/2025.2/data/xilinx_vip/include" -l xilinx_vip -l xpm -l axi_infrastructure_v1_1_0 -l axi_vip_v1_1_22 -l processing_system7_vip_v1_0_24 -l xil_defaultlib -l proc_sys_reset_v5_0_17 -l smartconnect_v1_0 -l axi_register_slice_v2_1_36 -l xlconcat_v2_1_7 \
+"../../../../gpio_project.gen/sources_1/bd/system/ipshared/3051/hdl/sc_si_converter_v1_0_vl_rfs.sv" \
+
+vlog -work xil_defaultlib  -incr "+incdir+../../../../gpio_project.gen/sources_1/bd/system/ipshared/ec67/hdl" "+incdir+../../../../gpio_project.gen/sources_1/bd/system/ipshared/9a25/hdl" "+incdir+../../../../gpio_project.gen/sources_1/bd/system/ipshared/f0b6/hdl/verilog" "+incdir+../../../../gpio_project.gen/sources_1/bd/system/ipshared/00fe/hdl/verilog" "+incdir+../../../../../../../../opt/Xilinx/2025.2/data/rsb/busdef" "+incdir+/opt/Xilinx/2025.2/data/xilinx_vip/include" -l xilinx_vip -l xpm -l axi_infrastructure_v1_1_0 -l axi_vip_v1_1_22 -l processing_system7_vip_v1_0_24 -l xil_defaultlib -l proc_sys_reset_v5_0_17 -l smartconnect_v1_0 -l axi_register_slice_v2_1_36 -l xlconcat_v2_1_7 \
+"../../../bd/system/ip/system_axi_smc_0/bd_0/ip/ip_19/sim/bd_44e3_s00sic_0.sv" \
+
+vlog -work smartconnect_v1_0  -incr "+incdir+../../../../gpio_project.gen/sources_1/bd/system/ipshared/ec67/hdl" "+incdir+../../../../gpio_project.gen/sources_1/bd/system/ipshared/9a25/hdl" "+incdir+../../../../gpio_project.gen/sources_1/bd/system/ipshared/f0b6/hdl/verilog" "+incdir+../../../../gpio_project.gen/sources_1/bd/system/ipshared/00fe/hdl/verilog" "+incdir+../../../../../../../../opt/Xilinx/2025.2/data/rsb/busdef" "+incdir+/opt/Xilinx/2025.2/data/xilinx_vip/include" -l xilinx_vip -l xpm -l axi_infrastructure_v1_1_0 -l axi_vip_v1_1_22 -l processing_system7_vip_v1_0_24 -l xil_defaultlib -l proc_sys_reset_v5_0_17 -l smartconnect_v1_0 -l axi_register_slice_v2_1_36 -l xlconcat_v2_1_7 \
+"../../../../gpio_project.gen/sources_1/bd/system/ipshared/852f/hdl/sc_axi2sc_v1_0_vl_rfs.sv" \
+
+vlog -work xil_defaultlib  -incr "+incdir+../../../../gpio_project.gen/sources_1/bd/system/ipshared/ec67/hdl" "+incdir+../../../../gpio_project.gen/sources_1/bd/system/ipshared/9a25/hdl" "+incdir+../../../../gpio_project.gen/sources_1/bd/system/ipshared/f0b6/hdl/verilog" "+incdir+../../../../gpio_project.gen/sources_1/bd/system/ipshared/00fe/hdl/verilog" "+incdir+../../../../../../../../opt/Xilinx/2025.2/data/rsb/busdef" "+incdir+/opt/Xilinx/2025.2/data/xilinx_vip/include" -l xilinx_vip -l xpm -l axi_infrastructure_v1_1_0 -l axi_vip_v1_1_22 -l processing_system7_vip_v1_0_24 -l xil_defaultlib -l proc_sys_reset_v5_0_17 -l smartconnect_v1_0 -l axi_register_slice_v2_1_36 -l xlconcat_v2_1_7 \
+"../../../bd/system/ip/system_axi_smc_0/bd_0/ip/ip_20/sim/bd_44e3_s00a2s_0.sv" \
+"../../../bd/system/ip/system_axi_smc_0/bd_0/ip/ip_21/sim/bd_44e3_sarn_0.sv" \
+"../../../bd/system/ip/system_axi_smc_0/bd_0/ip/ip_22/sim/bd_44e3_srn_0.sv" \
+"../../../bd/system/ip/system_axi_smc_0/bd_0/ip/ip_23/sim/bd_44e3_sawn_0.sv" \
+"../../../bd/system/ip/system_axi_smc_0/bd_0/ip/ip_24/sim/bd_44e3_swn_0.sv" \
+"../../../bd/system/ip/system_axi_smc_0/bd_0/ip/ip_25/sim/bd_44e3_sbn_0.sv" \
 
 vlog -work smartconnect_v1_0  -incr "+incdir+../../../../gpio_project.gen/sources_1/bd/system/ipshared/ec67/hdl" "+incdir+../../../../gpio_project.gen/sources_1/bd/system/ipshared/9a25/hdl" "+incdir+../../../../gpio_project.gen/sources_1/bd/system/ipshared/f0b6/hdl/verilog" "+incdir+../../../../gpio_project.gen/sources_1/bd/system/ipshared/00fe/hdl/verilog" "+incdir+../../../../../../../../opt/Xilinx/2025.2/data/rsb/busdef" "+incdir+/opt/Xilinx/2025.2/data/xilinx_vip/include" -l xilinx_vip -l xpm -l axi_infrastructure_v1_1_0 -l axi_vip_v1_1_22 -l processing_system7_vip_v1_0_24 -l xil_defaultlib -l proc_sys_reset_v5_0_17 -l smartconnect_v1_0 -l axi_register_slice_v2_1_36 -l xlconcat_v2_1_7 \
 "../../../../gpio_project.gen/sources_1/bd/system/ipshared/fca9/hdl/sc_sc2axi_v1_0_vl_rfs.sv" \
 
 vlog -work xil_defaultlib  -incr "+incdir+../../../../gpio_project.gen/sources_1/bd/system/ipshared/ec67/hdl" "+incdir+../../../../gpio_project.gen/sources_1/bd/system/ipshared/9a25/hdl" "+incdir+../../../../gpio_project.gen/sources_1/bd/system/ipshared/f0b6/hdl/verilog" "+incdir+../../../../gpio_project.gen/sources_1/bd/system/ipshared/00fe/hdl/verilog" "+incdir+../../../../../../../../opt/Xilinx/2025.2/data/rsb/busdef" "+incdir+/opt/Xilinx/2025.2/data/xilinx_vip/include" -l xilinx_vip -l xpm -l axi_infrastructure_v1_1_0 -l axi_vip_v1_1_22 -l processing_system7_vip_v1_0_24 -l xil_defaultlib -l proc_sys_reset_v5_0_17 -l smartconnect_v1_0 -l axi_register_slice_v2_1_36 -l xlconcat_v2_1_7 \
-"../../../bd/system/ip/system_axi_smc_0/bd_0/ip/ip_11/sim/bd_44e3_m00s2a_0.sv" \
+"../../../bd/system/ip/system_axi_smc_0/bd_0/ip/ip_26/sim/bd_44e3_m00s2a_0.sv" \
+"../../../bd/system/ip/system_axi_smc_0/bd_0/ip/ip_27/sim/bd_44e3_m00arn_0.sv" \
+"../../../bd/system/ip/system_axi_smc_0/bd_0/ip/ip_28/sim/bd_44e3_m00rn_0.sv" \
+"../../../bd/system/ip/system_axi_smc_0/bd_0/ip/ip_29/sim/bd_44e3_m00awn_0.sv" \
+"../../../bd/system/ip/system_axi_smc_0/bd_0/ip/ip_30/sim/bd_44e3_m00wn_0.sv" \
+"../../../bd/system/ip/system_axi_smc_0/bd_0/ip/ip_31/sim/bd_44e3_m00bn_0.sv" \
 
 vlog -work smartconnect_v1_0  -incr "+incdir+../../../../gpio_project.gen/sources_1/bd/system/ipshared/ec67/hdl" "+incdir+../../../../gpio_project.gen/sources_1/bd/system/ipshared/9a25/hdl" "+incdir+../../../../gpio_project.gen/sources_1/bd/system/ipshared/f0b6/hdl/verilog" "+incdir+../../../../gpio_project.gen/sources_1/bd/system/ipshared/00fe/hdl/verilog" "+incdir+../../../../../../../../opt/Xilinx/2025.2/data/rsb/busdef" "+incdir+/opt/Xilinx/2025.2/data/xilinx_vip/include" -l xilinx_vip -l xpm -l axi_infrastructure_v1_1_0 -l axi_vip_v1_1_22 -l processing_system7_vip_v1_0_24 -l xil_defaultlib -l proc_sys_reset_v5_0_17 -l smartconnect_v1_0 -l axi_register_slice_v2_1_36 -l xlconcat_v2_1_7 \
 "../../../../gpio_project.gen/sources_1/bd/system/ipshared/e44a/hdl/sc_exit_v1_0_vl_rfs.sv" \
 
 vlog -work xil_defaultlib  -incr "+incdir+../../../../gpio_project.gen/sources_1/bd/system/ipshared/ec67/hdl" "+incdir+../../../../gpio_project.gen/sources_1/bd/system/ipshared/9a25/hdl" "+incdir+../../../../gpio_project.gen/sources_1/bd/system/ipshared/f0b6/hdl/verilog" "+incdir+../../../../gpio_project.gen/sources_1/bd/system/ipshared/00fe/hdl/verilog" "+incdir+../../../../../../../../opt/Xilinx/2025.2/data/rsb/busdef" "+incdir+/opt/Xilinx/2025.2/data/xilinx_vip/include" -l xilinx_vip -l xpm -l axi_infrastructure_v1_1_0 -l axi_vip_v1_1_22 -l processing_system7_vip_v1_0_24 -l xil_defaultlib -l proc_sys_reset_v5_0_17 -l smartconnect_v1_0 -l axi_register_slice_v2_1_36 -l xlconcat_v2_1_7 \
-"../../../bd/system/ip/system_axi_smc_0/bd_0/ip/ip_12/sim/bd_44e3_m00e_0.sv" \
+"../../../bd/system/ip/system_axi_smc_0/bd_0/ip/ip_32/sim/bd_44e3_m00e_0.sv" \
+"../../../bd/system/ip/system_axi_smc_0/bd_0/ip/ip_33/sim/bd_44e3_m01s2a_0.sv" \
+"../../../bd/system/ip/system_axi_smc_0/bd_0/ip/ip_34/sim/bd_44e3_m01arn_0.sv" \
+"../../../bd/system/ip/system_axi_smc_0/bd_0/ip/ip_35/sim/bd_44e3_m01rn_0.sv" \
+"../../../bd/system/ip/system_axi_smc_0/bd_0/ip/ip_36/sim/bd_44e3_m01awn_0.sv" \
+"../../../bd/system/ip/system_axi_smc_0/bd_0/ip/ip_37/sim/bd_44e3_m01wn_0.sv" \
+"../../../bd/system/ip/system_axi_smc_0/bd_0/ip/ip_38/sim/bd_44e3_m01bn_0.sv" \
+"../../../bd/system/ip/system_axi_smc_0/bd_0/ip/ip_39/sim/bd_44e3_m01e_0.sv" \
 
 vcom -work smartconnect_v1_0 -93  -incr \
 "../../../../gpio_project.gen/sources_1/bd/system/ipshared/cb42/hdl/sc_ultralite_v1_0_rfs.vhd" \
 
 vlog -work smartconnect_v1_0  -incr "+incdir+../../../../gpio_project.gen/sources_1/bd/system/ipshared/ec67/hdl" "+incdir+../../../../gpio_project.gen/sources_1/bd/system/ipshared/9a25/hdl" "+incdir+../../../../gpio_project.gen/sources_1/bd/system/ipshared/f0b6/hdl/verilog" "+incdir+../../../../gpio_project.gen/sources_1/bd/system/ipshared/00fe/hdl/verilog" "+incdir+../../../../../../../../opt/Xilinx/2025.2/data/rsb/busdef" "+incdir+/opt/Xilinx/2025.2/data/xilinx_vip/include" -l xilinx_vip -l xpm -l axi_infrastructure_v1_1_0 -l axi_vip_v1_1_22 -l processing_system7_vip_v1_0_24 -l xil_defaultlib -l proc_sys_reset_v5_0_17 -l smartconnect_v1_0 -l axi_register_slice_v2_1_36 -l xlconcat_v2_1_7 \
 "../../../../gpio_project.gen/sources_1/bd/system/ipshared/cb42/hdl/sc_ultralite_v1_0_rfs.sv" \
-"../../../../gpio_project.gen/sources_1/bd/system/ipshared/0848/hdl/sc_switchboard_v1_0_vl_rfs.sv" \
 
 vlog -work axi_register_slice_v2_1_36  -incr -v2k5 "+incdir+../../../../gpio_project.gen/sources_1/bd/system/ipshared/ec67/hdl" "+incdir+../../../../gpio_project.gen/sources_1/bd/system/ipshared/9a25/hdl" "+incdir+../../../../gpio_project.gen/sources_1/bd/system/ipshared/f0b6/hdl/verilog" "+incdir+../../../../gpio_project.gen/sources_1/bd/system/ipshared/00fe/hdl/verilog" "+incdir+../../../../../../../../opt/Xilinx/2025.2/data/rsb/busdef" "+incdir+/opt/Xilinx/2025.2/data/xilinx_vip/include" -l xilinx_vip -l xpm -l axi_infrastructure_v1_1_0 -l axi_vip_v1_1_22 -l processing_system7_vip_v1_0_24 -l xil_defaultlib -l proc_sys_reset_v5_0_17 -l smartconnect_v1_0 -l axi_register_slice_v2_1_36 -l xlconcat_v2_1_7 \
 "../../../../gpio_project.gen/sources_1/bd/system/ipshared/bc4b/hdl/axi_register_slice_v2_1_vl_rfs.v" \
@@ -139,6 +170,13 @@ vlog -work xlconcat_v2_1_7  -incr -v2k5 "+incdir+../../../../gpio_project.gen/so
 
 vlog -work xil_defaultlib  -incr -v2k5 "+incdir+../../../../gpio_project.gen/sources_1/bd/system/ipshared/ec67/hdl" "+incdir+../../../../gpio_project.gen/sources_1/bd/system/ipshared/9a25/hdl" "+incdir+../../../../gpio_project.gen/sources_1/bd/system/ipshared/f0b6/hdl/verilog" "+incdir+../../../../gpio_project.gen/sources_1/bd/system/ipshared/00fe/hdl/verilog" "+incdir+../../../../../../../../opt/Xilinx/2025.2/data/rsb/busdef" "+incdir+/opt/Xilinx/2025.2/data/xilinx_vip/include" -l xilinx_vip -l xpm -l axi_infrastructure_v1_1_0 -l axi_vip_v1_1_22 -l processing_system7_vip_v1_0_24 -l xil_defaultlib -l proc_sys_reset_v5_0_17 -l smartconnect_v1_0 -l axi_register_slice_v2_1_36 -l xlconcat_v2_1_7 \
 "../../../bd/system/ip/system_xlconcat_0_0/sim/system_xlconcat_0_0.v" \
+
+vlog -work xil_defaultlib  -incr "+incdir+../../../../gpio_project.gen/sources_1/bd/system/ipshared/ec67/hdl" "+incdir+../../../../gpio_project.gen/sources_1/bd/system/ipshared/9a25/hdl" "+incdir+../../../../gpio_project.gen/sources_1/bd/system/ipshared/f0b6/hdl/verilog" "+incdir+../../../../gpio_project.gen/sources_1/bd/system/ipshared/00fe/hdl/verilog" "+incdir+../../../../../../../../opt/Xilinx/2025.2/data/rsb/busdef" "+incdir+/opt/Xilinx/2025.2/data/xilinx_vip/include" -l xilinx_vip -l xpm -l axi_infrastructure_v1_1_0 -l axi_vip_v1_1_22 -l processing_system7_vip_v1_0_24 -l xil_defaultlib -l proc_sys_reset_v5_0_17 -l smartconnect_v1_0 -l axi_register_slice_v2_1_36 -l xlconcat_v2_1_7 \
+"../../../bd/system/ipshared/e476/hdl/My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v" \
+
+vlog -work xil_defaultlib  -incr -v2k5 "+incdir+../../../../gpio_project.gen/sources_1/bd/system/ipshared/ec67/hdl" "+incdir+../../../../gpio_project.gen/sources_1/bd/system/ipshared/9a25/hdl" "+incdir+../../../../gpio_project.gen/sources_1/bd/system/ipshared/f0b6/hdl/verilog" "+incdir+../../../../gpio_project.gen/sources_1/bd/system/ipshared/00fe/hdl/verilog" "+incdir+../../../../../../../../opt/Xilinx/2025.2/data/rsb/busdef" "+incdir+/opt/Xilinx/2025.2/data/xilinx_vip/include" -l xilinx_vip -l xpm -l axi_infrastructure_v1_1_0 -l axi_vip_v1_1_22 -l processing_system7_vip_v1_0_24 -l xil_defaultlib -l proc_sys_reset_v5_0_17 -l smartconnect_v1_0 -l axi_register_slice_v2_1_36 -l xlconcat_v2_1_7 \
+"../../../bd/system/ipshared/e476/hdl/My_SPI.v" \
+"../../../bd/system/ip/system_My_SPI_0_4/sim/system_My_SPI_0_4.v" \
 "../../../bd/system/sim/system.v" \
 
 vlog -work xil_defaultlib \

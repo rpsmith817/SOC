@@ -1,0 +1,53 @@
+#-----------------------------------------------------------
+# Vivado v2025.2 (64-bit)
+# SW Build 6299465 on Fri Nov 14 12:34:56 MST 2025
+# IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
+# SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
+# Start of session at: Thu Oct 15 11:57:21 2026
+# Process ID         : 442052
+# Current directory  : /home/rps/fpga
+# Command line       : vivado
+# Log file           : /home/rps/fpga/vivado.log
+# Journal file       : /home/rps/fpga/vivado.jou
+# Running On         : rps-ThinkPad-T16-Gen-4
+# Platform           : Ubuntu
+# Operating System   : Ubuntu 24.04.5 LTS
+# Processor Detail   : Intel(R) Core(TM) Ultra 7 265U
+# CPU Frequency      : 1900.000 MHz
+# CPU Physical cores : 12
+# CPU Logical cores  : 14
+# Host memory        : 33044 MB
+# Swap memory        : 8589 MB
+# Total Virtual      : 41634 MB
+# Available Virtual  : 39806 MB
+#-----------------------------------------------------------
+start_gui
+open_project /home/rps/fpga/gpio_project/gpio_project.xpr
+update_compile_order -fileset sources_1
+open_hw_manager
+connect_hw_server -allow_non_jtag
+open_hw_target
+set_property PROGRAM.FILE {/home/rps/fpga/gpio_project/gpio_project.runs/impl_1/gpio_system_top.bit} [get_hw_devices xc7z007s_1]
+current_hw_device [get_hw_devices xc7z007s_1]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7z007s_1] 0]
+reset_run synth_1
+launch_runs impl_1 -jobs 8
+wait_on_run impl_1
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+wait_on_run impl_1
+reset_run synth_1
+launch_runs impl_1 -jobs 8
+wait_on_run impl_1
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+wait_on_run impl_1
+set_property PROBES.FILE {} [get_hw_devices xc7z007s_1]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7z007s_1]
+set_property PROGRAM.FILE {/home/rps/fpga/gpio_project/gpio_project.runs/impl_1/gpio_system_top.bit} [get_hw_devices xc7z007s_1]
+program_hw_devices [get_hw_devices xc7z007s_1]
+refresh_hw_device [lindex [get_hw_devices xc7z007s_1] 0]
+ipx::edit_ip_in_project -upgrade true -name My_SPI_v1_0_project -directory /home/rps/fpga/gpio_project/gpio_project.tmp/My_SPI_v1_0_project /home/rps/fpga/ip_repo/My_SPI_1_0/component.xml
+update_compile_order -fileset sources_1
+current_project gpio_project
+current_project My_SPI_v1_0_project
+current_project gpio_project
+close_project

@@ -1,13 +1,13 @@
-// Top level file for GPIO example for Xilinx XUP Blackboard rev D 
+// Top level file for hosting various modules for Xilinx XUP Blackboard rev D 
 // (gpio_system_top.sv)
-// Jason Losh
+// ryan smith adapted from gpio example by Jason Losh
 //
 // 32-bit GPIO port:
 //   GPIO port for IP module tied to GPIO [23:0]
 //   INTR debug output for IP module tied to RGB0[1]
 //   AXI4-lite aperature memory offset is 0x00000000
 
-module gpio_system_top (
+module the_system_top (
     input CLK100,
     output [9:0] LED,       // RGB1, RGB0, LED 9..0 placed from left to right
     output [2:0] RGB0,      
@@ -62,7 +62,7 @@ module gpio_system_top (
     assign RGB1 = 3'b000;
     // assign SS_ANODE = 4'b0000;
     // assign SS_CATHODE = 8'b11111111;
-    // assign GPIO = 24'bzzzzzzzzzzzzzzzzzzzzzzzz;
+    assign GPIO[23:1] = 23'bzzzzzzzzzzzzzzzzzzzzzzz;
     assign SERVO = 4'b0000;
     assign PDM_SPEAKER = 1'b0;
     assign PDM_MIC_CLK = 1'b0;
@@ -73,24 +73,87 @@ module gpio_system_top (
     assign IMU_CS_M = 1'b1;
     assign IMU_DEN_AG = 1'b0;
 
-    // display g (gpio) on left seven segment display
+
+    // display c (crude) on left seven segment display
     assign SS_ANODE = 4'b0111;
-    assign SS_CATHODE = 8'b10010000;
+    assign SS_CATHODE = 8'b10100111;
+    
 
     // Tie gpio to PMOD connectors
     wire [31:0] gpio_data_in;
     wire [31:0] gpio_data_out;
     wire [31:0] gpio_data_oe;
 
-    // pin control
-    genvar j;
-    for (j = 0; j < 22; j = j + 1)
-        assign GPIO[j] = gpio_data_oe[j] ? gpio_data_out[j] : 1'bz;
-    assign gpio_data_in = {8'b0, GPIO[23:0]};
+//    // pin control
+//    genvar j;
+//    for (j = 1; j < 21; j = j + 1)
+//        assign GPIO[j] = gpio_data_oe[j] ? gpio_data_out[j] : 1'bz;
+//    assign gpio_data_in = {8'b0, GPIO[22:1]};
+
+//    // pin control
+//    genvar j;
+//    for (j = 1; j < 21; j = j + 1)
+//        assign GPIO[j] = gpio_data_oe[j] ? gpio_data_out[j] : 1'bz;
+//    assign gpio_data_in = {8'b0, GPIO[22:1]};
         
     // Tie intr output to RGB0 green LED
     wire intr;
     assign RGB0 = {1'b0, intr, 1'b0};
+
+
+//SPI
+    wire [31:0] datain;
+    wire [31:0] dataout;
+    wire [31:0] status; //        .rd_index(status[31:28]),.wr_index(status[27:24]),.watermark(status[23:20])
+    wire clr_overflow;
+    wire rd_req;
+    wire wr_req;
+    wire empty;
+    wire full;
+    wire overflow;
+    wire baud_clk;
+    
+    //metastability for switches & a button
+    reg [11:0] sw_last;
+    reg [11:0] sw_final;
+    reg reset_btn_last;
+    reg reset_btn_final;
+    always_ff @(posedge CLK100)
+    begin
+        sw_last <= SW;
+        sw_final <= sw_last;
+        reset_btn_last <= PB[3];
+        reset_btn_final <= reset_btn_last;
+    end
+
+    assign GPIO[0] = baud_clk;
+
+//    //tryna reset and failing. figure it out later no time rn
+//    wire resetter;
+//    assign resetter = (DDR_reset_n | reset_btn_final);
+    
+    //sw handlin
+    reg [11:0] led_out;
+    always_ff @ (posedge CLK100)
+    begin
+        if(sw_final[1:0] == 2'b00)
+        begin
+            led_out[3:0] <= status[31:28];  //rd_index
+            led_out[7:4] <= status[27:24];  //wr_index
+            led_out[9:8] <= 2'b0;
+        end
+        if(sw_final[1:0] == 2'b01)
+        begin
+            led_out[9:0] <= {2'b0,status[23:20],1'b0,status[2:0]};    //watermark on the left; 5 blanks fe,ff,ov on the right
+        end
+        if(sw_final[1:0] == 2'b10)
+        begin
+            led_out[9:0] <= dataout[9:0];
+        end        
+    end
+    
+    assign LED = led_out;
+
 
     // Instantiate system wrapper
     system_wrapper system(
@@ -118,6 +181,17 @@ module gpio_system_top (
         .gpio_data_in(gpio_data_in),
         .gpio_data_out(gpio_data_out),
         .gpio_data_oe(gpio_data_oe),
-        .intr(intr));
+        .intr(intr),
+        .datain(datain),
+        .dataout(dataout),
+        .status(status),
+        .clr_overflow(clr_overflow),
+        .rd_req(0), //set definite, maybe we will have cause to poke it later, but for now any wr/rd should just do
+        .wr_req(0), //ditto
+        .empty(empty),
+        .full(full),
+        .overflow(overflow),
+        .baud_clk(baud_clk)
+        );
 
 endmodule

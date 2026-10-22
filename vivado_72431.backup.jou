@@ -1,0 +1,379 @@
+#-----------------------------------------------------------
+# Vivado v2025.2 (64-bit)
+# SW Build 6299465 on Fri Nov 14 12:34:56 MST 2025
+# IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
+# SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
+# Start of session at: Tue Oct 13 16:03:04 2026
+# Process ID         : 72431
+# Current directory  : /home/rps/fpga
+# Command line       : vivado
+# Log file           : /home/rps/fpga/vivado.log
+# Journal file       : /home/rps/fpga/vivado.jou
+# Running On         : rps-ThinkPad-T16-Gen-4
+# Platform           : Ubuntu
+# Operating System   : Ubuntu 24.04.5 LTS
+# Processor Detail   : Intel(R) Core(TM) Ultra 7 265U
+# CPU Frequency      : 2272.676 MHz
+# CPU Physical cores : 12
+# CPU Logical cores  : 14
+# Host memory        : 33044 MB
+# Swap memory        : 8589 MB
+# Total Virtual      : 41634 MB
+# Available Virtual  : 38353 MB
+#-----------------------------------------------------------
+start_gui
+open_project /home/rps/fpga/gpio_project/gpio_project.xpr
+update_compile_order -fileset sources_1
+open_bd_design {/home/rps/fpga/gpio_project/gpio_project.srcs/sources_1/bd/system/system.bd}
+set_property location {4 1471 356} [get_bd_cells My_SPI_0]
+set_property location {4 1458 343} [get_bd_cells My_SPI_0]
+delete_bd_objs [get_bd_intf_nets axi_smc_M01_AXI] [get_bd_nets rd_req_0_1] [get_bd_nets wr_req_0_1] [get_bd_nets datain_0_1] [get_bd_nets My_SPI_0_dataout] [get_bd_nets clr_overflow_0_1] [get_bd_nets My_SPI_0_empty] [get_bd_nets My_SPI_0_full] [get_bd_nets My_SPI_0_overflow] [get_bd_cells My_SPI_0]
+create_bd_cell -type ip -vlnv user.org:user:My_SPI:1.0 My_SPI_0
+set_property location {4 1476 313} [get_bd_cells My_SPI_0]
+set_property location {4 1471 355} [get_bd_cells My_SPI_0]
+apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {/processing_system7_0/FCLK_CLK0 (100 MHz)} Clk_slave {Auto} Clk_xbar {/processing_system7_0/FCLK_CLK0 (100 MHz)} Master {/processing_system7_0/M_AXI_GP0} Slave {/My_SPI_0/AXI_Interface_SPI} ddr_seg {Auto} intc_ip {/axi_smc} master_apm {0}}  [get_bd_intf_pins My_SPI_0/AXI_Interface_SPI]
+connect_bd_net [get_bd_ports dataout_0] [get_bd_pins My_SPI_0/dataout]
+connect_bd_net [get_bd_ports empty_0] [get_bd_pins My_SPI_0/empty]
+connect_bd_net [get_bd_ports full_0] [get_bd_pins My_SPI_0/full]
+connect_bd_net [get_bd_ports overflow_0] [get_bd_pins My_SPI_0/overflow]
+set_property location {2 563 647} [get_bd_cells My_SPI_0]
+connect_bd_net [get_bd_ports wr_req_0] [get_bd_pins My_SPI_0/wr_req]
+connect_bd_net [get_bd_ports datain_0] [get_bd_pins My_SPI_0/datain]
+connect_bd_net [get_bd_ports clr_overflow_0] [get_bd_pins My_SPI_0/clr_overflow]
+connect_bd_net [get_bd_ports rd_req_0] [get_bd_pins My_SPI_0/rd_req]
+startgroup
+make_bd_pins_external  [get_bd_pins My_SPI_0/status]
+endgroup
+set_property name wr_req [get_bd_ports wr_req_0]
+set_property name datain [get_bd_ports datain_0]
+set_property name rd_req [get_bd_ports rd_req_0]
+set_property name clr_overflow [get_bd_ports clr_overflow_0]
+set_property name dataout [get_bd_ports dataout_0]
+set_property name empty [get_bd_ports empty_0]
+set_property name full [get_bd_ports full_0]
+set_property name overflow [get_bd_ports overflow_0]
+set_property name status [get_bd_ports status_0]
+regenerate_bd_layout
+save_bd_design
+ipx::edit_ip_in_project -upgrade true -name My_SPI_v1_0_project -directory /home/rps/fpga/gpio_project/gpio_project.tmp/My_SPI_v1_0_project /home/rps/fpga/ip_repo/My_SPI_1_0/component.xml
+update_compile_order -fileset sources_1
+ipx::merge_project_changes files [ipx::current_core]
+ipx::merge_project_changes ports [ipx::current_core]
+set_property core_revision 13 [ipx::current_core]
+ipx::update_source_project_archive -component [ipx::current_core]
+ipx::create_xgui_files [ipx::current_core]
+ipx::update_checksums [ipx::current_core]
+ipx::check_integrity [ipx::current_core]
+ipx::save_core [ipx::current_core]
+ipx::move_temp_component_back -component [ipx::current_core]
+close_project -delete
+update_ip_catalog -rebuild -repo_path /home/rps/fpga/ip_repo/My_SPI_1_0
+regenerate_bd_layout
+report_ip_status -name ip_status 
+upgrade_ip -vlnv user.org:user:My_SPI:1.0 [get_ips  system_My_SPI_0_3] -log ip_upgrade.log
+export_ip_user_files -of_objects [get_ips system_My_SPI_0_3] -no_script -sync -force -quiet
+generate_target all [get_files  /home/rps/fpga/gpio_project/gpio_project.srcs/sources_1/bd/system/system.bd]
+catch { config_ip_cache -export [get_ips -all system_axi_smc_0] }
+catch { config_ip_cache -export [get_ips -all system_My_SPI_0_3] }
+export_ip_user_files -of_objects [get_files /home/rps/fpga/gpio_project/gpio_project.srcs/sources_1/bd/system/system.bd] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] /home/rps/fpga/gpio_project/gpio_project.srcs/sources_1/bd/system/system.bd]
+launch_runs system_My_SPI_0_3_synth_1 system_axi_smc_0_synth_1 -jobs 8
+wait_on_run system_My_SPI_0_3_synth_1
+wait_on_run system_axi_smc_0_synth_1
+export_simulation -lib_map_path [list {modelsim=/home/rps/fpga/gpio_project/gpio_project.cache/compile_simlib/modelsim} {questa=/home/rps/fpga/gpio_project/gpio_project.cache/compile_simlib/questa} {xcelium=/home/rps/fpga/gpio_project/gpio_project.cache/compile_simlib/xcelium} {vcs=/home/rps/fpga/gpio_project/gpio_project.cache/compile_simlib/vcs} {riviera=/home/rps/fpga/gpio_project/gpio_project.cache/compile_simlib/riviera}] -of_objects [get_files /home/rps/fpga/gpio_project/gpio_project.srcs/sources_1/bd/system/system.bd] -directory /home/rps/fpga/gpio_project/gpio_project.ip_user_files/sim_scripts -ip_user_files_dir /home/rps/fpga/gpio_project/gpio_project.ip_user_files -ipstatic_source_dir /home/rps/fpga/gpio_project/gpio_project.ip_user_files/ipstatic -use_ip_compiled_libs -force -quiet
+report_ip_status -name ip_status 
+regenerate_bd_layout
+ipx::edit_ip_in_project -upgrade true -name My_SPI_v1_0_project -directory /home/rps/fpga/gpio_project/gpio_project.tmp/My_SPI_v1_0_project /home/rps/fpga/ip_repo/My_SPI_1_0/component.xml
+update_compile_order -fileset sources_1
+current_project gpio_project
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+reset_run system_My_SPI_0_3_synth_1
+reset_run synth_1
+launch_runs synth_1 -jobs 8
+wait_on_run synth_1
+current_project My_SPI_v1_0_project
+launch_runs synth_1 -jobs 8
+wait_on_run synth_1
+reset_run synth_1
+launch_runs synth_1 -jobs 8
+wait_on_run synth_1
+reset_run synth_1
+launch_runs synth_1 -jobs 8
+wait_on_run synth_1
+reset_run synth_1
+launch_runs synth_1 -jobs 8
+wait_on_run synth_1
+reset_run synth_1
+launch_runs synth_1 -jobs 8
+wait_on_run synth_1
+reset_run synth_1
+launch_runs synth_1 -jobs 8
+wait_on_run synth_1
+reset_run synth_1
+launch_runs synth_1 -jobs 8
+wait_on_run synth_1
+reset_run synth_1
+launch_runs synth_1 -jobs 8
+wait_on_run synth_1
+reset_run synth_1
+launch_runs synth_1 -jobs 8
+wait_on_run synth_1
+reset_run synth_1
+launch_runs synth_1 -jobs 8
+wait_on_run synth_1
+current_project gpio_project
+ipx::edit_ip_in_project -upgrade true -name gpio_v1_0_project -directory /home/rps/fpga/gpio_project/gpio_project.tmp/gpio_v1_0_project /home/rps/fpga/ip_repo/gpio_1_0/component.xml
+update_compile_order -fileset sources_1
+current_project My_SPI_v1_0_project
+reset_run synth_1
+launch_runs synth_1 -jobs 8
+wait_on_run synth_1
+reset_run synth_1
+launch_runs synth_1 -jobs 8
+wait_on_run synth_1
+ipx::merge_project_changes files [ipx::current_core]
+ipx::merge_project_changes ports [ipx::current_core]
+set_property core_revision 14 [ipx::current_core]
+ipx::update_source_project_archive -component [ipx::current_core]
+ipx::create_xgui_files [ipx::current_core]
+ipx::update_checksums [ipx::current_core]
+ipx::check_integrity [ipx::current_core]
+ipx::save_core [ipx::current_core]
+ipx::move_temp_component_back -component [ipx::current_core]
+close_project -delete
+update_ip_catalog -rebuild -repo_path /home/rps/fpga/ip_repo/My_SPI_1_0
+current_project gpio_project
+update_ip_catalog -rebuild -scan_changes
+report_ip_status -name ip_status
+current_project gpio_v1_0_project
+current_project gpio_project
+upgrade_ip -vlnv user.org:user:My_SPI:1.0 [get_ips  system_My_SPI_0_3] -log ip_upgrade.log
+export_ip_user_files -of_objects [get_ips system_My_SPI_0_3] -no_script -sync -force -quiet
+generate_target all [get_files  /home/rps/fpga/gpio_project/gpio_project.srcs/sources_1/bd/system/system.bd]
+catch { config_ip_cache -export [get_ips -all system_axi_smc_0] }
+catch { [ delete_ip_run [get_ips -all system_axi_smc_0] ] }
+catch { config_ip_cache -export [get_ips -all system_My_SPI_0_3] }
+export_ip_user_files -of_objects [get_files /home/rps/fpga/gpio_project/gpio_project.srcs/sources_1/bd/system/system.bd] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] /home/rps/fpga/gpio_project/gpio_project.srcs/sources_1/bd/system/system.bd]
+launch_runs system_My_SPI_0_3_synth_1 -jobs 8
+wait_on_run system_My_SPI_0_3_synth_1
+export_simulation -lib_map_path [list {modelsim=/home/rps/fpga/gpio_project/gpio_project.cache/compile_simlib/modelsim} {questa=/home/rps/fpga/gpio_project/gpio_project.cache/compile_simlib/questa} {xcelium=/home/rps/fpga/gpio_project/gpio_project.cache/compile_simlib/xcelium} {vcs=/home/rps/fpga/gpio_project/gpio_project.cache/compile_simlib/vcs} {riviera=/home/rps/fpga/gpio_project/gpio_project.cache/compile_simlib/riviera}] -of_objects [get_files /home/rps/fpga/gpio_project/gpio_project.srcs/sources_1/bd/system/system.bd] -directory /home/rps/fpga/gpio_project/gpio_project.ip_user_files/sim_scripts -ip_user_files_dir /home/rps/fpga/gpio_project/gpio_project.ip_user_files -ipstatic_source_dir /home/rps/fpga/gpio_project/gpio_project.ip_user_files/ipstatic -use_ip_compiled_libs -force -quiet
+report_ip_status -name ip_status 
+reset_run synth_1
+launch_runs synth_1 -jobs 8
+wait_on_run synth_1
+launch_runs impl_1 -jobs 8
+wait_on_run impl_1
+open_run impl_1
+synth_design -rtl -rtl_skip_mlo -name rtl_1
+current_project gpio_v1_0_project
+close_project
+ipx::edit_ip_in_project -upgrade true -name My_SPI_v1_0_project -directory /home/rps/fpga/gpio_project/gpio_project.tmp/My_SPI_v1_0_project /home/rps/fpga/ip_repo/My_SPI_1_0/component.xml
+update_compile_order -fileset sources_1
+ipx::merge_project_changes files [ipx::current_core]
+ipx::merge_project_changes ports [ipx::current_core]
+set_property core_revision 15 [ipx::current_core]
+ipx::update_source_project_archive -component [ipx::current_core]
+ipx::create_xgui_files [ipx::current_core]
+ipx::update_checksums [ipx::current_core]
+ipx::check_integrity [ipx::current_core]
+ipx::save_core [ipx::current_core]
+ipx::move_temp_component_back -component [ipx::current_core]
+close_project -delete
+update_ip_catalog -rebuild -repo_path /home/rps/fpga/ip_repo/My_SPI_1_0
+ipx::edit_ip_in_project -upgrade true -name My_SPI_v1_0_project -directory /home/rps/fpga/gpio_project/gpio_project.tmp/My_SPI_v1_0_project /home/rps/fpga/ip_repo/My_SPI_1_0/component.xml
+update_compile_order -fileset sources_1
+current_project gpio_project
+report_ip_status -name ip_status 
+upgrade_ip -vlnv user.org:user:My_SPI:1.0 [get_ips  system_My_SPI_0_3] -log ip_upgrade.log
+export_ip_user_files -of_objects [get_ips system_My_SPI_0_3] -no_script -sync -force -quiet
+report_ip_status -name ip_status 
+reset_run synth_1
+launch_runs synth_1 -jobs 8
+wait_on_run synth_1
+ipx::edit_ip_in_project -upgrade true -name My_SPI_v1_0_project -directory /home/rps/fpga/gpio_project/gpio_project.tmp/My_SPI_v1_0_project /home/rps/fpga/ip_repo/My_SPI_1_0/component.xml
+current_project My_SPI_v1_0_project
+ipx::merge_project_changes files [ipx::current_core]
+ipx::merge_project_changes ports [ipx::current_core]
+set_property core_revision 16 [ipx::current_core]
+ipx::update_source_project_archive -component [ipx::current_core]
+ipx::create_xgui_files [ipx::current_core]
+ipx::update_checksums [ipx::current_core]
+ipx::check_integrity [ipx::current_core]
+ipx::save_core [ipx::current_core]
+ipx::move_temp_component_back -component [ipx::current_core]
+close_project -delete
+update_ip_catalog -rebuild -repo_path /home/rps/fpga/ip_repo/My_SPI_1_0
+report_ip_status -name ip_status 
+upgrade_ip -vlnv user.org:user:My_SPI:1.0 [get_ips  system_My_SPI_0_3] -log ip_upgrade.log
+export_ip_user_files -of_objects [get_ips system_My_SPI_0_3] -no_script -sync -force -quiet
+reset_run synth_1
+launch_runs synth_1 -jobs 8
+wait_on_run synth_1
+report_ip_status -name ip_status 
+ipx::edit_ip_in_project -upgrade true -name My_SPI_v1_0_project -directory /home/rps/fpga/gpio_project/gpio_project.tmp/My_SPI_v1_0_project /home/rps/fpga/ip_repo/My_SPI_1_0/component.xml
+update_compile_order -fileset sources_1
+current_project gpio_project
+launch_runs impl_1 -jobs 8
+wait_on_run impl_1
+update_ip_catalog -rebuild -scan_changes
+report_ip_status -name ip_status
+upgrade_ip -vlnv user.org:user:My_SPI:1.0 [get_ips  system_My_SPI_0_3] -log ip_upgrade.log
+export_ip_user_files -of_objects [get_ips system_My_SPI_0_3] -no_script -sync -force -quiet
+generate_target all [get_files  /home/rps/fpga/gpio_project/gpio_project.srcs/sources_1/bd/system/system.bd]
+catch { config_ip_cache -export [get_ips -all system_axi_smc_0] }
+catch { config_ip_cache -export [get_ips -all system_My_SPI_0_3] }
+export_ip_user_files -of_objects [get_files /home/rps/fpga/gpio_project/gpio_project.srcs/sources_1/bd/system/system.bd] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] /home/rps/fpga/gpio_project/gpio_project.srcs/sources_1/bd/system/system.bd]
+launch_runs system_My_SPI_0_3_synth_1 -jobs 8
+wait_on_run system_My_SPI_0_3_synth_1
+export_simulation -lib_map_path [list {modelsim=/home/rps/fpga/gpio_project/gpio_project.cache/compile_simlib/modelsim} {questa=/home/rps/fpga/gpio_project/gpio_project.cache/compile_simlib/questa} {xcelium=/home/rps/fpga/gpio_project/gpio_project.cache/compile_simlib/xcelium} {vcs=/home/rps/fpga/gpio_project/gpio_project.cache/compile_simlib/vcs} {riviera=/home/rps/fpga/gpio_project/gpio_project.cache/compile_simlib/riviera}] -of_objects [get_files /home/rps/fpga/gpio_project/gpio_project.srcs/sources_1/bd/system/system.bd] -directory /home/rps/fpga/gpio_project/gpio_project.ip_user_files/sim_scripts -ip_user_files_dir /home/rps/fpga/gpio_project/gpio_project.ip_user_files -ipstatic_source_dir /home/rps/fpga/gpio_project/gpio_project.ip_user_files/ipstatic -use_ip_compiled_libs -force -quiet
+report_ip_status -name ip_status 
+reset_run synth_1
+launch_runs synth_1 -jobs 8
+wait_on_run synth_1
+launch_runs impl_1 -jobs 8
+wait_on_run impl_1
+current_design impl_1
+create_ip_run [get_files -of_objects [get_fileset sources_1] /home/rps/fpga/gpio_project/gpio_project.srcs/sources_1/bd/system/system.bd]
+refresh_design
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+wait_on_run impl_1
+open_hw_manager
+connect_hw_server -allow_non_jtag
+open_hw_target
+current_hw_device [get_hw_devices xc7z007s_1]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7z007s_1] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7z007s_1]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7z007s_1]
+set_property PROGRAM.FILE {/home/rps/fpga/gpio_project/gpio_project.runs/impl_1/gpio_system_top.bit} [get_hw_devices xc7z007s_1]
+program_hw_devices [get_hw_devices xc7z007s_1]
+refresh_hw_device [lindex [get_hw_devices xc7z007s_1] 0]
+reset_run synth_1
+launch_runs synth_1 -jobs 8
+wait_on_run synth_1
+launch_runs impl_1 -jobs 8
+wait_on_run impl_1
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+wait_on_run impl_1
+set_property PROBES.FILE {} [get_hw_devices xc7z007s_1]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7z007s_1]
+set_property PROGRAM.FILE {/home/rps/fpga/gpio_project/gpio_project.runs/impl_1/gpio_system_top.bit} [get_hw_devices xc7z007s_1]
+program_hw_devices [get_hw_devices xc7z007s_1]
+refresh_hw_device [lindex [get_hw_devices xc7z007s_1] 0]
+open_bd_design {/home/rps/fpga/gpio_project/gpio_project.srcs/sources_1/bd/system/system.bd}
+set_property offset 0x43C20000 [get_bd_addr_segs {processing_system7_0/Data/SEG_My_SPI_0_AXI_Interface_SPI_reg}]
+save_bd_design
+reset_run synth_1
+launch_runs synth_1 -jobs 8
+wait_on_run synth_1
+report_ip_status -name ip_status 
+launch_runs impl_1 -jobs 8
+wait_on_run impl_1
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+wait_on_run impl_1
+set_property PROBES.FILE {} [get_hw_devices xc7z007s_1]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7z007s_1]
+set_property PROGRAM.FILE {/home/rps/fpga/gpio_project/gpio_project.runs/impl_1/gpio_system_top.bit} [get_hw_devices xc7z007s_1]
+program_hw_devices [get_hw_devices xc7z007s_1]
+refresh_hw_device [lindex [get_hw_devices xc7z007s_1] 0]
+reset_run synth_1
+launch_runs synth_1 -jobs 8
+wait_on_run synth_1
+launch_runs impl_1 -jobs 8
+wait_on_run impl_1
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+wait_on_run impl_1
+set_property PROBES.FILE {} [get_hw_devices xc7z007s_1]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7z007s_1]
+set_property PROGRAM.FILE {/home/rps/fpga/gpio_project/gpio_project.runs/impl_1/gpio_system_top.bit} [get_hw_devices xc7z007s_1]
+program_hw_devices [get_hw_devices xc7z007s_1]
+refresh_hw_device [lindex [get_hw_devices xc7z007s_1] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7z007s_1]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7z007s_1]
+set_property PROGRAM.FILE {/home/rps/fpga/gpio_project/gpio_project.runs/impl_1/gpio_system_top.bit} [get_hw_devices xc7z007s_1]
+program_hw_devices [get_hw_devices xc7z007s_1]
+refresh_hw_device [lindex [get_hw_devices xc7z007s_1] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7z007s_1]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7z007s_1]
+set_property PROGRAM.FILE {/home/rps/fpga/gpio_project/gpio_project.runs/impl_1/gpio_system_top.bit} [get_hw_devices xc7z007s_1]
+program_hw_devices [get_hw_devices xc7z007s_1]
+refresh_hw_device [lindex [get_hw_devices xc7z007s_1] 0]
+reset_run synth_1
+launch_runs impl_1 -jobs 8
+wait_on_run impl_1
+reset_run synth_1
+launch_runs synth_1 -jobs 8
+wait_on_run synth_1
+reset_run synth_1
+launch_runs synth_1 -jobs 8
+wait_on_run synth_1
+launch_runs impl_1 -jobs 8
+wait_on_run impl_1
+reset_run synth_1
+launch_runs impl_1 -jobs 8
+wait_on_run impl_1
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+wait_on_run impl_1
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+wait_on_run impl_1
+current_project My_SPI_v1_0_project
+launch_runs synth_1 -jobs 8
+wait_on_run synth_1
+launch_runs impl_1 -jobs 8
+wait_on_run impl_1
+reset_run synth_1
+launch_runs impl_1 -jobs 8
+wait_on_run impl_1
+reset_run synth_1
+launch_runs impl_1 -jobs 8
+wait_on_run impl_1
+ipx::merge_project_changes files [ipx::current_core]
+ipx::merge_project_changes ports [ipx::current_core]
+set_property core_revision 17 [ipx::current_core]
+ipx::update_source_project_archive -component [ipx::current_core]
+ipx::create_xgui_files [ipx::current_core]
+ipx::update_checksums [ipx::current_core]
+ipx::check_integrity [ipx::current_core]
+ipx::save_core [ipx::current_core]
+current_project gpio_project
+report_ip_status -name ip_status 
+report_ip_status -name ip_status 
+set_property core_revision 18 [ipx::current_core]
+ipx::update_source_project_archive -component [ipx::current_core]
+ipx::create_xgui_files [ipx::current_core]
+ipx::update_checksums [ipx::current_core]
+ipx::check_integrity [ipx::current_core]
+ipx::save_core [ipx::current_core]
+report_ip_status -name ip_status 
+report_ip_status -name ip_status 
+set_property PROBES.FILE {} [get_hw_devices xc7z007s_1]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7z007s_1]
+set_property PROGRAM.FILE {/home/rps/fpga/gpio_project/gpio_project.runs/impl_1/gpio_system_top.bit} [get_hw_devices xc7z007s_1]
+program_hw_devices [get_hw_devices xc7z007s_1]
+refresh_hw_device [lindex [get_hw_devices xc7z007s_1] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7z007s_1]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7z007s_1]
+set_property PROGRAM.FILE {/home/rps/fpga/gpio_project/gpio_project.runs/impl_1/gpio_system_top.bit} [get_hw_devices xc7z007s_1]
+program_hw_devices [get_hw_devices xc7z007s_1]
+refresh_hw_device [lindex [get_hw_devices xc7z007s_1] 0]
+current_project My_SPI_v1_0_project
+reset_run synth_1
+ipx::merge_project_changes files [ipx::current_core]
+current_project gpio_project
+set_property PROBES.FILE {} [get_hw_devices xc7z007s_1]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7z007s_1]
+set_property PROGRAM.FILE {/home/rps/fpga/gpio_project/gpio_project.runs/impl_1/gpio_system_top.bit} [get_hw_devices xc7z007s_1]
+program_hw_devices [get_hw_devices xc7z007s_1]
+refresh_hw_device [lindex [get_hw_devices xc7z007s_1] 0]
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+wait_on_run impl_1
+set_property PROBES.FILE {} [get_hw_devices xc7z007s_1]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7z007s_1]
+set_property PROGRAM.FILE {/home/rps/fpga/gpio_project/gpio_project.runs/impl_1/gpio_system_top.bit} [get_hw_devices xc7z007s_1]
+program_hw_devices [get_hw_devices xc7z007s_1]
+refresh_hw_device [lindex [get_hw_devices xc7z007s_1] 0]
+close_project
