@@ -1400,7 +1400,7 @@
       },
       "My_SPI_0": {
         "vlnv": "user.org:user:My_SPI:1.0",
-        "ip_revision": "21",
+        "ip_revision": "22",
         "xci_name": "system_My_SPI_0_4",
         "xci_path": "ip/system_My_SPI_0_4/system_My_SPI_0_4.xci",
         "inst_hier_path": "My_SPI_0",

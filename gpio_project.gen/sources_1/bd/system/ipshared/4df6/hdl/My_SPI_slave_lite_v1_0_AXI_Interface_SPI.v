@@ -501,9 +501,9 @@
 
     always @(posedge axi_clk or negedge axi_resetn)
     begin
-        if(!axi_resetn)
+        if(axi_resetn == 0)
         begin
-            baud_clk_next<=0;
+            baud_clk_next <= 0;
         end
         else if(brd_tick)
         begin

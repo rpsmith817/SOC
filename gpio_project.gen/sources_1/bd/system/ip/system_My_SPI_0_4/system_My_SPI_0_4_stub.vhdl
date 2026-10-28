@@ -2,7 +2,7 @@
 -- Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2025.2 (lin64) Build 6299465 Fri Nov 14 12:34:56 MST 2025
--- Date        : Tue Oct 20 16:12:10 2026
+-- Date        : Thu Oct 22 14:29:45 2026
 -- Host        : rps-ThinkPad-T16-Gen-4 running 64-bit Ubuntu 24.04.5 LTS
 -- Command     : write_vhdl -force -mode synth_stub
 --               /home/rps/fpga/gpio_project/gpio_project.gen/sources_1/bd/system/ip/system_My_SPI_0_4/system_My_SPI_0_4_stub.vhdl
