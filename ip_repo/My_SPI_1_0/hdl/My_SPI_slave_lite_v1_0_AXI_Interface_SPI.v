@@ -499,18 +499,150 @@
     //baud_clk
     reg baud_clk_next;
 
-    always @(posedge axi_clk or negedge axi_resetn)
+//    always @(posedge axi_clk or negedge axi_resetn)
+//    begin
+//        if(axi_resetn == 0)
+//        begin
+//            baud_clk_next <= 0;
+//        end
+//        else if(brd_tick)
+//        begin
+//        baud_clk_next <= ~baud_clk_next;
+//        end 
+//    end
+//    assign baud_clk = baud_clk_next;
+
+endmodule
+
+
+module spi_fsm(
+    input clk,              //full clock
+    input tick,             //state stepper
+    input reset,
+    input en,               //enable
+    input fe,               //fifo empty
+    input ff,               //fifo full
+    input word_size,        //bit index reset value
+    input [3:0]auto_cs,     //cs3,cs2,cs1,cs0, as bits.
+    input [7:0] mode,       //polarity and phase of each, [7:6]cs3, [5:4]cs2, [3:2]cs1, [1:0]cs0
+    input [1:0] cs_select,  //binary value is which cs we are using.
+    input [31:0] data,      //data to push out one at a time.
+    output logic spi_clk,         //sometimes we hold this high or low, so controlling the output is necessary.
+    output [3:0] cs         //if auto then what chip is high.
+);
+    //go from MSB to LSB
+    reg [31:0]data_reg; //load entire register, then go through slowly one at a time.
+    reg bit_idx;
+    reg [3:0]cs_auto;
+    reg [7:0]spi_mode;
+    reg [1:0]cs_select_r;
+    reg [7:0]state; //uncertain how many discrete states we need, so just oversize it with a 8bit val
+    reg auto;       //if cs is both selected and auto.
+    reg cpha;       //phase of selected cs
+    reg cpol;       //polarity of selected cs
+    
+    
+
+    always_ff @ (negedge reset, posedge clk)
     begin
-        if(axi_resetn == 0)
+        if(reset == 0)
         begin
-            baud_clk_next <= 0;
+            bit_idx <= word_size;
+            state <= 0;
+            spi_mode <= 0;
+            cs_auto <= 0;
+            cs_select_r <= 0;
+            spi_clk <= 1;
+            auto <= 0;
         end
-        else if(brd_tick)
+        else if(tick==1)    //state change time!
         begin
-        baud_clk_next <= ~baud_clk_next;
-        end 
+            case(state)
+                0:          //Idle state
+                begin                    
+                    if(~fe) //if the fifo has something in it.
+                    begin
+                        state <= 1; //if we have something to do then we should consider starting doing it.
+                    end
+                end
+                1:          //Load state
+                begin
+                    cs_auto <= auto_cs;
+                    spi_mode <= mode;
+                    cs_select_r <= cs_select;
+                    state <= 2;
+
+                    //from cs_select set the right polarity and phase
+                    case(cs_select)
+                        3: begin cpol <= mode[7]; cpha <= mode[6]; end
+                        2: begin cpol <= mode[5]; cpha <= mode[4]; end
+                        1: begin cpol <= mode[3]; cpha <= mode[2]; end
+                        0: begin cpol <= mode[1]; cpha <= mode[0]; end
+                    endcase
+
+                    //if the auto bit is high and matched the cs_select then auto is active, otherwise auto is not active
+                    if((cs_auto[3] & (cs_select == 2'b11)) || (cs_auto[2] & (cs_select == 2'b10)) || (cs_auto[1] & (cs_select == 2'b01)) || (cs_auto[0] & (cs_select == 2'b00)))
+                    begin
+                    auto <= 1;
+                    end
+                    else begin
+                    auto <= 0;
+                    end
+                                        
+                end
+                2:          //Drive clk
+                begin
+                    spi_clk <= 1;
+                    
+                                        
+                    
+                    
+                    //state change fork if auto or not.
+                    if(auto)
+                    begin
+                        state <= 3;
+                    end
+                    else
+                    begin
+                        state <= 3;
+                    end
+                end
+                3:          //CS handle
+                begin
+                    
+                    state<=4;
+                end
+                4:          //Update 1
+                begin
+                
+                
+                    state<=5;
+                end
+                5:          //Update 2
+                begin
+                    
+                    if(1)
+                    begin
+                        state<=6;
+                    end
+                    else if(1)
+                    
+                end
+                6:          //CS Disable
+                begin
+                
+                end
+                default:    //Error, or undefined.
+                begin
+                    
+                end
+            endcase
+            
+            
+        end
+        
+        
     end
-    assign baud_clk = baud_clk_next;
 
 endmodule
 
