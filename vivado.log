@@ -345,3 +345,11 @@ INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/rps/fpga/ip_repo/gpio_1
 INFO: [IP_Flow 19-795] Syncing license key meta-data
 ipx::edit_ip_in_project: Time (s): cpu = 00:00:14 ; elapsed = 00:00:05 . Memory (MB): peak = 10183.602 ; gain = 0.000 ; free physical = 13542 ; free virtual = 32920
 update_compile_order -fileset sources_1
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/rps/fpga/ip_repo/My_SPI_1_0/hdl/My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/rps/fpga/ip_repo/My_SPI_1_0/hdl/My_SPI.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/rps/fpga/ip_repo/My_SPI_1_0/hdl/My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/rps/fpga/ip_repo/My_SPI_1_0/hdl/My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/rps/fpga/ip_repo/My_SPI_1_0/hdl/My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/rps/fpga/ip_repo/My_SPI_1_0/hdl/My_SPI.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/rps/fpga/ip_repo/My_SPI_1_0/hdl/My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/rps/fpga/ip_repo/My_SPI_1_0/hdl/My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v:]

@@ -21,11 +21,10 @@
         input wire clr_overflow,
         input wire rd_req,
         input wire wr_req,
-        output wire empty,
-        output wire full,
-        output wire overflow,
-        
         output wire baud_clk,
+        output wire datum,
+        output wire [3:0] cs,
+        
 		// User ports ends
 		// Do not modify the ports beyond this line
 
@@ -84,10 +83,9 @@
         .clr_overflow(clr_overflow),
         .rd_req(rd_req),
         .wr_req(wr_req),
-        .empty(empty),
-        .full(full),
-        .overflow(overflow),
-        .baud_clk(baud_clk)        	
+        .baud_clk(baud_clk),
+        .datum(datum),
+        .cs(cs)
 	);
 
 	// Add user logic here

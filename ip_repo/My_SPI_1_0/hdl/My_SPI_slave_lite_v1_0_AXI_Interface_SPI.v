@@ -26,10 +26,10 @@
         input wire clr_overflow,
         input wire rd_req,
         input wire wr_req,
-        output wire empty,
-        output wire full,
-        output wire overflow,
         output wire baud_clk,
+        output wire datum,
+        output wire [3:0] cs,
+        
 
         // AXI clock and reset        
         input wire S_AXI_ACLK,
@@ -507,9 +507,9 @@
         begin
             baud_clk_next <= 0;
         end
-        else if(clk_go == 0)
+        else if(clk_go == 0) //ensure that first clk is known, not variable, else we might reverse the polarity at start...
         begin
-            baud_clk_next <= 0; //ensure that first clk is known, not variable.
+            baud_clk_next <= 0;
         end
         else if(brd_tick)
         begin
@@ -519,7 +519,7 @@
     assign baud_clk = (baud_clk_next&clk_go) ^ spi_clk;
     
     /*
-    clock stuff
+    clock stuff since we should be more transparent in code and comment better
     |cpol   | baud_clk  |clk_go |output |
     |-------|-----------|-------|-------|
     |   1   |   1       |   1   |   0   |
@@ -546,17 +546,34 @@
     cpol^ (baud_clk&clk_go);
         AKA
     (baud_clk_next&clk_go) ^ spi_clk;
-    
-        
     */
+    reg datum;
     
+    spi_fsm spi_fsm_inst
+    (
+        .clk(axi_clk),      //full clock
+        .brd_tick(brd_tick),//state stepper
+        .reset(axi_resetn), //reset sig
+        .en(ctrl[15]),      //enable
+        .fe(status[5]),     //fifo empty
+        .ff(status[4]),//fifo full
+        .word_size(ctrl[4:0]),//bit index reset value, input [4:0]
+        .auto_cs(ctrl[8:5]),//cs3,cs2,cs1,cs0, as bits. input [3:0]
+        .mode(ctrl[23:16]),//polarity and phase of each, [7:6]cs3, [5:4]cs2, [3:2]cs1, [1:0]cs0
+        .cs_select(ctrl[14:13]),//binary value is which cs we are using. input [1:0] 
+        .data(data[31:0]),//data to push out one at a time. input [31:0] 
+        .spi_clk(spi_clk),//outputs cpol, differentiating which spi_clk we are
+        .cs(ctrl[12:9]),//if auto then what chip is high. output reg [3:0] 
+        .datum(datum),//single bit output from data+fsm output reg    
+        .clk_go(clk_go)//outputs clock stop/go for idle state combine output reg
+    );
 
 endmodule
 
 
 module spi_fsm(
     input clk,              //full clock
-    input tick,             //state stepper
+    input brd_tick,             //state stepper
     input reset,            //reset sig
     input en,               //enable
     input fe,               //fifo empty
@@ -603,7 +620,7 @@ module spi_fsm(
             data_reg <= 0;
             datum <= 0;
         end
-        else if(tick==1)    //state change time!
+        else if(brd_tick==1)    //state change time!
         begin
             case(state)
 
@@ -698,19 +715,21 @@ module spi_fsm(
             //Update 2
                 5:
                 begin
-                    if(cpha == 0)   //load data
+                    if(cpha == 0)   //load data                
                     begin
                         datum <= data_reg[bit_idx];
                         bit_idx <= bit_idx_next;
-                    end    
-                        
+                    end
+                                            
                     if(bit_idx < word_size)         //if we aren't done then continue updating.
                     begin
                         state<=4;
                     end
                     else if(bit_idx == word_size)   //if the word is finished
                     begin
-                        if(auto == 1)               //and we are cs
+                        clk_go <= 0;                //idle tick at least temporarily, maybe for a while
+                        
+                        if(auto == 1)               //if we are handling cs
                         begin
                             state <= 6;             //proceed to toggle cs
                         end
@@ -720,7 +739,7 @@ module spi_fsm(
                         end
                         else if(fe)                 //we are not auto and there are no more words to output.
                         begin
-                            state <= 0;
+                            state <= 0;             //goto idle
                         end
                     end
                 end
@@ -729,15 +748,14 @@ module spi_fsm(
                 6:
                 begin
                     cs <= 4'b1111;
-                    clk_go <= 0;    //idle tick at least temporarily
 
-                    if(fe)
+                    if(fe)              //if we are done
                     begin
-                        state <= 0;
+                        state <= 0;     //be idle
                     end
                     else
                     begin
-                        state <= 1;
+                        state <= 1;     //otherwise load the next data set
                     end
                 end
                 
@@ -747,14 +765,9 @@ module spi_fsm(
                     state<=7;       //lock up until reset.
                     clk_go <= 0;    //stop the clock.
                 end
-            endcase
-            
-            
+            endcase            
         end
-        
-        
     end
-
 endmodule
 
 
