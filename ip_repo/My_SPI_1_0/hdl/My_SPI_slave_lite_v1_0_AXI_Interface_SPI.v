@@ -490,7 +490,7 @@
     (
     .clk(axi_clk),
     .enable(ctrl[15]),   //control register should drive this
-    .ibrd(brd[31:6]),     //this lives in the brd reg
+    .ibrd(brd[31:6]),    //this lives in the brd reg
     .fbrd(brd[5:0]),     //this lives in the brd reg
     .reset(axi_resetn),
     .out(brd_tick)      //single clock tick of brd (each clk edge)
@@ -498,19 +498,58 @@
 
     //baud_clk
     reg baud_clk_next;
+    reg spi_clk;
+    reg clk_go;
 
-//    always @(posedge axi_clk or negedge axi_resetn)
-//    begin
-//        if(axi_resetn == 0)
-//        begin
-//            baud_clk_next <= 0;
-//        end
-//        else if(brd_tick)
-//        begin
-//        baud_clk_next <= ~baud_clk_next;
-//        end 
-//    end
-//    assign baud_clk = baud_clk_next;
+    always @(posedge axi_clk or negedge axi_resetn)
+    begin
+        if(axi_resetn == 0)
+        begin
+            baud_clk_next <= 0;
+        end
+        else if(clk_go == 0)
+        begin
+            baud_clk_next <= 0; //ensure that first clk is known, not variable.
+        end
+        else if(brd_tick)
+        begin
+            baud_clk_next <= ~baud_clk_next;
+        end 
+    end
+    assign baud_clk = (baud_clk_next&clk_go) ^ spi_clk;
+    
+    /*
+    clock stuff
+    |cpol   | baud_clk  |clk_go |output |
+    |-------|-----------|-------|-------|
+    |   1   |   1       |   1   |   0   |
+    |   0   |   1       |   1   |   1   |
+    |   1   |   0       |   1   |   1   |
+    |   0   |   0       |   1   |   0   |
+    |   1   |   1       |   0   |   1   |
+    |   0   |   1       |   0   |   0   |
+    |   1   |   0       |   0   |   1   |
+    |   0   |   0       |   0   |   0   |
+    |===================================|
+    
+    this looks like (cpol ^ baud_clk) unless not enabled
+    if(~clk_go)
+    begin
+        output <= cpol;
+    end
+    else begin
+        output <= cpol^baud_clk;
+    end
+    
+    ((cpol ^ baud_clk)&clk_go) | cpol; 
+    
+    cpol^ (baud_clk&clk_go);
+        AKA
+    (baud_clk_next&clk_go) ^ spi_clk;
+    
+        
+    */
+    
 
 endmodule
 
@@ -518,21 +557,23 @@ endmodule
 module spi_fsm(
     input clk,              //full clock
     input tick,             //state stepper
-    input reset,
+    input reset,            //reset sig
     input en,               //enable
     input fe,               //fifo empty
     input ff,               //fifo full
-    input word_size,        //bit index reset value
+    input [4:0]word_size,   //bit index reset value
     input [3:0]auto_cs,     //cs3,cs2,cs1,cs0, as bits.
     input [7:0] mode,       //polarity and phase of each, [7:6]cs3, [5:4]cs2, [3:2]cs1, [1:0]cs0
     input [1:0] cs_select,  //binary value is which cs we are using.
     input [31:0] data,      //data to push out one at a time.
-    output logic spi_clk,         //sometimes we hold this high or low, so controlling the output is necessary.
-    output [3:0] cs         //if auto then what chip is high.
+    output spi_clk,         //outputs cpol, differentiating which spi_clk we are
+    output reg [3:0] cs,    //if auto then what chip is high.
+    output reg datum,       //single bit output from data+fsm   
+    output reg clk_go       //outputs clock stop/go for idle state combine
 );
     //go from MSB to LSB
     reg [31:0]data_reg; //load entire register, then go through slowly one at a time.
-    reg bit_idx;
+    reg [4:0] bit_idx;
     reg [3:0]cs_auto;
     reg [7:0]spi_mode;
     reg [1:0]cs_select_r;
@@ -540,9 +581,11 @@ module spi_fsm(
     reg auto;       //if cs is both selected and auto.
     reg cpha;       //phase of selected cs
     reg cpol;       //polarity of selected cs
+    reg [4:0] bit_idx_next;
     
+    assign spi_clk = cpol;
+    assign bit_idx_next = bit_idx - 1;
     
-
     always_ff @ (negedge reset, posedge clk)
     begin
         if(reset == 0)
@@ -552,25 +595,37 @@ module spi_fsm(
             spi_mode <= 0;
             cs_auto <= 0;
             cs_select_r <= 0;
-            spi_clk <= 1;
+            cpol <= 0;
+            cpha <= 0;
             auto <= 0;
+            clk_go <= 0;
+            cs <= 4'b1111;
+            data_reg <= 0;
+            datum <= 0;
         end
         else if(tick==1)    //state change time!
         begin
             case(state)
-                0:          //Idle state
+
+            //Idle state
+                0:
                 begin                    
                     if(~fe) //if the fifo has something in it.
                     begin
-                        state <= 1; //if we have something to do then we should consider starting doing it.
+                        state <= 1; //start the machine
                     end
                 end
-                1:          //Load state
+
+            //Load state
+                1:
                 begin
                     cs_auto <= auto_cs;
                     spi_mode <= mode;
                     cs_select_r <= cs_select;
                     state <= 2;
+                    data_reg <= data;
+                    bit_idx <= word_size;
+                    datum <= data_reg[bit_idx];
 
                     //from cs_select set the right polarity and phase
                     case(cs_select)
@@ -583,20 +638,19 @@ module spi_fsm(
                     //if the auto bit is high and matched the cs_select then auto is active, otherwise auto is not active
                     if((cs_auto[3] & (cs_select == 2'b11)) || (cs_auto[2] & (cs_select == 2'b10)) || (cs_auto[1] & (cs_select == 2'b01)) || (cs_auto[0] & (cs_select == 2'b00)))
                     begin
-                    auto <= 1;
+                        auto <= 1;
                     end
                     else begin
-                    auto <= 0;
+                        auto <= 0;
                     end
                                         
                 end
-                2:          //Drive clk
+
+            //Drive clk
+                2:
                 begin
-                    spi_clk <= 1;
-                    
+                    clk_go <= 1;
                                         
-                    
-                    
                     //state change fork if auto or not.
                     if(auto)
                     begin
@@ -606,35 +660,92 @@ module spi_fsm(
                     begin
                         state <= 3;
                     end
+                    
+                    if(cpha == 0)
+                    begin
+                        datum <= data_reg[bit_idx];
+                        bit_idx <= bit_idx_next;
+                    end
                 end
-                3:          //CS handle
+
+            //CS Handle
+                3:
                 begin
                     
+                    //push selected cs low, push others high.
+                    case(cs_select_r)
+                        3: begin cs[3] <= 0; cs[2] <= 1; cs[1] <= 1; cs[0] <= 1; end
+                        2: begin cs[3] <= 1; cs[2] <= 0; cs[1] <= 1; cs[0] <= 1; end
+                        1: begin cs[3] <= 1; cs[2] <= 1; cs[1] <= 0; cs[0] <= 1; end
+                        0: begin cs[3] <= 1; cs[2] <= 1; cs[1] <= 1; cs[0] <= 0; end
+                    endcase
+                                        
                     state<=4;
                 end
-                4:          //Update 1
+
+            //Update 1                
+                4:
                 begin
-                
+                    if(cpha == 1)   //load data
+                    begin
+                        datum <= data_reg[bit_idx];
+                        bit_idx <= bit_idx_next;
+                    end
                 
                     state<=5;
                 end
-                5:          //Update 2
+
+            //Update 2
+                5:
                 begin
-                    
-                    if(1)
+                    if(cpha == 0)   //load data
                     begin
-                        state<=6;
+                        datum <= data_reg[bit_idx];
+                        bit_idx <= bit_idx_next;
+                    end    
+                        
+                    if(bit_idx < word_size)         //if we aren't done then continue updating.
+                    begin
+                        state<=4;
                     end
-                    else if(1)
-                    
+                    else if(bit_idx == word_size)   //if the word is finished
+                    begin
+                        if(auto == 1)               //and we are cs
+                        begin
+                            state <= 6;             //proceed to toggle cs
+                        end
+                        else if(~fe)                //we are not auto and have more words to output
+                        begin
+                            state <= 2;             //goto drive clock
+                        end
+                        else if(fe)                 //we are not auto and there are no more words to output.
+                        begin
+                            state <= 0;
+                        end
+                    end
                 end
-                6:          //CS Disable
-                begin
                 
-                end
-                default:    //Error, or undefined.
+            //CS Disable
+                6:
                 begin
-                    
+                    cs <= 4'b1111;
+                    clk_go <= 0;    //idle tick at least temporarily
+
+                    if(fe)
+                    begin
+                        state <= 0;
+                    end
+                    else
+                    begin
+                        state <= 1;
+                    end
+                end
+                
+            //Error, or undefined.
+                default:
+                begin
+                    state<=7;       //lock up until reset.
+                    clk_go <= 0;    //stop the clock.
                 end
             endcase
             

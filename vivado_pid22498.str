@@ -1105,3 +1105,601 @@ selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 238, 324); // ae 
 // HMemoryUtils.trashcanNow. Engine heap size: 2,335 MB. GUI used memory: 86 MB. Current time: 10/29/26, 7:19:18 PM CDT
 // HMemoryUtils.trashcanNow. Engine heap size: 2,335 MB. GUI used memory: 86 MB. Current time: 10/29/26, 7:19:58 PM CDT
 // HMemoryUtils.trashcanNow. Engine heap size: 2,335 MB. GUI used memory: 86 MB. Current time: 10/29/26, 7:20:38 PM CDT
+// HMemoryUtils.trashcanNow. Engine heap size: 2,335 MB. GUI used memory: 86 MB. Current time: 10/29/26, 7:21:18 PM CDT
+// HMemoryUtils.trashcanNow. Engine heap size: 2,335 MB. GUI used memory: 86 MB. Current time: 10/29/26, 7:21:58 PM CDT
+// HMemoryUtils.trashcanNow. Engine heap size: 2,335 MB. GUI used memory: 86 MB. Current time: 10/29/26, 7:22:38 PM CDT
+// HMemoryUtils.trashcanNow. Engine heap size: 2,335 MB. GUI used memory: 86 MB. Current time: 10/29/26, 7:23:18 PM CDT
+// HMemoryUtils.trashcanNow. Engine heap size: 2,335 MB. GUI used memory: 86 MB. Current time: 10/29/26, 7:23:58 PM CDT
+// HMemoryUtils.trashcanNow. Engine heap size: 2,335 MB. GUI used memory: 86 MB. Current time: 10/29/26, 7:24:38 PM CDT
+// HMemoryUtils.trashcanNow. Engine heap size: 2,335 MB. GUI used memory: 86 MB. Current time: 10/29/26, 7:25:18 PM CDT
+// WARNING: HEventQueue.dispatchEvent() is taking  1444 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 2,335 MB. GUI used memory: 86 MB. Current time: 10/29/26, 7:25:59 PM CDT
+// HMemoryUtils.trashcanNow. Engine heap size: 2,335 MB. GUI used memory: 86 MB. Current time: 10/29/26, 7:26:39 PM CDT
+// HMemoryUtils.trashcanNow. Engine heap size: 2,335 MB. GUI used memory: 86 MB. Current time: 10/29/26, 7:27:19 PM CDT
+// HMemoryUtils.trashcanNow. Engine heap size: 2,335 MB. GUI used memory: 86 MB. Current time: 10/29/26, 7:27:59 PM CDT
+// HMemoryUtils.trashcanNow. Engine heap size: 2,335 MB. GUI used memory: 86 MB. Current time: 10/29/26, 7:28:39 PM CDT
+// HMemoryUtils.trashcanNow. Engine heap size: 2,335 MB. GUI used memory: 86 MB. Current time: 10/29/26, 7:29:19 PM CDT
+// HMemoryUtils.trashcanNow. Engine heap size: 2,335 MB. GUI used memory: 86 MB. Current time: 10/29/26, 7:29:59 PM CDT
+// HMemoryUtils.trashcanNow. Engine heap size: 2,335 MB. GUI used memory: 86 MB. Current time: 10/29/26, 7:30:39 PM CDT
+// HMemoryUtils.trashcanNow. Engine heap size: 2,335 MB. GUI used memory: 86 MB. Current time: 10/29/26, 7:31:19 PM CDT
+// HMemoryUtils.trashcanNow. Engine heap size: 2,335 MB. GUI used memory: 86 MB. Current time: 10/29/26, 7:31:59 PM CDT
+// HMemoryUtils.trashcanNow. Engine heap size: 2,335 MB. GUI used memory: 86 MB. Current time: 10/29/26, 7:32:39 PM CDT
+// HMemoryUtils.trashcanNow. Engine heap size: 2,335 MB. GUI used memory: 86 MB. Current time: 10/29/26, 7:33:19 PM CDT
+// HMemoryUtils.trashcanNow. Engine heap size: 2,335 MB. GUI used memory: 86 MB. Current time: 10/29/26, 7:33:59 PM CDT
+// HMemoryUtils.trashcanNow. Engine heap size: 2,335 MB. GUI used memory: 86 MB. Current time: 10/29/26, 7:34:39 PM CDT
+// HMemoryUtils.trashcanNow. Engine heap size: 2,335 MB. GUI used memory: 86 MB. Current time: 10/29/26, 7:35:19 PM CDT
+// HMemoryUtils.trashcanNow. Engine heap size: 2,335 MB. GUI used memory: 86 MB. Current time: 10/29/26, 7:35:59 PM CDT
+// HMemoryUtils.trashcanNow. Engine heap size: 2,335 MB. GUI used memory: 86 MB. Current time: 10/29/26, 7:36:39 PM CDT
+// HMemoryUtils.trashcanNow. Engine heap size: 2,335 MB. GUI used memory: 86 MB. Current time: 10/29/26, 7:37:19 PM CDT
+// HMemoryUtils.trashcanNow. Engine heap size: 2,335 MB. GUI used memory: 86 MB. Current time: 10/29/26, 7:37:59 PM CDT
+// HMemoryUtils.trashcanNow. Engine heap size: 2,335 MB. GUI used memory: 86 MB. Current time: 10/29/26, 7:38:39 PM CDT
+// HMemoryUtils.trashcanNow. Engine heap size: 2,335 MB. GUI used memory: 86 MB. Current time: 10/29/26, 7:39:19 PM CDT
+// HMemoryUtils.trashcanNow. Engine heap size: 2,335 MB. GUI used memory: 86 MB. Current time: 10/29/26, 7:39:59 PM CDT
+// HMemoryUtils.trashcanNow. Engine heap size: 2,335 MB. GUI used memory: 86 MB. Current time: 10/29/26, 7:40:39 PM CDT
+// HMemoryUtils.trashcanNow. Engine heap size: 2,335 MB. GUI used memory: 86 MB. Current time: 10/29/26, 7:41:19 PM CDT
+// HMemoryUtils.trashcanNow. Engine heap size: 2,335 MB. GUI used memory: 86 MB. Current time: 10/29/26, 7:41:59 PM CDT
+// HMemoryUtils.trashcanNow. Engine heap size: 2,335 MB. GUI used memory: 86 MB. Current time: 10/29/26, 7:42:39 PM CDT
+// HMemoryUtils.trashcanNow. Engine heap size: 2,335 MB. GUI used memory: 86 MB. Current time: 10/29/26, 7:43:19 PM CDT
+// HMemoryUtils.trashcanNow. Engine heap size: 2,335 MB. GUI used memory: 86 MB. Current time: 10/29/26, 7:43:59 PM CDT
+// HMemoryUtils.trashcanNow. Engine heap size: 2,335 MB. GUI used memory: 86 MB. Current time: 10/29/26, 7:44:40 PM CDT
+// HMemoryUtils.trashcanNow. Engine heap size: 2,335 MB. GUI used memory: 86 MB. Current time: 10/29/26, 7:45:20 PM CDT
+// HMemoryUtils.trashcanNow. Engine heap size: 2,335 MB. GUI used memory: 86 MB. Current time: 10/29/26, 7:46:00 PM CDT
+// HMemoryUtils.trashcanNow. Engine heap size: 2,335 MB. GUI used memory: 86 MB. Current time: 10/29/26, 7:46:40 PM CDT
+// HMemoryUtils.trashcanNow. Engine heap size: 2,335 MB. GUI used memory: 86 MB. Current time: 10/29/26, 7:47:20 PM CDT
+// HMemoryUtils.trashcanNow. Engine heap size: 2,335 MB. GUI used memory: 86 MB. Current time: 10/29/26, 7:48:00 PM CDT
+// HMemoryUtils.trashcanNow. Engine heap size: 2,335 MB. GUI used memory: 86 MB. Current time: 10/29/26, 7:48:40 PM CDT
+// HMemoryUtils.trashcanNow. Engine heap size: 2,335 MB. GUI used memory: 86 MB. Current time: 10/29/26, 7:49:20 PM CDT
+// HMemoryUtils.trashcanNow. Engine heap size: 2,335 MB. GUI used memory: 86 MB. Current time: 10/29/26, 7:50:00 PM CDT
+// HMemoryUtils.trashcanNow. Engine heap size: 2,335 MB. GUI used memory: 86 MB. Current time: 10/29/26, 7:50:40 PM CDT
+// HMemoryUtils.trashcanNow. Engine heap size: 2,335 MB. GUI used memory: 86 MB. Current time: 10/29/26, 7:51:20 PM CDT
+// HMemoryUtils.trashcanNow. Engine heap size: 2,335 MB. GUI used memory: 88 MB. Current time: 10/29/26, 7:52:00 PM CDT
+// HMemoryUtils.trashcanNow. Engine heap size: 2,335 MB. GUI used memory: 86 MB. Current time: 10/29/26, 7:52:40 PM CDT
+// HMemoryUtils.trashcanNow. Engine heap size: 2,335 MB. GUI used memory: 86 MB. Current time: 10/29/26, 7:53:20 PM CDT
+// HMemoryUtils.trashcanNow. Engine heap size: 2,335 MB. GUI used memory: 86 MB. Current time: 10/29/26, 7:54:00 PM CDT
+// HMemoryUtils.trashcanNow. Engine heap size: 2,335 MB. GUI used memory: 86 MB. Current time: 10/29/26, 7:54:40 PM CDT
+// HMemoryUtils.trashcanNow. Engine heap size: 2,335 MB. GUI used memory: 86 MB. Current time: 10/29/26, 7:55:20 PM CDT
+// HMemoryUtils.trashcanNow. Engine heap size: 2,335 MB. GUI used memory: 86 MB. Current time: 10/29/26, 7:56:00 PM CDT
+// HMemoryUtils.trashcanNow. Engine heap size: 2,335 MB. GUI used memory: 86 MB. Current time: 10/29/26, 7:56:40 PM CDT
+// HMemoryUtils.trashcanNow. Engine heap size: 2,335 MB. GUI used memory: 86 MB. Current time: 10/29/26, 7:57:20 PM CDT
+// HMemoryUtils.trashcanNow. Engine heap size: 2,335 MB. GUI used memory: 86 MB. Current time: 10/29/26, 7:58:00 PM CDT
+// HMemoryUtils.trashcanNow. Engine heap size: 2,335 MB. GUI used memory: 86 MB. Current time: 10/29/26, 7:58:40 PM CDT
+// WARNING: HEventQueue.dispatchEvent() is taking  403019939 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 2,335 MB. GUI used memory: 86 MB. Current time: 11/3/26, 10:55:56 AM CST
+// TclEventType: PACKAGER_MESSAGE_UPDATE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'PAResourceItoN.MsgLongTask_MESSAGE_LONG_TASK/M.f': 161h:46m:16s
+// TclEventType: DG_GRAPH_GENERATED
+// Elapsed Time for: 'PAResourceItoN.MsgLongTask_MESSAGE_LONG_TASK/M.f': 161h:46m:18s
+// HMemoryUtils.trashcanNow. Engine heap size: 2,355 MB. GUI used memory: 86 MB. Current time: 11/3/26, 10:56:19 AM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 2,345 MB. GUI used memory: 86 MB. Current time: 11/3/26, 10:56:59 AM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 2,345 MB. GUI used memory: 86 MB. Current time: 11/3/26, 10:57:39 AM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 2,345 MB. GUI used memory: 86 MB. Current time: 11/3/26, 10:58:19 AM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 2,345 MB. GUI used memory: 86 MB. Current time: 11/3/26, 10:58:59 AM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 2,345 MB. GUI used memory: 86 MB. Current time: 11/3/26, 10:59:39 AM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 2,345 MB. GUI used memory: 86 MB. Current time: 11/3/26, 11:00:19 AM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 2,345 MB. GUI used memory: 86 MB. Current time: 11/3/26, 11:00:59 AM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 2,345 MB. GUI used memory: 86 MB. Current time: 11/3/26, 11:01:39 AM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 2,345 MB. GUI used memory: 86 MB. Current time: 11/3/26, 11:02:19 AM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 2,345 MB. GUI used memory: 86 MB. Current time: 11/3/26, 11:02:59 AM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 2,345 MB. GUI used memory: 86 MB. Current time: 11/3/26, 11:03:39 AM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 2,345 MB. GUI used memory: 86 MB. Current time: 11/3/26, 11:04:19 AM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 2,345 MB. GUI used memory: 86 MB. Current time: 11/3/26, 11:04:59 AM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 2,345 MB. GUI used memory: 88 MB. Current time: 11/3/26, 11:05:39 AM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 2,345 MB. GUI used memory: 86 MB. Current time: 11/3/26, 11:06:19 AM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 2,345 MB. GUI used memory: 86 MB. Current time: 11/3/26, 11:06:59 AM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 2,345 MB. GUI used memory: 86 MB. Current time: 11/3/26, 11:07:39 AM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 2,345 MB. GUI used memory: 86 MB. Current time: 11/3/26, 11:08:19 AM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 2,345 MB. GUI used memory: 86 MB. Current time: 11/3/26, 11:08:59 AM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 2,345 MB. GUI used memory: 86 MB. Current time: 11/3/26, 11:09:39 AM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 2,345 MB. GUI used memory: 86 MB. Current time: 11/3/26, 11:10:19 AM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 2,345 MB. GUI used memory: 86 MB. Current time: 11/3/26, 11:10:59 AM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 2,345 MB. GUI used memory: 86 MB. Current time: 11/3/26, 11:11:39 AM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 2,345 MB. GUI used memory: 86 MB. Current time: 11/3/26, 11:12:19 AM CST
+// WARNING: HEventQueue.dispatchEvent() is taking  2669 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 2,345 MB. GUI used memory: 86 MB. Current time: 11/3/26, 11:13:02 AM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 2,345 MB. GUI used memory: 86 MB. Current time: 11/3/26, 11:13:42 AM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 2,345 MB. GUI used memory: 86 MB. Current time: 11/3/26, 11:14:22 AM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 2,345 MB. GUI used memory: 86 MB. Current time: 11/3/26, 11:15:02 AM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 2,345 MB. GUI used memory: 86 MB. Current time: 11/3/26, 11:15:42 AM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 2,345 MB. GUI used memory: 86 MB. Current time: 11/3/26, 11:16:22 AM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 2,345 MB. GUI used memory: 86 MB. Current time: 11/3/26, 11:17:02 AM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 2,345 MB. GUI used memory: 86 MB. Current time: 11/3/26, 11:17:42 AM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 2,345 MB. GUI used memory: 86 MB. Current time: 11/3/26, 11:18:22 AM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 2,345 MB. GUI used memory: 86 MB. Current time: 11/3/26, 11:19:02 AM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 2,345 MB. GUI used memory: 86 MB. Current time: 11/3/26, 11:19:42 AM CST
+// Elapsed time: 409950 seconds
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 302, 231); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+// HMemoryUtils.trashcanNow. Engine heap size: 2,345 MB. GUI used memory: 86 MB. Current time: 11/3/26, 11:20:22 AM CST
+// Elapsed time: 30 seconds
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 302, 231); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 637, 302); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 257, 202); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+// HMemoryUtils.trashcanNow. Engine heap size: 2,512 MB. GUI used memory: 86 MB. Current time: 11/3/26, 11:21:02 AM CST
+// [Engine Memory]: 3,062 MB (+225859kb) [162:12:19]
+// HMemoryUtils.trashcanNow. Engine heap size: 3,062 MB. GUI used memory: 86 MB. Current time: 11/3/26, 11:21:42 AM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 2,536 MB. GUI used memory: 86 MB. Current time: 11/3/26, 11:22:22 AM CST
+// Elapsed time: 97 seconds
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 336, 217); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 336, 217); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 217, 204); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+// Elapsed time: 12 seconds
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 97, 495); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 143, 258); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 72, 49); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 320, 408); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 234, 257); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+// HMemoryUtils.trashcanNow. Engine heap size: 2,345 MB. GUI used memory: 86 MB. Current time: 11/3/26, 11:23:02 AM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 3,173 MB. GUI used memory: 86 MB. Current time: 11/3/26, 11:23:42 AM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 2,512 MB. GUI used memory: 86 MB. Current time: 11/3/26, 11:24:22 AM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 2,345 MB. GUI used memory: 86 MB. Current time: 11/3/26, 11:25:02 AM CST
+// Elapsed time: 153 seconds
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 573, 403); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 573, 403); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+// HMemoryUtils.trashcanNow. Engine heap size: 2,345 MB. GUI used memory: 86 MB. Current time: 11/3/26, 11:25:42 AM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 2,345 MB. GUI used memory: 86 MB. Current time: 11/3/26, 11:26:22 AM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 2,345 MB. GUI used memory: 86 MB. Current time: 11/3/26, 11:27:02 AM CST
+// Elapsed time: 120 seconds
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 183, 515); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 362, 540); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 231, 361); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+// HMemoryUtils.trashcanNow. Engine heap size: 2,345 MB. GUI used memory: 86 MB. Current time: 11/3/26, 11:27:42 AM CST
+// Elapsed time: 38 seconds
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 350, 290); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 59, 171); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+// HMemoryUtils.trashcanNow. Engine heap size: 2,345 MB. GUI used memory: 86 MB. Current time: 11/3/26, 11:28:22 AM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 2,512 MB. GUI used memory: 86 MB. Current time: 11/3/26, 11:29:02 AM CST
+// Elapsed time: 81 seconds
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 485, 52); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+// HMemoryUtils.trashcanNow. Engine heap size: 2,345 MB. GUI used memory: 86 MB. Current time: 11/3/26, 11:29:42 AM CST
+// Elapsed time: 20 seconds
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 149, 68); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 166, 46); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 166, 46, false, false, false, false, true); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v) - Double Click
+// HMemoryUtils.trashcanNow. Engine heap size: 2,859 MB. GUI used memory: 86 MB. Current time: 11/3/26, 11:30:22 AM CST
+// Elapsed time: 40 seconds
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 307, 346); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+// HMemoryUtils.trashcanNow. Engine heap size: 2,345 MB. GUI used memory: 86 MB. Current time: 11/3/26, 11:31:02 AM CST
+// Elapsed time: 43 seconds
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 140, 295); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+// HMemoryUtils.trashcanNow. Engine heap size: 2,345 MB. GUI used memory: 86 MB. Current time: 11/3/26, 11:31:42 AM CST
+// Elapsed time: 37 seconds
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 256, 84); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 299, 162); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+// HMemoryUtils.trashcanNow. Engine heap size: 2,345 MB. GUI used memory: 88 MB. Current time: 11/3/26, 11:32:22 AM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 2,345 MB. GUI used memory: 86 MB. Current time: 11/3/26, 11:33:02 AM CST
+// Elapsed time: 58 seconds
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 147, 263); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+// HMemoryUtils.trashcanNow. Engine heap size: 2,345 MB. GUI used memory: 86 MB. Current time: 11/3/26, 11:33:42 AM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 2,345 MB. GUI used memory: 86 MB. Current time: 11/3/26, 11:34:22 AM CST
+// Elapsed time: 79 seconds
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 177, 539); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+// Elapsed time: 18 seconds
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 165, 7); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 165, 7, false, false, false, false, true); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v) - Double Click
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 353, 280); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+// HMemoryUtils.trashcanNow. Engine heap size: 2,345 MB. GUI used memory: 86 MB. Current time: 11/3/26, 11:35:03 AM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 2,345 MB. GUI used memory: 86 MB. Current time: 11/3/26, 11:35:43 AM CST
+// Elapsed time: 79 seconds
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 331, 262); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+// HMemoryUtils.trashcanNow. Engine heap size: 2,345 MB. GUI used memory: 86 MB. Current time: 11/3/26, 11:36:23 AM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 2,345 MB. GUI used memory: 86 MB. Current time: 11/3/26, 11:37:03 AM CST
+// Elapsed time: 89 seconds
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 231, 385); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 231, 385, false, false, false, false, true); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v) - Double Click
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 231, 385); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 231, 385, false, false, false, false, true); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v) - Double Click
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 179, 380); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 178, 384); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 178, 384, false, false, false, false, true); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v) - Double Click
+// HMemoryUtils.trashcanNow. Engine heap size: 2,345 MB. GUI used memory: 86 MB. Current time: 11/3/26, 11:37:43 AM CST
+// Elapsed time: 13 seconds
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 74, 156); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+// Elapsed time: 17 seconds
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 287, 265); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 519, 366); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+// HMemoryUtils.trashcanNow. Engine heap size: 2,345 MB. GUI used memory: 86 MB. Current time: 11/3/26, 11:38:23 AM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 2,345 MB. GUI used memory: 86 MB. Current time: 11/3/26, 11:39:03 AM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 2,345 MB. GUI used memory: 86 MB. Current time: 11/3/26, 11:39:43 AM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 2,345 MB. GUI used memory: 86 MB. Current time: 11/3/26, 11:40:23 AM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 2,345 MB. GUI used memory: 86 MB. Current time: 11/3/26, 11:41:03 AM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 2,345 MB. GUI used memory: 86 MB. Current time: 11/3/26, 11:41:43 AM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 2,345 MB. GUI used memory: 86 MB. Current time: 11/3/26, 11:42:23 AM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 2,345 MB. GUI used memory: 86 MB. Current time: 11/3/26, 11:43:03 AM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 2,345 MB. GUI used memory: 86 MB. Current time: 11/3/26, 11:43:43 AM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 2,345 MB. GUI used memory: 86 MB. Current time: 11/3/26, 11:44:23 AM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 2,345 MB. GUI used memory: 86 MB. Current time: 11/3/26, 11:45:03 AM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 2,345 MB. GUI used memory: 86 MB. Current time: 11/3/26, 11:45:43 AM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 2,345 MB. GUI used memory: 86 MB. Current time: 11/3/26, 11:46:23 AM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 2,345 MB. GUI used memory: 86 MB. Current time: 11/3/26, 11:47:03 AM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 2,345 MB. GUI used memory: 88 MB. Current time: 11/3/26, 11:47:43 AM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 2,345 MB. GUI used memory: 86 MB. Current time: 11/3/26, 11:48:23 AM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 2,345 MB. GUI used memory: 86 MB. Current time: 11/3/26, 11:49:03 AM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 2,345 MB. GUI used memory: 86 MB. Current time: 11/3/26, 11:49:43 AM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 2,345 MB. GUI used memory: 86 MB. Current time: 11/3/26, 11:50:23 AM CST
+// Elapsed time: 731 seconds
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 701, 263); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 701, 263); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 701, 263); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 701, 263); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 701, 263); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 701, 263); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 271, 356); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+// HMemoryUtils.trashcanNow. Engine heap size: 2,345 MB. GUI used memory: 88 MB. Current time: 11/3/26, 11:51:03 AM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 2,345 MB. GUI used memory: 86 MB. Current time: 11/3/26, 11:51:43 AM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 2,345 MB. GUI used memory: 86 MB. Current time: 11/3/26, 11:52:23 AM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 2,345 MB. GUI used memory: 86 MB. Current time: 11/3/26, 11:53:03 AM CST
+// Elapsed time: 182 seconds
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 93, 135); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 93, 135, false, false, false, false, true); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v) - Double Click
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 93, 124); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 93, 124, false, false, false, false, true); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v) - Double Click
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 271, 441); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+// HMemoryUtils.trashcanNow. Engine heap size: 2,345 MB. GUI used memory: 86 MB. Current time: 11/3/26, 11:53:43 AM CST
+// Elapsed time: 16 seconds
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+// Elapsed time: 22 seconds
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 73, 441); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 73, 441, false, false, false, false, true); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v) - Double Click
+// HMemoryUtils.trashcanNow. Engine heap size: 2,345 MB. GUI used memory: 88 MB. Current time: 11/3/26, 11:54:23 AM CST
+// Elapsed time: 12 seconds
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 171, 399); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+typeControlKey((HResource) null, "My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 'v'); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 379, 287); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 204, 332); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+// Elapsed time: 14 seconds
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 311, 410); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+// HMemoryUtils.trashcanNow. Engine heap size: 2,712 MB. GUI used memory: 86 MB. Current time: 11/3/26, 11:55:03 AM CST
+// Elapsed time: 11 seconds
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 147, 296); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+// Elapsed time: 30 seconds
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 249, 312); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+// HMemoryUtils.trashcanNow. Engine heap size: 2,345 MB. GUI used memory: 87 MB. Current time: 11/3/26, 11:55:43 AM CST
+// Elapsed time: 18 seconds
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 165, 205); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 165, 205); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 165, 205); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+typeControlKey((HResource) null, "My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 'v'); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+typeControlKey((HResource) null, "My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 'v'); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+// HMemoryUtils.trashcanNow. Engine heap size: 2,345 MB. GUI used memory: 86 MB. Current time: 11/3/26, 11:56:23 AM CST
+// Elapsed time: 16 seconds
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 374, 200); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+// HMemoryUtils.trashcanNow. Engine heap size: 2,345 MB. GUI used memory: 86 MB. Current time: 11/3/26, 11:57:03 AM CST
+// Elapsed time: 40 seconds
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 446, 417); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 446, 417); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 341, 83); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+typeControlKey((HResource) null, "My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 'c'); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 240, 383); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 240, 383, false, false, false, false, true); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v) - Double Click
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 240, 383); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+typeControlKey((HResource) null, "My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 'v'); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+// Elapsed time: 26 seconds
+typeControlKey((HResource) null, "My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 'v'); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+typeControlKey(null, null, 'z');
+// HMemoryUtils.trashcanNow. Engine heap size: 2,512 MB. GUI used memory: 86 MB. Current time: 11/3/26, 11:57:43 AM CST
+typeControlKey((HResource) null, "My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 'v'); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+// Elapsed time: 21 seconds
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 155, 399); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+// HMemoryUtils.trashcanNow. Engine heap size: 2,512 MB. GUI used memory: 86 MB. Current time: 11/3/26, 11:58:23 AM CST
+// Elapsed time: 26 seconds
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 235, 84); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 315, 67); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+// HMemoryUtils.trashcanNow. Engine heap size: 2,345 MB. GUI used memory: 86 MB. Current time: 11/3/26, 11:59:03 AM CST
+// Elapsed time: 51 seconds
+typeControlKey((HResource) null, "My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 'c'); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+typeControlKey((HResource) null, "My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 'v'); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+// HMemoryUtils.trashcanNow. Engine heap size: 2,512 MB. GUI used memory: 86 MB. Current time: 11/3/26, 11:59:43 AM CST
+// Elapsed time: 10 seconds
+typeControlKey((HResource) null, "My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 'v'); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+typeControlKey((HResource) null, "My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 'v'); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+// Elapsed time: 17 seconds
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 202, 257); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+// HMemoryUtils.trashcanNow. Engine heap size: 2,345 MB. GUI used memory: 88 MB. Current time: 11/3/26, 12:00:23 PM CST
+// Elapsed time: 31 seconds
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 503, 181); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+// HMemoryUtils.trashcanNow. Engine heap size: 2,345 MB. GUI used memory: 86 MB. Current time: 11/3/26, 12:01:03 PM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 2,345 MB. GUI used memory: 86 MB. Current time: 11/3/26, 12:01:43 PM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 2,345 MB. GUI used memory: 87 MB. Current time: 11/3/26, 12:02:23 PM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 2,345 MB. GUI used memory: 86 MB. Current time: 11/3/26, 12:03:03 PM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 2,345 MB. GUI used memory: 88 MB. Current time: 11/3/26, 12:03:43 PM CST
+// Elapsed time: 211 seconds
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 167, 352); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+// HMemoryUtils.trashcanNow. Engine heap size: 2,345 MB. GUI used memory: 86 MB. Current time: 11/3/26, 12:04:23 PM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 2,345 MB. GUI used memory: 86 MB. Current time: 11/3/26, 12:05:03 PM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 2,345 MB. GUI used memory: 86 MB. Current time: 11/3/26, 12:05:43 PM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 2,345 MB. GUI used memory: 86 MB. Current time: 11/3/26, 12:06:23 PM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 2,345 MB. GUI used memory: 87 MB. Current time: 11/3/26, 12:07:03 PM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 2,345 MB. GUI used memory: 86 MB. Current time: 11/3/26, 12:07:43 PM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 2,345 MB. GUI used memory: 86 MB. Current time: 11/3/26, 12:08:23 PM CST
+// Elapsed time: 259 seconds
+typeControlKey(null, null, 'z');
+// HMemoryUtils.trashcanNow. Engine heap size: 2,345 MB. GUI used memory: 86 MB. Current time: 11/3/26, 12:09:03 PM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 2,345 MB. GUI used memory: 86 MB. Current time: 11/3/26, 12:09:43 PM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 2,345 MB. GUI used memory: 86 MB. Current time: 11/3/26, 12:10:23 PM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 2,345 MB. GUI used memory: 87 MB. Current time: 11/3/26, 12:11:03 PM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 2,345 MB. GUI used memory: 86 MB. Current time: 11/3/26, 12:11:43 PM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 2,345 MB. GUI used memory: 86 MB. Current time: 11/3/26, 12:12:23 PM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 2,345 MB. GUI used memory: 87 MB. Current time: 11/3/26, 12:13:03 PM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 2,345 MB. GUI used memory: 88 MB. Current time: 11/3/26, 12:13:43 PM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 2,345 MB. GUI used memory: 86 MB. Current time: 11/3/26, 12:14:23 PM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 2,345 MB. GUI used memory: 87 MB. Current time: 11/3/26, 12:15:03 PM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 2,345 MB. GUI used memory: 86 MB. Current time: 11/3/26, 12:15:43 PM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 3,805 MB. GUI used memory: 86 MB. Current time: 11/3/26, 12:16:09 PM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 2,345 MB. GUI used memory: 86 MB. Current time: 11/3/26, 12:16:23 PM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 2,345 MB. GUI used memory: 86 MB. Current time: 11/3/26, 12:17:03 PM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 2,345 MB. GUI used memory: 86 MB. Current time: 11/3/26, 12:17:43 PM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 2,345 MB. GUI used memory: 86 MB. Current time: 11/3/26, 12:18:24 PM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 2,345 MB. GUI used memory: 86 MB. Current time: 11/3/26, 12:19:04 PM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 2,345 MB. GUI used memory: 86 MB. Current time: 11/3/26, 12:19:44 PM CST
+// Elapsed time: 674 seconds
+typeControlKey(null, null, 'z');
+// HMemoryUtils.trashcanNow. Engine heap size: 2,643 MB. GUI used memory: 86 MB. Current time: 11/3/26, 12:20:24 PM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 2,353 MB. GUI used memory: 86 MB. Current time: 11/3/26, 12:21:04 PM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 2,353 MB. GUI used memory: 86 MB. Current time: 11/3/26, 12:21:44 PM CST
+// Elapsed time: 129 seconds
+typeControlKey((HResource) null, "My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 'v'); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+// HMemoryUtils.trashcanNow. Engine heap size: 2,353 MB. GUI used memory: 86 MB. Current time: 11/3/26, 12:22:24 PM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 2,643 MB. GUI used memory: 86 MB. Current time: 11/3/26, 12:23:04 PM CST
+// Elapsed time: 92 seconds
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 692, 288); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 692, 288); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 692, 288); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 692, 288); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 692, 288); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 692, 288); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 692, 288); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 692, 288); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 692, 288); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 692, 288); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 331, 246); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 331, 246); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 331, 246); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+// HMemoryUtils.trashcanNow. Engine heap size: 2,353 MB. GUI used memory: 86 MB. Current time: 11/3/26, 12:23:44 PM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 2,353 MB. GUI used memory: 86 MB. Current time: 11/3/26, 12:24:24 PM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 2,353 MB. GUI used memory: 86 MB. Current time: 11/3/26, 12:25:04 PM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 3,132 MB. GUI used memory: 86 MB. Current time: 11/3/26, 12:25:44 PM CST
+// Elapsed time: 128 seconds
+typeControlKey(null, null, 'z');
+// Elapsed time: 24 seconds
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+// HMemoryUtils.trashcanNow. Engine heap size: 2,855 MB. GUI used memory: 86 MB. Current time: 11/3/26, 12:26:24 PM CST
+// Elapsed time: 21 seconds
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 266, 383); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+// HMemoryUtils.trashcanNow. Engine heap size: 2,353 MB. GUI used memory: 86 MB. Current time: 11/3/26, 12:27:04 PM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 2,353 MB. GUI used memory: 86 MB. Current time: 11/3/26, 12:27:44 PM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 2,353 MB. GUI used memory: 86 MB. Current time: 11/3/26, 12:28:24 PM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 2,353 MB. GUI used memory: 88 MB. Current time: 11/3/26, 12:29:04 PM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 2,353 MB. GUI used memory: 86 MB. Current time: 11/3/26, 12:29:44 PM CST
+// Elapsed time: 191 seconds
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 1, 54); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 1, 54, false, false, false, false, true); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v) - Double Click
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 209, 103); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 235, 156); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+// Elapsed time: 24 seconds
+typeControlKey((HResource) null, "My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 'c'); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+// HMemoryUtils.trashcanNow. Engine heap size: 2,353 MB. GUI used memory: 86 MB. Current time: 11/3/26, 12:30:24 PM CST
+// Elapsed time: 33 seconds
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 536, 299); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+// HMemoryUtils.trashcanNow. Engine heap size: 2,353 MB. GUI used memory: 86 MB. Current time: 11/3/26, 12:31:04 PM CST
+// Elapsed time: 47 seconds
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 29, 289); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 346, 460); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 346, 460); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+// HMemoryUtils.trashcanNow. Engine heap size: 2,353 MB. GUI used memory: 87 MB. Current time: 11/3/26, 12:31:44 PM CST
+typeControlKey((HResource) null, "My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 'c'); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+// HMemoryUtils.trashcanNow. Engine heap size: 2,353 MB. GUI used memory: 87 MB. Current time: 11/3/26, 12:32:24 PM CST
+// Elapsed time: 46 seconds
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 438, 380); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+// HMemoryUtils.trashcanNow. Engine heap size: 2,353 MB. GUI used memory: 86 MB. Current time: 11/3/26, 12:33:04 PM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 2,353 MB. GUI used memory: 86 MB. Current time: 11/3/26, 12:33:44 PM CST
+// Elapsed time: 88 seconds
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 202, 235); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 202, 235, false, false, false, false, true); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v) - Double Click
+// HMemoryUtils.trashcanNow. Engine heap size: 2,353 MB. GUI used memory: 86 MB. Current time: 11/3/26, 12:34:24 PM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 2,598 MB. GUI used memory: 86 MB. Current time: 11/3/26, 12:35:04 PM CST
+// Elapsed time: 92 seconds
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 446, 216); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+// HMemoryUtils.trashcanNow. Engine heap size: 2,353 MB. GUI used memory: 88 MB. Current time: 11/3/26, 12:35:44 PM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 2,639 MB. GUI used memory: 86 MB. Current time: 11/3/26, 12:36:24 PM CST
+// Elapsed time: 78 seconds
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 167, 309); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+// HMemoryUtils.trashcanNow. Engine heap size: 2,353 MB. GUI used memory: 86 MB. Current time: 11/3/26, 12:37:04 PM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 2,353 MB. GUI used memory: 86 MB. Current time: 11/3/26, 12:37:44 PM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 2,353 MB. GUI used memory: 86 MB. Current time: 11/3/26, 12:38:24 PM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 2,353 MB. GUI used memory: 86 MB. Current time: 11/3/26, 12:39:04 PM CST
+// Elapsed time: 133 seconds
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 281, 298); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 281, 298, false, false, false, false, true); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v) - Double Click
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 281, 298); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 269, 313); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 269, 313, false, false, false, false, true); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v) - Double Click
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 269, 313); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+typeControlKey((HResource) null, "My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 'c'); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+// HMemoryUtils.trashcanNow. Engine heap size: 2,353 MB. GUI used memory: 86 MB. Current time: 11/3/26, 12:39:44 PM CST
+// Elapsed time: 60 seconds
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 489, 451); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 258, 485); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+// HMemoryUtils.trashcanNow. Engine heap size: 2,353 MB. GUI used memory: 88 MB. Current time: 11/3/26, 12:40:24 PM CST
+// Elapsed time: 46 seconds
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 258, 485); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 258, 485); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 258, 485); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 258, 485); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 258, 485); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 258, 485); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 258, 485); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 258, 485); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+// HMemoryUtils.trashcanNow. Engine heap size: 2,353 MB. GUI used memory: 86 MB. Current time: 11/3/26, 12:41:04 PM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 2,353 MB. GUI used memory: 86 MB. Current time: 11/3/26, 12:41:44 PM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 2,353 MB. GUI used memory: 86 MB. Current time: 11/3/26, 12:42:24 PM CST
+// Elapsed time: 82 seconds
+typeControlKey(null, null, 'z');
+setText(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "toggle", true); // d.c (RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX)
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "toggle"); // d.c (RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX)
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "toggle"); // d.c (RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX)
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "toggle"); // d.c (RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX)
+setText(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "toggle"); // d.c (RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX)
+// Elapsed time: 32 seconds
+setText(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "assign"); // d.c (RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX)
+// HMemoryUtils.trashcanNow. Engine heap size: 2,346 MB. GUI used memory: 86 MB. Current time: 11/3/26, 12:43:04 PM CST
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 277, 282); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 277, 282); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 277, 282); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 277, 282); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 277, 282); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 277, 282); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 277, 282); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 277, 282); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 277, 282); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 277, 282); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 277, 282); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 277, 282); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 277, 282); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 277, 282); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 418, 194); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+// HMemoryUtils.trashcanNow. Engine heap size: 2,346 MB. GUI used memory: 86 MB. Current time: 11/3/26, 12:43:44 PM CST
+// Elapsed time: 44 seconds
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 55, 249); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+// HMemoryUtils.trashcanNow. Engine heap size: 2,346 MB. GUI used memory: 86 MB. Current time: 11/3/26, 12:44:24 PM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 2,346 MB. GUI used memory: 86 MB. Current time: 11/3/26, 12:45:04 PM CST
+// TclEventType: PACKAGER_MESSAGE_UPDATE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'PAResourceItoN.MsgLongTask_MESSAGE_LONG_TASK/M.f': 163h:35m:16s
+// TclEventType: DG_GRAPH_GENERATED
+// Elapsed Time for: 'PAResourceItoN.MsgLongTask_MESSAGE_LONG_TASK/M.f': 163h:35m:18s
+// Elapsed time: 78 seconds
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 346, 506); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+// Elapsed time: 11 seconds
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 506, 537); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 506, 537); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 506, 537); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 506, 537); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 506, 537); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 506, 537); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 506, 537); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 506, 537); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 506, 537); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 506, 537); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 506, 537); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 506, 537); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 506, 537); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 506, 537); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 506, 537); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 506, 537); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 506, 537); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 506, 537); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 506, 537); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 506, 537); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 506, 537); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 506, 537); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 506, 537); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 506, 537); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 506, 537); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 506, 537); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 506, 537); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 506, 537); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 506, 537); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 506, 537); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 506, 537); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 506, 537); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 506, 537); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 506, 537); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 506, 537); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 506, 537); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 506, 537); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 506, 537); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 506, 537); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 506, 537); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 506, 537); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 506, 537); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 506, 537); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 506, 537); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 506, 537); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 506, 537); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 506, 537); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 506, 537); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 506, 537); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 506, 537); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 506, 537); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 506, 537); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 506, 537); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 506, 537); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 506, 537); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 506, 537); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 506, 537); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 506, 537); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 506, 537); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 506, 537); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 506, 537); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 506, 537); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 506, 537); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 506, 537); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 506, 537); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 506, 537); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 506, 537); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 506, 537); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 417, 318); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+// HMemoryUtils.trashcanNow. Engine heap size: 2,374 MB. GUI used memory: 87 MB. Current time: 11/3/26, 12:45:44 PM CST
+// Elapsed time: 17 seconds
+typeControlKey((HResource) null, "My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 'v'); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+// HMemoryUtils.trashcanNow. Engine heap size: 2,374 MB. GUI used memory: 86 MB. Current time: 11/3/26, 12:46:24 PM CST
+// Elapsed time: 33 seconds
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 417, 318); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 417, 318); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 417, 318); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 417, 318); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 417, 318); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 417, 318); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 417, 318); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 417, 318); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 417, 318); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 417, 318); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 417, 318); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 417, 318); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 417, 318); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 417, 318); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 417, 318); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 417, 318); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 417, 318); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 417, 318); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 417, 318); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 417, 318); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 298, 253); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+// HMemoryUtils.trashcanNow. Engine heap size: 2,374 MB. GUI used memory: 86 MB. Current time: 11/3/26, 12:47:04 PM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 2,374 MB. GUI used memory: 87 MB. Current time: 11/3/26, 12:47:44 PM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 2,374 MB. GUI used memory: 87 MB. Current time: 11/3/26, 12:48:24 PM CST
+// Elapsed time: 131 seconds
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 385, 171); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 385, 171); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 196, 332); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 112, 159); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 112, 159, false, false, false, false, true); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v) - Double Click
+typeControlKey((HResource) null, "My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 'c'); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+// HMemoryUtils.trashcanNow. Engine heap size: 2,365 MB. GUI used memory: 87 MB. Current time: 11/3/26, 12:49:04 PM CST
+// Elapsed time: 15 seconds
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 258, 336); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 572, 413); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 572, 413); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 572, 413); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 572, 413); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 572, 413); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 572, 413); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 572, 413); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 572, 413); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 572, 413); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 572, 413); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 572, 413); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+// TclEventType: PACKAGER_MESSAGE_UPDATE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'PAResourceItoN.MsgLongTask_MESSAGE_LONG_TASK/M.f': 163h:39m:28s
+// TclEventType: DG_GRAPH_GENERATED
+// Elapsed Time for: 'PAResourceItoN.MsgLongTask_MESSAGE_LONG_TASK/M.f': 163h:39m:30s
