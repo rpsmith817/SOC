@@ -96,11 +96,10 @@ system_sv your_instance_name (
   .clr_overflow(clr_overflow), // input wire clr_overflow
   .datain(datain), // input wire [31:0] datain
   .dataout(dataout), // output wire [31:0] dataout
-  .empty(empty), // output wire empty
-  .full(full), // output wire full
-  .overflow(overflow), // output wire overflow
   .status(status), // output wire [31:0] status
-  .baud_clk(baud_clk) // output wire baud_clk
+  .baud_clk(baud_clk), // output wire baud_clk
+  .datum(datum), // output wire datum
+  .cs(cs) // output wire [3:0] cs
 );
 // INST_TAG_END ------  End cut for WRAPPER INSTANTIATION Template  ------
 

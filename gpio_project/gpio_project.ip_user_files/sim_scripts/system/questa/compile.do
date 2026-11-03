@@ -169,10 +169,10 @@ vlog -work xil_defaultlib -64 -incr -mfcu  "+incdir+../../../../gpio_project.gen
 "../../../bd/system/ip/system_xlconcat_0_0/sim/system_xlconcat_0_0.v" \
 
 vlog -work xil_defaultlib -64 -incr -mfcu  -sv -L smartconnect_v1_0 -L axi_vip_v1_1_22 -L processing_system7_vip_v1_0_24 -L xilinx_vip "+incdir+../../../../gpio_project.gen/sources_1/bd/system/ipshared/ec67/hdl" "+incdir+../../../../gpio_project.gen/sources_1/bd/system/ipshared/9a25/hdl" "+incdir+../../../../gpio_project.gen/sources_1/bd/system/ipshared/f0b6/hdl/verilog" "+incdir+../../../../gpio_project.gen/sources_1/bd/system/ipshared/00fe/hdl/verilog" "+incdir+../../../../../../../../opt/Xilinx/2025.2/data/rsb/busdef" "+incdir+/opt/Xilinx/2025.2/data/xilinx_vip/include" \
-"../../../bd/system/ipshared/e476/hdl/My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v" \
+"../../../bd/system/ipshared/c9c3/hdl/My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v" \
 
 vlog -work xil_defaultlib -64 -incr -mfcu  "+incdir+../../../../gpio_project.gen/sources_1/bd/system/ipshared/ec67/hdl" "+incdir+../../../../gpio_project.gen/sources_1/bd/system/ipshared/9a25/hdl" "+incdir+../../../../gpio_project.gen/sources_1/bd/system/ipshared/f0b6/hdl/verilog" "+incdir+../../../../gpio_project.gen/sources_1/bd/system/ipshared/00fe/hdl/verilog" "+incdir+../../../../../../../../opt/Xilinx/2025.2/data/rsb/busdef" "+incdir+/opt/Xilinx/2025.2/data/xilinx_vip/include" \
-"../../../bd/system/ipshared/e476/hdl/My_SPI.v" \
+"../../../bd/system/ipshared/c9c3/hdl/My_SPI.v" \
 "../../../bd/system/ip/system_My_SPI_0_4/sim/system_My_SPI_0_4.v" \
 "../../../bd/system/sim/system.v" \
 

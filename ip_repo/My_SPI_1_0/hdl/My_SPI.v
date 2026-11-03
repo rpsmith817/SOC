@@ -17,10 +17,6 @@
 		// Users to add ports here
 		input wire [31:0] datain,
         output wire [31:0] dataout,
-        output wire [31:0] status,
-        input wire clr_overflow,
-        input wire rd_req,
-        input wire wr_req,
         output wire baud_clk,
         output wire datum,
         output wire [3:0] cs,
@@ -79,10 +75,6 @@
 		.S_AXI_RREADY(axi_interface_spi_rready),
         .datain(datain),
         .dataout(dataout),
-        .status(status),
-        .clr_overflow(clr_overflow),
-        .rd_req(rd_req),
-        .wr_req(wr_req),
         .baud_clk(baud_clk),
         .datum(datum),
         .cs(cs)

@@ -1,6 +1,84 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2025.2 (lin64) Build 6299465 Fri Nov 14 12:34:56 MST 2025
+| Date         : Tue Nov  3 16:42:19 2026
+| Host         : rps-ThinkPad-T16-Gen-4 running 64-bit Ubuntu 24.04.5 LTS
+| Command      : upgrade_ip
+| Device       : xc7z007sclg400-1
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'system_My_SPI_0_4'
+
+1. Summary
+----------
+
+CAUTION (success, with warnings) in the upgrade of system_My_SPI_0_4 (user.org:user:My_SPI:1.0) from (Rev. 23) to (Rev. 24)
+
+After upgrade, an IP may have parameter and port differences compared to the original customization. Please review the parameters within the IP customization GUI to ensure proper functionality. Also, please review the updated IP instantiation template to ensure proper connectivity, and update your design if required.
+
+2. Connection Warnings
+----------------------
+
+Detected external port differences while upgrading 'system_My_SPI_0_4'. These changes may impact your design.
+
+
+-Upgrade has removed port 'clr_overflow'
+
+-Upgrade has removed port 'rd_req'
+
+-Upgrade has removed port 'status'
+
+-Upgrade has removed port 'wr_req'
+
+
+
+
+
+
+
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2025.2 (lin64) Build 6299465 Fri Nov 14 12:34:56 MST 2025
+| Date         : Tue Nov  3 15:08:53 2026
+| Host         : rps-ThinkPad-T16-Gen-4 running 64-bit Ubuntu 24.04.5 LTS
+| Command      : upgrade_ip
+| Device       : xc7z007sclg400-1
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'system_My_SPI_0_4'
+
+1. Summary
+----------
+
+CAUTION (success, with warnings) in the upgrade of system_My_SPI_0_4 (user.org:user:My_SPI:1.0) from (Rev. 22) to (Rev. 23)
+
+After upgrade, an IP may have parameter and port differences compared to the original customization. Please review the parameters within the IP customization GUI to ensure proper functionality. Also, please review the updated IP instantiation template to ensure proper connectivity, and update your design if required.
+
+2. Connection Warnings
+----------------------
+
+Detected external port differences while upgrading 'system_My_SPI_0_4'. These changes may impact your design.
+
+
+-Upgrade has removed port 'empty'
+
+-Upgrade has removed port 'full'
+
+-Upgrade has removed port 'overflow'
+
+-Upgrade has added port 'cs'
+
+-Upgrade has added port 'datum'
+
+
+
+
+
+
+
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2025.2 (lin64) Build 6299465 Fri Nov 14 12:34:56 MST 2025
 | Date         : Thu Oct 22 14:28:38 2026
 | Host         : rps-ThinkPad-T16-Gen-4 running 64-bit Ubuntu 24.04.5 LTS
 | Command      : upgrade_ip

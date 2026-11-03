@@ -3,8 +3,8 @@
 # SW Build 6299465 on Fri Nov 14 12:34:56 MST 2025
 # IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
 # SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
-# Start of session at: Thu Oct 22 14:29:16 2026
-# Process ID         : 15794
+# Start of session at: Tue Nov  3 16:42:37 2026
+# Process ID         : 172517
 # Current directory  : /home/rps/fpga/gpio_project/gpio_project.runs/system_My_SPI_0_4_synth_1
 # Command line       : vivado -log system_My_SPI_0_4.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source system_My_SPI_0_4.tcl
 # Log file           : /home/rps/fpga/gpio_project/gpio_project.runs/system_My_SPI_0_4_synth_1/system_My_SPI_0_4.vds
@@ -13,13 +13,13 @@
 # Platform           : Ubuntu
 # Operating System   : Ubuntu 24.04.5 LTS
 # Processor Detail   : Intel(R) Core(TM) Ultra 7 265U
-# CPU Frequency      : 400.000 MHz
+# CPU Frequency      : 1900.000 MHz
 # CPU Physical cores : 12
 # CPU Logical cores  : 14
 # Host memory        : 33044 MB
 # Swap memory        : 8589 MB
 # Total Virtual      : 41634 MB
-# Available Virtual  : 37498 MB
+# Available Virtual  : 33923 MB
 #-----------------------------------------------------------
 Sourcing tcl script '/home/rps/.Xilinx/Vivado/Vivado_init.tcl'
 source system_My_SPI_0_4.tcl -notrace
@@ -39,26 +39,52 @@ INFO: [Device 21-403] Loading part xc7z007sclg400-1
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 7 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
 WARNING: [Common 17-1361] You have specified a new message control rule that is equivalent to an existing rule with attributes ' -id {17-179}  -suppress '. The existing rule will be replaced.
-INFO: [Synth 8-7075] Helper process launched with PID 15841
+INFO: [Synth 8-7075] Helper process launched with PID 172576
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 2210.914 ; gain = 484.156 ; free physical = 21212 ; free virtual = 34399
+Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 2210.664 ; gain = 483.156 ; free physical = 6926 ; free virtual = 31018
 ---------------------------------------------------------------------------------
+INFO: [Synth 8-11241] undeclared symbol 'empty', assumed default net type 'wire' [/home/rps/fpga/gpio_project/gpio_project.gen/sources_1/bd/system/ipshared/c9c3/hdl/My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v:92]
+INFO: [Synth 8-11241] undeclared symbol 'full', assumed default net type 'wire' [/home/rps/fpga/gpio_project/gpio_project.gen/sources_1/bd/system/ipshared/c9c3/hdl/My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v:93]
+INFO: [Synth 8-11241] undeclared symbol 'overflow', assumed default net type 'wire' [/home/rps/fpga/gpio_project/gpio_project.gen/sources_1/bd/system/ipshared/c9c3/hdl/My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v:94]
+INFO: [Synth 8-11241] undeclared symbol 'clr_overflow_final', assumed default net type 'wire' [/home/rps/fpga/gpio_project/gpio_project.gen/sources_1/bd/system/ipshared/c9c3/hdl/My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v:432]
+INFO: [Synth 8-11241] undeclared symbol 'fifo_rd_req', assumed default net type 'wire' [/home/rps/fpga/gpio_project/gpio_project.gen/sources_1/bd/system/ipshared/c9c3/hdl/My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v:433]
+INFO: [Synth 8-11241] undeclared symbol 'wr_req_final', assumed default net type 'wire' [/home/rps/fpga/gpio_project/gpio_project.gen/sources_1/bd/system/ipshared/c9c3/hdl/My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v:434]
+WARNING: [Synth 8-11121] redeclaration of ANSI port 'datum' is not allowed [/home/rps/fpga/gpio_project/gpio_project.gen/sources_1/bd/system/ipshared/c9c3/hdl/My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v:544]
+WARNING: [Synth 8-8895] 'fifo_rd_req' is already implicitly declared on line 433 [/home/rps/fpga/gpio_project/gpio_project.gen/sources_1/bd/system/ipshared/c9c3/hdl/My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v:545]
 INFO: [Synth 8-6157] synthesizing module 'system_My_SPI_0_4' [/home/rps/fpga/gpio_project/gpio_project.gen/sources_1/bd/system/ip/system_My_SPI_0_4/synth/system_My_SPI_0_4.v:53]
-INFO: [Synth 8-6157] synthesizing module 'My_SPI' [/home/rps/fpga/gpio_project/gpio_project.gen/sources_1/bd/system/ipshared/4df6/hdl/My_SPI.v:4]
-INFO: [Synth 8-6157] synthesizing module 'My_SPI_slave_lite_v1_0_AXI_Interface_SPI' [/home/rps/fpga/gpio_project/gpio_project.gen/sources_1/bd/system/ipshared/4df6/hdl/My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v:11]
-INFO: [Synth 8-155] case statement is not full and has no default [/home/rps/fpga/gpio_project/gpio_project.gen/sources_1/bd/system/ipshared/4df6/hdl/My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v:253]
-INFO: [Synth 8-155] case statement is not full and has no default [/home/rps/fpga/gpio_project/gpio_project.gen/sources_1/bd/system/ipshared/4df6/hdl/My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v:370]
-INFO: [Synth 8-6157] synthesizing module 'fifo_fixed' [/home/rps/fpga/gpio_project/gpio_project.gen/sources_1/bd/system/ipshared/4df6/hdl/My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v:519]
-INFO: [Synth 8-6157] synthesizing module 'edge_detector' [/home/rps/fpga/gpio_project/gpio_project.gen/sources_1/bd/system/ipshared/4df6/hdl/My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v:648]
-INFO: [Synth 8-6155] done synthesizing module 'edge_detector' (0#1) [/home/rps/fpga/gpio_project/gpio_project.gen/sources_1/bd/system/ipshared/4df6/hdl/My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v:648]
-INFO: [Synth 8-6157] synthesizing module 'fifo15x32' [/home/rps/fpga/gpio_project/gpio_project.gen/sources_1/bd/system/ipshared/4df6/hdl/My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v:576]
-INFO: [Synth 8-6155] done synthesizing module 'fifo15x32' (0#1) [/home/rps/fpga/gpio_project/gpio_project.gen/sources_1/bd/system/ipshared/4df6/hdl/My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v:576]
-INFO: [Synth 8-6155] done synthesizing module 'fifo_fixed' (0#1) [/home/rps/fpga/gpio_project/gpio_project.gen/sources_1/bd/system/ipshared/4df6/hdl/My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v:519]
-INFO: [Synth 8-6157] synthesizing module 'the_brd' [/home/rps/fpga/gpio_project/gpio_project.gen/sources_1/bd/system/ipshared/4df6/hdl/My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v:672]
-INFO: [Synth 8-6155] done synthesizing module 'the_brd' (0#1) [/home/rps/fpga/gpio_project/gpio_project.gen/sources_1/bd/system/ipshared/4df6/hdl/My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v:672]
-INFO: [Synth 8-6155] done synthesizing module 'My_SPI_slave_lite_v1_0_AXI_Interface_SPI' (0#1) [/home/rps/fpga/gpio_project/gpio_project.gen/sources_1/bd/system/ipshared/4df6/hdl/My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v:11]
-INFO: [Synth 8-6155] done synthesizing module 'My_SPI' (0#1) [/home/rps/fpga/gpio_project/gpio_project.gen/sources_1/bd/system/ipshared/4df6/hdl/My_SPI.v:4]
+INFO: [Synth 8-6157] synthesizing module 'My_SPI' [/home/rps/fpga/gpio_project/gpio_project.gen/sources_1/bd/system/ipshared/c9c3/hdl/My_SPI.v:4]
+INFO: [Synth 8-6157] synthesizing module 'My_SPI_slave_lite_v1_0_AXI_Interface_SPI' [/home/rps/fpga/gpio_project/gpio_project.gen/sources_1/bd/system/ipshared/c9c3/hdl/My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v:11]
+INFO: [Synth 8-155] case statement is not full and has no default [/home/rps/fpga/gpio_project/gpio_project.gen/sources_1/bd/system/ipshared/c9c3/hdl/My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v:247]
+INFO: [Synth 8-155] case statement is not full and has no default [/home/rps/fpga/gpio_project/gpio_project.gen/sources_1/bd/system/ipshared/c9c3/hdl/My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v:364]
+INFO: [Synth 8-6157] synthesizing module 'fifo_fixed' [/home/rps/fpga/gpio_project/gpio_project.gen/sources_1/bd/system/ipshared/c9c3/hdl/My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v:784]
+INFO: [Synth 8-6157] synthesizing module 'edge_detector' [/home/rps/fpga/gpio_project/gpio_project.gen/sources_1/bd/system/ipshared/c9c3/hdl/My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v:913]
+INFO: [Synth 8-6155] done synthesizing module 'edge_detector' (0#1) [/home/rps/fpga/gpio_project/gpio_project.gen/sources_1/bd/system/ipshared/c9c3/hdl/My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v:913]
+INFO: [Synth 8-6157] synthesizing module 'fifo15x32' [/home/rps/fpga/gpio_project/gpio_project.gen/sources_1/bd/system/ipshared/c9c3/hdl/My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v:841]
+INFO: [Synth 8-6155] done synthesizing module 'fifo15x32' (0#1) [/home/rps/fpga/gpio_project/gpio_project.gen/sources_1/bd/system/ipshared/c9c3/hdl/My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v:841]
+INFO: [Synth 8-6155] done synthesizing module 'fifo_fixed' (0#1) [/home/rps/fpga/gpio_project/gpio_project.gen/sources_1/bd/system/ipshared/c9c3/hdl/My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v:784]
+INFO: [Synth 8-6157] synthesizing module 'the_brd' [/home/rps/fpga/gpio_project/gpio_project.gen/sources_1/bd/system/ipshared/c9c3/hdl/My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v:937]
+INFO: [Synth 8-6155] done synthesizing module 'the_brd' (0#1) [/home/rps/fpga/gpio_project/gpio_project.gen/sources_1/bd/system/ipshared/c9c3/hdl/My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v:937]
+INFO: [Synth 8-6157] synthesizing module 'spi_fsm' [/home/rps/fpga/gpio_project/gpio_project.gen/sources_1/bd/system/ipshared/c9c3/hdl/My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v:570]
+INFO: [Synth 8-6155] done synthesizing module 'spi_fsm' (0#1) [/home/rps/fpga/gpio_project/gpio_project.gen/sources_1/bd/system/ipshared/c9c3/hdl/My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v:570]
+INFO: [Synth 8-6155] done synthesizing module 'My_SPI_slave_lite_v1_0_AXI_Interface_SPI' (0#1) [/home/rps/fpga/gpio_project/gpio_project.gen/sources_1/bd/system/ipshared/c9c3/hdl/My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v:11]
+WARNING: [Synth 8-7071] port 'status' of module 'My_SPI_slave_lite_v1_0_AXI_Interface_SPI' is unconnected for instance 'My_SPI_slave_lite_v1_0_AXI_Interface_SPI_inst' [/home/rps/fpga/gpio_project/gpio_project.gen/sources_1/bd/system/ipshared/c9c3/hdl/My_SPI.v:54]
+WARNING: [Synth 8-7023] instance 'My_SPI_slave_lite_v1_0_AXI_Interface_SPI_inst' of module 'My_SPI_slave_lite_v1_0_AXI_Interface_SPI' has 27 connections declared, but only 26 given [/home/rps/fpga/gpio_project/gpio_project.gen/sources_1/bd/system/ipshared/c9c3/hdl/My_SPI.v:54]
+INFO: [Synth 8-6155] done synthesizing module 'My_SPI' (0#1) [/home/rps/fpga/gpio_project/gpio_project.gen/sources_1/bd/system/ipshared/c9c3/hdl/My_SPI.v:4]
 INFO: [Synth 8-6155] done synthesizing module 'system_My_SPI_0_4' (0#1) [/home/rps/fpga/gpio_project/gpio_project.gen/sources_1/bd/system/ip/system_My_SPI_0_4/synth/system_My_SPI_0_4.v:53]
+WARNING: [Synth 8-6014] Unused sequential element spi_mode_reg was removed.  [/home/rps/fpga/gpio_project/gpio_project.gen/sources_1/bd/system/ipshared/c9c3/hdl/My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v:618]
+WARNING: [Synth 8-6014] Unused sequential element cs_auto_reg was removed.  [/home/rps/fpga/gpio_project/gpio_project.gen/sources_1/bd/system/ipshared/c9c3/hdl/My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v:619]
+WARNING: [Synth 8-6014] Unused sequential element await_setup_reg was removed.  [/home/rps/fpga/gpio_project/gpio_project.gen/sources_1/bd/system/ipshared/c9c3/hdl/My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v:628]
+WARNING: [Synth 8-6014] Unused sequential element cs_await_timer_reg was removed.  [/home/rps/fpga/gpio_project/gpio_project.gen/sources_1/bd/system/ipshared/c9c3/hdl/My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v:629]
+WARNING: [Synth 8-7137] Register bit_idx_reg in module spi_fsm has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/rps/fpga/gpio_project/gpio_project.gen/sources_1/bd/system/ipshared/c9c3/hdl/My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v:604]
+WARNING: [Synth 8-3848] Net cs in module/entity My_SPI_slave_lite_v1_0_AXI_Interface_SPI does not have driver. [/home/rps/fpga/gpio_project/gpio_project.gen/sources_1/bd/system/ipshared/c9c3/hdl/My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v:28]
+WARNING: [Synth 8-3848] Net clr_overflow_final in module/entity My_SPI_slave_lite_v1_0_AXI_Interface_SPI does not have driver. [/home/rps/fpga/gpio_project/gpio_project.gen/sources_1/bd/system/ipshared/c9c3/hdl/My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v:432]
+WARNING: [Synth 8-3848] Net wr_req_final in module/entity My_SPI_slave_lite_v1_0_AXI_Interface_SPI does not have driver. [/home/rps/fpga/gpio_project/gpio_project.gen/sources_1/bd/system/ipshared/c9c3/hdl/My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v:434]
+INFO: [Synth 8-7129] Port en in module spi_fsm is either unconnected or has no load
+INFO: [Synth 8-7129] Port ff in module spi_fsm is either unconnected or has no load
+INFO: [Synth 8-7129] Port cs[3] in module My_SPI_slave_lite_v1_0_AXI_Interface_SPI is either unconnected or has no load
+INFO: [Synth 8-7129] Port cs[2] in module My_SPI_slave_lite_v1_0_AXI_Interface_SPI is either unconnected or has no load
+INFO: [Synth 8-7129] Port cs[1] in module My_SPI_slave_lite_v1_0_AXI_Interface_SPI is either unconnected or has no load
+INFO: [Synth 8-7129] Port cs[0] in module My_SPI_slave_lite_v1_0_AXI_Interface_SPI is either unconnected or has no load
 INFO: [Synth 8-7129] Port S_AXI_AWPROT[2] in module My_SPI_slave_lite_v1_0_AXI_Interface_SPI is either unconnected or has no load
 INFO: [Synth 8-7129] Port S_AXI_AWPROT[1] in module My_SPI_slave_lite_v1_0_AXI_Interface_SPI is either unconnected or has no load
 INFO: [Synth 8-7129] Port S_AXI_AWPROT[0] in module My_SPI_slave_lite_v1_0_AXI_Interface_SPI is either unconnected or has no load
@@ -66,48 +92,61 @@ INFO: [Synth 8-7129] Port S_AXI_ARPROT[2] in module My_SPI_slave_lite_v1_0_AXI_I
 INFO: [Synth 8-7129] Port S_AXI_ARPROT[1] in module My_SPI_slave_lite_v1_0_AXI_Interface_SPI is either unconnected or has no load
 INFO: [Synth 8-7129] Port S_AXI_ARPROT[0] in module My_SPI_slave_lite_v1_0_AXI_Interface_SPI is either unconnected or has no load
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 2303.883 ; gain = 577.125 ; free physical = 21096 ; free virtual = 34285
+Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 2305.602 ; gain = 578.094 ; free physical = 6826 ; free virtual = 30920
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 2312.789 ; gain = 586.031 ; free physical = 21095 ; free virtual = 34285
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 2320.445 ; gain = 592.938 ; free physical = 6825 ; free virtual = 30920
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 2312.789 ; gain = 586.031 ; free physical = 21095 ; free virtual = 34285
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 2320.445 ; gain = 592.938 ; free physical = 6825 ; free virtual = 30920
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2312.789 ; gain = 0.000 ; free physical = 21095 ; free virtual = 34285
+Netlist sorting complete. Time (s): cpu = 00:00:00.03 ; elapsed = 00:00:00.03 . Memory (MB): peak = 2320.445 ; gain = 0.000 ; free physical = 6825 ; free virtual = 30920
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2426.527 ; gain = 0.000 ; free physical = 21087 ; free virtual = 34290
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2423.184 ; gain = 0.000 ; free physical = 6821 ; free virtual = 30929
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00.07 ; elapsed = 00:00:00.03 . Memory (MB): peak = 2426.562 ; gain = 0.000 ; free physical = 21085 ; free virtual = 34289
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.09 ; elapsed = 00:00:00.04 . Memory (MB): peak = 2423.219 ; gain = 0.000 ; free physical = 6821 ; free virtual = 30931
 INFO: [Designutils 20-5008] Incremental synthesis strategy off
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 2426.562 ; gain = 699.805 ; free physical = 21145 ; free virtual = 34350
+Finished Constraint Validation : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 2423.219 ; gain = 695.711 ; free physical = 6886 ; free virtual = 30992
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z007sclg400-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 2434.531 ; gain = 707.773 ; free physical = 21145 ; free virtual = 34350
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 2431.188 ; gain = 703.680 ; free physical = 6886 ; free virtual = 30992
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 2434.531 ; gain = 707.773 ; free physical = 21145 ; free virtual = 34350
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 2431.188 ; gain = 703.680 ; free physical = 6886 ; free virtual = 30992
 ---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'spi_fsm'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                 iSTATE5 |                              000 |                         00000000
+                 iSTATE6 |                              001 |                         00000001
+                 iSTATE4 |                              010 |                         00000010
+                 iSTATE1 |                              011 |                         00000011
+                 iSTATE2 |                              100 |                         00000100
+                 iSTATE0 |                              101 |                         00000101
+                 iSTATE3 |                              110 |                         00000110
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'spi_fsm'
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 2434.531 ; gain = 707.773 ; free physical = 21140 ; free virtual = 34346
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:14 ; elapsed = 00:00:14 . Memory (MB): peak = 2431.188 ; gain = 703.680 ; free physical = 6885 ; free virtual = 30991
 ---------------------------------------------------------------------------------
 No constraint files found.
 ---------------------------------------------------------------------------------
@@ -117,22 +156,33 @@ Detailed RTL Component Info :
 +---Adders : 
 	   2 Input    8 Bit       Adders := 1     
 	   2 Input    7 Bit       Adders := 1     
-	   2 Input    5 Bit       Adders := 1     
+	   2 Input    5 Bit       Adders := 2     
 	   2 Input    4 Bit       Adders := 2     
 	   3 Input    4 Bit       Adders := 1     
++---XORs : 
+	   2 Input      1 Bit         XORs := 1     
 +---Registers : 
 	               32 Bit    Registers := 22    
 	                8 Bit    Registers := 2     
 	                7 Bit    Registers := 1     
 	                6 Bit    Registers := 1     
-	                4 Bit    Registers := 2     
-	                2 Bit    Registers := 2     
-	                1 Bit    Registers := 23    
+	                5 Bit    Registers := 1     
+	                4 Bit    Registers := 3     
+	                2 Bit    Registers := 3     
+	                1 Bit    Registers := 24    
 +---Muxes : 
 	   2 Input   32 Bit        Muxes := 7     
 	   4 Input   32 Bit        Muxes := 4     
-	   2 Input    1 Bit        Muxes := 24    
-	   4 Input    1 Bit        Muxes := 2     
+	   2 Input    8 Bit        Muxes := 4     
+	   2 Input    5 Bit        Muxes := 2     
+	   7 Input    5 Bit        Muxes := 1     
+	   4 Input    4 Bit        Muxes := 1     
+	   7 Input    4 Bit        Muxes := 1     
+	   7 Input    3 Bit        Muxes := 1     
+	   2 Input    3 Bit        Muxes := 5     
+	   2 Input    1 Bit        Muxes := 30    
+	   4 Input    1 Bit        Muxes := 5     
+	   7 Input    1 Bit        Muxes := 9     
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
 ---------------------------------------------------------------------------------
@@ -149,23 +199,10 @@ No constraint files found.
 ---------------------------------------------------------------------------------
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-3917] design system_My_SPI_0_4 has port status[19] driven by constant 0
-INFO: [Synth 8-3917] design system_My_SPI_0_4 has port status[18] driven by constant 0
-INFO: [Synth 8-3917] design system_My_SPI_0_4 has port status[17] driven by constant 0
-INFO: [Synth 8-3917] design system_My_SPI_0_4 has port status[16] driven by constant 0
-INFO: [Synth 8-3917] design system_My_SPI_0_4 has port status[15] driven by constant 0
-INFO: [Synth 8-3917] design system_My_SPI_0_4 has port status[14] driven by constant 0
-INFO: [Synth 8-3917] design system_My_SPI_0_4 has port status[13] driven by constant 0
-INFO: [Synth 8-3917] design system_My_SPI_0_4 has port status[12] driven by constant 0
-INFO: [Synth 8-3917] design system_My_SPI_0_4 has port status[11] driven by constant 0
-INFO: [Synth 8-3917] design system_My_SPI_0_4 has port status[10] driven by constant 0
-INFO: [Synth 8-3917] design system_My_SPI_0_4 has port status[9] driven by constant 0
-INFO: [Synth 8-3917] design system_My_SPI_0_4 has port status[8] driven by constant 0
-INFO: [Synth 8-3917] design system_My_SPI_0_4 has port status[7] driven by constant 0
-INFO: [Synth 8-3917] design system_My_SPI_0_4 has port status[6] driven by constant 0
-INFO: [Synth 8-3917] design system_My_SPI_0_4 has port status[5] driven by constant 0
-INFO: [Synth 8-3917] design system_My_SPI_0_4 has port status[4] driven by constant 0
-INFO: [Synth 8-3917] design system_My_SPI_0_4 has port status[3] driven by constant 0
+INFO: [Synth 8-7129] Port cs[3] in module system_My_SPI_0_4 is either unconnected or has no load
+INFO: [Synth 8-7129] Port cs[2] in module system_My_SPI_0_4 is either unconnected or has no load
+INFO: [Synth 8-7129] Port cs[1] in module system_My_SPI_0_4 is either unconnected or has no load
+INFO: [Synth 8-7129] Port cs[0] in module system_My_SPI_0_4 is either unconnected or has no load
 INFO: [Synth 8-7129] Port axi_interface_spi_awprot[2] in module system_My_SPI_0_4 is either unconnected or has no load
 INFO: [Synth 8-7129] Port axi_interface_spi_awprot[1] in module system_My_SPI_0_4 is either unconnected or has no load
 INFO: [Synth 8-7129] Port axi_interface_spi_awprot[0] in module system_My_SPI_0_4 is either unconnected or has no load
@@ -173,20 +210,20 @@ INFO: [Synth 8-7129] Port axi_interface_spi_arprot[2] in module system_My_SPI_0_
 INFO: [Synth 8-7129] Port axi_interface_spi_arprot[1] in module system_My_SPI_0_4 is either unconnected or has no load
 INFO: [Synth 8-7129] Port axi_interface_spi_arprot[0] in module system_My_SPI_0_4 is either unconnected or has no load
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:16 ; elapsed = 00:00:16 . Memory (MB): peak = 2434.531 ; gain = 707.773 ; free physical = 21144 ; free virtual = 34352
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 2431.188 ; gain = 703.680 ; free physical = 6866 ; free virtual = 30974
 ---------------------------------------------------------------------------------
 No constraint files found.
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:16 ; elapsed = 00:00:16 . Memory (MB): peak = 2434.531 ; gain = 707.773 ; free physical = 21144 ; free virtual = 34352
+Finished Timing Optimization : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 2431.188 ; gain = 703.680 ; free physical = 6866 ; free virtual = 30974
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 2434.531 ; gain = 707.773 ; free physical = 21144 ; free virtual = 34352
+Finished Technology Mapping : Time (s): cpu = 00:00:18 ; elapsed = 00:00:18 . Memory (MB): peak = 2431.188 ; gain = 703.680 ; free physical = 6889 ; free virtual = 30997
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -204,37 +241,52 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 2530.344 ; gain = 803.586 ; free physical = 21038 ; free virtual = 34245
+Finished IO Insertion : Time (s): cpu = 00:00:21 ; elapsed = 00:00:21 . Memory (MB): peak = 2532.969 ; gain = 805.461 ; free physical = 6803 ; free virtual = 30911
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 2530.344 ; gain = 803.586 ; free physical = 21038 ; free virtual = 34245
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:21 ; elapsed = 00:00:21 . Memory (MB): peak = 2532.969 ; gain = 805.461 ; free physical = 6803 ; free virtual = 30911
 ---------------------------------------------------------------------------------
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin inst/My_SPI_slave_lite_v1_0_AXI_Interface_SPI_inst/ctrl[12] with 1st driver pin 'inst/My_SPI_slave_lite_v1_0_AXI_Interface_SPI_inst/spi_fsm_inst/cs_reg[3]/Q' [/home/rps/fpga/gpio_project/gpio_project.gen/sources_1/bd/system/ipshared/c9c3/hdl/My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v:625]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin inst/My_SPI_slave_lite_v1_0_AXI_Interface_SPI_inst/ctrl[12] with 2nd driver pin 'inst/My_SPI_slave_lite_v1_0_AXI_Interface_SPI_inst/ctrl_reg[12]/Q' [/home/rps/fpga/gpio_project/gpio_project.gen/sources_1/bd/system/ipshared/c9c3/hdl/My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v:236]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin inst/My_SPI_slave_lite_v1_0_AXI_Interface_SPI_inst/ctrl[11] with 1st driver pin 'inst/My_SPI_slave_lite_v1_0_AXI_Interface_SPI_inst/spi_fsm_inst/cs_reg[2]/Q' [/home/rps/fpga/gpio_project/gpio_project.gen/sources_1/bd/system/ipshared/c9c3/hdl/My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v:625]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin inst/My_SPI_slave_lite_v1_0_AXI_Interface_SPI_inst/ctrl[11] with 2nd driver pin 'inst/My_SPI_slave_lite_v1_0_AXI_Interface_SPI_inst/ctrl_reg[11]/Q' [/home/rps/fpga/gpio_project/gpio_project.gen/sources_1/bd/system/ipshared/c9c3/hdl/My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v:236]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin inst/My_SPI_slave_lite_v1_0_AXI_Interface_SPI_inst/ctrl[10] with 1st driver pin 'inst/My_SPI_slave_lite_v1_0_AXI_Interface_SPI_inst/spi_fsm_inst/cs_reg[1]/Q' [/home/rps/fpga/gpio_project/gpio_project.gen/sources_1/bd/system/ipshared/c9c3/hdl/My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v:625]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin inst/My_SPI_slave_lite_v1_0_AXI_Interface_SPI_inst/ctrl[10] with 2nd driver pin 'inst/My_SPI_slave_lite_v1_0_AXI_Interface_SPI_inst/ctrl_reg[10]/Q' [/home/rps/fpga/gpio_project/gpio_project.gen/sources_1/bd/system/ipshared/c9c3/hdl/My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v:236]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin inst/My_SPI_slave_lite_v1_0_AXI_Interface_SPI_inst/ctrl[9] with 1st driver pin 'inst/My_SPI_slave_lite_v1_0_AXI_Interface_SPI_inst/spi_fsm_inst/cs_reg[0]/Q' [/home/rps/fpga/gpio_project/gpio_project.gen/sources_1/bd/system/ipshared/c9c3/hdl/My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v:625]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin inst/My_SPI_slave_lite_v1_0_AXI_Interface_SPI_inst/ctrl[9] with 2nd driver pin 'inst/My_SPI_slave_lite_v1_0_AXI_Interface_SPI_inst/ctrl_reg[9]/Q' [/home/rps/fpga/gpio_project/gpio_project.gen/sources_1/bd/system/ipshared/c9c3/hdl/My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v:236]
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        4|Failed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 2530.344 ; gain = 803.586 ; free physical = 21039 ; free virtual = 34246
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:21 ; elapsed = 00:00:21 . Memory (MB): peak = 2532.969 ; gain = 805.461 ; free physical = 6803 ; free virtual = 30911
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 2530.344 ; gain = 803.586 ; free physical = 21039 ; free virtual = 34246
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:21 ; elapsed = 00:00:21 . Memory (MB): peak = 2532.969 ; gain = 805.461 ; free physical = 6803 ; free virtual = 30911
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 2530.344 ; gain = 803.586 ; free physical = 21039 ; free virtual = 34246
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:21 ; elapsed = 00:00:21 . Memory (MB): peak = 2532.969 ; gain = 805.461 ; free physical = 6803 ; free virtual = 30911
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 2530.344 ; gain = 803.586 ; free physical = 21039 ; free virtual = 34246
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:21 ; elapsed = 00:00:21 . Memory (MB): peak = 2532.969 ; gain = 805.461 ; free physical = 6803 ; free virtual = 30911
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -251,46 +303,49 @@ Report Cell Usage:
 |      |Cell   |Count |
 +------+-------+------+
 |1     |CARRY4 |    14|
-|2     |LUT1   |     3|
-|3     |LUT2   |    52|
-|4     |LUT3   |    46|
-|5     |LUT4   |    40|
-|6     |LUT5   |    36|
-|7     |LUT6   |   172|
+|2     |LUT1   |     4|
+|3     |LUT2   |    59|
+|4     |LUT3   |    69|
+|5     |LUT4   |    45|
+|6     |LUT5   |    45|
+|7     |LUT6   |   189|
 |8     |MUXF7  |    64|
 |9     |MUXF8  |    32|
-|10    |FDCE   |    47|
-|11    |FDRE   |   738|
-|12    |FDSE   |     1|
+|10    |FDCE   |    95|
+|11    |FDPE   |     9|
+|12    |FDRE   |   733|
+|13    |FDSE   |     1|
+|14    |LDC    |     5|
 +------+-------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 2530.344 ; gain = 803.586 ; free physical = 21039 ; free virtual = 34246
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:21 ; elapsed = 00:00:21 . Memory (MB): peak = 2532.969 ; gain = 805.461 ; free physical = 6803 ; free virtual = 30910
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:18 ; elapsed = 00:00:18 . Memory (MB): peak = 2530.344 ; gain = 689.812 ; free physical = 21038 ; free virtual = 34246
-Synthesis Optimization Complete : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 2530.352 ; gain = 803.586 ; free physical = 21038 ; free virtual = 34246
+Synthesis finished with 0 errors, 8 critical warnings and 0 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 2532.969 ; gain = 702.688 ; free physical = 6803 ; free virtual = 30910
+Synthesis Optimization Complete : Time (s): cpu = 00:00:21 ; elapsed = 00:00:21 . Memory (MB): peak = 2532.977 ; gain = 805.461 ; free physical = 6803 ; free virtual = 30910
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2546.188 ; gain = 0.000 ; free physical = 21023 ; free virtual = 34233
-INFO: [Netlist 29-17] Analyzing 110 Unisim elements for replacement
+Netlist sorting complete. Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2547.844 ; gain = 0.000 ; free physical = 6787 ; free virtual = 30898
+INFO: [Netlist 29-17] Analyzing 115 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2697.809 ; gain = 0.000 ; free physical = 21135 ; free virtual = 34346
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2699.496 ; gain = 0.000 ; free physical = 6848 ; free virtual = 30960
 INFO: [Project 1-111] Unisim Transformation Summary:
-No Unisim elements were transformed.
+  A total of 5 instances were transformed.
+  LDC => LDCE: 5 instances
 
-Synth Design complete | Checksum: 1a4e5ecc
+Synth Design complete | Checksum: 54f50c6c
 INFO: [Common 17-83] Releasing license: Synthesis
-66 Infos, 3 Warnings, 0 Critical Warnings and 0 Errors encountered.
+69 Infos, 15 Warnings, 8 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:26 ; elapsed = 00:00:24 . Memory (MB): peak = 2697.844 ; gain = 1074.352 ; free physical = 21135 ; free virtual = 34346
-INFO: [Common 17-2834] synth_design peak Physical Memory [PSS] (MB): overall = 1901.423; main = 1763.486; forked = 282.071
-INFO: [Common 17-2834] synth_design peak Virtual Memory [VSS] (MB): overall = 3540.398; main = 2697.812; forked = 994.223
-Write ShapeDB Complete: Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 2721.820 ; gain = 0.000 ; free physical = 21135 ; free virtual = 34346
+synth_design: Time (s): cpu = 00:00:28 ; elapsed = 00:00:25 . Memory (MB): peak = 2699.531 ; gain = 1068.320 ; free physical = 6852 ; free virtual = 30964
+INFO: [Common 17-2834] synth_design peak Physical Memory [PSS] (MB): overall = 1826.907; main = 1781.804; forked = 280.734
+INFO: [Common 17-2834] synth_design peak Virtual Memory [VSS] (MB): overall = 3443.414; main = 2699.500; forked = 994.223
+Write ShapeDB Complete: Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2723.508 ; gain = 0.000 ; free physical = 6852 ; free virtual = 30964
 INFO: [Common 17-1381] The checkpoint '/home/rps/fpga/gpio_project/gpio_project.runs/system_My_SPI_0_4_synth_1/system_My_SPI_0_4.dcp' has been generated.
-INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP system_My_SPI_0_4, cache-ID = 8bbb38716ea68f57
-INFO: [Coretcl 2-1174] Renamed 8 cell refs.
-Write ShapeDB Complete: Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 2721.820 ; gain = 0.000 ; free physical = 21120 ; free virtual = 34332
+INFO: [runtcl-6] Synthesis results are not added to the cache due to CRITICAL_WARNING
+INFO: [Coretcl 2-1174] Renamed 9 cell refs.
+Write ShapeDB Complete: Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 2723.508 ; gain = 0.000 ; free physical = 6866 ; free virtual = 30979
 INFO: [Common 17-1381] The checkpoint '/home/rps/fpga/gpio_project/gpio_project.runs/system_My_SPI_0_4_synth_1/system_My_SPI_0_4.dcp' has been generated.
 INFO: [Vivado 12-24828] Executing command : report_utilization -file system_My_SPI_0_4_utilization_synth.rpt -pb system_My_SPI_0_4_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Thu Oct 22 14:29:46 2026...
+INFO: [Common 17-206] Exiting Vivado at Tue Nov  3 16:43:09 2026...

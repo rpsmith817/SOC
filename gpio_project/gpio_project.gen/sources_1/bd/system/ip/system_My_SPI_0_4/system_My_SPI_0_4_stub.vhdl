@@ -2,7 +2,7 @@
 -- Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2025.2 (lin64) Build 6299465 Fri Nov 14 12:34:56 MST 2025
--- Date        : Thu Oct 22 14:29:45 2026
+-- Date        : Tue Nov  3 16:43:09 2026
 -- Host        : rps-ThinkPad-T16-Gen-4 running 64-bit Ubuntu 24.04.5 LTS
 -- Command     : write_vhdl -force -mode synth_stub
 --               /home/rps/fpga/gpio_project/gpio_project.gen/sources_1/bd/system/ip/system_My_SPI_0_4/system_My_SPI_0_4_stub.vhdl
@@ -17,14 +17,9 @@ entity system_My_SPI_0_4 is
   Port ( 
     datain : in STD_LOGIC_VECTOR ( 31 downto 0 );
     dataout : out STD_LOGIC_VECTOR ( 31 downto 0 );
-    status : out STD_LOGIC_VECTOR ( 31 downto 0 );
-    clr_overflow : in STD_LOGIC;
-    rd_req : in STD_LOGIC;
-    wr_req : in STD_LOGIC;
-    empty : out STD_LOGIC;
-    full : out STD_LOGIC;
-    overflow : out STD_LOGIC;
     baud_clk : out STD_LOGIC;
+    datum : out STD_LOGIC;
+    cs : out STD_LOGIC_VECTOR ( 3 downto 0 );
     axi_interface_spi_aclk : in STD_LOGIC;
     axi_interface_spi_aresetn : in STD_LOGIC;
     axi_interface_spi_awaddr : in STD_LOGIC_VECTOR ( 7 downto 0 );
@@ -58,7 +53,7 @@ architecture stub of system_My_SPI_0_4 is
   attribute syn_black_box : boolean;
   attribute black_box_pad_pin : string;
   attribute syn_black_box of stub : architecture is true;
-  attribute black_box_pad_pin of stub : architecture is "datain[31:0],dataout[31:0],status[31:0],clr_overflow,rd_req,wr_req,empty,full,overflow,baud_clk,axi_interface_spi_aclk,axi_interface_spi_aresetn,axi_interface_spi_awaddr[7:0],axi_interface_spi_awprot[2:0],axi_interface_spi_awvalid,axi_interface_spi_awready,axi_interface_spi_wdata[31:0],axi_interface_spi_wstrb[3:0],axi_interface_spi_wvalid,axi_interface_spi_wready,axi_interface_spi_bresp[1:0],axi_interface_spi_bvalid,axi_interface_spi_bready,axi_interface_spi_araddr[7:0],axi_interface_spi_arprot[2:0],axi_interface_spi_arvalid,axi_interface_spi_arready,axi_interface_spi_rdata[31:0],axi_interface_spi_rresp[1:0],axi_interface_spi_rvalid,axi_interface_spi_rready";
+  attribute black_box_pad_pin of stub : architecture is "datain[31:0],dataout[31:0],baud_clk,datum,cs[3:0],axi_interface_spi_aclk,axi_interface_spi_aresetn,axi_interface_spi_awaddr[7:0],axi_interface_spi_awprot[2:0],axi_interface_spi_awvalid,axi_interface_spi_awready,axi_interface_spi_wdata[31:0],axi_interface_spi_wstrb[3:0],axi_interface_spi_wvalid,axi_interface_spi_wready,axi_interface_spi_bresp[1:0],axi_interface_spi_bvalid,axi_interface_spi_bready,axi_interface_spi_araddr[7:0],axi_interface_spi_arprot[2:0],axi_interface_spi_arvalid,axi_interface_spi_arready,axi_interface_spi_rdata[31:0],axi_interface_spi_rresp[1:0],axi_interface_spi_rvalid,axi_interface_spi_rready";
   attribute X_INTERFACE_INFO : string;
   attribute X_INTERFACE_INFO of baud_clk : signal is "xilinx.com:signal:clock:1.0 baud_clk CLK";
   attribute X_INTERFACE_MODE : string;

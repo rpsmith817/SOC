@@ -2187,3 +2187,1333 @@ typeControlKey(null, null, 'z');
 // TclEventType: PACKAGER_MESSAGE_UPDATE
 // TclEventType: DG_GRAPH_STALE
 // TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'PAResourceItoN.MsgLongTask_MESSAGE_LONG_TASK/M.f': 165h:52m:26s
+// TclEventType: DG_GRAPH_GENERATED
+// HMemoryUtils.trashcanNow. Engine heap size: 2,891 MB. GUI used memory: 88 MB. Current time: 11/3/26, 3:02:28 PM CST
+// Elapsed Time for: 'PAResourceItoN.MsgLongTask_MESSAGE_LONG_TASK/M.f': 165h:52m:28s
+// HMemoryUtils.trashcanNow. Engine heap size: 2,524 MB. GUI used memory: 88 MB. Current time: 11/3/26, 3:03:08 PM CST
+// Elapsed time: 1018 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Package IP - My_SPI", 1); // m (PlanAheadTabBaseWorkspace_JideTabbedPane)
+selectList(PAResourceOtoP.PackagerStepsPanel_PACKAGER_STEPS_LIST, "Review and Package", 7); // S (PAResourceOtoP.PackagerStepsPanel_PACKAGER_STEPS_LIST)
+selectList(PAResourceOtoP.PackagerStepsPanel_PACKAGER_STEPS_LIST, "Compatibility", 1); // S (PAResourceOtoP.PackagerStepsPanel_PACKAGER_STEPS_LIST)
+selectList(PAResourceOtoP.PackagerStepsPanel_PACKAGER_STEPS_LIST, "File Groups", 2); // S (PAResourceOtoP.PackagerStepsPanel_PACKAGER_STEPS_LIST)
+selectButton(PAResourceItoN.MessageBanner_CHANGES_DETECTED_IN_VIVADO_PROJECT_THAT, "Merge changes from File Groups Wizard"); // h (PAResourceItoN.MessageBanner_CHANGES_DETECTED_IN_VIVADO_PROJECT_THAT)
+// TclEventType: PACKAGER_COMPONENT_RESET
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_MESSAGE_UPDATE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_OBJECT_CHANGE
+// HMemoryUtils.trashcanNow. Engine heap size: 2,576 MB. GUI used memory: 93 MB. Current time: 11/3/26, 3:03:48 PM CST
+// Tcl Message: ipx::merge_project_changes files [ipx::current_core] 
+selectList(PAResourceOtoP.PackagerStepsPanel_PACKAGER_STEPS_LIST, "Customization Parameters", 3); // S (PAResourceOtoP.PackagerStepsPanel_PACKAGER_STEPS_LIST)
+selectButton(PAResourceItoN.MessageBanner_CHANGES_DETECTED_IN_VIVADO_PROJECT_THAT, "Merge changes from Customization Parameters Wizard"); // h (PAResourceItoN.MessageBanner_CHANGES_DETECTED_IN_VIVADO_PROJECT_THAT)
+// TclEventType: PACKAGER_COMPONENT_RESET
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_MESSAGE_UPDATE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_OBJECT_CHANGE
+// Tcl Message: ipx::merge_project_changes hdl_parameters [ipx::current_core] 
+// Tcl Message: INFO: [IP_Flow 19-5654] Module 'My_SPI' uses SystemVerilog sources with a Verilog top file. These SystemVerilog files will not be analysed by the packager. INFO: [IP_Flow 19-3166] Bus Interface 'AXI_Interface_SPI': References existing memory map 'AXI_Interface_SPI'. 
+selectList(PAResourceOtoP.PackagerStepsPanel_PACKAGER_STEPS_LIST, "File Groups", 2); // S (PAResourceOtoP.PackagerStepsPanel_PACKAGER_STEPS_LIST)
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_MESSAGE_UPDATE
+selectList(PAResourceOtoP.PackagerStepsPanel_PACKAGER_STEPS_LIST, "Review and Package", 7); // S (PAResourceOtoP.PackagerStepsPanel_PACKAGER_STEPS_LIST)
+selectList(PAResourceOtoP.PackagerStepsPanel_PACKAGER_STEPS_LIST, "Ports and Interfaces", 4); // S (PAResourceOtoP.PackagerStepsPanel_PACKAGER_STEPS_LIST)
+selectButton(PAResourceOtoP.PackagerStepContentPanel_MESSAGES, "2"); // h (PAResourceOtoP.PackagerStepContentPanel_MESSAGES)
+selectList(PAResourceOtoP.PackagerStepsPanel_PACKAGER_STEPS_LIST, "Review and Package", 7); // S (PAResourceOtoP.PackagerStepsPanel_PACKAGER_STEPS_LIST)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 2); // m (PlanAheadTabBaseWorkspace_JideTabbedPane)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Package IP - My_SPI", 1); // m (PlanAheadTabBaseWorkspace_JideTabbedPane)
+selectButton(PAResourceQtoS.ReviewContentPanel_RE_PACKAGE_IP, "Re-Package IP"); // a (PAResourceQtoS.ReviewContentPanel_RE_PACKAGE_IP)
+// TclEventType: PACKAGER_OBJECT_CHANGE
+// Tcl Message: set_property core_revision 23 [ipx::current_core] 
+// Tcl Message: ipx::update_source_project_archive -component [ipx::current_core] 
+// Tcl Message: ipx::create_xgui_files [ipx::current_core] 
+// Tcl Message: ipx::update_checksums [ipx::current_core] 
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_MESSAGE_UPDATE
+// Tcl Message: ipx::check_integrity [ipx::current_core] 
+// Tcl Message: INFO: [IP_Flow 19-2181] Payment is not required for this core. 
+// Tcl Message: INFO: [Ipptcl 7-1486] check_integrity: Integrity check passed. 
+// Tcl Message: ipx::save_core [ipx::current_core] 
+// TclEventType: FILE_SET_CHANGE
+selectButton("NO", "No", "Close Project"); // JButton (NO)
+// HMemoryUtils.trashcanNow. Engine heap size: 3,408 MB. GUI used memory: 98 MB. Current time: 11/3/26, 3:04:28 PM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 2,580 MB. GUI used memory: 97 MB. Current time: 11/3/26, 3:05:08 PM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 2,580 MB. GUI used memory: 97 MB. Current time: 11/3/26, 3:05:48 PM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 2,580 MB. GUI used memory: 97 MB. Current time: 11/3/26, 3:06:28 PM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 2,580 MB. GUI used memory: 97 MB. Current time: 11/3/26, 3:07:08 PM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 2,580 MB. GUI used memory: 97 MB. Current time: 11/3/26, 3:07:48 PM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 2,580 MB. GUI used memory: 97 MB. Current time: 11/3/26, 3:08:28 PM CST
+// Elapsed time: 258 seconds
+selectButton(PAResourceOtoP.PlanAheadTab_REFRESH_IP_CATALOG, "Refresh IP Catalog"); // h (PAResourceOtoP.PlanAheadTab_REFRESH_IP_CATALOG)
+// Tcl Message: current_project gpio_project 
+// TclEventType: CREATE_IP_CATALOG
+// TclEventType: IP_LOCK_CHANGE
+// TclEventType: BDCELL_LOCK_CHANGE
+// TclEventType: IP_LOCK_CHANGE
+// TclEventType: BDCELL_LOCK_CHANGE
+// TclEventType: CREATE_IP_CATALOG
+// Tcl Message: update_ip_catalog -rebuild -scan_changes 
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/rps/fpga/ip_repo/My_SPI_1_0'. INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/rps/fpga/ip_repo/SPI_1_0'. INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/rps/fpga/ip_repo/gpio_1_0'. 
+// Tcl Message: INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/rps/fpga/ip_repo/gpio_1_0'. 
+// TclEventType: PAUSE_COMPOSITE_FILE_CHANGE_GUI
+// TclEventType: IP_SUMMARY_RESULTS
+// TclEventType: PAUSE_COMPOSITE_FILE_CHANGE_GUI
+// Tcl Message: report_ip_status -name ip_status 
+// Tcl Message: current_project My_SPI_v1_0_project 
+dismissDialog("Refresh IP Catalog"); // bk (Refresh IP Catalog Progress)
+ // selectButton(PAResourceItoN.IPStatusTablePanel_MORE_INFO, "Upgrade IP"); // o.d (PAResourceItoN.IPStatusTablePanel_MORE_INFO)
+selectButton(PAResourceItoN.IPStatusSectionPanel_UPGRADE_SELECTED, "Upgrade Selected"); // a (PAResourceItoN.IPStatusSectionPanel_UPGRADE_SELECTED)
+// Run Command: PAResourceCommand.PACommandNames_UPGRADE_IP
+// Tcl Message: current_project gpio_project 
+// TclEventType: PAUSE_COMPOSITE_FILE_CHANGE_GUI
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_CHANGE_CURRENT_DIAGRAM
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: RSB_LOCK_CHANGE
+// TclEventType: RSB_CHANGE_CURRENT_DIAGRAM
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: COMPOSITE_FILE_CHANGE
+// TclEventType: RSB_LOCK_CHANGE
+// TclEventType: RSB_CHANGE_CURRENT_DIAGRAM
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_OPEN_DIAGRAM
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: RSB_OPEN_DIAGRAM
+// WARNING: HEventQueue.dispatchEvent() is taking  1194 ms.
+// TclEventType: RSB_OPEN_DIAGRAM
+// Tcl Message: upgrade_ip -vlnv user.org:user:My_SPI:1.0 [get_ips  system_My_SPI_0_4] -log ip_upgrade.log 
+// Tcl Message: Reading block design file </home/rps/fpga/gpio_project/gpio_project.srcs/sources_1/bd/system/system.bd>... Adding component instance block -- xilinx.com:ip:processing_system7:5.5 - processing_system7_0 Adding component instance block -- xilinx.com:ip:proc_sys_reset:5.0 - proc_sys_reset_0 Adding component instance block -- user.org:user:gpio:1.0 - gpio_0 Adding component instance block -- xilinx.com:ip:smartconnect:1.0 - axi_smc Adding component instance block -- xilinx.com:ip:xlconcat:2.1 - xlconcat_0 Adding component instance block -- user.org:user:My_SPI:1.0 - My_SPI_0 Successfully read diagram <system> from block design file </home/rps/fpga/gpio_project/gpio_project.srcs/sources_1/bd/system/system.bd> 
+runTclCommand (PAResourceOtoP.PAViews_SYSTEM, "unselect_objects"); // gb (PAResourceOtoP.PAViews_SYSTEM, PlanAheadTabSystem)
+// TclEventType: RSB_OPEN_DIAGRAM
+// TclEventType: RUN_DELETE_COLLECTION
+// Tcl Message: Upgrading '/home/rps/fpga/gpio_project/gpio_project.srcs/sources_1/bd/system/system.bd' 
+// TclEventType: RUN_DELETE_COLLECTION
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_RESET
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_DELETE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: FILE_SET_DELETE
+// TclEventType: RUN_DELETE_COLLECTION
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: COMPOSITE_FILE_CHANGE
+// TclEventType: RSB_SAVE_DIAGRAM
+// TclEventType: COMPOSITE_FILE_CHANGE
+// TclEventType: RSB_SAVE_DIAGRAM
+// TclEventType: FILESET_UPDATE_IP
+// TclEventType: IP_UPGRADE_COMPLETE
+// TclEventType: PAUSE_COMPOSITE_FILE_CHANGE_GUI
+// Tcl Message: INFO: [IP_Flow 19-3422] Upgraded system_My_SPI_0_4 (My_SPI_v1.0 1.0) from revision 22 to revision 23 
+// Tcl Message: Wrote  : </home/rps/fpga/gpio_project/gpio_project.srcs/sources_1/bd/system/system.bd>  Wrote  : </home/rps/fpga/gpio_project/gpio_project.srcs/sources_1/bd/system/ui/bd_c954508f.ui>  
+// Tcl Message: INFO: [Coretcl 2-1525] Wrote upgrade log to '/home/rps/fpga/gpio_project/ip_upgrade.log'. 
+// Tcl Message: export_ip_user_files -of_objects [get_ips system_My_SPI_0_4] -no_script -sync -force -quiet 
+selectButton("OK", "OK", "Upgrade IP"); // JButton (OK)
+// WARNING: HTimer (Open addressing views timer) is taking 71ms to process. Increasing delay to 1300 ms.
+// Elapsed Time for: 'PAResourceItoN.MsgLongTask_MESSAGE_LONG_TASK/M.f': 165h:59m:27s
+// TclEventType: DG_GRAPH_GENERATED
+// Elapsed Time for: 'PAResourceItoN.MsgLongTask_MESSAGE_LONG_TASK/M.f': 165h:59m:29s
+selectButton(PAResourceQtoS.SimpleOutputProductDialog_CLOSE_DIALOG_UNSAVED_CHANGES_WILL, "Skip", "Generate Output Products"); // f (PAResourceQtoS.SimpleOutputProductDialog_CLOSE_DIALOG_UNSAVED_CHANGES_WILL)
+dismissDialog("Generate Output Products"); // Y (dialog0)
+selectButton(PAResourceAtoD.CmdMsgDialog_OK, "OK", "Critical Messages"); // f (PAResourceAtoD.CmdMsgDialog_OK)
+dismissDialog("Critical Messages"); // a (dialog1)
+// [GUI Memory]: 192 MB (+734kb) [165:59:57]
+// [GUI Memory]: 205 MB (+2854kb) [165:59:57]
+// HMemoryUtils.trashcanNow. Engine heap size: 3,066 MB. GUI used memory: 114 MB. Current time: 11/3/26, 3:09:09 PM CST
+runTclCommand (PAResourceOtoP.PAViews_SYSTEM, "select_objects [get_bd_ports /empty]"); // gb (PAResourceOtoP.PAViews_SYSTEM, PlanAheadTabSystem)
+// Run Command: RDIResourceCommand.RDICommands_DELETE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// Tcl Message: delete_bd_objs [get_bd_nets My_SPI_0_empty] [get_bd_ports empty] 
+// TclEventType: DG_GRAPH_GENERATED
+// Elapsed Time for: 'PAResourceItoN.MsgLongTask_MESSAGE_LONG_TASK/M.f': 165h:59m:45s
+// TclEventType: DG_GRAPH_GENERATED
+runTclCommand (PAResourceOtoP.PAViews_SYSTEM, "select_objects [get_bd_ports /full]"); // gb (PAResourceOtoP.PAViews_SYSTEM, PlanAheadTabSystem)
+// Elapsed Time for: 'PAResourceItoN.MsgLongTask_MESSAGE_LONG_TASK/M.f': 165h:59m:47s
+// Run Command: RDIResourceCommand.RDICommands_DELETE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// Tcl Message: delete_bd_objs [get_bd_nets My_SPI_0_full] [get_bd_ports full] 
+runTclCommand (PAResourceOtoP.PAViews_SYSTEM, "select_objects [get_bd_ports /overflow]"); // gb (PAResourceOtoP.PAViews_SYSTEM, PlanAheadTabSystem)
+// Run Command: RDIResourceCommand.RDICommands_DELETE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// Tcl Message: delete_bd_objs [get_bd_nets My_SPI_0_overflow] [get_bd_ports overflow] 
+// Tcl Command: 'set_property location {1591 553} [get_bd_ports baud_clk]'
+// TclEventType: RSB_CANVAS_LOCATION
+// Tcl Message: set_property location {1591 553} [get_bd_ports baud_clk] 
+runTclCommand (PAResourceOtoP.PAViews_SYSTEM, "select_objects [get_bd_pins /My_SPI_0/datum]"); // gb (PAResourceOtoP.PAViews_SYSTEM, PlanAheadTabSystem)
+selectView(PAResourceOtoP.PAViews_SYSTEM, "System", 489, 366, 867, 665, false, false, false, true, false); // gb (PAResourceOtoP.PAViews_SYSTEM, PlanAheadTabSystem) - Popup Trigger
+runTclCommand (PAResourceOtoP.PAViews_SYSTEM, "select_objects [get_bd_pins /My_SPI_0/datum]"); // gb (PAResourceOtoP.PAViews_SYSTEM, PlanAheadTabSystem)
+selectMenuItem(PAResourceCommand.PACommandNames_AUTO_CONNECT_PORTS, "Make External"); // ap (PAResourceCommand.PACommandNames_AUTO_CONNECT_PORTS, auto_connect_ports_menu)
+// Run Command: PAResourceCommand.PACommandNames_AUTO_CONNECT_PORTS
+// TclEventType: RSB_SCRIPT_TASK
+// Tcl Message: startgroup 
+// Tcl Message: make_bd_pins_external  [get_bd_pins My_SPI_0/datum] 
+// Tcl Message: endgroup 
+selectView(PAResourceOtoP.PAViews_SYSTEM, "System", 491, 393, 867, 665, false, false, false, true, false); // gb (PAResourceOtoP.PAViews_SYSTEM, PlanAheadTabSystem) - Popup Trigger
+runTclCommand (PAResourceOtoP.PAViews_SYSTEM, "select_objects [get_bd_pins /My_SPI_0/cs]"); // gb (PAResourceOtoP.PAViews_SYSTEM, PlanAheadTabSystem)
+selectMenu(PAResourceQtoS.SystemBuilderView_PINNING, "Pinning"); // am (PAResourceQtoS.SystemBuilderView_PINNING, Pinning)
+selectMenu(PAResourceQtoS.SystemBuilderView_PINNING, "Pinning"); // am (PAResourceQtoS.SystemBuilderView_PINNING, Pinning)
+selectMenu(PAResourceQtoS.SystemBuilderView_PINNING, "Pinning"); // am (PAResourceQtoS.SystemBuilderView_PINNING, Pinning)
+selectMenuItem(PAResourceCommand.PACommandNames_AUTO_CONNECT_PORTS, "Make External"); // ap (PAResourceCommand.PACommandNames_AUTO_CONNECT_PORTS, auto_connect_ports_menu)
+// Run Command: PAResourceCommand.PACommandNames_AUTO_CONNECT_PORTS
+// TclEventType: RSB_SCRIPT_TASK
+// Tcl Message: startgroup 
+// Tcl Message: make_bd_pins_external  [get_bd_pins My_SPI_0/cs] 
+// Tcl Message: endgroup 
+// HMemoryUtils.trashcanNow. Engine heap size: 2,627 MB. GUI used memory: 110 MB. Current time: 11/3/26, 3:09:49 PM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 2,627 MB. GUI used memory: 110 MB. Current time: 11/3/26, 3:10:29 PM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 2,627 MB. GUI used memory: 110 MB. Current time: 11/3/26, 3:11:09 PM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 2,627 MB. GUI used memory: 110 MB. Current time: 11/3/26, 3:11:49 PM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 2,627 MB. GUI used memory: 110 MB. Current time: 11/3/26, 3:12:29 PM CST
+// Elapsed time: 181 seconds
+selectTab((HResource) null, (HResource) null, "Sources", 0); // ab
+// HMemoryUtils.trashcanNow. Engine heap size: 2,795 MB. GUI used memory: 115 MB. Current time: 11/3/26, 3:13:09 PM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 2,628 MB. GUI used memory: 113 MB. Current time: 11/3/26, 3:13:49 PM CST
+// Elapsed time: 77 seconds
+runTclCommand (PAResourceOtoP.PAViews_SYSTEM, "unselect_objects"); // gb (PAResourceOtoP.PAViews_SYSTEM, PlanAheadTabSystem)
+selectTreeTable(PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE, "My_SPI_v1.0 ; AXI4 ; Pre-Production ; Included ; user.org:user:My_SPI:1.0", 2, "My_SPI_v1.0", 0, false); // z (PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE)
+expandTreeTable(PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE, "My_SPI_v1.0 ; AXI4 ; Pre-Production ; Included ; user.org:user:My_SPI:1.0", 2); // z (PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE)
+selectTreeTable(PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE, "My_SPI_v1.0 ; AXI4 ; Pre-Production ; Included ; user.org:user:My_SPI:1.0", 2, "My_SPI_v1.0", 0, false, false, false, false, false, true); // z (PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE) - Double Click
+// Run Command: PAResourceCommand.PACommandNames_CUSTOMIZE_CORE
+selectButton((HResource) null, "Cancel", "Add IP"); // JButton
+closeView(PAResourceOtoP.PAViews_IP_CATALOG, "IP Catalog"); // J (PAResourceOtoP.PAViews_IP_CATALOG, PlanAheadTabIP Catalog)
+closeView(PAResourceOtoP.PAViews_PROJECT_SUMMARY, "Project Summary"); // x (PAResourceOtoP.PAViews_PROJECT_SUMMARY, PlanAheadTabProject Summary)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, the_system_top (gpio_system_top.sv)]", 1, true); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, the_system_top (gpio_system_top.sv), system : system_wrapper (system_wrapper.v)]", 2, true); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, the_system_top (gpio_system_top.sv), system : system_wrapper (system_wrapper.v)]", 2, true, false, false, false, false, true); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE) - Double Click - Node
+// HMemoryUtils.trashcanNow. Engine heap size: 2,668 MB. GUI used memory: 115 MB. Current time: 11/3/26, 3:14:29 PM CST
+// Elapsed time: 17 seconds
+selectCodeEditor("system_wrapper.v", 223, 151); // ae (system_wrapper.v)
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, the_system_top (gpio_system_top.sv), system : system_wrapper (system_wrapper.v)]", 2); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE)
+collapseTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, the_system_top (gpio_system_top.sv), system : system_wrapper (system_wrapper.v)]", 2); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE)
+selectCodeEditor("system_wrapper.v", 148, 416); // ae (system_wrapper.v)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Address Map", 2); // m (PlanAheadTabBaseWorkspace_JideTabbedPane)
+closeView(PAResourceOtoP.PAViews_ADDRESS_MAP, "Address Map"); // m (PAResourceOtoP.PAViews_ADDRESS_MAP, PlanAheadTabAddress Map)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Address Editor", 1); // m (PlanAheadTabBaseWorkspace_JideTabbedPane)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "System", 0); // m (PlanAheadTabBaseWorkspace_JideTabbedPane)
+// HMemoryUtils.trashcanNow. Engine heap size: 2,668 MB. GUI used memory: 118 MB. Current time: 11/3/26, 3:15:09 PM CST
+selectView(PAResourceOtoP.PAViews_SYSTEM, "System", 152, 150, 1184, 665, false, false, false, true, false); // gb (PAResourceOtoP.PAViews_SYSTEM, PlanAheadTabSystem) - Popup Trigger
+runTclCommand (PAResourceOtoP.PAViews_SYSTEM, "unselect_objects"); // gb (PAResourceOtoP.PAViews_SYSTEM, PlanAheadTabSystem)
+// Tcl Command: 'set_property location {1569 599} [get_bd_ports datum_0]'
+// TclEventType: RSB_CANVAS_LOCATION
+// Tcl Message: set_property location {1569 599} [get_bd_ports datum_0] 
+// HMemoryUtils.trashcanNow. Engine heap size: 2,678 MB. GUI used memory: 116 MB. Current time: 11/3/26, 3:15:49 PM CST
+// Tcl Command: 'set_property location {1568 574} [get_bd_ports baud_clk]'
+// TclEventType: RSB_CANVAS_LOCATION
+// Tcl Message: set_property location {1568 574} [get_bd_ports baud_clk] 
+// Elapsed time: 32 seconds
+runTclCommand (PAResourceOtoP.PAViews_SYSTEM, "select_objects [get_bd_ports /baud_clk]"); // gb (PAResourceOtoP.PAViews_SYSTEM, PlanAheadTabSystem)
+runTclCommand (PAResourceOtoP.PAViews_SYSTEM, "select_objects [get_bd_ports /status]"); // gb (PAResourceOtoP.PAViews_SYSTEM, PlanAheadTabSystem)
+// Tcl Command: 'set_property location {1570 541} [get_bd_ports status]'
+// TclEventType: RSB_CANVAS_LOCATION
+// Tcl Message: set_property location {1570 541} [get_bd_ports status] 
+// Tcl Command: 'set_property location {1577 509} [get_bd_ports dataout]'
+// TclEventType: RSB_CANVAS_LOCATION
+// Tcl Message: set_property location {1577 509} [get_bd_ports dataout] 
+runTclCommand (PAResourceOtoP.PAViews_SYSTEM, "select_objects [get_bd_ports /dataout]"); // gb (PAResourceOtoP.PAViews_SYSTEM, PlanAheadTabSystem)
+runTclCommand (PAResourceOtoP.PAViews_SYSTEM, "unselect_objects"); // gb (PAResourceOtoP.PAViews_SYSTEM, PlanAheadTabSystem)
+// Tcl Command: 'set_property location {4 1333 597} [get_bd_cells My_SPI_0]'
+// TclEventType: RSB_CANVAS_LOCATION
+// Tcl Message: set_property location {4 1333 597} [get_bd_cells My_SPI_0] 
+// Tcl Command: 'set_property location {4 1330 596} [get_bd_cells My_SPI_0]'
+// TclEventType: RSB_CANVAS_LOCATION
+// Tcl Message: set_property location {4 1330 596} [get_bd_cells My_SPI_0] 
+// Tcl Command: 'set_property location {4 1338 572} [get_bd_cells My_SPI_0]'
+// TclEventType: RSB_CANVAS_LOCATION
+// Tcl Message: set_property location {4 1338 572} [get_bd_cells My_SPI_0] 
+// Elapsed time: 21 seconds
+selectButton(PAResourceCommand.PACommandNames_REGENERATE_LAYOUT, "System_regenerate_rsb_layout"); // C (PAResourceCommand.PACommandNames_REGENERATE_LAYOUT, System_regenerate_rsb_layout)
+// Run Command: PAResourceCommand.PACommandNames_REGENERATE_LAYOUT
+// Tcl Command: 'regenerate_bd_layout'
+// TclEventType: RSB_LAYOUT_STATE
+// TclEventType: RSB_REGENERATE_LAYOUT
+// Tcl Message: regenerate_bd_layout 
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "system_wrapper.v", 2); // m (PlanAheadTabBaseWorkspace_JideTabbedPane)
+// HMemoryUtils.trashcanNow. Engine heap size: 2,662 MB. GUI used memory: 116 MB. Current time: 11/3/26, 3:16:29 PM CST
+// Run Command: RDIResourceCommand.RDICommands_UNDO
+typeControlKey(null, null, 'z');
+// TclEventType: RSB_LAYOUT_STATE
+// Tcl Message: undo 
+// Tcl Message: INFO: [Common 17-17] undo 'regenerate_bd_layout' 
+selectCodeEditor("system_wrapper.v", 357, 386); // ae (system_wrapper.v)
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Address Editor", 1); // m (PlanAheadTabBaseWorkspace_JideTabbedPane)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "System", 0); // m (PlanAheadTabBaseWorkspace_JideTabbedPane)
+// Tcl Command: 'set_property location {2 455 739} [get_bd_cells proc_sys_reset_0]'
+// TclEventType: RSB_CANVAS_LOCATION
+// Tcl Message: set_property location {2 455 739} [get_bd_cells proc_sys_reset_0] 
+// Tcl Command: 'set_property location {1 137 634} [get_bd_cells xlconcat_0]'
+// TclEventType: RSB_CANVAS_LOCATION
+// Tcl Message: set_property location {1 137 634} [get_bd_cells xlconcat_0] 
+// HMemoryUtils.trashcanNow. Engine heap size: 2,662 MB. GUI used memory: 118 MB. Current time: 11/3/26, 3:17:09 PM CST
+// Tcl Command: 'set_property location {1 128 658} [get_bd_cells xlconcat_0]'
+// TclEventType: RSB_CANVAS_LOCATION
+// Tcl Message: set_property location {1 128 658} [get_bd_cells xlconcat_0] 
+// Tcl Command: 'set_property location {1585 241} [get_bd_intf_ports FIXED_IO]'
+// TclEventType: RSB_CANVAS_LOCATION
+// Tcl Message: set_property location {1585 241} [get_bd_intf_ports FIXED_IO] 
+// Tcl Command: 'set_property location {1597 213} [get_bd_intf_ports DDR]'
+// TclEventType: RSB_CANVAS_LOCATION
+// Tcl Message: set_property location {1597 213} [get_bd_intf_ports DDR] 
+// Tcl Command: 'set_property location {1572 223} [get_bd_intf_ports DDR]'
+// TclEventType: RSB_CANVAS_LOCATION
+// Tcl Message: set_property location {1572 223} [get_bd_intf_ports DDR] 
+// Tcl Command: 'set_property location {1594 244} [get_bd_intf_ports FIXED_IO]'
+// TclEventType: RSB_CANVAS_LOCATION
+// Tcl Message: set_property location {1594 244} [get_bd_intf_ports FIXED_IO] 
+// Tcl Command: 'set_property location {3 978 439} [get_bd_cells axi_smc]'
+// TclEventType: RSB_CANVAS_LOCATION
+// Tcl Message: set_property location {3 978 439} [get_bd_cells axi_smc] 
+// HMemoryUtils.trashcanNow. Engine heap size: 2,662 MB. GUI used memory: 122 MB. Current time: 11/3/26, 3:17:49 PM CST
+// Elapsed time: 68 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "system_wrapper.v", 2); // m (PlanAheadTabBaseWorkspace_JideTabbedPane)
+// Elapsed time: 12 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Address Editor", 1); // m (PlanAheadTabBaseWorkspace_JideTabbedPane)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "System", 0); // m (PlanAheadTabBaseWorkspace_JideTabbedPane)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "system_wrapper.v", 2); // m (PlanAheadTabBaseWorkspace_JideTabbedPane)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "System", 1); // m (PlanAheadTabBaseWorkspace_JideTabbedPane)
+// Elapsed Time for: 'PAResourceItoN.MsgLongTask_MESSAGE_LONG_TASK/M.f': 166h:08m:47s
+// TclEventType: DG_GRAPH_GENERATED
+// Elapsed Time for: 'PAResourceItoN.MsgLongTask_MESSAGE_LONG_TASK/M.f': 166h:08m:49s
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "system_wrapper.v", 2); // m (PlanAheadTabBaseWorkspace_JideTabbedPane)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "System", 1); // m (PlanAheadTabBaseWorkspace_JideTabbedPane)
+runTclCommand (PAResourceOtoP.PAViews_SYSTEM, "select_objects [get_bd_ports /datum_0]"); // gb (PAResourceOtoP.PAViews_SYSTEM, PlanAheadTabSystem)
+selectView(PAResourceOtoP.PAViews_SYSTEM, "System", 1058, 450, 1184, 665, false, false, false, true, false); // gb (PAResourceOtoP.PAViews_SYSTEM, PlanAheadTabSystem) - Popup Trigger
+runTclCommand (PAResourceOtoP.PAViews_SYSTEM, "select_objects [get_bd_ports /datum_0]"); // gb (PAResourceOtoP.PAViews_SYSTEM, PlanAheadTabSystem)
+selectMenu(PAResourceQtoS.SystemBuilderView_PINNING, "Pinning"); // am (PAResourceQtoS.SystemBuilderView_PINNING, Pinning)
+selectMenu(PAResourceQtoS.SystemBuilderView_PINNING, "Pinning"); // am (PAResourceQtoS.SystemBuilderView_PINNING, Pinning)
+// HMemoryUtils.trashcanNow. Engine heap size: 2,686 MB. GUI used memory: 122 MB. Current time: 11/3/26, 3:18:29 PM CST
+selectView(PAResourceOtoP.PAViews_SYSTEM, "System", 1072, 456, 1184, 665, false, false, false, true, false); // gb (PAResourceOtoP.PAViews_SYSTEM, PlanAheadTabSystem) - Popup Trigger
+runTclCommand (PAResourceOtoP.PAViews_SYSTEM, "select_objects [get_bd_ports /datum_0]"); // gb (PAResourceOtoP.PAViews_SYSTEM, PlanAheadTabSystem)
+setText(PAResourceQtoS.RSBExternalPortPropPanels_NAME, "datum", true); // ad (PAResourceQtoS.RSBExternalPortPropPanels_NAME)
+// Tcl Command: 'set_property name datum [get_bd_ports datum_0]'
+// TclEventType: RSB_RENAME_OBJECT
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: RSB_RENAME_OBJECT
+// Tcl Message: set_property name datum [get_bd_ports datum_0] 
+runTclCommand (PAResourceOtoP.PAViews_SYSTEM, "select_objects [get_bd_ports /cs_0]"); // gb (PAResourceOtoP.PAViews_SYSTEM, PlanAheadTabSystem)
+setText(PAResourceQtoS.RSBExternalPortPropPanels_NAME, "cs", true); // ad (PAResourceQtoS.RSBExternalPortPropPanels_NAME)
+// Tcl Command: 'set_property name cs [get_bd_ports cs_0]'
+// TclEventType: RSB_RENAME_OBJECT
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: RSB_RENAME_OBJECT
+// Tcl Message: set_property name cs [get_bd_ports cs_0] 
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "system_wrapper.v", 2); // m (PlanAheadTabBaseWorkspace_JideTabbedPane)
+// HMemoryUtils.trashcanNow. Engine heap size: 2,686 MB. GUI used memory: 128 MB. Current time: 11/3/26, 3:19:09 PM CST
+// Elapsed time: 25 seconds
+selectButton((HResource) null, "RDIResource.FrameControlsPanel_MINIMIZE_Sources"); // P.a (RDIResource.FrameControlsPanel_MINIMIZE_Sources)
+selectButton((HResource) null, "RDIResource.FrameControlsPanel_MINIMIZE_Properties"); // P.a (RDIResource.FrameControlsPanel_MINIMIZE_Properties)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "system_wrapper.v", 2); // m (PlanAheadTabBaseWorkspace_JideTabbedPane)
+selectButton(RDIResource.HCodeView_TOGGLE_COLUMN_SELECTION_MODE, (String) null); // w (RDIResource.HCodeView_TOGGLE_COLUMN_SELECTION_MODE): TRUE
+selectButton(RDIResource.HCodeView_TOGGLE_COLUMN_SELECTION_MODE, (String) null); // w (RDIResource.HCodeView_TOGGLE_COLUMN_SELECTION_MODE): FALSE
+// Elapsed time: 11 seconds
+selectButton((HResource) null, "RDIResource.FrameControlsPanel_FLOAT_PlanAheadTabBaseWorkspace_JideTabbedPane"); // P.a (RDIResource.FrameControlsPanel_FLOAT_PlanAheadTabBaseWorkspace_JideTabbedPane)
+floatFrame(PAResourceOtoP.PAViews_CODE, "system_wrapper.v *"); // S (PAResourceOtoP.PAViews_CODE, Code)
+// PAResourceOtoP.PAViews_CODE: Code: float view
+selectCodeEditor("system_wrapper.v", 314, 439); // ae (system_wrapper.v)
+// [GUI Memory]: 216 MB (+1619kb) [166:10:37]
+// HMemoryUtils.trashcanNow. Engine heap size: 2,681 MB. GUI used memory: 126 MB. Current time: 11/3/26, 3:19:49 PM CST
+// Elapsed time: 30 seconds
+closeFrame(PAResourceOtoP.PAViews_CODE, "system_wrapper.v *"); // S (PAResourceOtoP.PAViews_CODE, Code)
+dockFrame(PAResourceOtoP.PAViews_CODE, "system_wrapper.v *"); // S (PAResourceOtoP.PAViews_CODE, Code)
+closeView(PAResourceOtoP.PAViews_CODE, "Code"); // H (PAResourceOtoP.PAViews_CODE, PlanAheadTabCode)
+selectButton(RDIResource.ConfirmSaveTextEditsDialog_NO, "No", "Text Changed"); // a (RDIResource.ConfirmSaveTextEditsDialog_NO)
+dismissDialog("Text Changed"); // i (dialog2)
+// Elapsed time: 14 seconds
+unMinimizeFrame(RDIResource.RDIViews_PROPERTIES, "Properties"); // S (RDIResource.RDIViews_PROPERTIES, Properties)
+// HMemoryUtils.trashcanNow. Engine heap size: 2,973 MB. GUI used memory: 127 MB. Current time: 11/3/26, 3:20:29 PM CST
+unMinimizeFrame(PAResourceOtoP.PAViews_SIGNALS, "Signals"); // S (PAResourceOtoP.PAViews_SIGNALS, Signals)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, the_system_top (gpio_system_top.sv), system : system_wrapper (system_wrapper.v)]", 2, true, false, false, false, true, false); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE) - Popup Trigger - Node
+// HMemoryUtils.trashcanNow. Engine heap size: 2,659 MB. GUI used memory: 127 MB. Current time: 11/3/26, 3:21:09 PM CST
+// Elapsed time: 64 seconds
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, the_system_top (gpio_system_top.sv), system : system_wrapper (system_wrapper.v)]", 2); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, the_system_top (gpio_system_top.sv), system : system_wrapper (system_wrapper.v), system_i : system (system.bd)]", 3, true, false, false, false, true, false); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE) - Popup Trigger - Node
+selectMenu(PAResourceCommand.PACommandNames_OPEN_FILE_WITH, "Open With"); // am (PAResourceCommand.PACommandNames_OPEN_FILE_WITH, Open With)
+// HMemoryUtils.trashcanNow. Engine heap size: 2,659 MB. GUI used memory: 135 MB. Current time: 11/3/26, 3:21:49 PM CST
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, the_system_top (gpio_system_top.sv), system : system_wrapper (system_wrapper.v), system_i : system (system.bd)]", 3, true, false, false, false, true, false); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE) - Popup Trigger - Node
+selectMenu(PAResourceCommand.PACommandNames_OPEN_FILE_WITH, "Open With"); // am (PAResourceCommand.PACommandNames_OPEN_FILE_WITH, Open With)
+selectMenuItem(PAResourceCommand.PACommandNames_CREATE_TOP_HDL, "Create HDL Wrapper..."); // ap (PAResourceCommand.PACommandNames_CREATE_TOP_HDL, create_top_hdl_menu)
+// Run Command: PAResourceCommand.PACommandNames_CREATE_TOP_HDL
+// Elapsed time: 19 seconds
+selectButton(RDIResource.BaseDialog_OK, "OK", "Create HDL Wrapper"); // f (RDIResource.BaseDialog_OK)
+// 'af' command handler elapsed time: 19 seconds
+dismissDialog("Create HDL Wrapper"); // a (dialog3)
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_CLOSE_DIAGRAM
+// TclEventType: REPORT_IP_STATUS_STALE
+// Tcl Message: make_wrapper -files [get_files /home/rps/fpga/gpio_project/gpio_project.srcs/sources_1/bd/system/system.bd] -top 
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_SAVE_DIAGRAM
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: RSB_SAVE_DIAGRAM
+// TclEventType: RSB_SCRIPT_TASK
+// Create Top HDL Elapsed Time: 3.7s
+// Tcl Message: Wrote  : </home/rps/fpga/gpio_project/gpio_project.srcs/sources_1/bd/system/system.bd>  Wrote  : </home/rps/fpga/gpio_project/gpio_project.srcs/sources_1/bd/system/ui/bd_c954508f.ui>  Verilog Output written to : /home/rps/fpga/gpio_project/gpio_project.gen/sources_1/bd/system/synth/system.v Verilog Output written to : /home/rps/fpga/gpio_project/gpio_project.gen/sources_1/bd/system/sim/system.v Verilog Output written to : /home/rps/fpga/gpio_project/gpio_project.gen/sources_1/bd/system/hdl/system_wrapper.v 
+dismissDialog("Create HDL Wrapper"); // bk (Create HDL Wrapper Progress)
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_GENERATED
+// Elapsed Time for: 'PAResourceItoN.MsgLongTask_MESSAGE_LONG_TASK/M.f': 166h:12m:49s
+// Elapsed Time for: 'PAResourceItoN.MsgLongTask_MESSAGE_LONG_TASK/M.f': 166h:12m:51s
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, the_system_top (gpio_system_top.sv), system : system_wrapper (system_wrapper.v)]", 2, true); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, the_system_top (gpio_system_top.sv)]", 1, true); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, the_system_top (gpio_system_top.sv)]", 1, true, false, false, false, false, true); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE) - Double Click - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints, constrs_1, blackboard.xdc]", 4, false); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints, constrs_1, blackboard.xdc]", 4, false, false, false, false, false, true); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE) - Double Click
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, the_system_top (gpio_system_top.sv)]", 1); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, the_system_top (gpio_system_top.sv), system : system_wrapper (system_wrapper.v)]", 2, true); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, the_system_top (gpio_system_top.sv), system : system_wrapper (system_wrapper.v)]", 2, true, false, false, false, false, true); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE) - Double Click - Node
+// HMemoryUtils.trashcanNow. Engine heap size: 2,848 MB. GUI used memory: 130 MB. Current time: 11/3/26, 3:22:30 PM CST
+selectCodeEditor("system_wrapper.v", 270, 409); // ae (system_wrapper.v)
+selectCodeEditor("system_wrapper.v", 179, 117); // ae (system_wrapper.v)
+selectCodeEditor("system_wrapper.v", 179, 117); // ae (system_wrapper.v)
+selectCodeEditor("system_wrapper.v", 179, 117); // ae (system_wrapper.v)
+// Elapsed time: 20 seconds
+selectCodeEditor("system_wrapper.v", 70, 514); // ae (system_wrapper.v)
+// HMemoryUtils.trashcanNow. Engine heap size: 2,842 MB. GUI used memory: 129 MB. Current time: 11/3/26, 3:23:10 PM CST
+typeControlKey((HResource) null, "system_wrapper.v", 'c'); // ae (system_wrapper.v)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, the_system_top (gpio_system_top.sv)]", 1, true); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, the_system_top (gpio_system_top.sv)]", 1, true, false, false, false, false, true); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE) - Double Click - Node
+selectCodeEditor("gpio_system_top.sv", 263, 412); // ae (gpio_system_top.sv)
+selectCodeEditor("gpio_system_top.sv", 263, 412); // ae (gpio_system_top.sv)
+selectCodeEditor("gpio_system_top.sv", 263, 412); // ae (gpio_system_top.sv)
+selectCodeEditor("gpio_system_top.sv", 263, 412); // ae (gpio_system_top.sv)
+selectCodeEditor("gpio_system_top.sv", 263, 412); // ae (gpio_system_top.sv)
+selectCodeEditor("gpio_system_top.sv", 204, 518); // ae (gpio_system_top.sv)
+typeControlKey((HResource) null, "gpio_system_top.sv", 'v'); // ae (gpio_system_top.sv)
+// Elapsed time: 11 seconds
+typeControlKey(null, null, 'z');
+// HMemoryUtils.trashcanNow. Engine heap size: 2,842 MB. GUI used memory: 130 MB. Current time: 11/3/26, 3:23:50 PM CST
+// Elapsed time: 36 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 2); // m (PlanAheadTabBaseWorkspace_JideTabbedPane)
+// HMemoryUtils.trashcanNow. Engine heap size: 2,842 MB. GUI used memory: 131 MB. Current time: 11/3/26, 3:24:30 PM CST
+// Elapsed time: 17 seconds
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 198, 385); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 198, 385); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+// HMemoryUtils.trashcanNow. Engine heap size: 2,842 MB. GUI used memory: 130 MB. Current time: 11/3/26, 3:25:10 PM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 2,842 MB. GUI used memory: 130 MB. Current time: 11/3/26, 3:25:50 PM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 2,842 MB. GUI used memory: 130 MB. Current time: 11/3/26, 3:26:30 PM CST
+// Elapsed time: 115 seconds
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 312, 348); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+// Elapsed time: 23 seconds
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+// HMemoryUtils.trashcanNow. Engine heap size: 2,843 MB. GUI used memory: 130 MB. Current time: 11/3/26, 3:27:10 PM CST
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// WARNING: HEventQueue.dispatchEvent() is taking  1153 ms.
+// Elapsed Time for: 'PAResourceItoN.MsgLongTask_MESSAGE_LONG_TASK/M.f': 166h:18m:02s
+// TclEventType: DG_GRAPH_GENERATED
+// Elapsed Time for: 'PAResourceItoN.MsgLongTask_MESSAGE_LONG_TASK/M.f': 166h:18m:05s
+// Elapsed time: 30 seconds
+selectCodeEditor("gpio_system_top.sv", 141, 205); // ae (gpio_system_top.sv)
+selectCodeEditor("gpio_system_top.sv", 141, 205); // ae (gpio_system_top.sv)
+selectCodeEditor("gpio_system_top.sv", 141, 205); // ae (gpio_system_top.sv)
+// Elapsed time: 10 seconds
+selectCodeEditor("gpio_system_top.sv", 112, 517); // ae (gpio_system_top.sv)
+// HMemoryUtils.trashcanNow. Engine heap size: 3,034 MB. GUI used memory: 132 MB. Current time: 11/3/26, 3:27:51 PM CST
+// Elapsed time: 40 seconds
+selectCodeEditor("gpio_system_top.sv", 200, 439); // ae (gpio_system_top.sv)
+// HMemoryUtils.trashcanNow. Engine heap size: 2,867 MB. GUI used memory: 130 MB. Current time: 11/3/26, 3:28:31 PM CST
+// Elapsed time: 20 seconds
+selectCodeEditor("gpio_system_top.sv", 95, 500); // ae (gpio_system_top.sv)
+selectCodeEditor("gpio_system_top.sv", 95, 500, false, false, false, false, true); // ae (gpio_system_top.sv) - Double Click
+// HMemoryUtils.trashcanNow. Engine heap size: 2,867 MB. GUI used memory: 130 MB. Current time: 11/3/26, 3:29:11 PM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 2,867 MB. GUI used memory: 135 MB. Current time: 11/3/26, 3:29:51 PM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 2,867 MB. GUI used memory: 131 MB. Current time: 11/3/26, 3:30:31 PM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 2,867 MB. GUI used memory: 131 MB. Current time: 11/3/26, 3:31:11 PM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 2,867 MB. GUI used memory: 132 MB. Current time: 11/3/26, 3:31:51 PM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 2,867 MB. GUI used memory: 131 MB. Current time: 11/3/26, 3:32:31 PM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 2,867 MB. GUI used memory: 131 MB. Current time: 11/3/26, 3:33:11 PM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 2,867 MB. GUI used memory: 131 MB. Current time: 11/3/26, 3:33:51 PM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 2,867 MB. GUI used memory: 131 MB. Current time: 11/3/26, 3:34:31 PM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 2,867 MB. GUI used memory: 131 MB. Current time: 11/3/26, 3:35:11 PM CST
+// Elapsed time: 424 seconds
+selectCodeEditor("gpio_system_top.sv", 132, 340); // ae (gpio_system_top.sv)
+// HMemoryUtils.trashcanNow. Engine heap size: 2,867 MB. GUI used memory: 131 MB. Current time: 11/3/26, 3:35:51 PM CST
+selectCodeEditor("gpio_system_top.sv", 352, 328); // ae (gpio_system_top.sv)
+selectCodeEditor("gpio_system_top.sv", 352, 328); // ae (gpio_system_top.sv)
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+// HMemoryUtils.trashcanNow. Engine heap size: 2,867 MB. GUI used memory: 131 MB. Current time: 11/3/26, 3:36:31 PM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 2,867 MB. GUI used memory: 132 MB. Current time: 11/3/26, 3:37:11 PM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 2,867 MB. GUI used memory: 131 MB. Current time: 11/3/26, 3:37:51 PM CST
+// Elapsed time: 137 seconds
+typeControlKey((HResource) null, "gpio_system_top.sv", 'c'); // ae (gpio_system_top.sv)
+typeControlKey((HResource) null, "gpio_system_top.sv", 'v'); // ae (gpio_system_top.sv)
+typeControlKey((HResource) null, "gpio_system_top.sv", 'c'); // ae (gpio_system_top.sv)
+typeControlKey((HResource) null, "gpio_system_top.sv", 'v'); // ae (gpio_system_top.sv)
+typeControlKey((HResource) null, "gpio_system_top.sv", 'c'); // ae (gpio_system_top.sv)
+typeControlKey((HResource) null, "gpio_system_top.sv", 'v'); // ae (gpio_system_top.sv)
+// HMemoryUtils.trashcanNow. Engine heap size: 2,877 MB. GUI used memory: 131 MB. Current time: 11/3/26, 3:38:31 PM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 2,869 MB. GUI used memory: 131 MB. Current time: 11/3/26, 3:39:11 PM CST
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'PAResourceItoN.MsgLongTask_MESSAGE_LONG_TASK/M.f': 166h:30m:17s
+// TclEventType: DG_GRAPH_GENERATED
+// Elapsed Time for: 'PAResourceItoN.MsgLongTask_MESSAGE_LONG_TASK/M.f': 166h:30m:19s
+// HMemoryUtils.trashcanNow. Engine heap size: 2,887 MB. GUI used memory: 133 MB. Current time: 11/3/26, 3:39:51 PM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 2,887 MB. GUI used memory: 132 MB. Current time: 11/3/26, 3:40:31 PM CST
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// WARNING: HEventQueue.dispatchEvent() is taking  1069 ms.
+// Elapsed Time for: 'PAResourceItoN.MsgLongTask_MESSAGE_LONG_TASK/M.f': 166h:31m:29s
+// TclEventType: DG_GRAPH_GENERATED
+// Elapsed Time for: 'PAResourceItoN.MsgLongTask_MESSAGE_LONG_TASK/M.f': 166h:31m:31s
+// Elapsed time: 157 seconds
+setText(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "rd_req", true); // d.c (RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX)
+// HMemoryUtils.trashcanNow. Engine heap size: 3,064 MB. GUI used memory: 132 MB. Current time: 11/3/26, 3:41:11 PM CST
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "rd_req"); // d.c (RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX)
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "rd_req"); // d.c (RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX)
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "rd_req"); // d.c (RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX)
+setText(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "rd_req"); // d.c (RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX)
+// HMemoryUtils.trashcanNow. Engine heap size: 2,897 MB. GUI used memory: 132 MB. Current time: 11/3/26, 3:41:51 PM CST
+// Elapsed time: 43 seconds
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 127, 289); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 127, 289, false, false, false, false, true); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v) - Double Click
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 127, 289); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 127, 289); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 127, 289, false, false, false, false, true); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v) - Double Click
+// HMemoryUtils.trashcanNow. Engine heap size: 2,897 MB. GUI used memory: 132 MB. Current time: 11/3/26, 3:42:31 PM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 2,897 MB. GUI used memory: 132 MB. Current time: 11/3/26, 3:43:11 PM CST
+// Elapsed time: 71 seconds
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 127, 289); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+// Elapsed time: 25 seconds
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 139, 246); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 139, 246, false, false, false, false, true); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v) - Double Click
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 241, 250); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 241, 250, false, false, false, false, true); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v) - Double Click
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 241, 250, false, true, false, false, false); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v) - Control Key
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 241, 250); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 241, 250, false, false, false, false, true); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v) - Double Click
+// HMemoryUtils.trashcanNow. Engine heap size: 2,897 MB. GUI used memory: 132 MB. Current time: 11/3/26, 3:43:51 PM CST
+// Elapsed time: 33 seconds
+setText(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "rd_req_final"); // d.c (RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 201, 232); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 201, 232, false, false, false, false, true); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v) - Double Click
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "rd_req"); // d.c (RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX)
+// HMemoryUtils.trashcanNow. Engine heap size: 2,897 MB. GUI used memory: 132 MB. Current time: 11/3/26, 3:44:31 PM CST
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "rd_req"); // d.c (RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX)
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "rd_req"); // d.c (RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX)
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "rd_req"); // d.c (RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX)
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "rd_req"); // d.c (RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX)
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "rd_req"); // d.c (RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX)
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "rd_req"); // d.c (RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX)
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "rd_req"); // d.c (RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX)
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "rd_req"); // d.c (RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX)
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "rd_req"); // d.c (RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX)
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "rd_req"); // d.c (RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX)
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "rd_req"); // d.c (RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX)
+// HMemoryUtils.trashcanNow. Engine heap size: 2,897 MB. GUI used memory: 132 MB. Current time: 11/3/26, 3:45:12 PM CST
+// Elapsed time: 28 seconds
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 235, 309); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+// Elapsed time: 32 seconds
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 155, 172); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+// HMemoryUtils.trashcanNow. Engine heap size: 2,897 MB. GUI used memory: 132 MB. Current time: 11/3/26, 3:45:52 PM CST
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 124, 174); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 124, 174, false, false, false, false, true); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v) - Double Click
+// HMemoryUtils.trashcanNow. Engine heap size: 2,897 MB. GUI used memory: 132 MB. Current time: 11/3/26, 3:46:32 PM CST
+// Elapsed time: 55 seconds
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 226, 310); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+// HMemoryUtils.trashcanNow. Engine heap size: 2,897 MB. GUI used memory: 132 MB. Current time: 11/3/26, 3:47:12 PM CST
+// Elapsed time: 39 seconds
+typeControlKey(null, null, 'z');
+// HMemoryUtils.trashcanNow. Engine heap size: 2,897 MB. GUI used memory: 132 MB. Current time: 11/3/26, 3:47:52 PM CST
+// Elapsed time: 33 seconds
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+// HMemoryUtils.trashcanNow. Engine heap size: 2,897 MB. GUI used memory: 132 MB. Current time: 11/3/26, 3:48:32 PM CST
+// Elapsed time: 63 seconds
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 226, 310); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 226, 310); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 226, 310); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 226, 310); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 226, 310); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 226, 310); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 226, 310); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 128, 191); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 128, 191, false, false, false, false, true); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v) - Double Click
+// HMemoryUtils.trashcanNow. Engine heap size: 2,897 MB. GUI used memory: 132 MB. Current time: 11/3/26, 3:49:12 PM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 2,897 MB. GUI used memory: 134 MB. Current time: 11/3/26, 3:49:52 PM CST
+// Elapsed time: 51 seconds
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 541, 248); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+// HMemoryUtils.trashcanNow. Engine heap size: 2,897 MB. GUI used memory: 132 MB. Current time: 11/3/26, 3:50:32 PM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 2,897 MB. GUI used memory: 132 MB. Current time: 11/3/26, 3:51:12 PM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 2,897 MB. GUI used memory: 132 MB. Current time: 11/3/26, 3:51:52 PM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 2,897 MB. GUI used memory: 132 MB. Current time: 11/3/26, 3:52:32 PM CST
+// Elapsed time: 175 seconds
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 249, 311); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+// HMemoryUtils.trashcanNow. Engine heap size: 3,064 MB. GUI used memory: 132 MB. Current time: 11/3/26, 3:53:12 PM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 2,897 MB. GUI used memory: 132 MB. Current time: 11/3/26, 3:53:52 PM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 2,897 MB. GUI used memory: 132 MB. Current time: 11/3/26, 3:54:32 PM CST
+// Elapsed time: 116 seconds
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 249, 311); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+// HMemoryUtils.trashcanNow. Engine heap size: 2,897 MB. GUI used memory: 132 MB. Current time: 11/3/26, 3:55:12 PM CST
+// Elapsed time: 23 seconds
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 249, 311); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 249, 311); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 249, 311); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 249, 311); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+// HMemoryUtils.trashcanNow. Engine heap size: 2,897 MB. GUI used memory: 132 MB. Current time: 11/3/26, 3:55:52 PM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 2,897 MB. GUI used memory: 132 MB. Current time: 11/3/26, 3:56:32 PM CST
+// Elapsed time: 93 seconds
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 170, 363); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+// Elapsed time: 13 seconds
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 98, 355); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 98, 355, false, false, false, false, true); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v) - Double Click
+typeControlKey((HResource) null, "My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 'c'); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+// HMemoryUtils.trashcanNow. Engine heap size: 2,897 MB. GUI used memory: 132 MB. Current time: 11/3/26, 3:57:12 PM CST
+// Elapsed time: 37 seconds
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 273, 242); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 273, 242); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 273, 242); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 273, 242); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 273, 242); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+// HMemoryUtils.trashcanNow. Engine heap size: 2,897 MB. GUI used memory: 132 MB. Current time: 11/3/26, 3:57:52 PM CST
+// Elapsed time: 27 seconds
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 557, 319); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 202, 430); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 199, 430); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 554, 293); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 560, 321); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+// HMemoryUtils.trashcanNow. Engine heap size: 2,897 MB. GUI used memory: 132 MB. Current time: 11/3/26, 3:58:32 PM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 2,897 MB. GUI used memory: 132 MB. Current time: 11/3/26, 3:59:12 PM CST
+// Elapsed time: 72 seconds
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 473, 262); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+typeControlKey(null, null, 'z');
+// HMemoryUtils.trashcanNow. Engine heap size: 2,897 MB. GUI used memory: 132 MB. Current time: 11/3/26, 3:59:52 PM CST
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 558, 149); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+typeControlKey((HResource) null, "My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 'v'); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+// HMemoryUtils.trashcanNow. Engine heap size: 2,897 MB. GUI used memory: 132 MB. Current time: 11/3/26, 4:00:32 PM CST
+// Elapsed time: 61 seconds
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 769, 210, false, false, false, true, false); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v) - Popup Trigger
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 634, 174); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 477, 116); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 445, 131); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+// HMemoryUtils.trashcanNow. Engine heap size: 2,897 MB. GUI used memory: 133 MB. Current time: 11/3/26, 4:01:12 PM CST
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 557, 320); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+// HMemoryUtils.trashcanNow. Engine heap size: 2,897 MB. GUI used memory: 132 MB. Current time: 11/3/26, 4:01:52 PM CST
+// Elapsed time: 58 seconds
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 141, 187); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+// Elapsed time: 12 seconds
+typeControlKey(null, null, 'z');
+// HMemoryUtils.trashcanNow. Engine heap size: 2,897 MB. GUI used memory: 132 MB. Current time: 11/3/26, 4:02:32 PM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 2,897 MB. GUI used memory: 132 MB. Current time: 11/3/26, 4:03:12 PM CST
+// TclEventType: PACKAGER_MESSAGE_UPDATE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'PAResourceItoN.MsgLongTask_MESSAGE_LONG_TASK/M.f': 166h:53m:18s
+// TclEventType: DG_GRAPH_GENERATED
+// WARNING: HEventQueue.dispatchEvent() is taking  2126 ms.
+// Elapsed time: 53 seconds
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 369, 203); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+// Elapsed Time for: 'PAResourceItoN.MsgLongTask_MESSAGE_LONG_TASK/M.f': 166h:53m:20s
+// HMemoryUtils.trashcanNow. Engine heap size: 3,091 MB. GUI used memory: 132 MB. Current time: 11/3/26, 4:03:52 PM CST
+// Elapsed time: 58 seconds
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 312, 292); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 312, 292); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 312, 292); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 312, 292); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 312, 292); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 312, 292); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 312, 292); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 312, 292); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 312, 292); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 312, 292); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 312, 292); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+// HMemoryUtils.trashcanNow. Engine heap size: 2,923 MB. GUI used memory: 132 MB. Current time: 11/3/26, 4:04:32 PM CST
+// Elapsed time: 16 seconds
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 223, 245); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 223, 245, false, false, false, false, true); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v) - Double Click
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 223, 245); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 228, 371); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 228, 371); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 228, 371); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 228, 371); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 228, 371, false, false, false, false, true); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v) - Double Click
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 228, 371); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 228, 371, false, false, false, false, true); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v) - Double Click
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 228, 371); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 238, 472); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 238, 472, false, false, false, false, true); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v) - Double Click
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 238, 472); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 226, 365); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 226, 365, false, false, false, false, true); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v) - Double Click
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 226, 365); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+// HMemoryUtils.trashcanNow. Engine heap size: 2,924 MB. GUI used memory: 132 MB. Current time: 11/3/26, 4:05:12 PM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 2,924 MB. GUI used memory: 132 MB. Current time: 11/3/26, 4:05:52 PM CST
+// Elapsed time: 67 seconds
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 406, 321); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+// HMemoryUtils.trashcanNow. Engine heap size: 2,924 MB. GUI used memory: 132 MB. Current time: 11/3/26, 4:06:32 PM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 2,924 MB. GUI used memory: 132 MB. Current time: 11/3/26, 4:07:12 PM CST
+// Elapsed time: 114 seconds
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 236, 263); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 236, 263, false, false, false, false, true); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v) - Double Click
+// HMemoryUtils.trashcanNow. Engine heap size: 2,924 MB. GUI used memory: 132 MB. Current time: 11/3/26, 4:07:52 PM CST
+typeControlKey((HResource) null, "My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 'c'); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+// HMemoryUtils.trashcanNow. Engine heap size: 2,924 MB. GUI used memory: 132 MB. Current time: 11/3/26, 4:08:32 PM CST
+// Elapsed time: 43 seconds
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 268, 233); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+// HMemoryUtils.trashcanNow. Engine heap size: 2,924 MB. GUI used memory: 132 MB. Current time: 11/3/26, 4:09:12 PM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 2,924 MB. GUI used memory: 132 MB. Current time: 11/3/26, 4:09:52 PM CST
+// Elapsed time: 108 seconds
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 255, 203); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 255, 203, false, false, false, false, true); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v) - Double Click
+// HMemoryUtils.trashcanNow. Engine heap size: 2,924 MB. GUI used memory: 132 MB. Current time: 11/3/26, 4:10:32 PM CST
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 188, 286); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+// Elapsed time: 24 seconds
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 144, 304); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 144, 304, false, false, false, false, true); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v) - Double Click
+typeControlKey((HResource) null, "My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 'c'); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 302, 299); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 302, 299); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+// HMemoryUtils.trashcanNow. Engine heap size: 2,924 MB. GUI used memory: 132 MB. Current time: 11/3/26, 4:11:12 PM CST
+// Elapsed time: 33 seconds
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 468, 187); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+// HMemoryUtils.trashcanNow. Engine heap size: 2,924 MB. GUI used memory: 132 MB. Current time: 11/3/26, 4:11:52 PM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 2,924 MB. GUI used memory: 132 MB. Current time: 11/3/26, 4:12:32 PM CST
+// TclEventType: PACKAGER_MESSAGE_UPDATE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// WARNING: HEventQueue.dispatchEvent() is taking  2029 ms.
+// Elapsed Time for: 'PAResourceItoN.MsgLongTask_MESSAGE_LONG_TASK/M.f': 167h:03m:02s
+// TclEventType: DG_GRAPH_GENERATED
+// Elapsed Time for: 'PAResourceItoN.MsgLongTask_MESSAGE_LONG_TASK/M.f': 167h:03m:04s
+// Elapsed time: 84 seconds
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 415, 347); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+typeControlKey((HResource) null, "My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 'v'); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+// TclEventType: PACKAGER_MESSAGE_UPDATE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'PAResourceItoN.MsgLongTask_MESSAGE_LONG_TASK/M.f': 167h:03m:12s
+// HMemoryUtils.trashcanNow. Engine heap size: 2,968 MB. GUI used memory: 132 MB. Current time: 11/3/26, 4:13:13 PM CST
+// TclEventType: DG_GRAPH_GENERATED
+// WARNING: HEventQueue.dispatchEvent() is taking  2273 ms.
+// Elapsed Time for: 'PAResourceItoN.MsgLongTask_MESSAGE_LONG_TASK/M.f': 167h:03m:15s
+// Elapsed time: 13 seconds
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 287, 441); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+typeControlKey((HResource) null, "My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 'v'); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 548, 423); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+typeControlKey((HResource) null, "My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 'v'); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 537, 161); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+// HMemoryUtils.trashcanNow. Engine heap size: 2,958 MB. GUI used memory: 133 MB. Current time: 11/3/26, 4:13:53 PM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 2,958 MB. GUI used memory: 133 MB. Current time: 11/3/26, 4:14:33 PM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 2,958 MB. GUI used memory: 133 MB. Current time: 11/3/26, 4:15:13 PM CST
+// Elapsed time: 94 seconds
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 302, 191); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+typeControlKey(null, null, 'z');
+// TclEventType: PACKAGER_MESSAGE_UPDATE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// WARNING: HEventQueue.dispatchEvent() is taking  1790 ms.
+// Elapsed Time for: 'PAResourceItoN.MsgLongTask_MESSAGE_LONG_TASK/M.f': 167h:05m:36s
+// TclEventType: DG_GRAPH_GENERATED
+// Elapsed Time for: 'PAResourceItoN.MsgLongTask_MESSAGE_LONG_TASK/M.f': 167h:05m:38s
+// Elapsed time: 30 seconds
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 207, 251); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+// HMemoryUtils.trashcanNow. Engine heap size: 2,978 MB. GUI used memory: 134 MB. Current time: 11/3/26, 4:15:53 PM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 2,978 MB. GUI used memory: 133 MB. Current time: 11/3/26, 4:16:33 PM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 2,978 MB. GUI used memory: 133 MB. Current time: 11/3/26, 4:17:13 PM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 2,978 MB. GUI used memory: 133 MB. Current time: 11/3/26, 4:17:53 PM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 2,978 MB. GUI used memory: 134 MB. Current time: 11/3/26, 4:18:33 PM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 2,978 MB. GUI used memory: 133 MB. Current time: 11/3/26, 4:19:13 PM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 2,978 MB. GUI used memory: 133 MB. Current time: 11/3/26, 4:19:53 PM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 2,978 MB. GUI used memory: 133 MB. Current time: 11/3/26, 4:20:33 PM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 2,978 MB. GUI used memory: 133 MB. Current time: 11/3/26, 4:21:13 PM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 2,978 MB. GUI used memory: 133 MB. Current time: 11/3/26, 4:21:53 PM CST
+// Elapsed time: 370 seconds
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 189, 292); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 189, 292, false, false, false, false, true); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v) - Double Click
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 189, 292); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 204, 313); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 204, 313, false, false, false, false, true); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v) - Double Click
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 204, 313); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+// WARNING: HEventQueue.dispatchEvent() is taking  1834 ms.
+// Elapsed time: 26 seconds
+setText(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "clr_overflow", true); // d.c (RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX)
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "clr_overflow"); // d.c (RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX)
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "clr_overflow"); // d.c (RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX)
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "clr_overflow"); // d.c (RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX)
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "clr_overflow"); // d.c (RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX)
+// HMemoryUtils.trashcanNow. Engine heap size: 2,978 MB. GUI used memory: 133 MB. Current time: 11/3/26, 4:22:33 PM CST
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "clr_overflow"); // d.c (RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX)
+// Elapsed time: 10 seconds
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 72, 424); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 300, 409); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 353, 412); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 348, 412); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 348, 412, false, false, false, false, true); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v) - Double Click
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 64, 338); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 64, 338, false, false, false, false, true); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v) - Double Click
+// Elapsed time: 11 seconds
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 96, 245); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 96, 245, false, false, false, false, true); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v) - Double Click
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 96, 245); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+typeControlKey(null, null, 'z');
+// HMemoryUtils.trashcanNow. Engine heap size: 2,978 MB. GUI used memory: 133 MB. Current time: 11/3/26, 4:23:13 PM CST
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+// WARNING: HEventQueue.dispatchEvent() is taking  1783 ms.
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+// WARNING: HEventQueue.dispatchEvent() is taking  1480 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 2,978 MB. GUI used memory: 134 MB. Current time: 11/3/26, 4:23:53 PM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 2,978 MB. GUI used memory: 133 MB. Current time: 11/3/26, 4:24:33 PM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 2,978 MB. GUI used memory: 133 MB. Current time: 11/3/26, 4:25:13 PM CST
+// Elapsed time: 127 seconds
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 236, 155); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+// HMemoryUtils.trashcanNow. Engine heap size: 2,978 MB. GUI used memory: 133 MB. Current time: 11/3/26, 4:25:53 PM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 2,978 MB. GUI used memory: 133 MB. Current time: 11/3/26, 4:26:33 PM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 2,978 MB. GUI used memory: 133 MB. Current time: 11/3/26, 4:27:13 PM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 2,978 MB. GUI used memory: 133 MB. Current time: 11/3/26, 4:27:53 PM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 2,978 MB. GUI used memory: 133 MB. Current time: 11/3/26, 4:28:33 PM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 2,978 MB. GUI used memory: 133 MB. Current time: 11/3/26, 4:29:13 PM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 2,978 MB. GUI used memory: 133 MB. Current time: 11/3/26, 4:29:53 PM CST
+// Elapsed time: 296 seconds
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 298, 539); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 292, 550); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+typeControlKey((HResource) null, "My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 'c'); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+// HMemoryUtils.trashcanNow. Engine heap size: 2,978 MB. GUI used memory: 133 MB. Current time: 11/3/26, 4:30:34 PM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 2,978 MB. GUI used memory: 133 MB. Current time: 11/3/26, 4:31:14 PM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 2,978 MB. GUI used memory: 133 MB. Current time: 11/3/26, 4:31:54 PM CST
+// Elapsed time: 95 seconds
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 316, 147); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 112, 147); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 112, 147, false, false, false, false, true); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v) - Double Click
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 112, 147); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 112, 147, false, false, false, true, false); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v) - Popup Trigger
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 150, 119); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+// TclEventType: PACKAGER_MESSAGE_UPDATE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'PAResourceItoN.MsgLongTask_MESSAGE_LONG_TASK/M.f': 167h:22m:08s
+// TclEventType: DG_GRAPH_GENERATED
+// WARNING: HEventQueue.dispatchEvent() is taking  2380 ms.
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 472, 165); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 472, 165); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 472, 165); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 472, 165); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 472, 165); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 472, 165); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 472, 165); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 472, 165); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 472, 165); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 472, 165); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 472, 165); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 472, 165); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 472, 165); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 472, 165); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+// Elapsed Time for: 'PAResourceItoN.MsgLongTask_MESSAGE_LONG_TASK/M.f': 167h:22m:11s
+// HMemoryUtils.trashcanNow. Engine heap size: 2,994 MB. GUI used memory: 133 MB. Current time: 11/3/26, 4:32:34 PM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 2,994 MB. GUI used memory: 134 MB. Current time: 11/3/26, 4:33:14 PM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 2,994 MB. GUI used memory: 133 MB. Current time: 11/3/26, 4:33:54 PM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 2,994 MB. GUI used memory: 133 MB. Current time: 11/3/26, 4:34:34 PM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 2,994 MB. GUI used memory: 133 MB. Current time: 11/3/26, 4:35:14 PM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 2,994 MB. GUI used memory: 133 MB. Current time: 11/3/26, 4:35:54 PM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 2,994 MB. GUI used memory: 133 MB. Current time: 11/3/26, 4:36:34 PM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 2,994 MB. GUI used memory: 133 MB. Current time: 11/3/26, 4:37:14 PM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 2,994 MB. GUI used memory: 133 MB. Current time: 11/3/26, 4:37:54 PM CST
+// Elapsed time: 356 seconds
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 270, 290); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 270, 290); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 270, 290); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 270, 290); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 270, 290); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 270, 290); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 359, 302); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 359, 302); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 359, 302); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 359, 302); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 359, 302); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 359, 302); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 359, 302); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 359, 302); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 359, 302); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 359, 302); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 361, 291); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 361, 291); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 361, 291); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 361, 291); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 361, 291); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 370, 277); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 370, 277); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 370, 277); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+// HMemoryUtils.trashcanNow. Engine heap size: 2,994 MB. GUI used memory: 133 MB. Current time: 11/3/26, 4:38:34 PM CST
+// Elapsed time: 23 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 3); // m (PlanAheadTabBaseWorkspace_JideTabbedPane)
+closeView(PAResourceOtoP.PAViews_CODE, "Code"); // H (PAResourceOtoP.PAViews_CODE, PlanAheadTabCode)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, My_SPI (My_SPI.v)]", 1, true); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, My_SPI (My_SPI.v)]", 1, true, false, false, false, false, true); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE) - Double Click - Node
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 2); // m (PlanAheadTabBaseWorkspace_JideTabbedPane)
+// Elapsed time: 19 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "My_SPI.v", 3); // m (PlanAheadTabBaseWorkspace_JideTabbedPane)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 2); // m (PlanAheadTabBaseWorkspace_JideTabbedPane)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 372, 206); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+// HMemoryUtils.trashcanNow. Engine heap size: 2,984 MB. GUI used memory: 135 MB. Current time: 11/3/26, 4:39:14 PM CST
+// Elapsed time: 33 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "My_SPI.v", 3); // m (PlanAheadTabBaseWorkspace_JideTabbedPane)
+selectCodeEditor("My_SPI.v", 184, 335); // ae (My_SPI.v)
+// HMemoryUtils.trashcanNow. Engine heap size: 2,994 MB. GUI used memory: 135 MB. Current time: 11/3/26, 4:39:54 PM CST
+// Elapsed time: 25 seconds
+selectCodeEditor("My_SPI.v", 172, 401); // ae (My_SPI.v)
+selectCodeEditor("My_SPI.v", 172, 401, false, false, false, false, true); // ae (My_SPI.v) - Double Click
+selectCodeEditor("My_SPI.v", 188, 446); // ae (My_SPI.v)
+typeControlKey(null, null, 'z');
+// HMemoryUtils.trashcanNow. Engine heap size: 2,994 MB. GUI used memory: 134 MB. Current time: 11/3/26, 4:40:34 PM CST
+// TclEventType: PACKAGER_MESSAGE_UPDATE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: current_project My_SPI_v1_0_project 
+// Elapsed Time for: 'PAResourceItoN.MsgLongTask_MESSAGE_LONG_TASK/M.f': 167h:30m:52s
+// TclEventType: DG_GRAPH_GENERATED
+// Elapsed Time for: 'PAResourceItoN.MsgLongTask_MESSAGE_LONG_TASK/M.f': 167h:30m:54s
+// HMemoryUtils.trashcanNow. Engine heap size: 3,022 MB. GUI used memory: 134 MB. Current time: 11/3/26, 4:41:14 PM CST
+// Elapsed time: 83 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Project Summary", 0); // m (PlanAheadTabBaseWorkspace_JideTabbedPane)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Package IP - My_SPI", 1); // m (PlanAheadTabBaseWorkspace_JideTabbedPane)
+selectList(PAResourceOtoP.PackagerStepsPanel_PACKAGER_STEPS_LIST, "File Groups", 2); // S (PAResourceOtoP.PackagerStepsPanel_PACKAGER_STEPS_LIST)
+selectButton(PAResourceItoN.MessageBanner_CHANGES_DETECTED_IN_VIVADO_PROJECT_THAT, "Merge changes from File Groups Wizard"); // h (PAResourceItoN.MessageBanner_CHANGES_DETECTED_IN_VIVADO_PROJECT_THAT)
+// TclEventType: PACKAGER_COMPONENT_RESET
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_MESSAGE_UPDATE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_OBJECT_CHANGE
+// Tcl Message: ipx::merge_project_changes files [ipx::current_core] 
+selectList(PAResourceOtoP.PackagerStepsPanel_PACKAGER_STEPS_LIST, "Ports and Interfaces", 4); // S (PAResourceOtoP.PackagerStepsPanel_PACKAGER_STEPS_LIST)
+selectButton(PAResourceItoN.MessageBanner_CHANGES_DETECTED_IN_VIVADO_PROJECT_THAT, "Merge changes from Ports and Interfaces Wizard"); // h (PAResourceItoN.MessageBanner_CHANGES_DETECTED_IN_VIVADO_PROJECT_THAT)
+// TclEventType: PACKAGER_COMPONENT_RESET
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_MESSAGE_UPDATE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_OBJECT_CHANGE
+// HMemoryUtils.trashcanNow. Engine heap size: 3,018 MB. GUI used memory: 143 MB. Current time: 11/3/26, 4:41:55 PM CST
+// Tcl Message: ipx::merge_project_changes ports [ipx::current_core] 
+// Tcl Message: INFO: [IP_Flow 19-5654] Module 'My_SPI' uses SystemVerilog sources with a Verilog top file. These SystemVerilog files will not be analysed by the packager. INFO: [IP_Flow 19-3166] Bus Interface 'AXI_Interface_SPI': References existing memory map 'AXI_Interface_SPI'. 
+selectList(PAResourceOtoP.PackagerStepsPanel_PACKAGER_STEPS_LIST, "Review and Package", 7); // S (PAResourceOtoP.PackagerStepsPanel_PACKAGER_STEPS_LIST)
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_MESSAGE_UPDATE
+selectButton(PAResourceQtoS.ReviewContentPanel_RE_PACKAGE_IP, "Re-Package IP"); // a (PAResourceQtoS.ReviewContentPanel_RE_PACKAGE_IP)
+// TclEventType: PACKAGER_OBJECT_CHANGE
+// Tcl Message: set_property core_revision 24 [ipx::current_core] 
+// Tcl Message: ipx::update_source_project_archive -component [ipx::current_core] 
+// Tcl Message: ipx::create_xgui_files [ipx::current_core] 
+// Tcl Message: ipx::update_checksums [ipx::current_core] 
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_MESSAGE_UPDATE
+// Tcl Message: ipx::check_integrity [ipx::current_core] 
+// Tcl Message: INFO: [IP_Flow 19-2181] Payment is not required for this core. 
+// Tcl Message: INFO: [Ipptcl 7-1486] check_integrity: Integrity check passed. 
+// Tcl Message: ipx::save_core [ipx::current_core] 
+// TclEventType: FILE_SET_CHANGE
+selectButton("YES", "Yes", "Close Project"); // JButton (YES)
+// Tcl Message: ipx::move_temp_component_back -component [ipx::current_core] 
+// TclEventType: PROJECT_CLOSE
+// WARNING: HSwingWorker (Monitor File Timestamp Swing Worker) is taking 588 ms to process. Increasing delay to 2000 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 2,961 MB. GUI used memory: 142 MB. Current time: 11/3/26, 4:42:04 PM CST
+// WARNING: HEventQueue.dispatchEvent() is taking  1134 ms.
+// Tcl Message: close_project -delete 
+dismissDialog("Package IP"); // bk (Package IP Progress)
+// TclEventType: CREATE_IP_CATALOG
+// TclEventType: IP_LOCK_CHANGE
+// TclEventType: BDCELL_LOCK_CHANGE
+// TclEventType: RSB_LOCK_CHANGE
+// TclEventType: IP_LOCK_CHANGE
+// TclEventType: BDCELL_LOCK_CHANGE
+// TclEventType: CREATE_IP_CATALOG
+// [Engine Memory]: 3,991 MB (+521629kb) [167:32:57]
+selectButton(PAResourceQtoS.SystemTab_SHOW_IP_STATUS, "Show IP Status"); // h (PAResourceQtoS.SystemTab_SHOW_IP_STATUS)
+selectButton(PAResourceItoN.IPStatusSectionPanel_UPGRADE_SELECTED, "Upgrade Selected"); // a (PAResourceItoN.IPStatusSectionPanel_UPGRADE_SELECTED)
+// Run Command: PAResourceCommand.PACommandNames_UPGRADE_IP
+// TclEventType: PAUSE_COMPOSITE_FILE_CHANGE_GUI
+// TclEventType: RSB_OPEN_DIAGRAM
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: COMPOSITE_FILE_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: COMPOSITE_FILE_CHANGE
+// TclEventType: RSB_SAVE_DIAGRAM
+// TclEventType: COMPOSITE_FILE_CHANGE
+// TclEventType: RSB_SAVE_DIAGRAM
+// TclEventType: FILESET_UPDATE_IP
+// TclEventType: IP_UPGRADE_COMPLETE
+// TclEventType: PAUSE_COMPOSITE_FILE_CHANGE_GUI
+// Tcl Message: upgrade_ip -vlnv user.org:user:My_SPI:1.0 [get_ips  system_My_SPI_0_4] -log ip_upgrade.log 
+// Tcl Message: Upgrading '/home/rps/fpga/gpio_project/gpio_project.srcs/sources_1/bd/system/system.bd' 
+// Tcl Message: INFO: [IP_Flow 19-3422] Upgraded system_My_SPI_0_4 (My_SPI_v1.0 1.0) from revision 23 to revision 24 
+// Tcl Message: Wrote  : </home/rps/fpga/gpio_project/gpio_project.srcs/sources_1/bd/system/system.bd>  Wrote  : </home/rps/fpga/gpio_project/gpio_project.srcs/sources_1/bd/system/ui/bd_c954508f.ui>  
+// Tcl Message: INFO: [Coretcl 2-1525] Wrote upgrade log to '/home/rps/fpga/gpio_project/ip_upgrade.log'. 
+// Tcl Message: export_ip_user_files -of_objects [get_ips system_My_SPI_0_4] -no_script -sync -force -quiet 
+selectButton("OK", "OK", "Upgrade IP"); // JButton (OK)
+// Elapsed Time for: 'PAResourceItoN.MsgLongTask_MESSAGE_LONG_TASK/M.f': 167h:32m:53s
+// TclEventType: DG_GRAPH_GENERATED
+// Elapsed Time for: 'PAResourceItoN.MsgLongTask_MESSAGE_LONG_TASK/M.f': 167h:32m:55s
+selectButton(PAResourceQtoS.SimpleOutputProductDialog_GENERATE_OUTPUT_PRODUCTS_IMMEDIATELY, "Generate", "Generate Output Products"); // f (PAResourceQtoS.SimpleOutputProductDialog_GENERATE_OUTPUT_PRODUCTS_IMMEDIATELY)
+// TclEventType: PAUSE_COMPOSITE_FILE_CHANGE_GUI
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// Tcl Message: generate_target all [get_files  /home/rps/fpga/gpio_project/gpio_project.srcs/sources_1/bd/system/system.bd] 
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_CLOSE_DIAGRAM
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_SAVE_DIAGRAM
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: RSB_SAVE_DIAGRAM
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: COMPOSITE_FILE_CHANGE
+// Tcl Message: Wrote  : </home/rps/fpga/gpio_project/gpio_project.srcs/sources_1/bd/system/system.bd>  
+// Tcl Message: Verilog Output written to : /home/rps/fpga/gpio_project/gpio_project.gen/sources_1/bd/system/synth/system.v 
+// Tcl Message: Verilog Output written to : /home/rps/fpga/gpio_project/gpio_project.gen/sources_1/bd/system/sim/system.v Verilog Output written to : /home/rps/fpga/gpio_project/gpio_project.gen/sources_1/bd/system/hdl/system_wrapper.v 
+// TclEventType: COMPOSITE_FILE_CHANGE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: COMPOSITE_FILE_CHANGE
+// TclEventType: PAUSE_COMPOSITE_FILE_CHANGE_GUI
+// Tcl Message: Exporting to file /home/rps/fpga/gpio_project/gpio_project.gen/sources_1/bd/system/ip/system_axi_smc_0/bd_0/hw_handoff/system_axi_smc_0.hwh Generated Hardware Definition File /home/rps/fpga/gpio_project/gpio_project.gen/sources_1/bd/system/ip/system_axi_smc_0/bd_0/synth/system_axi_smc_0.hwdef 
+// Tcl Message: INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_smc . INFO: [BD 41-1029] Generation completed for the IP Integrator block My_SPI_0 . 
+// Tcl Message: Exporting to file /home/rps/fpga/gpio_project/gpio_project.gen/sources_1/bd/system/hw_handoff/system.hwh Generated Hardware Definition File /home/rps/fpga/gpio_project/gpio_project.gen/sources_1/bd/system/synth/system.hwdef 
+// Tcl Message: INFO: [BD 41-3262] Generated VHDL Instantiation Template file /home/rps/fpga/gpio_project/gpio_project.gen/sources_1/bd/system/system.vho INFO: [BD 41-3262] Generated Verilog Instantiation Template file /home/rps/fpga/gpio_project/gpio_project.gen/sources_1/bd/system/system.veo INFO: [BD 41-3262] Generated System Verilog Instantiation Template file /home/rps/fpga/gpio_project/gpio_project.gen/sources_1/bd/system/system_sv.sveo 
+// Tcl Message: generate_target: Time (s): cpu = 00:00:09 ; elapsed = 00:00:08 . Memory (MB): peak = 10966.270 ; gain = 0.000 ; free physical = 8398 ; free virtual = 32407 
+// Tcl Message: catch { config_ip_cache -export [get_ips -all system_axi_smc_0] } 
+// TclEventType: OOC_IP_CACHE_USED
+// Tcl Message: INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP system_axi_smc_0, cache-ID = 32fb8151003c696a; cache size = 25.500 MB. 
+// TclEventType: PROJ_DESIGN_MODE_SET
+// Tcl Message: catch { config_ip_cache -export [get_ips -all system_My_SPI_0_4] } 
+// TclEventType: PROJ_DESIGN_MODE_SET
+// Tcl Message: export_ip_user_files -of_objects [get_files /home/rps/fpga/gpio_project/gpio_project.srcs/sources_1/bd/system/system.bd] -no_script -sync -force -quiet 
+// TclEventType: RUN_ADD_COLLECTION
+// TclEventType: PAUSE_COMPOSITE_FILE_CHANGE_GUI
+// TclEventType: FILE_SET_NEW
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_ADD
+// TclEventType: RUN_ADD_COLLECTION
+// TclEventType: PAUSE_COMPOSITE_FILE_CHANGE_GUI
+// Tcl Message: create_ip_run [get_files -of_objects [get_fileset sources_1] /home/rps/fpga/gpio_project/gpio_project.srcs/sources_1/bd/system/system.bd] 
+// HMemoryUtils.trashcanNow. Engine heap size: 4,098 MB. GUI used memory: 142 MB. Current time: 11/3/26, 4:42:34 PM CST
+// TclEventType: PAUSE_COMPOSITE_FILE_CHANGE_GUI
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: RUN_LAUNCH
+// Tcl Message: launch_runs system_My_SPI_0_4_synth_1 -jobs 8 
+// TclEventType: RUN_MODIFY
+// TclEventType: PAUSE_COMPOSITE_FILE_CHANGE_GUI
+// Tcl Message: [Tue Nov  3 16:42:34 2026] Launched system_My_SPI_0_4_synth_1... 
+// Tcl Message: Run output will be captured here: /home/rps/fpga/gpio_project/gpio_project.runs/system_My_SPI_0_4_synth_1/runme.log 
+// TclEventType: PROJECT_CHANGE
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: PROJECT_CHANGE
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// HMemoryUtils.trashcanNow. Engine heap size: 2,663 MB. GUI used memory: 144 MB. Current time: 11/3/26, 4:42:36 PM CST
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PAUSE_COMPOSITE_FILE_CHANGE_GUI
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 30 seconds
+selectButton("OK", "OK", "Generate Output Products"); // JButton (OK)
+// Elapsed Time for: 'PAResourceItoN.MsgLongTask_MESSAGE_LONG_TASK/M.f': 167h:33m:28s
+// Elapsed time: 15 seconds
+selectButton(PAResourceAtoD.CmdMsgDialog_OK, "OK", "Critical Messages"); // f (PAResourceAtoD.CmdMsgDialog_OK)
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+dismissDialog("Critical Messages"); // a (dialog4)
+// TclEventType: FILE_SET_CHANGE
+// HMemoryUtils.trashcanNow. Engine heap size: 2,675 MB. GUI used memory: 155 MB. Current time: 11/3/26, 4:43:17 PM CST
+// WARNING: HEventQueue.dispatchEvent() is taking  24135 ms.
+// Elapsed time: 38 seconds
+selectButton(RDIResource.BaseReportTab_RERUN, "Rerun"); // h (RDIResource.BaseReportTab_RERUN)
+// Tcl Command: 'report_ip_status -name ip_status '
+// TclEventType: PAUSE_COMPOSITE_FILE_CHANGE_GUI
+// TclEventType: IP_SUMMARY_RESULTS
+// TclEventType: PAUSE_COMPOSITE_FILE_CHANGE_GUI
+// Tcl Message: report_ip_status -name ip_status  
+runTclCommand (PAResourceOtoP.PAViews_SYSTEM, "unselect_objects"); // gb (PAResourceOtoP.PAViews_SYSTEM, PlanAheadTabSystem)
+// [GUI Memory]: 232 MB (+5049kb) [167:34:48]
+// HMemoryUtils.trashcanNow. Engine heap size: 2,675 MB. GUI used memory: 148 MB. Current time: 11/3/26, 4:43:57 PM CST
+// Elapsed time: 22 seconds
+runTclCommand (PAResourceOtoP.PAViews_SYSTEM, "select_objects [get_bd_ports /rd_req]"); // gb (PAResourceOtoP.PAViews_SYSTEM, PlanAheadTabSystem)
+// Run Command: RDIResourceCommand.RDICommands_DELETE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// Tcl Message: delete_bd_objs [get_bd_nets rd_req_1] [get_bd_ports rd_req] 
+// Elapsed Time for: 'PAResourceItoN.MsgLongTask_MESSAGE_LONG_TASK/M.f': 167h:34m:51s
+selectView(PAResourceOtoP.PAViews_SYSTEM, "System", 98, 451, 1190, 665, false, false, false, true, false); // gb (PAResourceOtoP.PAViews_SYSTEM, PlanAheadTabSystem) - Popup Trigger
+runTclCommand (PAResourceOtoP.PAViews_SYSTEM, "select_objects [get_bd_ports /wr_req]"); // gb (PAResourceOtoP.PAViews_SYSTEM, PlanAheadTabSystem)
+// [Engine Memory]: 4,392 MB (+211405kb) [167:35:12]
+// TclEventType: DG_GRAPH_GENERATED
+selectMenuItem(RDIResourceCommand.RDICommands_DELETE, "Delete"); // ap (RDIResourceCommand.RDICommands_DELETE, global_delete_menu)
+// Run Command: RDIResourceCommand.RDICommands_DELETE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// Tcl Message: delete_bd_objs [get_bd_nets wr_req_1] [get_bd_ports wr_req] 
+// Elapsed Time for: 'PAResourceItoN.MsgLongTask_MESSAGE_LONG_TASK/M.f': 167h:34m:54s
+// HMemoryUtils.trashcanNow. Engine heap size: 4,324 MB. GUI used memory: 142 MB. Current time: 11/3/26, 4:44:21 PM CST
+selectView(PAResourceOtoP.PAViews_SYSTEM, "System", 97, 298, 1190, 665, false, false, false, true, false); // gb (PAResourceOtoP.PAViews_SYSTEM, PlanAheadTabSystem) - Popup Trigger
+runTclCommand (PAResourceOtoP.PAViews_SYSTEM, "select_objects [get_bd_ports /clr_overflow]"); // gb (PAResourceOtoP.PAViews_SYSTEM, PlanAheadTabSystem)
+selectMenu(PAResourceQtoS.SelectMenu_HIGHLIGHT, "Highlight"); // am (PAResourceQtoS.SelectMenu_HIGHLIGHT, Highlight)
+selectMenuItem(RDIResourceCommand.RDICommands_DELETE, "Delete"); // ap (RDIResourceCommand.RDICommands_DELETE, global_delete_menu)
+// Run Command: RDIResourceCommand.RDICommands_DELETE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// Tcl Message: delete_bd_objs [get_bd_nets clr_overflow_1] [get_bd_ports clr_overflow] 
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "gpio_system_top.sv", 2); // m (PlanAheadTabBaseWorkspace_JideTabbedPane)
+selectCodeEditor("gpio_system_top.sv", 189, 506); // ae (gpio_system_top.sv)
+// HMemoryUtils.trashcanNow. Engine heap size: 2,697 MB. GUI used memory: 142 MB. Current time: 11/3/26, 4:44:37 PM CST
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'PAResourceItoN.MsgLongTask_MESSAGE_LONG_TASK/M.f': 167h:35m:25s
+// TclEventType: DG_GRAPH_GENERATED
+// Elapsed Time for: 'PAResourceItoN.MsgLongTask_MESSAGE_LONG_TASK/M.f': 167h:35m:27s
+// Elapsed time: 32 seconds
+selectCodeEditor("gpio_system_top.sv", 106, 160); // ae (gpio_system_top.sv)
+// HMemoryUtils.trashcanNow. Engine heap size: 2,713 MB. GUI used memory: 144 MB. Current time: 11/3/26, 4:45:17 PM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 2,713 MB. GUI used memory: 142 MB. Current time: 11/3/26, 4:45:57 PM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 2,713 MB. GUI used memory: 142 MB. Current time: 11/3/26, 4:46:37 PM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 2,713 MB. GUI used memory: 142 MB. Current time: 11/3/26, 4:47:17 PM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 2,713 MB. GUI used memory: 142 MB. Current time: 11/3/26, 4:47:57 PM CST
+// Elapsed time: 187 seconds
+selectCodeEditor("gpio_system_top.sv", 176, 438); // ae (gpio_system_top.sv)
+// HMemoryUtils.trashcanNow. Engine heap size: 2,713 MB. GUI used memory: 142 MB. Current time: 11/3/26, 4:48:37 PM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 2,713 MB. GUI used memory: 142 MB. Current time: 11/3/26, 4:49:17 PM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 2,713 MB. GUI used memory: 139 MB. Current time: 11/3/26, 4:49:57 PM CST
+// Elapsed time: 113 seconds
+selectCodeEditor("gpio_system_top.sv", 130, 407); // ae (gpio_system_top.sv)
+// HMemoryUtils.trashcanNow. Engine heap size: 2,713 MB. GUI used memory: 139 MB. Current time: 11/3/26, 4:50:37 PM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 2,713 MB. GUI used memory: 139 MB. Current time: 11/3/26, 4:51:17 PM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 2,713 MB. GUI used memory: 139 MB. Current time: 11/3/26, 4:51:57 PM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 2,713 MB. GUI used memory: 139 MB. Current time: 11/3/26, 4:52:37 PM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 2,713 MB. GUI used memory: 139 MB. Current time: 11/3/26, 4:53:17 PM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 2,713 MB. GUI used memory: 147 MB. Current time: 11/3/26, 4:53:57 PM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 2,713 MB. GUI used memory: 139 MB. Current time: 11/3/26, 4:54:37 PM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 2,713 MB. GUI used memory: 139 MB. Current time: 11/3/26, 4:55:17 PM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 2,713 MB. GUI used memory: 139 MB. Current time: 11/3/26, 4:55:57 PM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 2,713 MB. GUI used memory: 139 MB. Current time: 11/3/26, 4:56:37 PM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 2,713 MB. GUI used memory: 140 MB. Current time: 11/3/26, 4:57:17 PM CST
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 435 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Address Editor", 0); // m (PlanAheadTabBaseWorkspace_JideTabbedPane)
+// Elapsed Time for: 'PAResourceItoN.MsgLongTask_MESSAGE_LONG_TASK/M.f': 167h:47m:54s
+// TclEventType: DG_GRAPH_GENERATED
+// Elapsed Time for: 'PAResourceItoN.MsgLongTask_MESSAGE_LONG_TASK/M.f': 167h:47m:55s
+// HMemoryUtils.trashcanNow. Engine heap size: 2,731 MB. GUI used memory: 145 MB. Current time: 11/3/26, 4:57:57 PM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 2,731 MB. GUI used memory: 140 MB. Current time: 11/3/26, 4:58:37 PM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 2,731 MB. GUI used memory: 140 MB. Current time: 11/3/26, 4:59:17 PM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 2,731 MB. GUI used memory: 140 MB. Current time: 11/3/26, 4:59:57 PM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 2,731 MB. GUI used memory: 140 MB. Current time: 11/3/26, 5:00:38 PM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 2,731 MB. GUI used memory: 140 MB. Current time: 11/3/26, 5:01:18 PM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 2,731 MB. GUI used memory: 140 MB. Current time: 11/3/26, 5:01:58 PM CST
+// Elapsed time: 299 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "gpio_system_top.sv", 2); // m (PlanAheadTabBaseWorkspace_JideTabbedPane)
+// Run Command: PAResourceCommand.PACommandNames_SAVE_RSB_DESIGN
+// TclEventType: PAUSE_COMPOSITE_FILE_CHANGE_GUI
+// TclEventType: RSB_SAVE_DIAGRAM
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: COMPOSITE_FILE_CHANGE
+// TclEventType: RSB_SAVE_DIAGRAM
+// TclEventType: PAUSE_COMPOSITE_FILE_CHANGE_GUI
+// Tcl Message: save_bd_design 
+// Tcl Message: Wrote  : </home/rps/fpga/gpio_project/gpio_project.srcs/sources_1/bd/system/system.bd>  Wrote  : </home/rps/fpga/gpio_project/gpio_project.srcs/sources_1/bd/system/ui/bd_c954508f.ui>  
+// TclEventType: DG_GRAPH_GENERATED
+// Elapsed Time for: 'PAResourceItoN.MsgLongTask_MESSAGE_LONG_TASK/M.f': 167h:52m:55s
+// TclEventType: DG_GRAPH_GENERATED
+// Elapsed Time for: 'PAResourceItoN.MsgLongTask_MESSAGE_LONG_TASK/M.f': 167h:52m:57s

@@ -4,7 +4,7 @@
     "xci_name": "system_My_SPI_0_4",
     "cell_name": "My_SPI_0",
     "component_reference": "user.org:user:My_SPI:1.0",
-    "ip_revision": "22",
+    "ip_revision": "24",
     "gen_directory": "../../../../../../gpio_project.gen/sources_1/bd/system/ip/system_My_SPI_0_4",
     "parameters": {
       "component_parameters": {
@@ -33,7 +33,7 @@
       },
       "runtime_parameters": {
         "IPCONTEXT": [ { "value": "IP_Integrator" } ],
-        "IPREVISION": [ { "value": "22" } ],
+        "IPREVISION": [ { "value": "24" } ],
         "MANAGED": [ { "value": "TRUE" } ],
         "OUTPUTDIR": [ { "value": "../../../../../../gpio_project.gen/sources_1/bd/system/ip/system_My_SPI_0_4" } ],
         "SELECTEDSIMMODEL": [ { "value": "" } ],
@@ -46,14 +46,9 @@
       "ports": {
         "datain": [ { "direction": "in", "size_left": "31", "size_right": "0" } ],
         "dataout": [ { "direction": "out", "size_left": "31", "size_right": "0" } ],
-        "status": [ { "direction": "out", "size_left": "31", "size_right": "0" } ],
-        "clr_overflow": [ { "direction": "in" } ],
-        "rd_req": [ { "direction": "in" } ],
-        "wr_req": [ { "direction": "in" } ],
-        "empty": [ { "direction": "out" } ],
-        "full": [ { "direction": "out" } ],
-        "overflow": [ { "direction": "out" } ],
         "baud_clk": [ { "direction": "out" } ],
+        "datum": [ { "direction": "out" } ],
+        "cs": [ { "direction": "out", "size_left": "3", "size_right": "0" } ],
         "axi_interface_spi_aclk": [ { "direction": "in" } ],
         "axi_interface_spi_aresetn": [ { "direction": "in" } ],
         "axi_interface_spi_awaddr": [ { "direction": "in", "size_left": "7", "size_right": "0" } ],
@@ -205,5 +200,5 @@
       }
     }
   },
-  "checksum": "8a21ce31"
+  "checksum": "9195b36c"
 }

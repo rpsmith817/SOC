@@ -57,7 +57,6 @@ if {$::dispatch::connected} {
 
 OPTRACE "system_My_SPI_0_4_synth_1" START { ROLLUP_AUTO }
 set_param bd.open.in_stealth_mode 1
-set_param xicom.use_bs_reader 1
 set_param general.usePosixSpawnForFork 1
 set_msg_config -id {HDL-1065} -limit 10000
 set_msg_config  -id {17-179}  -suppress 

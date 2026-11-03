@@ -2,7 +2,7 @@
 //Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2025.2 (lin64) Build 6299465 Fri Nov 14 12:34:56 MST 2025
-//Date        : Tue Oct 20 16:02:18 2026
+//Date        : Tue Nov  3 16:42:29 2026
 //Host        : rps-ThinkPad-T16-Gen-4 running 64-bit Ubuntu 24.04.5 LTS
 //Command     : generate_target system.bd
 //Design      : system
@@ -35,15 +35,14 @@ module system
     FIXED_IO_ps_srstb,
     baud_clk,
     clr_overflow,
+    cs,
     datain,
     dataout,
-    empty,
-    full,
+    datum,
     gpio_data_in,
     gpio_data_oe,
     gpio_data_out,
     intr,
-    overflow,
     rd_req,
     status,
     wr_req);
@@ -70,15 +69,14 @@ module system
   (* X_INTERFACE_INFO = "xilinx.com:display_processing_system7:fixedio:1.0 FIXED_IO PS_SRSTB" *) inout FIXED_IO_ps_srstb;
   (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 CLK.BAUD_CLK CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME CLK.BAUD_CLK, CLK_DOMAIN system_My_SPI_0_4_baud_clk, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, INSERT_VIP 0, PHASE 0.0" *) output baud_clk;
   input clr_overflow;
+  output [3:0]cs;
   input [31:0]datain;
   output [31:0]dataout;
-  output empty;
-  output full;
+  output datum;
   input [31:0]gpio_data_in;
   output [31:0]gpio_data_oe;
   output [31:0]gpio_data_out;
   (* X_INTERFACE_INFO = "xilinx.com:signal:interrupt:1.0 INTR.INTR INTERRUPT" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME INTR.INTR, PortWidth 1, SENSITIVITY LEVEL_HIGH" *) output intr;
-  output overflow;
   input rd_req;
   output [31:0]status;
   input wr_req;
@@ -144,15 +142,14 @@ module system
   wire axi_smc_M01_AXI_WVALID;
   wire baud_clk;
   wire clr_overflow;
+  wire [3:0]cs;
   wire [31:0]datain;
   wire [31:0]dataout;
-  wire empty;
-  wire full;
+  wire datum;
   wire [31:0]gpio_data_in;
   wire [31:0]gpio_data_oe;
   wire [31:0]gpio_data_out;
   wire intr;
-  wire overflow;
   wire [0:0]proc_sys_reset_0_peripheral_aresetn;
   wire processing_system7_0_FCLK_CLK0;
   wire processing_system7_0_FCLK_RESET0_N;
@@ -195,7 +192,6 @@ module system
   wire [3:0]processing_system7_0_M_AXI_GP0_WSTRB;
   wire processing_system7_0_M_AXI_GP0_WVALID;
   wire rd_req;
-  wire [31:0]status;
   wire wr_req;
   wire [2:0]xlconcat_0_dout;
 
@@ -222,15 +218,10 @@ module system
         .axi_interface_spi_wstrb(axi_smc_M01_AXI_WSTRB),
         .axi_interface_spi_wvalid(axi_smc_M01_AXI_WVALID),
         .baud_clk(baud_clk),
-        .clr_overflow(clr_overflow),
+        .cs(cs),
         .datain(datain),
         .dataout(dataout),
-        .empty(empty),
-        .full(full),
-        .overflow(overflow),
-        .rd_req(rd_req),
-        .status(status),
-        .wr_req(wr_req));
+        .datum(datum));
   system_axi_smc_0 axi_smc
        (.M00_AXI_araddr(axi_smc_M00_AXI_ARADDR),
         .M00_AXI_arprot(axi_smc_M00_AXI_ARPROT),

@@ -114,15 +114,13 @@ module system_sv (
   (* X_INTERFACE_IGNORE = "true" *)
   output wire [31:0] dataout,
   (* X_INTERFACE_IGNORE = "true" *)
-  output wire empty,
-  (* X_INTERFACE_IGNORE = "true" *)
-  output wire full,
-  (* X_INTERFACE_IGNORE = "true" *)
-  output wire overflow,
-  (* X_INTERFACE_IGNORE = "true" *)
   output wire [31:0] status,
   (* X_INTERFACE_IGNORE = "true" *)
-  output wire baud_clk
+  output wire baud_clk,
+  (* X_INTERFACE_IGNORE = "true" *)
+  output wire datum,
+  (* X_INTERFACE_IGNORE = "true" *)
+  output wire [3:0] cs
 );
 
   system inst (
@@ -156,11 +154,10 @@ module system_sv (
     .clr_overflow(clr_overflow),
     .datain(datain),
     .dataout(dataout),
-    .empty(empty),
-    .full(full),
-    .overflow(overflow),
     .status(status),
-    .baud_clk(baud_clk)
+    .baud_clk(baud_clk),
+    .datum(datum),
+    .cs(cs)
   );
 
 endmodule

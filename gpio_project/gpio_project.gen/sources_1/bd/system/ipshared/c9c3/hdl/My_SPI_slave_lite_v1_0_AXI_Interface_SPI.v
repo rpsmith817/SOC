@@ -23,13 +23,10 @@
 		input wire [31:0] datain,
         output wire [31:0] dataout,
         output wire [31:0] status,
-        input wire clr_overflow,
-        input wire rd_req,
-        input wire wr_req,
-        output wire empty,
-        output wire full,
-        output wire overflow,
         output wire baud_clk,
+        output wire datum,
+        output wire [3:0] cs,
+        
 
         // AXI clock and reset        
         input wire S_AXI_ACLK,
@@ -81,6 +78,7 @@
 	reg [31:0] ctrl;
 	reg [31:0] brd;
 	reg clr_overflow_req;
+	reg clr_txoverflow_req;
 
 	wire [31:0] fifo_rd_data;
 	wire fifo_empty;
@@ -144,18 +142,12 @@
 
 	reg [31:0] datain_betweener;
 	reg [31:0] datain_final;
-	reg rd_req_betweener, wr_req_betweener, clr_overflow_betweener;
-	reg rd_req_final, wr_req_final, clr_overflow_final;
+//	reg rd_req_betweener, wr_req_betweener, clr_overflow_betweener;
+//	reg rd_req_final, wr_req_final, clr_overflow_final;
 	always_ff @ (posedge(S_AXI_ACLK))
     begin
         datain_betweener <= datain;
         datain_final <= datain_betweener;
-        rd_req_betweener <= rd_req;
-        rd_req_final <= rd_req_betweener;
-        wr_req_betweener <= wr_req;
-        wr_req_final <= wr_req_betweener;
-        clr_overflow_betweener <= clr_overflow;
-        clr_overflow_final <= clr_overflow_betweener;
     end
 
     // Assert address ready handshake (axi_awready)
@@ -244,16 +236,17 @@
             ctrl <= 32'b0;
             brd <= 32'b0;
             clr_overflow_req <= 1'b0;
+            clr_txoverflow_req <= 1'b0;
         end
         else
         begin
             clr_overflow_req <= 1'b0;	//add default so it doesn't wig out
+            clr_txoverflow_req <= 1'b0; //single clk cycle/single strobe operation unless contantly asserted.
             if (wr)
             begin
                 case (waddr[4:2])
                     DATA_REG:
                     begin
-//                        fifo_wr_req <= 1'b1;  //yes a write.
                         for (byte_index = 0; byte_index <= 3; byte_index = byte_index+1)
                             if ( axi_wstrb[byte_index] == 1)
                             begin
@@ -262,15 +255,17 @@
                     end                        
                     STATUS_REG:
                     begin
-//                        fifo_wr_req <= 1'b0;    //not a fifo wr
                         if (axi_wstrb[0] && S_AXI_WDATA[0])     //for now we only care about if the thing came through, later we will add the other writes we care about. like clearing the fifowrreq sig
                         begin
                             clr_overflow_req <= 1'b1;           //this is then 0x1 @ offset 0x4, just like the project datasheet for rx.
                         end
+                        if(axi_wstrb[0] && S_AXI_WDATA[3])      //we might care about the txfifo, so this is added as resetter here. We aren't controlling these independently yet.
+                        begin
+                            clr_txoverflow_req <= 1'b1;
+                        end
                     end
                     CTRL_REG:
                     begin
-//                        fifo_wr_req <= 1'b0;    //not a fifo wr
                         for (byte_index = 0; byte_index <= 3; byte_index = byte_index+1)
                             if (axi_wstrb[byte_index] == 1)
                             begin
@@ -279,7 +274,6 @@
                     end
                     BRD_REG:
                     begin
-//                        fifo_wr_req <= 1'b0;    //not a fifo wr
                         for (byte_index = 0; byte_index <= 3; byte_index = byte_index+1)
                             if (axi_wstrb[byte_index] == 1)
                                 brd[(byte_index*8) +: 8] <= S_AXI_WDATA[(byte_index*8) +: 8];
@@ -382,7 +376,7 @@
         end
     end
 
-    wire fifo_rd_req = rd && (raddr[4:2] == DATA_REG);
+//    wire fifo_rd_req = rd && (raddr[4:2] == DATA_REG);
 
     // Assert data is valid for reading (axi_rvalid)
     // - after address is valid (axi_arvalid)
@@ -435,9 +429,9 @@
         .reset(S_AXI_ARESETN),      //input
         .datain(fifo_wr_data),      //input [31:0]
         .dataout(fifo_rd_data),     //output [31:0]
-        .clr_overflow(clr_overflow_req | clr_overflow_final),   //input
-        .rd_req(fifo_rd_req | rd_req_final),       //input also piggybacks, but off an axird or assert
-        .wr_req(fifo_wr_req | wr_req_final),       //input piggybacks off the axiwr or an actual assert. 
+        .clr_overflow(clr_overflow_req | clr_overflow_final | clr_txoverflow_req),   //input
+        .rd_req(fifo_rd_req),       //input based on fsm
+        .wr_req(fifo_wr_req | wr_req_final),       //input piggybacks off the axiwr or an actual assert. later might rely on fsm?
         .empty(fifo_empty),         //output
         .full(fifo_full),           //output
         .overflow(fifo_overflow),   //output
@@ -490,7 +484,7 @@
     (
     .clk(axi_clk),
     .enable(ctrl[15]),   //control register should drive this
-    .ibrd(brd[31:6]),     //this lives in the brd reg
+    .ibrd(brd[31:6]),    //this lives in the brd reg
     .fbrd(brd[5:0]),     //this lives in the brd reg
     .reset(axi_resetn),
     .out(brd_tick)      //single clock tick of brd (each clk edge)
@@ -498,6 +492,8 @@
 
     //baud_clk
     reg baud_clk_next;
+    reg spi_clk;
+    reg clk_go;
 
     always @(posedge axi_clk or negedge axi_resetn)
     begin
@@ -505,13 +501,282 @@
         begin
             baud_clk_next <= 0;
         end
+        else if(clk_go == 0) //ensure that first clk is known, not variable, else we might reverse the polarity at start...
+        begin
+            baud_clk_next <= 0;
+        end
         else if(brd_tick)
         begin
-        baud_clk_next <= ~baud_clk_next;
+            baud_clk_next <= ~baud_clk_next;
         end 
     end
-    assign baud_clk = baud_clk_next;
+    assign baud_clk = (baud_clk_next&clk_go) ^ spi_clk;
+    
+    /*
+    clock stuff since we should be more transparent in code and comment better
+    |cpol   | baud_clk  |clk_go |output |
+    |-------|-----------|-------|-------|
+    |   1   |   1       |   1   |   0   |
+    |   0   |   1       |   1   |   1   |
+    |   1   |   0       |   1   |   1   |
+    |   0   |   0       |   1   |   0   |
+    |   1   |   1       |   0   |   1   |
+    |   0   |   1       |   0   |   0   |
+    |   1   |   0       |   0   |   1   |
+    |   0   |   0       |   0   |   0   |
+    |===================================|
+    
+    this looks like (cpol ^ baud_clk) unless not enabled
+    if(~clk_go)
+    begin
+        output <= cpol;
+    end
+    else begin
+        output <= cpol^baud_clk;
+    end
+    
+    ((cpol ^ baud_clk)&clk_go) | cpol; 
+    
+    cpol^ (baud_clk&clk_go);
+        AKA
+    (baud_clk_next&clk_go) ^ spi_clk;
+    */
+    reg datum;
+    wire fifo_rd_req;
+    
+    spi_fsm spi_fsm_inst
+    (
+        .clk(axi_clk),          //full clock
+        .brd_tick(brd_tick),    //state stepper
+        .reset(axi_resetn),     //reset sig
+        .en(ctrl[15]),          //enable
+        .fe(status[5]),         //fifo empty
+        .ff(status[4]),         //fifo full
+        .word_size(ctrl[4:0]),  //bit index reset value, input [4:0]
+        .auto_cs(ctrl[8:5]),    //cs3,cs2,cs1,cs0, as bits. input [3:0]
+        .mode(ctrl[23:16]),     //polarity and phase of each, [7:6]cs3, [5:4]cs2, [3:2]cs1, [1:0]cs0
+        .cs_select(ctrl[14:13]),//binary value is which cs we are using. input [1:0] 
+        .data(data[31:0]),      //data to push out one at a time. input [31:0] 
+        .spi_clk(spi_clk),      //outputs cpol, differentiating which spi_clk we are
+        .cs(ctrl[12:9]),        //if auto then what chip is high. output reg [3:0] 
+        .datum(datum),          //single bit output from data+fsm output reg    
+        .clk_go(clk_go),        //outputs clock stop/go for idle state combine output reg
+        .rd_req(fifo_rd_req)    //outputs when each word is transmitted.
+    );
 
+endmodule
+
+
+module spi_fsm(
+    input clk,              //full clock
+    input brd_tick,             //state stepper
+    input reset,            //reset sig
+    input en,               //enable
+    input fe,               //fifo empty
+    input ff,               //fifo full
+    input [4:0]word_size,   //bit index reset value
+    input [3:0]auto_cs,     //cs3,cs2,cs1,cs0, as bits.
+    input [7:0] mode,       //polarity and phase of each, [7:6]cs3, [5:4]cs2, [3:2]cs1, [1:0]cs0
+    input [1:0] cs_select,  //binary value is which cs we are using.
+    input [31:0] data,      //data to push out one at a time.
+    output spi_clk,         //outputs cpol, differentiating which spi_clk we are
+    output reg [3:0] cs,    //if auto then what chip is high.
+    output reg datum,       //single bit output from data+fsm   
+    output reg clk_go,      //outputs clock stop/go for idle state combine
+    output reg rd_req       //outputs rd_req signal for rd_idx increment and data loading
+);
+    //go from MSB to LSB
+    reg [31:0]data_reg;         //load entire register, then go through slowly one at a time.
+    reg [4:0] bit_idx;
+    reg [3:0]cs_auto;
+    reg [7:0]spi_mode;
+    reg [1:0]cs_select_r;
+    reg [7:0]state;             //uncertain how many discrete states we need, so just oversize it with a 8bit val
+    reg auto;                   //if cs is both selected and auto.
+    reg cpha;                   //phase of selected cs
+    reg cpol;                   //polarity of selected cs
+    reg [4:0] bit_idx_next;
+    reg await_setup;            //await cs setup time so we stay in bounds of the chip we are targeting.
+    reg [7:0]cs_await_timer;    //counts clocks so we have cs timing OK.
+    reg rd_req_flag;            //flag if rd_req should be high.
+    
+    assign spi_clk = cpol;
+    assign bit_idx_next = bit_idx - 1;
+    assign rd_req = rd_req_flag;
+    
+    always_ff @ (negedge reset, posedge clk)
+    begin
+        if(rd_req_flag) //if it is time, let it only be time for a single clk.
+        begin
+            rd_req_flag <= 0;
+        end
+        
+        if(reset == 0)
+        begin
+            bit_idx <= word_size;
+            state <= 0;
+            spi_mode <= 0;
+            cs_auto <= 0;
+            cs_select_r <= 0;
+            cpol <= 0;
+            cpha <= 0;
+            auto <= 0;
+            clk_go <= 0;
+            cs <= 4'b1111;
+            data_reg <= 0;
+            datum <= 0;
+            await_setup <= 0;
+            cs_await_timer <= 0;
+            rd_req_flag <= 0;
+        end
+        else if(brd_tick==1)    //state change time!
+        begin
+            case(state)
+
+            //Idle state
+                0:
+                begin
+                    if(~fe) //if the fifo has something in it.
+                    begin
+                        state <= 1; //start the machine
+                    end
+                end
+
+            //Load state
+                1:
+                begin
+                    cs_auto <= auto_cs;
+                    spi_mode <= mode;
+                    cs_select_r <= cs_select;
+                    state <= 2;
+                    data_reg <= data;
+                    bit_idx <= word_size;
+                    datum <= data_reg[bit_idx];
+
+                    //from cs_select set the right polarity and phase
+                    case(cs_select)
+                        3: begin cpol <= mode[7]; cpha <= mode[6]; end
+                        2: begin cpol <= mode[5]; cpha <= mode[4]; end
+                        1: begin cpol <= mode[3]; cpha <= mode[2]; end
+                        0: begin cpol <= mode[1]; cpha <= mode[0]; end
+                    endcase
+
+                    //if the auto bit is high and matched the cs_select then auto is active, otherwise auto is not active
+                    if((auto_cs[3] & (cs_select == 2'b11)) || (auto_cs[2] & (cs_select == 2'b10)) || (auto_cs[1] & (cs_select == 2'b01)) || (auto_cs[0] & (cs_select == 2'b00)))
+                    begin
+                        auto <= 1;
+                    end
+                    else begin
+                        auto <= 0;
+                    end
+                                        
+                end
+
+            //Drive clk maybe
+                2:
+                begin
+                                        
+                    //state change fork if auto or not.
+                    if(auto)
+                    begin
+                        state <= 3;
+                    end
+                    else
+                    begin
+                        state <= 4;
+                        clk_go <= 1;
+                    end
+                    
+                    if(cpha == 0)
+                    begin
+                        datum <= data_reg[bit_idx];
+                        bit_idx <= bit_idx_next;
+                    end
+                end
+
+            //Auto CS Handle
+                3:
+                begin
+                    //push selected cs low, push others high.
+                    case(cs_select_r)
+                        3: begin await_setup<=1; cs[3] <= 0; cs[2] <= 1; cs[1] <= 1; cs[0] <= 1; end
+                        2: begin await_setup<=1; cs[3] <= 1; cs[2] <= 0; cs[1] <= 1; cs[0] <= 1; end
+                        1: begin await_setup<=1; cs[3] <= 1; cs[2] <= 1; cs[1] <= 0; cs[0] <= 1; end
+                        0: begin await_setup<=1; cs[3] <= 1; cs[2] <= 1; cs[1] <= 1; cs[0] <= 0; end
+                    endcase
+                                        
+                end
+
+            //Update 1                
+                4:
+                begin
+                    clk_go <= 1;
+                    if(cpha == 1)   //load data
+                    begin
+                        datum <= data_reg[bit_idx];
+                        bit_idx <= bit_idx_next;
+                    end
+                
+                    state<=5;
+                end
+
+            //Update 2
+                5:
+                begin
+                    if(cpha == 0)   //load data                
+                    begin
+                        datum <= data_reg[bit_idx];
+                        bit_idx <= bit_idx_next;
+                    end
+                                            
+                    if(bit_idx < word_size)         //if we aren't done then continue updating.
+                    begin
+                        state<=4;
+                    end
+                    else if(bit_idx == word_size)   //if the word is finished
+                    begin
+                        clk_go <= 0;                //idle tick at least temporarily, maybe for a while
+                        rd_req_flag <= 1;           //assert rd_req
+                        
+                        if(auto == 1)               //if we are handling cs
+                        begin
+                            state <= 6;             //proceed to toggle cs
+                        end
+                        else if(~fe)                //we are not auto and have more words to output
+                        begin
+                            state <= 2;             //goto drive clock
+                        end
+                        else if(fe)                 //we are not auto and there are no more words to output.
+                        begin
+                            state <= 0;             //goto idle
+                        end
+                    end
+                end
+                
+            //CS Disable
+                6:
+                begin
+                    cs <= 4'b1111;      //deselect cs
+                    clk_go <= 0;        //let clock be polarity
+                    if(fe)              //if we are done
+                    begin
+                        state <= 0;     //be idle
+                    end
+                    else
+                    begin
+                        state <= 1;     //otherwise load the next data set
+                    end
+                end
+                
+            //Error, or undefined.
+                default:
+                begin
+                    state <= 8'b11111111;       //lock up until reset.
+                    clk_go <= 0;    //stop the clock.
+                end
+            endcase            
+        end
+    end
 endmodule
 
 

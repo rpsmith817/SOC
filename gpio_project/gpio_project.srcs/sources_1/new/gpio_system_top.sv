@@ -62,7 +62,7 @@ module the_system_top (
     assign RGB1 = 3'b000;
     // assign SS_ANODE = 4'b0000;
     // assign SS_CATHODE = 8'b11111111;
-    assign GPIO[23:1] = 23'bzzzzzzzzzzzzzzzzzzzzzzz;
+    assign GPIO[23:6] = 18'bzzzzzzzzzzzzzzzzzz;
     assign SERVO = 4'b0000;
     assign PDM_SPEAKER = 1'b0;
     assign PDM_MIC_CLK = 1'b0;
@@ -104,13 +104,8 @@ module the_system_top (
 //SPI
     wire [31:0] datain;
     wire [31:0] dataout;
-    wire [31:0] status; //        .rd_index(status[31:28]),.wr_index(status[27:24]),.watermark(status[23:20])
-    wire clr_overflow;
-    wire rd_req;
-    wire wr_req;
-    wire empty;
-    wire full;
-    wire overflow;
+    wire datum;
+    wire [3:0] cs;
     wire baud_clk;
     
     //metastability for switches & a button
@@ -126,33 +121,35 @@ module the_system_top (
         reset_btn_final <= reset_btn_last;
     end
 
+    //PMODA
     assign GPIO[0] = baud_clk;
+    assign GPIO[1] = datum;
+    assign GPIO[5:2] = cs;
+    
 
-//    //tryna reset and failing. figure it out later no time rn
-//    wire resetter;
-//    assign resetter = (DDR_reset_n | reset_btn_final);
+
     
-    //sw handlin
-    reg [11:0] led_out;
-    always_ff @ (posedge CLK100)
-    begin
-        if(sw_final[1:0] == 2'b00)
-        begin
-            led_out[3:0] <= status[31:28];  //rd_index
-            led_out[7:4] <= status[27:24];  //wr_index
-            led_out[9:8] <= 2'b0;
-        end
-        if(sw_final[1:0] == 2'b01)
-        begin
-            led_out[9:0] <= {2'b0,status[23:20],1'b0,status[2:0]};    //watermark on the left; 5 blanks fe,ff,ov on the right
-        end
-        if(sw_final[1:0] == 2'b10)
-        begin
-            led_out[9:0] <= dataout[9:0];
-        end        
-    end
+//    //sw handlin
+//    reg [11:0] led_out;
+//    always_ff @ (posedge CLK100)
+//    begin
+//        if(sw_final[1:0] == 2'b00)
+//        begin
+//            led_out[3:0] <= status[31:28];  //rd_index
+//            led_out[7:4] <= status[27:24];  //wr_index
+//            led_out[9:8] <= 2'b0;
+//        end
+//        if(sw_final[1:0] == 2'b01)
+//        begin
+//            led_out[9:0] <= {2'b0,status[23:20],1'b0,status[2:0]};    //watermark on the left; 5 blanks fe,ff,ov on the right
+//        end
+//        if(sw_final[1:0] == 2'b10)
+//        begin
+//            led_out[9:0] <= dataout[9:0];
+//        end        
+//    end
     
-    assign LED = led_out;
+//    assign LED = led_out;
 
 
     // Instantiate system wrapper
@@ -178,20 +175,15 @@ module the_system_top (
         .FIXED_IO_ps_clk(FIXED_IO_ps_clk),
         .FIXED_IO_ps_porb(FIXED_IO_ps_porb),
         .FIXED_IO_ps_srstb(FIXED_IO_ps_srstb),
-        .gpio_data_in(gpio_data_in),
-        .gpio_data_out(gpio_data_out),
-        .gpio_data_oe(gpio_data_oe),
-        .intr(intr),
+        .baud_clk(baud_clk),
+        .cs(GPIO[5:2]),
         .datain(datain),
         .dataout(dataout),
-        .status(status),
-        .clr_overflow(clr_overflow),
-        .rd_req(0), //set definite, maybe we will have cause to poke it later, but for now any wr/rd should just do
-        .wr_req(0), //ditto
-        .empty(empty),
-        .full(full),
-        .overflow(overflow),
-        .baud_clk(baud_clk)
+        .datum(datum),
+        .gpio_data_in(gpio_data_in),
+        .gpio_data_oe(gpio_data_oe),
+        .gpio_data_out(gpio_data_out),
+        .intr(intr)
         );
 
 endmodule
