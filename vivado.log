@@ -353,3 +353,7 @@ WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-f
 WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/rps/fpga/ip_repo/My_SPI_1_0/hdl/My_SPI.v:]
 WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/rps/fpga/ip_repo/My_SPI_1_0/hdl/My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v:]
 WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/rps/fpga/ip_repo/My_SPI_1_0/hdl/My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/rps/fpga/ip_repo/My_SPI_1_0/hdl/My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/rps/fpga/ip_repo/My_SPI_1_0/hdl/My_SPI.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/rps/fpga/ip_repo/My_SPI_1_0/hdl/My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/rps/fpga/ip_repo/My_SPI_1_0/hdl/My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v:]

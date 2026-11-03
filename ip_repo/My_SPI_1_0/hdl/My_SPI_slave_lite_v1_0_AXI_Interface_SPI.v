@@ -599,12 +599,15 @@ module spi_fsm(
     reg cpha;       //phase of selected cs
     reg cpol;       //polarity of selected cs
     reg [4:0] bit_idx_next;
+    reg await_setup;    //await cs setup time so we stay in bounds of the chip we are targeting.
+    reg [7:0]cs_await_timer;   //counts clocks so we have cs timing OK.
     
     assign spi_clk = cpol;
     assign bit_idx_next = bit_idx - 1;
     
     always_ff @ (negedge reset, posedge clk)
     begin
+        
         if(reset == 0)
         begin
             bit_idx <= word_size;
@@ -619,6 +622,8 @@ module spi_fsm(
             cs <= 4'b1111;
             data_reg <= 0;
             datum <= 0;
+            await_setup<=0;
+            cs_await_timer <= 0;
         end
         else if(brd_tick==1)    //state change time!
         begin
@@ -626,7 +631,7 @@ module spi_fsm(
 
             //Idle state
                 0:
-                begin                    
+                begin
                     if(~fe) //if the fifo has something in it.
                     begin
                         state <= 1; //start the machine
@@ -653,7 +658,7 @@ module spi_fsm(
                     endcase
 
                     //if the auto bit is high and matched the cs_select then auto is active, otherwise auto is not active
-                    if((cs_auto[3] & (cs_select == 2'b11)) || (cs_auto[2] & (cs_select == 2'b10)) || (cs_auto[1] & (cs_select == 2'b01)) || (cs_auto[0] & (cs_select == 2'b00)))
+                    if((auto_cs[3] & (cs_select == 2'b11)) || (auto_cs[2] & (cs_select == 2'b10)) || (auto_cs[1] & (cs_select == 2'b01)) || (auto_cs[0] & (cs_select == 2'b00)))
                     begin
                         auto <= 1;
                     end
@@ -663,10 +668,9 @@ module spi_fsm(
                                         
                 end
 
-            //Drive clk
+            //Drive clk maybe
                 2:
                 begin
-                    clk_go <= 1;
                                         
                     //state change fork if auto or not.
                     if(auto)
@@ -675,7 +679,8 @@ module spi_fsm(
                     end
                     else
                     begin
-                        state <= 3;
+                        state <= 4;
+                        clk_go <= 1;
                     end
                     
                     if(cpha == 0)
@@ -685,24 +690,23 @@ module spi_fsm(
                     end
                 end
 
-            //CS Handle
+            //Auto CS Handle
                 3:
                 begin
-                    
                     //push selected cs low, push others high.
                     case(cs_select_r)
-                        3: begin cs[3] <= 0; cs[2] <= 1; cs[1] <= 1; cs[0] <= 1; end
-                        2: begin cs[3] <= 1; cs[2] <= 0; cs[1] <= 1; cs[0] <= 1; end
-                        1: begin cs[3] <= 1; cs[2] <= 1; cs[1] <= 0; cs[0] <= 1; end
-                        0: begin cs[3] <= 1; cs[2] <= 1; cs[1] <= 1; cs[0] <= 0; end
+                        3: begin await_setup<=1; cs[3] <= 0; cs[2] <= 1; cs[1] <= 1; cs[0] <= 1; end
+                        2: begin await_setup<=1; cs[3] <= 1; cs[2] <= 0; cs[1] <= 1; cs[0] <= 1; end
+                        1: begin await_setup<=1; cs[3] <= 1; cs[2] <= 1; cs[1] <= 0; cs[0] <= 1; end
+                        0: begin await_setup<=1; cs[3] <= 1; cs[2] <= 1; cs[1] <= 1; cs[0] <= 0; end
                     endcase
                                         
-                    state<=4;
                 end
 
             //Update 1                
                 4:
                 begin
+                    clk_go <= 1;
                     if(cpha == 1)   //load data
                     begin
                         datum <= data_reg[bit_idx];
@@ -747,8 +751,8 @@ module spi_fsm(
             //CS Disable
                 6:
                 begin
-                    cs <= 4'b1111;
-
+                    cs <= 4'b1111;      //deselect cs
+                    clk_go <= 0;        //let clock be polarity
                     if(fe)              //if we are done
                     begin
                         state <= 0;     //be idle

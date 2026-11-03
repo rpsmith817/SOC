@@ -2184,3 +2184,6 @@ typeControlKey(null, null, 'z');
 // HMemoryUtils.trashcanNow. Engine heap size: 2,515 MB. GUI used memory: 90 MB. Current time: 11/3/26, 3:00:28 PM CST
 // HMemoryUtils.trashcanNow. Engine heap size: 2,515 MB. GUI used memory: 88 MB. Current time: 11/3/26, 3:01:08 PM CST
 // HMemoryUtils.trashcanNow. Engine heap size: 2,515 MB. GUI used memory: 88 MB. Current time: 11/3/26, 3:01:48 PM CST
+// TclEventType: PACKAGER_MESSAGE_UPDATE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
