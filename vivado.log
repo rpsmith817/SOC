@@ -630,3 +630,9 @@ save_bd_design
 WARNING: [BD 41-597] NET <My_SPI_0_status> has no source
 Wrote  : </home/rps/fpga/gpio_project/gpio_project.srcs/sources_1/bd/system/system.bd> 
 Wrote  : </home/rps/fpga/gpio_project/gpio_project.srcs/sources_1/bd/system/ui/bd_c954508f.ui> 
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/rps/fpga/gpio_project/gpio_project.gen/sources_1/bd/system/hdl/system_wrapper.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/rps/fpga/gpio_project/gpio_project.srcs/sources_1/new/gpio_system_top.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/rps/fpga/gpio_project/gpio_project.srcs/sources_1/new/gpio_system_top.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/rps/fpga/gpio_project/gpio_project.srcs/sources_1/new/gpio_system_top.sv:]
+exit
+INFO: [Common 17-206] Exiting Vivado at Tue Nov  3 17:03:27 2026...

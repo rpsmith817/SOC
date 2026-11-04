@@ -127,8 +127,7 @@ module the_system_top (
     assign GPIO[5:2] = cs;
     
 
-
-    
+        
 //    //sw handlin
 //    reg [11:0] led_out;
 //    always_ff @ (posedge CLK100)
