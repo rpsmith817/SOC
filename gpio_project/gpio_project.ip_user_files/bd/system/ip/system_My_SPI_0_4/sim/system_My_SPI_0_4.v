@@ -48,7 +48,7 @@
 
 
 // IP VLNV: user.org:user:My_SPI:1.0
-// IP Revision: 24
+// IP Revision: 37
 
 `timescale 1ns/1ps
 

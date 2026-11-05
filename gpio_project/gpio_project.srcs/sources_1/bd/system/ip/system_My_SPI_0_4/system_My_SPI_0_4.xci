@@ -4,7 +4,7 @@
     "xci_name": "system_My_SPI_0_4",
     "cell_name": "My_SPI_0",
     "component_reference": "user.org:user:My_SPI:1.0",
-    "ip_revision": "24",
+    "ip_revision": "38",
     "gen_directory": "../../../../../../gpio_project.gen/sources_1/bd/system/ip/system_My_SPI_0_4",
     "parameters": {
       "component_parameters": {
@@ -33,7 +33,7 @@
       },
       "runtime_parameters": {
         "IPCONTEXT": [ { "value": "IP_Integrator" } ],
-        "IPREVISION": [ { "value": "24" } ],
+        "IPREVISION": [ { "value": "38" } ],
         "MANAGED": [ { "value": "TRUE" } ],
         "OUTPUTDIR": [ { "value": "../../../../../../gpio_project.gen/sources_1/bd/system/ip/system_My_SPI_0_4" } ],
         "SELECTEDSIMMODEL": [ { "value": "" } ],
@@ -200,5 +200,5 @@
       }
     }
   },
-  "checksum": "9195b36c"
+  "checksum": "7ce6af4b"
 }

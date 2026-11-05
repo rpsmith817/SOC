@@ -7,7 +7,8 @@
       "name": "system",
       "rev_ctrl_bd_flag": "RevCtrlBdOff",
       "synth_flow_mode": "Hierarchical",
-      "tool_version": "2025.2"
+      "tool_version": "2025.2",
+      "validated": "true"
     },
     "design_tree": {
       "processing_system7_0": "",
@@ -207,7 +208,17 @@
       },
       "intr": {
         "type": "intr",
-        "direction": "O"
+        "direction": "O",
+        "parameters": {
+          "PortWidth": {
+            "value": "1",
+            "value_src": "default_prop"
+          },
+          "SENSITIVITY": {
+            "value": "LEVEL_HIGH",
+            "value_src": "const_prop"
+          }
+        }
       },
       "gpio_data_out": {
         "direction": "O",
@@ -236,7 +247,29 @@
       },
       "baud_clk": {
         "type": "clk",
-        "direction": "O"
+        "direction": "O",
+        "parameters": {
+          "CLK_DOMAIN": {
+            "value": "system_My_SPI_0_4_baud_clk",
+            "value_src": "default_prop"
+          },
+          "FREQ_HZ": {
+            "value": "100000000",
+            "value_src": "default"
+          },
+          "FREQ_TOLERANCE_HZ": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "PHASE": {
+            "value": "0.0",
+            "value_src": "default"
+          }
+        }
       },
       "datum": {
         "direction": "O"
@@ -1357,7 +1390,7 @@
       },
       "My_SPI_0": {
         "vlnv": "user.org:user:My_SPI:1.0",
-        "ip_revision": "24",
+        "ip_revision": "38",
         "xci_name": "system_My_SPI_0_4",
         "xci_path": "ip/system_My_SPI_0_4/system_My_SPI_0_4.xci",
         "inst_hier_path": "My_SPI_0",

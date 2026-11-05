@@ -22,7 +22,6 @@
 		
 		input wire [31:0] datain,
         output wire [31:0] dataout,
-        output wire [31:0] status,
         output wire baud_clk,
         output wire datum,
         output wire [3:0] cs,
@@ -75,6 +74,7 @@
 //     reg [31:0] int_status;
 //     reg [31:0] int_clear_request;
 	reg [31:0] data;
+	reg [31:0] status;
 	reg [31:0] ctrl;
 	reg [31:0] brd;
 	reg clr_overflow_req;
@@ -87,11 +87,7 @@
 	wire [3:0] fifo_wr_index;
 	wire [3:0] fifo_rd_index;
 	wire [3:0] fifo_watermark;
-	assign status = {fifo_rd_index, fifo_wr_index, fifo_watermark, 17'b0, fifo_empty, fifo_full, fifo_overflow};	//defined as [31:28] =rd_index, [27:24] =wr_index, [23:20]=watermark, [19:3] UNUSED, [2]=empty, [1] =full, [0] =overflow
-	assign dataout = fifo_rd_data;
-	assign empty = fifo_empty;
-	assign full = fifo_full;
-	assign overflow = fifo_overflow;
+
 
     // Register numbers
     localparam integer DATA_REG             = 3'b000;
@@ -420,6 +416,7 @@
 //	assign status[2] = empty;
 //	assign status[1] = full;
 //	assign status[0] = overflow;
+    wire fifo_rd_req;
 
 
 
@@ -432,52 +429,14 @@
         .clr_overflow(clr_overflow_req | clr_overflow_final | clr_txoverflow_req),   //input
         .rd_req(fifo_rd_req),       //input based on fsm
         .wr_req(fifo_wr_req | wr_req_final),       //input piggybacks off the axiwr or an actual assert. later might rely on fsm?
-        .empty(fifo_empty),         //output
-        .full(fifo_full),           //output
-        .overflow(fifo_overflow),   //output
+        .empty(status[5]),         //output
+        .full(status[4]),           //output
+        .overflow(status[3]),   //output
         .wr_index(fifo_wr_index),
         .rd_index(fifo_rd_index),
-        .watermark(fifo_watermark)
+        .watermark(status[13:10])
     );
 
-//     // Interrupt generation
-//     integer i;
-//     reg [31:0] last_read_port_data;
-//     always_ff @ (posedge axi_clk)
-//     begin
-//         if (axi_resetn == 1'b0)
-//         begin
-//             last_read_port_data <= 32'b0;
-//             int_status <= 32'b0;
-//         end
-//         else if (int_clear_request != 32'b0)
-//             int_status <= int_status & ~int_clear_request;
-//         else
-//         begin
-//             last_read_port_data <= read_port_data;
-//             for (i = 0; i < 32; i = i + 1)
-//             begin
-//                 if (int_enable[i])
-//                 begin
-//                     if (int_edge_mode[i])
-//                     begin
-//                         if (int_positive[i] && read_port_data[i] && !last_read_port_data[i])
-//                             int_status[i] <= 1'b1;
-//                         if (int_negative[i] && !read_port_data[i] && last_read_port_data[i])
-//                             int_status[i] <= 1'b1;
-//                     end
-//                     else
-//                     begin
-//                         if (int_positive[i] && read_port_data[i])
-//                             int_status[i] <= 1'b1;
-//                         if (int_negative[i] && !read_port_data[i])
-//                             int_status[i] <= 1'b1;
-//                     end
-//                 end
-//             end
-//         end
-//     end
-//     assign intr = int_status != 32'b0;
 
     reg brd_tick;    
     the_brd the_brd_instantiation
@@ -541,8 +500,6 @@
         AKA
     (baud_clk_next&clk_go) ^ spi_clk;
     */
-    reg datum;
-    wire fifo_rd_req;
     
     spi_fsm spi_fsm_inst
     (
@@ -558,7 +515,8 @@
         .cs_select(ctrl[14:13]),//binary value is which cs we are using. input [1:0] 
         .data(data[31:0]),      //data to push out one at a time. input [31:0] 
         .spi_clk(spi_clk),      //outputs cpol, differentiating which spi_clk we are
-        .cs(ctrl[12:9]),        //if auto then what chip is high. output reg [3:0] 
+        .cs_manual(ctrl[12:9]), //which cs is high if control is manual.
+        .cs(cs),            //cs control output 
         .datum(datum),          //single bit output from data+fsm output reg    
         .clk_go(clk_go),        //outputs clock stop/go for idle state combine output reg
         .rd_req(fifo_rd_req)    //outputs when each word is transmitted.
@@ -579,6 +537,7 @@ module spi_fsm(
     input [7:0] mode,       //polarity and phase of each, [7:6]cs3, [5:4]cs2, [3:2]cs1, [1:0]cs0
     input [1:0] cs_select,  //binary value is which cs we are using.
     input [31:0] data,      //data to push out one at a time.
+    input [3:0] cs_manual,  //in manual what CS should be high.
     output spi_clk,         //outputs cpol, differentiating which spi_clk we are
     output reg [3:0] cs,    //if auto then what chip is high.
     output reg datum,       //single bit output from data+fsm   
@@ -599,10 +558,14 @@ module spi_fsm(
     reg await_setup;            //await cs setup time so we stay in bounds of the chip we are targeting.
     reg [7:0]cs_await_timer;    //counts clocks so we have cs timing OK.
     reg rd_req_flag;            //flag if rd_req should be high.
+    reg [3:0] cs_manual_r;
+    reg [3:0] cs_auto_out;
     
     assign spi_clk = cpol;
     assign bit_idx_next = bit_idx - 1;
     assign rd_req = rd_req_flag;
+
+
     
     always_ff @ (negedge reset, posedge clk)
     begin
@@ -610,7 +573,46 @@ module spi_fsm(
         begin
             rd_req_flag <= 0;
         end
-        
+//handle cs output
+        begin
+            if(!cs_auto[3])
+            begin
+                cs[3] <= cs_manual_r[3];
+            end
+            else
+            begin
+                cs[3] <= cs_auto_out[3];
+            end
+            
+            if(!cs_auto[2])
+            begin
+                cs[2] <= cs_manual_r[2];
+            end
+            else
+            begin
+                cs[2] <= cs_auto_out[2];
+            end
+    
+            if(!cs_auto[1])
+            begin
+                cs[1] <= cs_manual_r[1];
+            end
+            else
+            begin
+                cs[1] <= cs_auto_out[1];
+            end
+    
+            if(!cs_auto[0])
+            begin
+                cs[0] <= cs_manual_r[0];
+            end
+            else
+            begin
+                cs[0] <= cs_auto_out[0];
+            end
+        end
+
+//reset
         if(reset == 0)
         begin
             bit_idx <= word_size;
@@ -622,13 +624,14 @@ module spi_fsm(
             cpha <= 0;
             auto <= 0;
             clk_go <= 0;
-            cs <= 4'b1111;
             data_reg <= 0;
             datum <= 0;
             await_setup <= 0;
             cs_await_timer <= 0;
             rd_req_flag <= 0;
+            cs_manual_r <= 0;
         end
+//state machine
         else if(brd_tick==1)    //state change time!
         begin
             case(state)
@@ -636,6 +639,7 @@ module spi_fsm(
             //Idle state
                 0:
                 begin
+                datum <= 0;
                     if(~fe) //if the fifo has something in it.
                     begin
                         state <= 1; //start the machine
@@ -699,10 +703,10 @@ module spi_fsm(
                 begin
                     //push selected cs low, push others high.
                     case(cs_select_r)
-                        3: begin await_setup<=1; cs[3] <= 0; cs[2] <= 1; cs[1] <= 1; cs[0] <= 1; end
-                        2: begin await_setup<=1; cs[3] <= 1; cs[2] <= 0; cs[1] <= 1; cs[0] <= 1; end
-                        1: begin await_setup<=1; cs[3] <= 1; cs[2] <= 1; cs[1] <= 0; cs[0] <= 1; end
-                        0: begin await_setup<=1; cs[3] <= 1; cs[2] <= 1; cs[1] <= 1; cs[0] <= 0; end
+                        3: begin cs_auto_out[3] <= 0; cs_auto_out[2] <= 1; cs_auto_out[1] <= 1; cs_auto_out[0] <= 1; end
+                        2: begin cs_auto_out[3] <= 1; cs_auto_out[2] <= 0; cs_auto_out[1] <= 1; cs_auto_out[0] <= 1; end
+                        1: begin cs_auto_out[3] <= 1; cs_auto_out[2] <= 1; cs_auto_out[1] <= 0; cs_auto_out[0] <= 1; end
+                        0: begin cs_auto_out[3] <= 1; cs_auto_out[2] <= 1; cs_auto_out[1] <= 1; cs_auto_out[0] <= 0; end
                     endcase
                                         
                 end
@@ -773,8 +777,14 @@ module spi_fsm(
                 begin
                     state <= 8'b11111111;       //lock up until reset.
                     clk_go <= 0;    //stop the clock.
+                    datum <= 0;
                 end
             endcase            
+        end
+//if not tick then push manual setting into manual reg.
+        else
+        begin
+            cs_manual_r <= cs_manual;
         end
     end
 endmodule

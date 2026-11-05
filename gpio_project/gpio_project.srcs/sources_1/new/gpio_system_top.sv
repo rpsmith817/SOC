@@ -175,7 +175,7 @@ module the_system_top (
         .FIXED_IO_ps_porb(FIXED_IO_ps_porb),
         .FIXED_IO_ps_srstb(FIXED_IO_ps_srstb),
         .baud_clk(baud_clk),
-        .cs(GPIO[5:2]),
+        .cs(cs),
         .datain(datain),
         .dataout(dataout),
         .datum(datum),

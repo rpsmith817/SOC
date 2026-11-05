@@ -78,9 +78,6 @@ COMPONENT system
     intr : OUT STD_LOGIC;
     gpio_data_out : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
     gpio_data_oe : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
-    wr_req : IN STD_LOGIC;
-    rd_req : IN STD_LOGIC;
-    clr_overflow : IN STD_LOGIC;
     datain : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
     dataout : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
     status : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
@@ -122,9 +119,6 @@ your_instance_name : system
     intr => intr,
     gpio_data_out => gpio_data_out,
     gpio_data_oe => gpio_data_oe,
-    wr_req => wr_req,
-    rd_req => rd_req,
-    clr_overflow => clr_overflow,
     datain => datain,
     dataout => dataout,
     status => status,

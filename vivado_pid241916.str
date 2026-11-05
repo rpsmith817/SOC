@@ -1,0 +1,1632 @@
+/*
+
+AMD Vivado v2025.2 (64-bit) [Major: 2025, Minor: 2]
+SW Build: 6299465 on Fri Nov 14 12:34:56 MST 2025
+IP Build: 6300035 on Fri Nov 14 10:48:45 MST 2025
+IP Build: 6300035 on Fri Nov 14 10:48:45 MST 2025
+
+Process ID (PID): 241916
+License: Customer
+Mode: GUI Mode
+
+Current time: 	Thu Nov 05 14:54:03 CST 2026
+Time zone: 	Central Standard Time (America/Chicago)
+
+OS: Ubuntu
+OS Version: 6.17.0-1033-oem
+OS Architecture: amd64
+Available processors (cores): 14
+LSB Release Description: DISTRIB_ID=Ubuntu
+
+Display: 0
+Screen size: 1920x1200
+Local screen bounds: x = 66, y = 32, width = 1854, height = 1168
+Screen resolution (DPI): 100
+Available screens: 1
+Default font: family=Open Sans,name=Open Sans,style=plain,size=13
+Scale size: 13
+OS font scaling: 100%
+Anti-Alias Enabled: false
+
+Java version: 	21.0.5 64-bit
+
+Java home: 	/opt/Xilinx/2025.2/tps/lnx64/jre21.0.5_11
+Java executable: 	/opt/Xilinx/2025.2/tps/lnx64/jre21.0.5_11/bin/java
+Java arguments: 	[-Dsun.java2d.pmoffscreen=false, -Dhttps.protocols=TLSv1,TLSv1.1,TLSv1.2, -Dsun.java2d.xrender=false, -Dsun.java2d.uiScale.enabled=false, -Dswing.aatext=true, -XX:-UsePerfData, -Djdk.map.althashing.threshold=512, -XX:StringTableSize=4072, -XX:+UseStringDeduplication, -XX:MaxGCPauseMillis=200, -XX:ParallelGCThreads=4, -XX:+ParallelRefProcEnabled, --add-opens=java.desktop/javax.swing.plaf.synth=ALL-UNNAMED, --add-opens=java.base/java.nio=ALL-UNNAMED, --add-opens=java.desktop/sun.swing=ALL-UNNAMED, --add-opens=java.desktop/javax.swing=ALL-UNNAMED, --add-opens=java.desktop/javax.swing.tree=ALL-UNNAMED, --add-opens=java.desktop/javax.swing.plaf.basic=ALL-UNNAMED, --add-opens=java.desktop/javax.swing.plaf.synth=ALL-UNNAMED, --add-opens=java.desktop/javax.swing.plaf.basic=ALL-UNNAMED, --add-opens=java.desktop/javax.swing=ALL-UNNAMED, --add-opens=java.desktop/javax.swing.tree=ALL-UNNAMED, --add-opens=java.desktop/java.awt.event=ALL-UNNAMED, --add-opens=java.desktop/sun.awt.X11=ALL-UNNAMED, --add-exports=java.desktop/javax.swing.plaf.synth=ALL-UNNAMED, --add-exports=java.base/java.nio=ALL-UNNAMED, --add-exports=java.desktop/sun.swing=ALL-UNNAMED, --add-exports=java.desktop/javax.swing=ALL-UNNAMED, --add-exports=java.desktop/javax.swing.tree=ALL-UNNAMED, --add-exports=java.desktop/javax.swing.plaf.basic=ALL-UNNAMED, --add-exports=java.desktop/sun.swing=ALL-UNNAMED, --add-exports=java.desktop/sun.swing.table=ALL-UNNAMED, --add-exports=java.desktop/sun.swing.plaf.synth=ALL-UNNAMED, --add-exports=java.desktop/sun.awt.shell=ALL-UNNAMED, --add-exports=java.base/sun.security.action=ALL-UNNAMED, --add-exports=java.desktop/sun.font=ALL-UNNAMED, --add-opens=java.desktop/sun.awt.X11=ALL-UNNAMED, -XX:NewSize=80m, -XX:MaxNewSize=80m, -Xms812m, -Xmx6144m, -Xss10m, -Xrs]
+Java initial memory (-Xms): 	812 MB
+Java maximum memory (-Xmx):	 6 GB
+
+User name: 	rps
+User home directory: /home/rps
+User working directory: /home/rps/fpga
+User country: 	US
+User language: 	en
+User locale: 	en_US
+
+RDI_BASEROOT: /opt/Xilinx/2025.2
+HDI_APPROOT: /opt/Xilinx/2025.2/Vivado
+RDI_DATADIR: /home/rps/fpga/:/opt/Xilinx/2025.2/data
+RDI_BINDIR: /opt/Xilinx/2025.2/Vivado/bin
+
+Vivado preferences file: /home/rps/.Xilinx/Vivado/2025.2/newvivado.xml
+Vivado preferences directory: /home/rps/.Xilinx/Vivado/2025.2/
+Vivado layouts directory: /home/rps/.Xilinx/Vivado/2025.2/data/layouts
+PlanAhead jar file: 	/opt/Xilinx/2025.2/Vivado/lib/classes/planAhead.jar
+Vivado log file: 	/home/rps/fpga/vivado.log
+Vivado journal file: 	/home/rps/fpga/vivado.jou
+Engine tmp dir: 	./.Xil/Vivado-241916-rps-ThinkPad-T16-Gen-4
+Non-Default Parameters:	[]
+
+Xilinx & AMD Environment Variables
+--------------------------------------------------------------------------------------------
+GNOME_SHELL_SESSION_MODE: ubuntu
+RDI_APPROOT: /opt/Xilinx/2025.2/Vivado
+RDI_BASEROOT: /opt/Xilinx/2025.2
+RDI_BINROOT: /opt/Xilinx/2025.2/Vivado/bin
+RDI_BUILD: yes
+RDI_DATADIR: :/opt/Xilinx/2025.2/data
+RDI_INSTALLROOT: /opt/Xilinx
+RDI_INSTALLVER: Vivado
+RDI_JAVA_PLATFORM: 
+RDI_JAVA_VERSION: 21.0.5_11
+RDI_LIBDIR: /opt/Xilinx/2025.2/Vivado/lib/lnx64.o/Ubuntu/24:/opt/Xilinx/2025.2/Vivado/lib/lnx64.o/Ubuntu:/opt/Xilinx/2025.2/Vivado/lib/lnx64.o
+RDI_OPT_EXT: .o
+RDI_PATCHROOT: 
+RDI_PLATFORM: lnx64
+RDI_PREPEND_PATH: /opt/Xilinx/2025.2/Vitis/bin:/opt/Xilinx/2025.2/Vivado/ids_lite/ISE/bin/lin64
+RDI_PROG: /opt/Xilinx/2025.2/Vivado/bin/unwrapped/lnx64.o/vivado
+RDI_SESSION_INFO: /home/rps/fpga:rps-ThinkPad-T16-Gen-4_1793912032_241820
+RDI_SHARED_DATA: 
+RDI_TPS_ROOT: /opt/Xilinx/2025.2/Vivado/tps/lnx64
+RDI_USE_JDK21: True
+SHELL: /bin/bash
+XILINX: /opt/Xilinx/2025.2/Vivado/ids_lite/ISE
+XILINX_DSP: /opt/Xilinx/2025.2/Vivado/ids_lite/ISE
+XILINX_HLS: /opt/Xilinx/2025.2/Vitis
+XILINX_PLANAHEAD: /opt/Xilinx/2025.2/Vivado
+XILINX_SDK: /opt/Xilinx/2025.2/Vitis
+XILINX_VITIS: /opt/Xilinx/2025.2/Vitis
+XILINX_VIVADO: /opt/Xilinx/2025.2/Vivado
+
+
+GUI allocated memory:	812 MB
+GUI max memory:		6,144 MB
+Engine allocated memory: 1,877 MB
+
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+
+*/
+
+// TclEventType: START_GUI
+// Tcl Message: start_gui 
+// Tcl Message: Sourcing tcl script '/home/rps/.Xilinx/Vivado/Vivado_init.tcl' 
+// HMemoryUtils.trashcanNow. Engine heap size: 1,877 MB. GUI used memory: 69 MB. Current time: 11/5/26, 2:54:04 PM CST
+// WARNING: HEventQueue.dispatchEvent() is taking  1001 ms.
+selectList(PAResourceTtoZ.UpgradedSyntheticaGettingStartedView_RECENT_PROJECTS, "/home/rps/fpga/gpio_project/gpio_project.xpr$Zynq-7000, xc7z007sclg400-1", 0); // b.c (PAResourceTtoZ.UpgradedSyntheticaGettingStartedView_RECENT_PROJECTS)
+// Opening Vivado Project: /home/rps/fpga/gpio_project/gpio_project.xpr. Version: Vivado v2025.2 
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// TclEventType: FLOW_ADDED
+// TclEventType: MSGMGR_MOVEMSG
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: FILE_SET_NEW
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_CURRENT
+// TclEventType: MSGMGR_REFRESH_MSG
+// TclEventType: PROJECT_DASHBOARD_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: IP_LOCK_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: PROJECT_NEW
+// [GUI Memory]: 94 MB (+95787kb) [00:00:20]
+// [Engine Memory]: 1,972 MB (+1915861kb) [00:00:20]
+// [GUI Memory]: 122 MB (+24420kb) [00:00:21]
+// WARNING: HEventQueue.dispatchEvent() is taking  1783 ms.
+// Tcl Message: open_project /home/rps/fpga/gpio_project/gpio_project.xpr 
+// Tcl Message: Scanning sources... Finished scanning sources 
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/rps/fpga/ip_repo/My_SPI_1_0'. INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/rps/fpga/ip_repo/SPI_1_0'. INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/rps/fpga/ip_repo/gpio_1_0'. 
+// Tcl Message: INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/rps/fpga/ip_repo/gpio_1_0'. INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/opt/Xilinx/2025.2/data/ip'. 
+// Tcl Message: INFO: [Project 1-5698] Found the below utility IPs instantiated in block design /home/rps/fpga/gpio_project/gpio_project.srcs/sources_1/bd/system/system.bd which have equivalent inline hdl with improved performance and reduced diskspace. It is recommended to migrate these utility IPs to inline hdl  using the command upgrade_project -migrate_to_inline_hdl.  The utility IPs may be deprecated in future releases. More information on inline hdl is available in UG994. Utility IP Component Instances:  system_xlconcat_0_0 
+// [GUI Memory]: 131 MB (+3682kb) [00:00:22]
+// [GUI Memory]: 141 MB (+2979kb) [00:00:22]
+// Project name: gpio_project; location: /home/rps/fpga/gpio_project; part: xc7z007sclg400-1
+dismissDialog("Open Project"); // bk (Open Project Progress)
+// TclEventType: DG_GRAPH_GENERATED
+// [GUI Memory]: 155 MB (+7249kb) [00:00:24]
+// [Engine Memory]: 2,090 MB (+20773kb) [00:00:24]
+// Tcl Message: update_compile_order -fileset sources_1 
+selectTab(PAResourceEtoH.FileSetView_TABBED_PANE, PAResourceEtoH.FileSetView_ADD_TAB, "IP Sources", 1); // g (PAResourceEtoH.FileSetView_TABBED_PANE, SourcesView)
+selectTab(PAResourceEtoH.FileSetView_TABBED_PANE, PAResourceEtoH.FileSetView_INSERT_TAB, "Hierarchy", 0); // g (PAResourceEtoH.FileSetView_TABBED_PANE, SourcesView)
+selectTab(PAResourceEtoH.FileSetView_TABBED_PANE, PAResourceEtoH.FileSetView_ADD_TAB, "IP Sources", 1); // g (PAResourceEtoH.FileSetView_TABBED_PANE, SourcesView)
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Block Designs, system]", 1); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE)
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Block Designs, system, Simulation]", 3); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Block Designs, system, Simulation, system_My_SPI_0_4]", 9, false, false, false, false, true, false); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE) - Popup Trigger
+// HMemoryUtils.trashcanNow. Engine heap size: 2,078 MB. GUI used memory: 86 MB. Current time: 11/5/26, 2:54:35 PM CST
+selectMenuItem(PAResourceCommand.PACommandNames_REPORT_IP_STATUS, "Report IP Status"); // ap (PAResourceCommand.PACommandNames_REPORT_IP_STATUS, report_ip_status_menu)
+// Run Command: PAResourceCommand.PACommandNames_REPORT_IP_STATUS
+// Tcl Command: 'report_ip_status -name ip_status '
+// TclEventType: PAUSE_COMPOSITE_FILE_CHANGE_GUI
+// TclEventType: IP_SUMMARY_RESULTS
+// TclEventType: PAUSE_COMPOSITE_FILE_CHANGE_GUI
+// Tcl Message: report_ip_status -name ip_status  
+dismissDialog("Report IP Status"); // bk (Report IP Status Progress)
+selectButton(PAResourceItoN.IPStatusSectionPanel_UPGRADE_SELECTED, "Upgrade Selected"); // a (PAResourceItoN.IPStatusSectionPanel_UPGRADE_SELECTED)
+// Run Command: PAResourceCommand.PACommandNames_UPGRADE_IP
+// TclEventType: PAUSE_COMPOSITE_FILE_CHANGE_GUI
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: LOAD_FEATURE
+// TclEventType: RSB_CHANGE_CURRENT_DIAGRAM
+// TclEventType: LOAD_FEATURE
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: RSB_LOCK_CHANGE
+// TclEventType: RSB_CHANGE_CURRENT_DIAGRAM
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: COMPOSITE_FILE_CHANGE
+// TclEventType: RSB_LOCK_CHANGE
+// TclEventType: RSB_CHANGE_CURRENT_DIAGRAM
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_OPEN_DIAGRAM
+// TclEventType: RSB_INSERT_ADDRNETWORK
+// TclEventType: RSB_OPEN_DIAGRAM
+// [GUI Memory]: 166 MB (+3424kb) [00:00:46]
+// WARNING: HEventQueue.dispatchEvent() is taking  1336 ms.
+// TclEventType: RSB_OPEN_DIAGRAM
+// Tcl Message: upgrade_ip -vlnv user.org:user:My_SPI:1.0 [get_ips  system_My_SPI_0_4] -log ip_upgrade.log 
+// Tcl Message: Reading block design file </home/rps/fpga/gpio_project/gpio_project.srcs/sources_1/bd/system/system.bd>... Adding component instance block -- xilinx.com:ip:processing_system7:5.5 - processing_system7_0 Adding component instance block -- xilinx.com:ip:proc_sys_reset:5.0 - proc_sys_reset_0 Adding component instance block -- user.org:user:gpio:1.0 - gpio_0 Adding component instance block -- xilinx.com:ip:smartconnect:1.0 - axi_smc Adding component instance block -- xilinx.com:ip:xlconcat:2.1 - xlconcat_0 Adding component instance block -- user.org:user:My_SPI:1.0 - My_SPI_0 Successfully read diagram <system> from block design file </home/rps/fpga/gpio_project/gpio_project.srcs/sources_1/bd/system/system.bd> 
+runTclCommand (PAResourceOtoP.PAViews_SYSTEM, "unselect_objects"); // gb (PAResourceOtoP.PAViews_SYSTEM, PlanAheadTabSystem)
+// TclEventType: RSB_OPEN_DIAGRAM
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: DG_GRAPH_STALE
+// Tcl Message: Upgrading '/home/rps/fpga/gpio_project/gpio_project.srcs/sources_1/bd/system/system.bd' 
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: COMPOSITE_FILE_CHANGE
+// TclEventType: RSB_SAVE_DIAGRAM
+// TclEventType: COMPOSITE_FILE_CHANGE
+// TclEventType: RSB_SAVE_DIAGRAM
+// TclEventType: FILESET_UPDATE_IP
+// TclEventType: IP_UPGRADE_COMPLETE
+// TclEventType: PAUSE_COMPOSITE_FILE_CHANGE_GUI
+// Tcl Message: INFO: [IP_Flow 19-3422] Upgraded system_My_SPI_0_4 (My_SPI_v1.0 1.0) from revision 35 to revision 36 
+// Tcl Message: Wrote  : </home/rps/fpga/gpio_project/gpio_project.srcs/sources_1/bd/system/system.bd>  
+// Tcl Message: INFO: [Coretcl 2-1525] Wrote upgrade log to '/home/rps/fpga/gpio_project/ip_upgrade.log'. 
+// Tcl Message: export_ip_user_files -of_objects [get_ips system_My_SPI_0_4] -no_script -sync -force -quiet 
+// Elapsed time: 12 seconds
+selectButton("OK", "OK", "Upgrade IP"); // JButton (OK)
+// TclEventType: DG_GRAPH_GENERATED
+// Elapsed Time for: 'PAResourceItoN.MsgLongTask_MESSAGE_LONG_TASK/M.f': 38s
+// TclEventType: DG_GRAPH_GENERATED
+// HMemoryUtils.trashcanNow. Engine heap size: 2,196 MB. GUI used memory: 90 MB. Current time: 11/5/26, 2:54:54 PM CST
+// Elapsed Time for: 'PAResourceItoN.MsgLongTask_MESSAGE_LONG_TASK/M.f': 40s
+selectButton(PAResourceQtoS.SimpleOutputProductDialog_GENERATE_OUTPUT_PRODUCTS_IMMEDIATELY, "Generate", "Generate Output Products"); // f (PAResourceQtoS.SimpleOutputProductDialog_GENERATE_OUTPUT_PRODUCTS_IMMEDIATELY)
+// TclEventType: PAUSE_COMPOSITE_FILE_CHANGE_GUI
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_CLOSE_DIAGRAM
+// TclEventType: REPORT_IP_STATUS_STALE
+// Tcl Message: generate_target all [get_files  /home/rps/fpga/gpio_project/gpio_project.srcs/sources_1/bd/system/system.bd] 
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_SAVE_DIAGRAM
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: RSB_SAVE_DIAGRAM
+// TclEventType: RSB_SCRIPT_TASK
+// [Engine Memory]: 3,054 MB (+901438kb) [00:01:05]
+// TclEventType: COMPOSITE_FILE_CHANGE
+// Tcl Message: Wrote  : </home/rps/fpga/gpio_project/gpio_project.srcs/sources_1/bd/system/system.bd>  
+// Tcl Message: Verilog Output written to : /home/rps/fpga/gpio_project/gpio_project.gen/sources_1/bd/system/synth/system.v 
+// Tcl Message: Verilog Output written to : /home/rps/fpga/gpio_project/gpio_project.gen/sources_1/bd/system/sim/system.v Verilog Output written to : /home/rps/fpga/gpio_project/gpio_project.gen/sources_1/bd/system/hdl/system_wrapper.v 
+// TclEventType: COMPOSITE_FILE_CHANGE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: COMPOSITE_FILE_CHANGE
+// TclEventType: PAUSE_COMPOSITE_FILE_CHANGE_GUI
+// Tcl Message: Exporting to file /home/rps/fpga/gpio_project/gpio_project.gen/sources_1/bd/system/ip/system_axi_smc_0/bd_0/hw_handoff/system_axi_smc_0.hwh Generated Hardware Definition File /home/rps/fpga/gpio_project/gpio_project.gen/sources_1/bd/system/ip/system_axi_smc_0/bd_0/synth/system_axi_smc_0.hwdef 
+// Tcl Message: INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_smc . INFO: [BD 41-1029] Generation completed for the IP Integrator block My_SPI_0 . 
+// Tcl Message: Exporting to file /home/rps/fpga/gpio_project/gpio_project.gen/sources_1/bd/system/hw_handoff/system.hwh Generated Hardware Definition File /home/rps/fpga/gpio_project/gpio_project.gen/sources_1/bd/system/synth/system.hwdef 
+// Tcl Message: INFO: [BD 41-3262] Generated VHDL Instantiation Template file /home/rps/fpga/gpio_project/gpio_project.gen/sources_1/bd/system/system.vho INFO: [BD 41-3262] Generated Verilog Instantiation Template file /home/rps/fpga/gpio_project/gpio_project.gen/sources_1/bd/system/system.veo INFO: [BD 41-3262] Generated System Verilog Instantiation Template file /home/rps/fpga/gpio_project/gpio_project.gen/sources_1/bd/system/system_sv.sveo 
+// TclEventType: OOC_IP_CACHE_USED
+// Tcl Message: catch { config_ip_cache -export [get_ips -all system_axi_smc_0] } 
+// Tcl Message: INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP system_axi_smc_0, cache-ID = 32fb8151003c696a; cache size = 27.195 MB. 
+// TclEventType: PROJ_DESIGN_MODE_SET
+// Tcl Message: catch { config_ip_cache -export [get_ips -all system_My_SPI_0_4] } 
+// TclEventType: PROJ_DESIGN_MODE_SET
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: export_ip_user_files -of_objects [get_files /home/rps/fpga/gpio_project/gpio_project.srcs/sources_1/bd/system/system.bd] -no_script -sync -force -quiet 
+// TclEventType: RUN_ADD_COLLECTION
+// TclEventType: PAUSE_COMPOSITE_FILE_CHANGE_GUI
+// TclEventType: FILE_SET_NEW
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_ADD
+// TclEventType: RUN_ADD_COLLECTION
+// TclEventType: PAUSE_COMPOSITE_FILE_CHANGE_GUI
+// Tcl Message: create_ip_run [get_files -of_objects [get_fileset sources_1] /home/rps/fpga/gpio_project/gpio_project.srcs/sources_1/bd/system/system.bd] 
+// HMemoryUtils.trashcanNow. Engine heap size: 3,169 MB. GUI used memory: 96 MB. Current time: 11/5/26, 2:55:03 PM CST
+// TclEventType: PAUSE_COMPOSITE_FILE_CHANGE_GUI
+// Tcl Message: launch_runs system_My_SPI_0_4_synth_1 -jobs 8 
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: PAUSE_COMPOSITE_FILE_CHANGE_GUI
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: PAUSE_COMPOSITE_FILE_CHANGE_GUI
+// Tcl Message: [Thu Nov  5 14:55:04 2026] Launched system_My_SPI_0_4_synth_1... Run output will be captured here: /home/rps/fpga/gpio_project/gpio_project.runs/system_My_SPI_0_4_synth_1/runme.log 
+// TclEventType: PROJECT_CHANGE
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PAUSE_COMPOSITE_FILE_CHANGE_GUI
+// Elapsed time: 18 seconds
+selectButton("OK", "OK", "Generate Output Products"); // JButton (OK)
+// Elapsed Time for: 'PAResourceItoN.MsgLongTask_MESSAGE_LONG_TASK/M.f': 01m:00s
+// HMemoryUtils.trashcanNow. Engine heap size: 2,250 MB. GUI used memory: 96 MB. Current time: 11/5/26, 2:55:18 PM CST
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: FILE_SET_CHANGE
+// HMemoryUtils.trashcanNow. Engine heap size: 2,307 MB. GUI used memory: 111 MB. Current time: 11/5/26, 2:55:58 PM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 2,322 MB. GUI used memory: 109 MB. Current time: 11/5/26, 2:56:38 PM CST
+// Elapsed time: 86 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Generate Bitstream]", 21, false); // g (PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, Flow Navigator Tree)
+// Run Command: PAResourceCommand.PACommandNames_RUN_BITGEN
+// TclEventType: PAUSE_COMPOSITE_FILE_CHANGE_GUI
+// TclEventType: RUN_MODIFY
+// [GUI Memory]: 177 MB (+2541kb) [00:02:46]
+// TclEventType: RUN_RESET
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// TclEventType: PAUSE_COMPOSITE_FILE_CHANGE_GUI
+// Tcl Message: reset_run synth_1 
+// Tcl Message: INFO: [Project 1-1161] Replacing file /home/rps/fpga/gpio_project/gpio_project.srcs/utils_1/imports/synth_1/gpio_system_top.dcp with file /home/rps/fpga/gpio_project/gpio_project.runs/synth_1/the_system_top.dcp 
+// HMemoryUtils.trashcanNow. Engine heap size: 2,332 MB. GUI used memory: 113 MB. Current time: 11/5/26, 2:56:42 PM CST
+dismissDialog("Resetting Runs"); // bk (Resetting Runs Progress)
+// TclEventType: PAUSE_COMPOSITE_FILE_CHANGE_GUI
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_MODIFY
+// TclEventType: PAUSE_COMPOSITE_FILE_CHANGE_GUI
+// Tcl Message: launch_runs impl_1 -to_step write_bitstream -jobs 8 
+// Tcl Message: [Thu Nov  5 14:56:42 2026] Launched synth_1... Run output will be captured here: /home/rps/fpga/gpio_project/gpio_project.runs/synth_1/runme.log [Thu Nov  5 14:56:42 2026] Launched impl_1... Run output will be captured here: /home/rps/fpga/gpio_project/gpio_project.runs/impl_1/runme.log 
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// [GUI Memory]: 189 MB (+4026kb) [00:03:12]
+// TclEventType: RUN_FAILED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// HMemoryUtils.trashcanNow. Engine heap size: 2,324 MB. GUI used memory: 114 MB. Current time: 11/5/26, 2:57:18 PM CST
+// Elapsed time: 68 seconds
+selectButton(RDIResource.BaseDialog_OK, "OK", "Implementation Failed"); // f (RDIResource.BaseDialog_OK)
+// Run Command: PAResourceCommand.PACommandNames_MESSAGE_WINDOW
+dismissDialog("Implementation Failed"); // W.a (dialog0)
+collapseTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Implementation, Opt Design, DRC]", 7); // u.d (PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE)
+expandTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Implementation, Opt Design, DRC]", 7); // u.d (PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE)
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Implementation, Opt Design, DRC, Netlist, Net, [DRC MDRV-1] Multiple Driver Nets: Net system/system_i/My_SPI_0/inst/My_SPI_slave_lite_v1_0_AXI_Interface_SPI_inst/spi_fsm_inst/cs[0] has multiple drivers: system/system_i/My_SPI_0/inst/My_SPI_slave_lite_v1_0_AXI_Interface_SPI_inst/spi_fsm_inst/cs_reg[0]__0/Q, and system/system_i/My_SPI_0/inst/My_SPI_slave_lite_v1_0_AXI_Interface_SPI_inst/spi_fsm_inst/cs_reg[0]/Q.. ]", 10, true); // u.d (PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE) - Node
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Implementation, Opt Design, DRC, Netlist, Net, [DRC MDRV-1] Multiple Driver Nets: Net system/system_i/My_SPI_0/inst/My_SPI_slave_lite_v1_0_AXI_Interface_SPI_inst/spi_fsm_inst/cs[0] has multiple drivers: system/system_i/My_SPI_0/inst/My_SPI_slave_lite_v1_0_AXI_Interface_SPI_inst/spi_fsm_inst/cs_reg[0]__0/Q, and system/system_i/My_SPI_0/inst/My_SPI_slave_lite_v1_0_AXI_Interface_SPI_inst/spi_fsm_inst/cs_reg[0]/Q.. , [DRC MDRV-1] Multiple Driver Nets: Net system/system_i/My_SPI_0/inst/My_SPI_slave_lite_v1_0_AXI_Interface_SPI_inst/spi_fsm_inst/cs[3] has multiple drivers: system/system_i/My_SPI_0/inst/My_SPI_slave_lite_v1_0_AXI_Interface_SPI_inst/spi_fsm_inst/cs_reg[3]__0/Q, and system/system_i/My_SPI_0/inst/My_SPI_slave_lite_v1_0_AXI_Interface_SPI_inst/spi_fsm_inst/cs_reg[3]/Q.. ]", 13, false, false, false, false, false, true); // u.d (PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE) - Double Click
+// HMemoryUtils.trashcanNow. Engine heap size: 2,324 MB. GUI used memory: 113 MB. Current time: 11/5/26, 2:57:58 PM CST
+// Elapsed time: 11 seconds
+selectTree(PAResourceQtoS.SystemTreeView_SYSTEM_TREE, "[system, My_SPI_0]", 7, true, false, false, false, true, false); // a (PAResourceQtoS.SystemTreeView_SYSTEM_TREE) - Popup Trigger - Node
+selectTab((HResource) null, (HResource) null, "Sources", 0); // ab
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Block Designs, system, Synthesis, system_My_SPI_0_4]", 8, true, false, false, false, true, false); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE) - Popup Trigger - Node
+selectMenuItem(PAResourceCommand.PACommandNames_EDIT_IN_IP_PACKAGER, "Edit in IP Packager"); // ap (PAResourceCommand.PACommandNames_EDIT_IN_IP_PACKAGER, edit_in_ip_packager_menu)
+// Run Command: PAResourceCommand.PACommandNames_EDIT_IN_IP_PACKAGER
+selectButton(RDIResource.BaseDialog_OK, "OK", "Edit in IP Packager"); // f (RDIResource.BaseDialog_OK)
+selectButton("OK", "OK", "Confirm Overwrite"); // JButton (OK)
+// TclEventType: FILE_SET_NEW
+// TclEventType: RUN_ADD
+// TclEventType: RUN_CURRENT
+// TclEventType: PROJECT_DASHBOARD_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_NEW
+// WARNING: HEventQueue.dispatchEvent() is taking  1158 ms.
+// Tcl Message: ipx::edit_ip_in_project -upgrade true -name My_SPI_v1_0_project -directory /home/rps/fpga/gpio_project/gpio_project.tmp/My_SPI_v1_0_project /home/rps/fpga/ip_repo/My_SPI_1_0/component.xml 
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1704] No user IP repositories specified INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/opt/Xilinx/2025.2/data/ip'. 
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: PACKAGER_CURRENT_CORE
+// Run Command: PAResourceCommand.PACommandNames_IP_PACKAGER
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/rps/fpga/ip_repo/My_SPI_1_0'. INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/rps/fpga/ip_repo/SPI_1_0'. INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/rps/fpga/ip_repo/gpio_1_0'. 
+// Tcl Message: INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/rps/fpga/ip_repo/gpio_1_0'. INFO: [IP_Flow 19-795] Syncing license key meta-data 
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_MESSAGE_UPDATE
+// 'h' command handler elapsed time: 8 seconds
+dismissDialog("Edit in IP Packager"); // bk (Edit in IP Packager Progress)
+// TclEventType: DG_GRAPH_GENERATED
+closeMainWindow("My_SPI_v1_0_project - [/home/rps/fpga/gpio_project/gpio_project.tmp/My_SPI_v1_0_project/My_SPI_v1_0_project.xpr] - Vivado 2025.2"); // N (MainFrame)
+// Run Command: PAResourceCommand.PACommandNames_CLOSE_PROJECT
+// TclEventType: PROJECT_CLOSE
+// HMemoryUtils.trashcanNow. Engine heap size: 3,113 MB. GUI used memory: 130 MB. Current time: 11/5/26, 2:58:28 PM CST
+// Tcl Message: close_project 
+dismissDialog("Close Project"); // bk (Close Project Progress)
+// HMemoryUtils.trashcanNow. Engine heap size: 2,348 MB. GUI used memory: 124 MB. Current time: 11/5/26, 2:58:38 PM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 2,348 MB. GUI used memory: 121 MB. Current time: 11/5/26, 2:59:18 PM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 2,348 MB. GUI used memory: 121 MB. Current time: 11/5/26, 2:59:58 PM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 2,348 MB. GUI used memory: 122 MB. Current time: 11/5/26, 3:00:38 PM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 2,348 MB. GUI used memory: 122 MB. Current time: 11/5/26, 3:01:18 PM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 2,348 MB. GUI used memory: 122 MB. Current time: 11/5/26, 3:01:58 PM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 2,340 MB. GUI used memory: 122 MB. Current time: 11/5/26, 3:02:38 PM CST
+// Elapsed time: 263 seconds
+selectTab((HResource) null, (HResource) null, "IP Status", 3); // ab
+selectTab((HResource) null, (HResource) null, "Messages", 1); // ab
+selectButton(PAResourceOtoP.PlanAheadTab_REFRESH_IP_CATALOG, "Refresh IP Catalog"); // h (PAResourceOtoP.PlanAheadTab_REFRESH_IP_CATALOG)
+// TclEventType: CREATE_IP_CATALOG
+// TclEventType: IP_LOCK_CHANGE
+// TclEventType: BDCELL_LOCK_CHANGE
+// TclEventType: RSB_LOCK_CHANGE
+// TclEventType: IP_LOCK_CHANGE
+// TclEventType: BDCELL_LOCK_CHANGE
+// TclEventType: CREATE_IP_CATALOG
+// Tcl Message: update_ip_catalog -rebuild -scan_changes 
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/rps/fpga/ip_repo/My_SPI_1_0'. INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/rps/fpga/ip_repo/SPI_1_0'. INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/rps/fpga/ip_repo/gpio_1_0'. 
+// Tcl Message: INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/rps/fpga/ip_repo/gpio_1_0'. 
+// TclEventType: PAUSE_COMPOSITE_FILE_CHANGE_GUI
+// TclEventType: IP_SUMMARY_RESULTS
+// TclEventType: PAUSE_COMPOSITE_FILE_CHANGE_GUI
+// Tcl Message: report_ip_status -name ip_status 
+dismissDialog("Refresh IP Catalog"); // bk (Refresh IP Catalog Progress)
+selectButton(PAResourceItoN.IPStatusSectionPanel_UPGRADE_SELECTED, "Upgrade Selected"); // a (PAResourceItoN.IPStatusSectionPanel_UPGRADE_SELECTED)
+// Run Command: PAResourceCommand.PACommandNames_UPGRADE_IP
+// TclEventType: PAUSE_COMPOSITE_FILE_CHANGE_GUI
+// TclEventType: RSB_OPEN_DIAGRAM
+// TclEventType: RUN_DELETE_COLLECTION
+// TclEventType: RUN_MODIFY
+// [GUI Memory]: 202 MB (+3605kb) [00:09:05]
+// TclEventType: RUN_RESET
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_DELETE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: FILE_SET_DELETE
+// TclEventType: RUN_DELETE_COLLECTION
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// Tcl Message: upgrade_ip -vlnv user.org:user:My_SPI:1.0 [get_ips  system_My_SPI_0_4] -log ip_upgrade.log 
+// Tcl Message: Upgrading '/home/rps/fpga/gpio_project/gpio_project.srcs/sources_1/bd/system/system.bd' 
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: COMPOSITE_FILE_CHANGE
+// TclEventType: RSB_SAVE_DIAGRAM
+// TclEventType: COMPOSITE_FILE_CHANGE
+// TclEventType: RSB_SAVE_DIAGRAM
+// TclEventType: FILESET_UPDATE_IP
+// TclEventType: IP_UPGRADE_COMPLETE
+// TclEventType: PAUSE_COMPOSITE_FILE_CHANGE_GUI
+// Tcl Message: INFO: [IP_Flow 19-3422] Upgraded system_My_SPI_0_4 (My_SPI_v1.0 1.0) from revision 36 to revision 37 
+// Tcl Message: Wrote  : </home/rps/fpga/gpio_project/gpio_project.srcs/sources_1/bd/system/system.bd>  
+// Tcl Message: INFO: [Coretcl 2-1525] Wrote upgrade log to '/home/rps/fpga/gpio_project/ip_upgrade.log'. 
+// Tcl Message: export_ip_user_files -of_objects [get_ips system_My_SPI_0_4] -no_script -sync -force -quiet 
+// Elapsed time: 17 seconds
+selectButton("OK", "OK", "Upgrade IP"); // JButton (OK)
+// TclEventType: DG_GRAPH_GENERATED
+// Elapsed Time for: 'PAResourceItoN.MsgLongTask_MESSAGE_LONG_TASK/M.f': 09m:02s
+// TclEventType: DG_GRAPH_GENERATED
+// HMemoryUtils.trashcanNow. Engine heap size: 2,403 MB. GUI used memory: 127 MB. Current time: 11/5/26, 3:03:19 PM CST
+selectButton(PAResourceQtoS.SimpleOutputProductDialog_GENERATE_OUTPUT_PRODUCTS_IMMEDIATELY, "Generate", "Generate Output Products"); // f (PAResourceQtoS.SimpleOutputProductDialog_GENERATE_OUTPUT_PRODUCTS_IMMEDIATELY)
+// TclEventType: PAUSE_COMPOSITE_FILE_CHANGE_GUI
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_CLOSE_DIAGRAM
+// TclEventType: REPORT_IP_STATUS_STALE
+// Tcl Message: generate_target all [get_files  /home/rps/fpga/gpio_project/gpio_project.srcs/sources_1/bd/system/system.bd] 
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_SAVE_DIAGRAM
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: RSB_SAVE_DIAGRAM
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: COMPOSITE_FILE_CHANGE
+// Tcl Message: Wrote  : </home/rps/fpga/gpio_project/gpio_project.srcs/sources_1/bd/system/system.bd>  
+// Tcl Message: Verilog Output written to : /home/rps/fpga/gpio_project/gpio_project.gen/sources_1/bd/system/synth/system.v 
+// Tcl Message: Verilog Output written to : /home/rps/fpga/gpio_project/gpio_project.gen/sources_1/bd/system/sim/system.v Verilog Output written to : /home/rps/fpga/gpio_project/gpio_project.gen/sources_1/bd/system/hdl/system_wrapper.v 
+// TclEventType: COMPOSITE_FILE_CHANGE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: COMPOSITE_FILE_CHANGE
+// TclEventType: PAUSE_COMPOSITE_FILE_CHANGE_GUI
+// Tcl Message: Exporting to file /home/rps/fpga/gpio_project/gpio_project.gen/sources_1/bd/system/ip/system_axi_smc_0/bd_0/hw_handoff/system_axi_smc_0.hwh Generated Hardware Definition File /home/rps/fpga/gpio_project/gpio_project.gen/sources_1/bd/system/ip/system_axi_smc_0/bd_0/synth/system_axi_smc_0.hwdef 
+// Tcl Message: INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_smc . INFO: [BD 41-1029] Generation completed for the IP Integrator block My_SPI_0 . 
+// Tcl Message: Exporting to file /home/rps/fpga/gpio_project/gpio_project.gen/sources_1/bd/system/hw_handoff/system.hwh Generated Hardware Definition File /home/rps/fpga/gpio_project/gpio_project.gen/sources_1/bd/system/synth/system.hwdef 
+// Tcl Message: INFO: [BD 41-3262] Generated VHDL Instantiation Template file /home/rps/fpga/gpio_project/gpio_project.gen/sources_1/bd/system/system.vho INFO: [BD 41-3262] Generated Verilog Instantiation Template file /home/rps/fpga/gpio_project/gpio_project.gen/sources_1/bd/system/system.veo INFO: [BD 41-3262] Generated System Verilog Instantiation Template file /home/rps/fpga/gpio_project/gpio_project.gen/sources_1/bd/system/system_sv.sveo 
+// TclEventType: OOC_IP_CACHE_USED
+// Tcl Message: catch { config_ip_cache -export [get_ips -all system_axi_smc_0] } 
+// Tcl Message: INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP system_axi_smc_0, cache-ID = 32fb8151003c696a; cache size = 27.195 MB. 
+// TclEventType: PROJ_DESIGN_MODE_SET
+// Tcl Message: catch { config_ip_cache -export [get_ips -all system_My_SPI_0_4] } 
+// TclEventType: PROJ_DESIGN_MODE_SET
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: PROJ_DESIGN_MODE_SET
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: PROJ_DESIGN_MODE_SET
+// Tcl Message: export_ip_user_files -of_objects [get_files /home/rps/fpga/gpio_project/gpio_project.srcs/sources_1/bd/system/system.bd] -no_script -sync -force -quiet 
+// TclEventType: RUN_ADD_COLLECTION
+// TclEventType: PAUSE_COMPOSITE_FILE_CHANGE_GUI
+// TclEventType: FILE_SET_NEW
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_ADD
+// TclEventType: RUN_ADD_COLLECTION
+// TclEventType: PAUSE_COMPOSITE_FILE_CHANGE_GUI
+// Tcl Message: create_ip_run [get_files -of_objects [get_fileset sources_1] /home/rps/fpga/gpio_project/gpio_project.srcs/sources_1/bd/system/system.bd] 
+// HMemoryUtils.trashcanNow. Engine heap size: 2,470 MB. GUI used memory: 128 MB. Current time: 11/5/26, 3:03:26 PM CST
+// TclEventType: PAUSE_COMPOSITE_FILE_CHANGE_GUI
+// Tcl Message: launch_runs system_My_SPI_0_4_synth_1 -jobs 8 
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: PAUSE_COMPOSITE_FILE_CHANGE_GUI
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: PAUSE_COMPOSITE_FILE_CHANGE_GUI
+// Tcl Message: [Thu Nov  5 15:03:27 2026] Launched system_My_SPI_0_4_synth_1... Run output will be captured here: /home/rps/fpga/gpio_project/gpio_project.runs/system_My_SPI_0_4_synth_1/runme.log 
+// TclEventType: PROJECT_CHANGE
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PAUSE_COMPOSITE_FILE_CHANGE_GUI
+// Elapsed time: 25 seconds
+selectButton("OK", "OK", "Generate Output Products"); // JButton (OK)
+// Elapsed Time for: 'PAResourceItoN.MsgLongTask_MESSAGE_LONG_TASK/M.f': 09m:30s
+selectButton(RDIResource.BaseReportTab_RERUN, "Rerun"); // h (RDIResource.BaseReportTab_RERUN)
+// Tcl Command: 'report_ip_status -name ip_status '
+// TclEventType: PAUSE_COMPOSITE_FILE_CHANGE_GUI
+// TclEventType: IP_SUMMARY_RESULTS
+// TclEventType: PAUSE_COMPOSITE_FILE_CHANGE_GUI
+// Tcl Message: report_ip_status -name ip_status  
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Synthesis, Run Synthesis]", 15, false); // g (PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, Flow Navigator Tree)
+// Run Command: PAResourceCommand.PACommandNames_RUN_SYNTHESIS
+// TclEventType: PAUSE_COMPOSITE_FILE_CHANGE_GUI
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_RESET
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// TclEventType: PAUSE_COMPOSITE_FILE_CHANGE_GUI
+// Tcl Message: reset_run synth_1 
+// Tcl Message: INFO: [Project 1-1161] Replacing file /home/rps/fpga/gpio_project/gpio_project.srcs/utils_1/imports/synth_1/gpio_system_top.dcp with file /home/rps/fpga/gpio_project/gpio_project.runs/synth_1/the_system_top.dcp 
+// HMemoryUtils.trashcanNow. Engine heap size: 2,434 MB. GUI used memory: 133 MB. Current time: 11/5/26, 3:03:55 PM CST
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: PAUSE_COMPOSITE_FILE_CHANGE_GUI
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: PAUSE_COMPOSITE_FILE_CHANGE_GUI
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: PAUSE_COMPOSITE_FILE_CHANGE_GUI
+// Tcl Message: launch_runs synth_1 -jobs 8 
+// Tcl Message: [Thu Nov  5 15:03:55 2026] Launched synth_1... Run output will be captured here: /home/rps/fpga/gpio_project/gpio_project.runs/synth_1/runme.log 
+dismissDialog("Starting Design Runs"); // bk (Starting Design Runs Progress)
+// TclEventType: RUN_STATUS_CHANGE
+// HMemoryUtils.trashcanNow. Engine heap size: 2,422 MB. GUI used memory: 137 MB. Current time: 11/5/26, 3:04:02 PM CST
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// HMemoryUtils.trashcanNow. Engine heap size: 2,422 MB. GUI used memory: 133 MB. Current time: 11/5/26, 3:04:42 PM CST
+// Elapsed time: 65 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Generate Bitstream]", 21, false); // g (PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, Flow Navigator Tree)
+// Run Command: PAResourceCommand.PACommandNames_RUN_BITGEN
+selectCheckBox(RDIResource.MessageWithOptionDialog_DONT_SHOW_THIS_DIALOG_AGAIN, "Don't show this dialog again", true); // f (RDIResource.MessageWithOptionDialog_DONT_SHOW_THIS_DIALOG_AGAIN): TRUE
+selectButton(RDIResource.BaseDialog_YES, "Yes", "No Implementation Results Available"); // f (RDIResource.BaseDialog_YES)
+// 'cU' command handler elapsed time: 7 seconds
+// HMemoryUtils.trashcanNow. Engine heap size: 2,927 MB. GUI used memory: 135 MB. Current time: 11/5/26, 3:05:10 PM CST
+dismissDialog("No Implementation Results Available"); // x (dialog1)
+dismissDialog("Resetting Runs"); // bk (Resetting Runs Progress)
+// TclEventType: PAUSE_COMPOSITE_FILE_CHANGE_GUI
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: PAUSE_COMPOSITE_FILE_CHANGE_GUI
+// Tcl Message: launch_runs impl_1 -to_step write_bitstream -jobs 8 
+// Tcl Message: [Thu Nov  5 15:05:10 2026] Launched impl_1... Run output will be captured here: /home/rps/fpga/gpio_project/gpio_project.runs/impl_1/runme.log 
+// TclEventType: RUN_STATUS_CHANGE
+// HMemoryUtils.trashcanNow. Engine heap size: 2,414 MB. GUI used memory: 138 MB. Current time: 11/5/26, 3:05:22 PM CST
+// TclEventType: RUN_FAILED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// Elapsed time: 37 seconds
+selectButton(RDIResource.BaseDialog_OK, "OK", "Implementation Failed"); // f (RDIResource.BaseDialog_OK)
+// Run Command: PAResourceCommand.PACommandNames_MESSAGE_WINDOW
+dismissDialog("Implementation Failed"); // W.a (dialog2)
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Implementation, Opt Design, DRC, Netlist, Net, [DRC MDRV-1] Multiple Driver Nets: Net system/system_i/My_SPI_0/inst/My_SPI_slave_lite_v1_0_AXI_Interface_SPI_inst/spi_fsm_inst/cs[0] has multiple drivers: system/system_i/My_SPI_0/inst/My_SPI_slave_lite_v1_0_AXI_Interface_SPI_inst/spi_fsm_inst/cs_reg[0]__0/Q, and system/system_i/My_SPI_0/inst/My_SPI_slave_lite_v1_0_AXI_Interface_SPI_inst/spi_fsm_inst/cs_reg[0]/Q.. ]", 10, true); // u.d (PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE) - Node
+expandTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Implementation, Opt Design, DRC, Netlist, Net, [DRC MDRV-1] Multiple Driver Nets: Net system/system_i/My_SPI_0/inst/My_SPI_slave_lite_v1_0_AXI_Interface_SPI_inst/spi_fsm_inst/cs[0] has multiple drivers: system/system_i/My_SPI_0/inst/My_SPI_slave_lite_v1_0_AXI_Interface_SPI_inst/spi_fsm_inst/cs_reg[0]__0/Q, and system/system_i/My_SPI_0/inst/My_SPI_slave_lite_v1_0_AXI_Interface_SPI_inst/spi_fsm_inst/cs_reg[0]/Q.. ]", 10); // u.d (PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE)
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Implementation, Opt Design, DRC, Netlist, Net, [DRC MDRV-1] Multiple Driver Nets: Net system/system_i/My_SPI_0/inst/My_SPI_slave_lite_v1_0_AXI_Interface_SPI_inst/spi_fsm_inst/cs[0] has multiple drivers: system/system_i/My_SPI_0/inst/My_SPI_slave_lite_v1_0_AXI_Interface_SPI_inst/spi_fsm_inst/cs_reg[0]__0/Q, and system/system_i/My_SPI_0/inst/My_SPI_slave_lite_v1_0_AXI_Interface_SPI_inst/spi_fsm_inst/cs_reg[0]/Q.. , [DRC MDRV-1] Multiple Driver Nets: Net system/system_i/My_SPI_0/inst/My_SPI_slave_lite_v1_0_AXI_Interface_SPI_inst/spi_fsm_inst/cs[1] has multiple drivers: system/system_i/My_SPI_0/inst/My_SPI_slave_lite_v1_0_AXI_Interface_SPI_inst/spi_fsm_inst/cs_reg[1]__0/Q, and system/system_i/My_SPI_0/inst/My_SPI_slave_lite_v1_0_AXI_Interface_SPI_inst/spi_fsm_inst/cs_reg[1]/Q.. ]", 11, false); // u.d (PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE)
+// HMemoryUtils.trashcanNow. Engine heap size: 2,414 MB. GUI used memory: 135 MB. Current time: 11/5/26, 3:06:02 PM CST
+// Elapsed time: 23 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Block Designs, system, Synthesis, system_My_SPI_0_4]", 8, true, false, false, false, true, false); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE) - Popup Trigger - Node
+selectMenuItem(PAResourceCommand.PACommandNames_EDIT_IN_IP_PACKAGER, "Edit in IP Packager"); // ap (PAResourceCommand.PACommandNames_EDIT_IN_IP_PACKAGER, edit_in_ip_packager_menu)
+// Run Command: PAResourceCommand.PACommandNames_EDIT_IN_IP_PACKAGER
+selectButton(RDIResource.BaseDialog_OK, "OK", "Edit in IP Packager"); // f (RDIResource.BaseDialog_OK)
+// TclEventType: FILE_SET_NEW
+// TclEventType: RUN_ADD
+// TclEventType: RUN_CURRENT
+// TclEventType: PROJECT_DASHBOARD_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_NEW
+// WARNING: HEventQueue.dispatchEvent() is taking  1151 ms.
+// Tcl Message: ipx::edit_ip_in_project -upgrade true -name My_SPI_v1_0_project -directory /home/rps/fpga/gpio_project/gpio_project.tmp/My_SPI_v1_0_project /home/rps/fpga/ip_repo/My_SPI_1_0/component.xml 
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1704] No user IP repositories specified INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/opt/Xilinx/2025.2/data/ip'. 
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: PACKAGER_CURRENT_CORE
+// Run Command: PAResourceCommand.PACommandNames_IP_PACKAGER
+// [GUI Memory]: 220 MB (+8629kb) [00:12:31]
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_MESSAGE_UPDATE
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/rps/fpga/ip_repo/My_SPI_1_0'. INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/rps/fpga/ip_repo/SPI_1_0'. INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/rps/fpga/ip_repo/gpio_1_0'. 
+// Tcl Message: INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/rps/fpga/ip_repo/gpio_1_0'. INFO: [IP_Flow 19-795] Syncing license key meta-data 
+// 'h' command handler elapsed time: 4 seconds
+dismissDialog("Edit in IP Packager"); // bk (Edit in IP Packager Progress)
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: PACKAGER_MESSAGE_UPDATE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: PACKAGER_MESSAGE_UPDATE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// Tcl Message: update_compile_order -fileset sources_1 
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, My_SPI (My_SPI.v)]", 1); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, My_SPI (My_SPI.v), My_SPI_slave_lite_v1_0_AXI_Interface_SPI_inst : My_SPI_slave_lite_v1_0_AXI_Interface_SPI (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)]", 2, true); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, My_SPI (My_SPI.v), My_SPI_slave_lite_v1_0_AXI_Interface_SPI_inst : My_SPI_slave_lite_v1_0_AXI_Interface_SPI (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)]", 2, true, false, false, false, false, true); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE) - Double Click - Node
+// TclEventType: DG_GRAPH_GENERATED
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 140, 339); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 140, 339); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 140, 339); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 140, 339); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 140, 339); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 140, 339); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 140, 339); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 140, 339); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 140, 339); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 140, 339); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 140, 339); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 140, 339); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 140, 339); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 140, 339); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 140, 339); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 140, 339); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 140, 339); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 140, 339); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 140, 339); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 140, 339); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 140, 339); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 140, 339); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 140, 339); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 140, 339); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 140, 339); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 140, 339); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 140, 339); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 140, 339); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 140, 339); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 140, 339); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 140, 339); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 140, 339); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 140, 339); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 140, 339); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 140, 339); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 140, 339); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 140, 339); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 140, 339); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 140, 339); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 140, 339); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 140, 339); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 140, 339); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 140, 339); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 140, 339); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 140, 339); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 140, 339); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 140, 339); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 140, 339); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 140, 339); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 140, 339); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 140, 339); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 140, 339); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 140, 339); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 140, 339); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 140, 339); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 140, 339); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 140, 339); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 140, 339); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 140, 339); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 140, 339); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 140, 339); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 140, 339); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 140, 339); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 140, 339); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 140, 339); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 140, 339); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 140, 339); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 140, 339); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 140, 339); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 140, 339); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 140, 339); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 140, 339); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 140, 339); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 140, 339); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 140, 339); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 140, 339); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 140, 339); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 140, 339); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 140, 339); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 140, 339); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 140, 339); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 140, 339); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 140, 339); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 140, 339); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 140, 339); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+// [GUI Memory]: 235 MB (+3426kb) [00:12:39]
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 140, 339); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 140, 339); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 140, 339); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 140, 339); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 140, 339); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 140, 339); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 140, 339); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 140, 339); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 140, 339); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 140, 339); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 140, 339); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 140, 339); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 140, 339); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 140, 339); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 140, 339); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 140, 339); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 140, 339); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 140, 339); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 140, 339); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 140, 339); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 140, 339); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 140, 339); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 140, 339); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 140, 339); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 140, 339); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 140, 339); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 140, 339); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 140, 339); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 140, 339); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 140, 339); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 140, 339); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 140, 339); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 140, 339); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 140, 339); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 140, 339); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 140, 339); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 140, 339); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 140, 339); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 140, 339); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 140, 339); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 140, 339); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 140, 339); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 140, 339); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 140, 339); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 140, 339); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 140, 339); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 140, 339); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 140, 339); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 140, 339); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 140, 339); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 140, 339); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 140, 339); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 140, 339); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 153, 323); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 153, 323); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 153, 323); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 153, 323); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 153, 323); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 153, 323); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 153, 323); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 153, 323); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 153, 323); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 153, 323); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 153, 323); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 153, 323); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 153, 323); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 153, 323); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 153, 323); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 153, 323); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 153, 323); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 153, 323); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 153, 323); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 153, 323); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 153, 323); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 153, 323); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 153, 323); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 153, 323); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 153, 323); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 153, 323); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 153, 323); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 153, 323); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 153, 323); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 153, 323); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 153, 323); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 153, 323); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 153, 323); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 153, 323); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 153, 323); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 153, 323); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 153, 323); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 153, 323); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 153, 323); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 153, 323); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 153, 323); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 153, 323); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 153, 323); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 153, 323); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 153, 323); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 153, 323); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 153, 323); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 153, 323); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 153, 323); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 153, 323); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 153, 323); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 153, 323); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 153, 323); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 153, 323); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 153, 323); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+// HMemoryUtils.trashcanNow. Engine heap size: 2,765 MB. GUI used memory: 154 MB. Current time: 11/5/26, 3:06:42 PM CST
+// Elapsed time: 13 seconds
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 108, 436); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 109, 429); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 102, 426); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+// Elapsed time: 24 seconds
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 295, 368); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+typeControlKey((HResource) null, "My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 'v'); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+// HMemoryUtils.trashcanNow. Engine heap size: 2,590 MB. GUI used memory: 154 MB. Current time: 11/5/26, 3:07:22 PM CST
+// Elapsed time: 26 seconds
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+// HMemoryUtils.trashcanNow. Engine heap size: 2,757 MB. GUI used memory: 154 MB. Current time: 11/5/26, 3:08:02 PM CST
+// Elapsed time: 21 seconds
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 238, 250); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+// Elapsed time: 10 seconds
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+// Elapsed time: 13 seconds
+typeControlKey((HResource) null, "My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 'c'); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+typeControlKey((HResource) null, "My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 'v'); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+// HMemoryUtils.trashcanNow. Engine heap size: 2,590 MB. GUI used memory: 154 MB. Current time: 11/5/26, 3:08:42 PM CST
+typeControlKey((HResource) null, "My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 'v'); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+typeControlKey((HResource) null, "My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 'v'); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+typeControlKey((HResource) null, "My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 'v'); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+typeControlKey((HResource) null, "My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 'v'); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+typeControlKey((HResource) null, "My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 'v'); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+typeControlKey((HResource) null, "My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 'v'); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+typeControlKey((HResource) null, "My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 'v'); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+typeControlKey((HResource) null, "My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 'v'); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+typeControlKey((HResource) null, "My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 'v'); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+typeControlKey((HResource) null, "My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 'v'); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+typeControlKey((HResource) null, "My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 'v'); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+typeControlKey((HResource) null, "My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 'v'); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+typeControlKey((HResource) null, "My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 'v'); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+typeControlKey((HResource) null, "My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 'v'); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 275, 252); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 275, 252); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 227, 248); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+// HMemoryUtils.trashcanNow. Engine heap size: 2,590 MB. GUI used memory: 154 MB. Current time: 11/5/26, 3:09:22 PM CST
+// Elapsed time: 19 seconds
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 235, 242); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+// HMemoryUtils.trashcanNow. Engine heap size: 2,590 MB. GUI used memory: 154 MB. Current time: 11/5/26, 3:10:02 PM CST
+// Elapsed time: 45 seconds
+typeControlKey((HResource) null, "My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 'c'); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+typeControlKey((HResource) null, "My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 'v'); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+typeControlKey(null, null, 'z');
+typeControlKey((HResource) null, "My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 'v'); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+typeControlKey((HResource) null, "My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 'v'); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+typeControlKey((HResource) null, "My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 'v'); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+// HMemoryUtils.trashcanNow. Engine heap size: 2,757 MB. GUI used memory: 154 MB. Current time: 11/5/26, 3:10:42 PM CST
+// Elapsed time: 23 seconds
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 105, 29); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+// HMemoryUtils.trashcanNow. Engine heap size: 2,590 MB. GUI used memory: 154 MB. Current time: 11/5/26, 3:11:22 PM CST
+// TclEventType: PACKAGER_MESSAGE_UPDATE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'PAResourceItoN.MsgLongTask_MESSAGE_LONG_TASK/M.f': 05m:08s
+// TclEventType: DG_GRAPH_GENERATED
+// Elapsed Time for: 'PAResourceItoN.MsgLongTask_MESSAGE_LONG_TASK/M.f': 05m:10s
+// Elapsed time: 41 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, RTL Analysis, Run Linter]", 13, false); // g (PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, Flow Navigator Tree)
+// TclEventType: MSGMGR_REFRESH_MSG
+// Tcl Message: synth_design -top My_SPI -part xc7z007sclg400-1 -lint  
+// Tcl Message: Command: synth_design -top My_SPI -part xc7z007sclg400-1 -lint Starting synth_design Attempting to get a license for feature 'Synthesis' and/or device 'xc7z007s' 
+// Tcl Message: INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z007s' INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 7 processes. INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes INFO: [Synth 8-7075] Helper process launched with PID 247604 
+// Tcl Message: --------------------------------------------------------------------------------- 
+// Tcl Message: Starting Synthesize : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 11009.473 ; gain = 449.688 ; free physical = 22045 ; free virtual = 35002 
+// Tcl Message: --------------------------------------------------------------------------------- 
+// Tcl Message: Clean up Linter database... 
+// [Engine Memory]: 3,296 MB (+93278kb) [00:17:48]
+// TclEventType: LINTER_RUN
+// Tcl Message: INFO: [Synth 8-11241] undeclared symbol 'clr_overflow_final', assumed default net type 'wire' [/home/rps/fpga/ip_repo/My_SPI_1_0/hdl/My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v:429] INFO: [Synth 8-11241] undeclared symbol 'wr_req_final', assumed default net type 'wire' [/home/rps/fpga/ip_repo/My_SPI_1_0/hdl/My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v:431] INFO: [Synth 8-6157] synthesizing module 'My_SPI' [/home/rps/fpga/ip_repo/My_SPI_1_0/hdl/My_SPI.v:4] INFO: [Synth 8-6157] synthesizing module 'My_SPI_slave_lite_v1_0_AXI_Interface_SPI' [/home/rps/fpga/ip_repo/My_SPI_1_0/hdl/My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v:11] 
+// Tcl Message: 	Parameter C_S_AXI_ADDR_WIDTH bound to: 8 - type: integer  
+// Tcl Message: INFO: [Synth 8-6155] done synthesizing module 'spi_fsm' (5#1) [/home/rps/fpga/ip_repo/My_SPI_1_0/hdl/My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v:528] 
+// Tcl Message: INFO: [Synth 8-6155] done synthesizing module 'My_SPI_slave_lite_v1_0_AXI_Interface_SPI' (6#1) [/home/rps/fpga/ip_repo/My_SPI_1_0/hdl/My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v:11] INFO: [Synth 8-6155] done synthesizing module 'My_SPI' (7#1) [/home/rps/fpga/ip_repo/My_SPI_1_0/hdl/My_SPI.v:4] 
+// Tcl Message: --------------------------------------------------------------------------------- 
+// Tcl Message: Finished Synthesize : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 11100.441 ; gain = 540.656 ; free physical = 22033 ; free virtual = 34991 
+// Tcl Message: --------------------------------------------------------------------------------- 
+// Tcl Message: INFO: [Synth 37-85] Total of 0 linter message(s) generated. INFO: [Synth 37-45] Linter Run Finished! 
+// Tcl Message: Synthesis Optimization Runtime : Time (s): cpu = 00:00:05 ; elapsed = 00:00:04 . Memory (MB): peak = 11100.441 ; gain = 540.656 ; free physical = 22031 ; free virtual = 34989 
+// Tcl Message: INFO: [Common 17-83] Releasing license: Synthesis 
+// Tcl Message: 25 Infos, 10 Warnings, 0 Critical Warnings and 0 Errors encountered. synth_design completed successfully 
+// 'a' command handler elapsed time: 4 seconds
+dismissDialog("Run Linter"); // bk (Run Linter Progress)
+// HMemoryUtils.trashcanNow. Engine heap size: 3,327 MB. GUI used memory: 158 MB. Current time: 11/5/26, 3:11:44 PM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 3,160 MB. GUI used memory: 161 MB. Current time: 11/5/26, 3:12:03 PM CST
+// Elapsed time: 44 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, RTL Analysis, Run Linter]", 13, false); // g (PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, Flow Navigator Tree)
+// TclEventType: MSGMGR_REFRESH_MSG
+// Tcl Message: synth_design -top My_SPI -part xc7z007sclg400-1 -lint  
+// Tcl Message: Command: synth_design -top My_SPI -part xc7z007sclg400-1 -lint Starting synth_design Attempting to get a license for feature 'Synthesis' and/or device 'xc7z007s' 
+// Tcl Message: INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z007s' INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 7 processes. 
+// Tcl Message: --------------------------------------------------------------------------------- 
+// Tcl Message: Starting Synthesize : Time (s): cpu = 00:00:04 ; elapsed = 00:00:03 . Memory (MB): peak = 11100.477 ; gain = 0.027 ; free physical = 21984 ; free virtual = 34937 
+// Tcl Message: --------------------------------------------------------------------------------- 
+// Tcl Message: Clean up Linter database... 
+// TclEventType: LINTER_RUN
+// Tcl Message: INFO: [Synth 8-11241] undeclared symbol 'clr_overflow_final', assumed default net type 'wire' [/home/rps/fpga/ip_repo/My_SPI_1_0/hdl/My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v:429] INFO: [Synth 8-11241] undeclared symbol 'wr_req_final', assumed default net type 'wire' [/home/rps/fpga/ip_repo/My_SPI_1_0/hdl/My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v:431] INFO: [Synth 8-6157] synthesizing module 'My_SPI' [/home/rps/fpga/ip_repo/My_SPI_1_0/hdl/My_SPI.v:4] INFO: [Synth 8-6157] synthesizing module 'My_SPI_slave_lite_v1_0_AXI_Interface_SPI' [/home/rps/fpga/ip_repo/My_SPI_1_0/hdl/My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v:11] 
+// Tcl Message: 	Parameter C_S_AXI_ADDR_WIDTH bound to: 8 - type: integer  
+// Tcl Message: INFO: [Synth 8-6155] done synthesizing module 'spi_fsm' (5#1) [/home/rps/fpga/ip_repo/My_SPI_1_0/hdl/My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v:528] 
+// Tcl Message: INFO: [Synth 8-6155] done synthesizing module 'My_SPI_slave_lite_v1_0_AXI_Interface_SPI' (6#1) [/home/rps/fpga/ip_repo/My_SPI_1_0/hdl/My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v:11] INFO: [Synth 8-6155] done synthesizing module 'My_SPI' (7#1) [/home/rps/fpga/ip_repo/My_SPI_1_0/hdl/My_SPI.v:4] 
+// Tcl Message: --------------------------------------------------------------------------------- 
+// Tcl Message: Finished Synthesize : Time (s): cpu = 00:00:05 ; elapsed = 00:00:04 . Memory (MB): peak = 11107.441 ; gain = 6.992 ; free physical = 21975 ; free virtual = 34925 
+// Tcl Message: --------------------------------------------------------------------------------- 
+// Tcl Message: INFO: [Synth 37-85] Total of 0 linter message(s) generated. INFO: [Synth 37-45] Linter Run Finished! 
+// Tcl Message: Synthesis Optimization Runtime : Time (s): cpu = 00:00:05 ; elapsed = 00:00:04 . Memory (MB): peak = 11125.254 ; gain = 24.805 ; free physical = 21966 ; free virtual = 34916 
+// Tcl Message: INFO: [Common 17-83] Releasing license: Synthesis 
+// Tcl Message: 23 Infos, 10 Warnings, 0 Critical Warnings and 0 Errors encountered. synth_design completed successfully 
+// 'a' command handler elapsed time: 3 seconds
+dismissDialog("Run Linter"); // bk (Run Linter Progress)
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, RTL Analysis, Open Elaborated Design]", 14, true); // g (PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, Flow Navigator Tree) - Node
+// Run Command: PAResourceCommand.PACommandNames_GOTO_RTL_DESIGN
+selectCheckBox(RDIResource.MessageWithOptionDialog_DONT_SHOW_THIS_DIALOG_AGAIN, "Don't show this dialog again", false); // f (RDIResource.MessageWithOptionDialog_DONT_SHOW_THIS_DIALOG_AGAIN): FALSE
+selectButton(RDIResource.BaseDialog_OK, "OK", "Elaborate Design"); // f (RDIResource.BaseDialog_OK)
+dismissDialog("Elaborate Design"); // x (dialog3)
+// Tcl Message: synth_design -rtl -rtl_skip_mlo -name rtl_1 
+// Tcl Message: Command: synth_design -rtl -rtl_skip_mlo -name rtl_1 Starting synth_design Using part: xc7z007sclg400-1 Top: My_SPI 
+// TclEventType: ELABORATE_START
+// TclEventType: MSGMGR_REFRESH_MSG
+// HMemoryUtils.trashcanNow. Engine heap size: 3,210 MB. GUI used memory: 162 MB. Current time: 11/5/26, 3:12:44 PM CST
+// TclEventType: ELABORATE_FINISH
+// TclEventType: FLOORPLAN_MODIFY
+// TclEventType: DESIGN_NEW
+// HMemoryUtils.trashcanNow. Engine heap size: 3,493 MB. GUI used memory: 160 MB. Current time: 11/5/26, 3:12:47 PM CST
+// [Engine Memory]: 3,493 MB (+33891kb) [00:18:52]
+// TclEventType: HFED_INIT_ROUTE_STORAGE_COMPLETED
+// TclEventType: DESIGN_NEW
+// [Engine Memory]: 3,849 MB (+189788kb) [00:18:54]
+// WARNING: HEventQueue.dispatchEvent() is taking  1079 ms.
+// TclEventType: CURR_DESIGN_SET
+// Tcl Message: INFO: [Device 21-403] Loading part xc7z007sclg400-1 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 7 processes. 
+// Tcl Message: --------------------------------------------------------------------------------- 
+// Tcl Message: Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:03 . Memory (MB): peak = 11188.910 ; gain = 45.844 ; free physical = 21967 ; free virtual = 34917 
+// Tcl Message: --------------------------------------------------------------------------------- 
+// Tcl Message: INFO: [Synth 8-11241] undeclared symbol 'clr_overflow_final', assumed default net type 'wire' [/home/rps/fpga/ip_repo/My_SPI_1_0/hdl/My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v:429] INFO: [Synth 8-11241] undeclared symbol 'wr_req_final', assumed default net type 'wire' [/home/rps/fpga/ip_repo/My_SPI_1_0/hdl/My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v:431] INFO: [Synth 8-6157] synthesizing module 'My_SPI' [/home/rps/fpga/ip_repo/My_SPI_1_0/hdl/My_SPI.v:4] INFO: [Synth 8-6157] synthesizing module 'My_SPI_slave_lite_v1_0_AXI_Interface_SPI' [/home/rps/fpga/ip_repo/My_SPI_1_0/hdl/My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v:11] 
+// Tcl Message: 	Parameter C_S_AXI_ADDR_WIDTH bound to: 8 - type: integer  
+// Tcl Message: --------------------------------------------------------------------------------- 
+// Tcl Message: Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:04 . Memory (MB): peak = 11282.910 ; gain = 139.844 ; free physical = 21850 ; free virtual = 34800 
+// Tcl Message: --------------------------------------------------------------------------------- 
+// Tcl Message: --------------------------------------------------------------------------------- Start Handling Custom Attributes --------------------------------------------------------------------------------- --------------------------------------------------------------------------------- 
+// Tcl Message: Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:04 . Memory (MB): peak = 11300.723 ; gain = 157.656 ; free physical = 21850 ; free virtual = 34801 
+// Tcl Message: --------------------------------------------------------------------------------- --------------------------------------------------------------------------------- 
+// Tcl Message: Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:04 . Memory (MB): peak = 11300.723 ; gain = 157.656 ; free physical = 21850 ; free virtual = 34801 
+// Tcl Message: --------------------------------------------------------------------------------- 
+// Tcl Message: Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 11300.730 ; gain = 0.000 ; free physical = 21850 ; free virtual = 34800 
+// Tcl Message: INFO: [Project 1-570] Preparing netlist for logic optimization 
+// Tcl Message:  Processing XDC Constraints Initializing timing engine Completed Processing XDC Constraints  
+// Tcl Message: Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 11413.461 ; gain = 0.000 ; free physical = 21946 ; free virtual = 34896 
+// Tcl Message: INFO: [Project 1-111] Unisim Transformation Summary: No Unisim elements were transformed.  
+// TclEventType: CURR_DESIGN_SET
+// [GUI Memory]: 260 MB (+14116kb) [00:18:55]
+// Tcl Message: RTL Elaboration Complete:  : Time (s): cpu = 00:00:14 ; elapsed = 00:00:07 . Memory (MB): peak = 11625.938 ; gain = 482.871 ; free physical = 21712 ; free virtual = 34681 
+// Tcl Message: 22 Infos, 8 Warnings, 0 Critical Warnings and 0 Errors encountered. synth_design completed successfully 
+// Tcl Message: synth_design: Time (s): cpu = 00:00:15 ; elapsed = 00:00:08 . Memory (MB): peak = 11625.938 ; gain = 500.676 ; free physical = 21712 ; free virtual = 34681 
+// Tcl Message: INFO: [Common 17-2834] synth_design peak Physical Memory [PSS] (MB): overall = 2895.967; main = 2895.967; forked = 0.000 INFO: [Common 17-2834] synth_design peak Virtual Memory [VSS] (MB): overall = 11625.906; main = 11625.906; forked = 0.000 
+// 'ef' command handler elapsed time: 9 seconds
+dismissDialog("Open Elaborated Design"); // bk (Open Elaborated Design Progress)
+selectButton(PAResourceCommand.PACommandNames_ZOOM_FIT, "Schematic_zoom_fit"); // C (PAResourceCommand.PACommandNames_ZOOM_FIT, Schematic_zoom_fit)
+// Run Command: PAResourceCommand.PACommandNames_ZOOM_FIT
+selectButton(PAResourceCommand.PACommandNames_ZOOM_IN, "Schematic_zoom_in"); // C (PAResourceCommand.PACommandNames_ZOOM_IN, Schematic_zoom_in)
+// Run Command: PAResourceCommand.PACommandNames_ZOOM_IN
+selectButton(PAResourceCommand.PACommandNames_ZOOM_IN, "Schematic_zoom_in"); // C (PAResourceCommand.PACommandNames_ZOOM_IN, Schematic_zoom_in)
+selectButton(PAResourceCommand.PACommandNames_ZOOM_IN, "Schematic_zoom_in"); // C (PAResourceCommand.PACommandNames_ZOOM_IN, Schematic_zoom_in)
+selectButton(PAResourceCommand.PACommandNames_ZOOM_IN, "Schematic_zoom_in"); // C (PAResourceCommand.PACommandNames_ZOOM_IN, Schematic_zoom_in)
+selectButton(PAResourceCommand.PACommandNames_ZOOM_IN, "Schematic_zoom_in"); // C (PAResourceCommand.PACommandNames_ZOOM_IN, Schematic_zoom_in)
+// HMemoryUtils.trashcanNow. Engine heap size: 3,844 MB. GUI used memory: 188 MB. Current time: 11/5/26, 3:13:24 PM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 3,677 MB. GUI used memory: 189 MB. Current time: 11/5/26, 3:14:04 PM CST
+// Elapsed time: 81 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 3); // m (PlanAheadTabBaseWorkspace_JideTabbedPane)
+// Run Command: RDIResourceCommand.RDICommands_FIND
+setText(PAResourceTtoZ.TclFindDialog_RESULT_NAME, "find_1cs_reg", true); // i (PAResourceTtoZ.TclFindDialog_RESULT_NAME)
+// Tcl Command: 'show_objects -name find_1cs_reg [get_cells -hierarchical -filter { PRIMITIVE_TYPE =~ OTHERS.*.* } ]'
+// TclEventType: SHOW_OBJECTS
+// Tcl Message: show_objects -name find_1cs_reg [get_cells -hierarchical -filter { PRIMITIVE_TYPE =~ OTHERS.*.* } ] 
+selectButton(RDIResource.BaseDialog_OK, "OK", "Find"); // f (RDIResource.BaseDialog_OK)
+dismissDialog("Find Cells"); // bk (Find Cells Progress)
+dismissDialog("Find"); // f (dialog4)
+// Run Command: RDIResourceCommand.RDICommands_FIND
+selectButton(RDIResource.BaseDialog_CANCEL, "Cancel", "Find"); // f (RDIResource.BaseDialog_CANCEL)
+dismissDialog("Find"); // f (dialog4)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 359, 341); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+setText(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "cs_reg", true); // d.c (RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX)
+setText(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "cs_reg"); // d.c (RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX)
+// HMemoryUtils.trashcanNow. Engine heap size: 3,678 MB. GUI used memory: 194 MB. Current time: 11/5/26, 3:14:44 PM CST
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 356, 265); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+setText(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "cs_reg"); // d.c (RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Schematic", 1); // m (PlanAheadTabBaseWorkspace_JideTabbedPane)
+// [GUI Memory]: 273 MB (+93kb) [00:21:06]
+runTclCommand (PAResourceOtoP.PAViews_SCHEMATIC, "select_objects [get_cells My_SPI_slave_lite_v1_0_AXI_Interface_SPI_inst/spi_fsm_inst/cs_reg[3]]"); // j (PAResourceOtoP.PAViews_SCHEMATIC, PlanAheadTabSchematic)
+runTclCommand (PAResourceOtoP.PAViews_SCHEMATIC, "unselect_objects"); // j (PAResourceOtoP.PAViews_SCHEMATIC, PlanAheadTabSchematic)
+runTclCommand (PAResourceOtoP.PAViews_SCHEMATIC, "select_objects [get_cells My_SPI_slave_lite_v1_0_AXI_Interface_SPI_inst/spi_fsm_inst/cs_reg[3]]"); // j (PAResourceOtoP.PAViews_SCHEMATIC, PlanAheadTabSchematic)
+// HMemoryUtils.trashcanNow. Engine heap size: 3,682 MB. GUI used memory: 196 MB. Current time: 11/5/26, 3:15:24 PM CST
+// Elapsed time: 18 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 3); // m (PlanAheadTabBaseWorkspace_JideTabbedPane)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 84, 193); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 84, 193, false, false, false, false, true); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v) - Double Click
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 134, 250); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+// HMemoryUtils.trashcanNow. Engine heap size: 3,682 MB. GUI used memory: 196 MB. Current time: 11/5/26, 3:16:04 PM CST
+// Elapsed time: 23 seconds
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 90, 430); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 90, 430, false, false, false, false, true); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v) - Double Click
+// TclEventType: PACKAGER_MESSAGE_UPDATE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: DESIGN_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'PAResourceItoN.MsgLongTask_MESSAGE_LONG_TASK/M.f': 10m:16s
+// Elapsed time: 26 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, RTL Analysis, Run Linter]", 13, false); // g (PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, Flow Navigator Tree)
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: MSGMGR_REFRESH_MSG
+// Tcl Message: synth_design -top My_SPI -part xc7z007sclg400-1 -lint  
+// Tcl Message: Command: synth_design -top My_SPI -part xc7z007sclg400-1 -lint Starting synth_design Attempting to get a license for feature 'Synthesis' and/or device 'xc7z007s' 
+// Tcl Message: INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z007s' INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 7 processes. 
+// HMemoryUtils.trashcanNow. Engine heap size: 3,826 MB. GUI used memory: 198 MB. Current time: 11/5/26, 3:16:44 PM CST
+// TclEventType: LINTER_RUN
+// Tcl Message: --------------------------------------------------------------------------------- 
+// Tcl Message: Starting Synthesize : Time (s): cpu = 00:00:04 ; elapsed = 00:00:03 . Memory (MB): peak = 11754.742 ; gain = 128.805 ; free physical = 21419 ; free virtual = 34400 
+// Tcl Message: --------------------------------------------------------------------------------- 
+// Tcl Message: Clean up Linter database... 
+// Tcl Message: INFO: [Synth 8-11241] undeclared symbol 'clr_overflow_final', assumed default net type 'wire' [/home/rps/fpga/ip_repo/My_SPI_1_0/hdl/My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v:429] INFO: [Synth 8-11241] undeclared symbol 'wr_req_final', assumed default net type 'wire' [/home/rps/fpga/ip_repo/My_SPI_1_0/hdl/My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v:431] INFO: [Synth 8-6157] synthesizing module 'My_SPI' [/home/rps/fpga/ip_repo/My_SPI_1_0/hdl/My_SPI.v:4] INFO: [Synth 8-6157] synthesizing module 'My_SPI_slave_lite_v1_0_AXI_Interface_SPI' [/home/rps/fpga/ip_repo/My_SPI_1_0/hdl/My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v:11] 
+// Tcl Message: 	Parameter C_S_AXI_ADDR_WIDTH bound to: 8 - type: integer  
+// Tcl Message: INFO: [Synth 8-6155] done synthesizing module 'spi_fsm' (5#1) [/home/rps/fpga/ip_repo/My_SPI_1_0/hdl/My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v:528] 
+// Tcl Message: INFO: [Synth 8-6155] done synthesizing module 'My_SPI_slave_lite_v1_0_AXI_Interface_SPI' (6#1) [/home/rps/fpga/ip_repo/My_SPI_1_0/hdl/My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v:11] INFO: [Synth 8-6155] done synthesizing module 'My_SPI' (7#1) [/home/rps/fpga/ip_repo/My_SPI_1_0/hdl/My_SPI.v:4] 
+// Tcl Message: --------------------------------------------------------------------------------- 
+// Tcl Message: Finished Synthesize : Time (s): cpu = 00:00:05 ; elapsed = 00:00:04 . Memory (MB): peak = 11845.742 ; gain = 219.805 ; free physical = 21309 ; free virtual = 34290 
+// Tcl Message: --------------------------------------------------------------------------------- 
+// Tcl Message: INFO: [Synth 37-85] Total of 0 linter message(s) generated. INFO: [Synth 37-45] Linter Run Finished! 
+// Tcl Message: Synthesis Optimization Runtime : Time (s): cpu = 00:00:05 ; elapsed = 00:00:04 . Memory (MB): peak = 11845.742 ; gain = 219.805 ; free physical = 21313 ; free virtual = 34294 
+// Tcl Message: INFO: [Common 17-83] Releasing license: Synthesis 
+// Tcl Message: 23 Infos, 10 Warnings, 0 Critical Warnings and 0 Errors encountered. synth_design completed successfully 
+// 'a' command handler elapsed time: 4 seconds
+dismissDialog("Run Linter"); // bk (Run Linter Progress)
+// Elapsed Time for: 'PAResourceItoN.MsgLongTask_MESSAGE_LONG_TASK/M.f': 10m:22s
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Schematic", 1); // m (PlanAheadTabBaseWorkspace_JideTabbedPane)
+selectButton(PAResourceOtoP.ProjectTab_RELOAD, "Reload"); // h (PAResourceOtoP.ProjectTab_RELOAD)
+// TclEventType: ELABORATE_START
+// TclEventType: MSGMGR_REFRESH_MSG
+// Tcl Message: refresh_design 
+// Tcl Message: INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 7 processes. 
+// Tcl Message: --------------------------------------------------------------------------------- 
+// Tcl Message: Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:03 . Memory (MB): peak = 11845.777 ; gain = 0.027 ; free physical = 21318 ; free virtual = 34299 
+// Tcl Message: --------------------------------------------------------------------------------- 
+// TclEventType: ELABORATE_FINISH
+// TclEventType: DESIGN_REFRESH
+// HMemoryUtils.trashcanNow. Engine heap size: 3,939 MB. GUI used memory: 195 MB. Current time: 11/5/26, 3:16:55 PM CST
+// Engine heap size: 3,939 MB. GUI used memory: 197 MB. Current time: 11/5/26, 3:16:55 PM CST
+// Tcl Message: INFO: [Synth 8-11241] undeclared symbol 'clr_overflow_final', assumed default net type 'wire' [/home/rps/fpga/ip_repo/My_SPI_1_0/hdl/My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v:429] INFO: [Synth 8-11241] undeclared symbol 'wr_req_final', assumed default net type 'wire' [/home/rps/fpga/ip_repo/My_SPI_1_0/hdl/My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v:431] INFO: [Synth 8-6157] synthesizing module 'My_SPI' [/home/rps/fpga/ip_repo/My_SPI_1_0/hdl/My_SPI.v:4] INFO: [Synth 8-6157] synthesizing module 'My_SPI_slave_lite_v1_0_AXI_Interface_SPI' [/home/rps/fpga/ip_repo/My_SPI_1_0/hdl/My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v:11] 
+// Tcl Message: 	Parameter C_S_AXI_ADDR_WIDTH bound to: 8 - type: integer  
+// Tcl Message: --------------------------------------------------------------------------------- 
+// Tcl Message: Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:04 . Memory (MB): peak = 11847.742 ; gain = 1.992 ; free physical = 21314 ; free virtual = 34295 
+// Tcl Message: --------------------------------------------------------------------------------- 
+// Tcl Message: --------------------------------------------------------------------------------- Start Handling Custom Attributes --------------------------------------------------------------------------------- --------------------------------------------------------------------------------- 
+// Tcl Message: Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:04 . Memory (MB): peak = 11865.555 ; gain = 19.805 ; free physical = 21314 ; free virtual = 34295 
+// Tcl Message: --------------------------------------------------------------------------------- --------------------------------------------------------------------------------- 
+// Tcl Message: Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:04 . Memory (MB): peak = 11865.555 ; gain = 19.805 ; free physical = 21314 ; free virtual = 34295 
+// Tcl Message: --------------------------------------------------------------------------------- 
+// TclEventType: FLOORPLAN_MODIFY
+// TclEventType: DESIGN_REFRESH
+// HMemoryUtils.trashcanNow. Engine heap size: 3,939 MB. GUI used memory: 174 MB. Current time: 11/5/26, 3:16:56 PM CST
+// [Engine Memory]: 5,070 MB (+1079170kb) [00:23:02]
+// TclEventType: HFED_INIT_ROUTE_STORAGE_COMPLETED
+// Tcl Message: Netlist sorting complete. Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.01 . Memory (MB): peak = 11867.555 ; gain = 0.000 ; free physical = 21433 ; free virtual = 34422 
+// Tcl Message: INFO: [Project 1-570] Preparing netlist for logic optimization 
+// Tcl Message:  Processing XDC Constraints Initializing timing engine Completed Processing XDC Constraints  
+// Tcl Message: refresh_design: Time (s): cpu = 00:00:12 ; elapsed = 00:00:06 . Memory (MB): peak = 11893.562 ; gain = 47.812 ; free physical = 21341 ; free virtual = 34348 
+dismissDialog("Reloading"); // bk (Reloading Progress)
+selectButton(PAResourceCommand.PACommandNames_ZOOM_FIT, "Schematic_zoom_fit"); // C (PAResourceCommand.PACommandNames_ZOOM_FIT, Schematic_zoom_fit)
+// Run Command: PAResourceCommand.PACommandNames_ZOOM_FIT
+// HMemoryUtils.trashcanNow. Engine heap size: 5,061 MB. GUI used memory: 207 MB. Current time: 11/5/26, 3:17:26 PM CST
+// Elapsed time: 46 seconds
+closeView(PAResourceOtoP.PAViews_SCHEMATIC, "Schematic"); // j (PAResourceOtoP.PAViews_SCHEMATIC, PlanAheadTabSchematic)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 2); // m (PlanAheadTabBaseWorkspace_JideTabbedPane)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 209, 293); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 209, 293, false, false, false, false, true); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v) - Double Click
+selectCodeEditor("My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 209, 293); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+// HMemoryUtils.trashcanNow. Engine heap size: 3,939 MB. GUI used memory: 198 MB. Current time: 11/5/26, 3:18:06 PM CST
+// Elapsed time: 30 seconds
+typeControlKey((HResource) null, "My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v", 'v'); // ae (My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v)
+// HMemoryUtils.trashcanNow. Engine heap size: 3,939 MB. GUI used memory: 198 MB. Current time: 11/5/26, 3:18:46 PM CST
+// TclEventType: PACKAGER_MESSAGE_UPDATE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: DESIGN_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed Time for: 'PAResourceItoN.MsgLongTask_MESSAGE_LONG_TASK/M.f': 12m:30s
+// TclEventType: DG_GRAPH_GENERATED
+// Elapsed Time for: 'PAResourceItoN.MsgLongTask_MESSAGE_LONG_TASK/M.f': 12m:32s
+// Elapsed time: 28 seconds
+selectButton(PAResourceOtoP.ProjectTab_RELOAD, "Reload"); // h (PAResourceOtoP.ProjectTab_RELOAD)
+// TclEventType: ELABORATE_START
+// TclEventType: MSGMGR_REFRESH_MSG
+// Tcl Message: refresh_design 
+// Tcl Message: INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 7 processes. 
+// Tcl Message: --------------------------------------------------------------------------------- 
+// Tcl Message: Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:03 . Memory (MB): peak = 11893.562 ; gain = 0.000 ; free physical = 21302 ; free virtual = 34288 
+// Tcl Message: --------------------------------------------------------------------------------- 
+// TclEventType: ELABORATE_FINISH
+// TclEventType: DESIGN_REFRESH
+// HMemoryUtils.trashcanNow. Engine heap size: 3,960 MB. GUI used memory: 200 MB. Current time: 11/5/26, 3:19:01 PM CST
+// Engine heap size: 3,960 MB. GUI used memory: 200 MB. Current time: 11/5/26, 3:19:01 PM CST
+// Tcl Message: INFO: [Synth 8-11241] undeclared symbol 'clr_overflow_final', assumed default net type 'wire' [/home/rps/fpga/ip_repo/My_SPI_1_0/hdl/My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v:429] INFO: [Synth 8-11241] undeclared symbol 'wr_req_final', assumed default net type 'wire' [/home/rps/fpga/ip_repo/My_SPI_1_0/hdl/My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v:431] INFO: [Synth 8-6157] synthesizing module 'My_SPI' [/home/rps/fpga/ip_repo/My_SPI_1_0/hdl/My_SPI.v:4] INFO: [Synth 8-6157] synthesizing module 'My_SPI_slave_lite_v1_0_AXI_Interface_SPI' [/home/rps/fpga/ip_repo/My_SPI_1_0/hdl/My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v:11] 
+// Tcl Message: 	Parameter C_S_AXI_ADDR_WIDTH bound to: 8 - type: integer  
+// Tcl Message: --------------------------------------------------------------------------------- 
+// Tcl Message: Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:04 . Memory (MB): peak = 11893.562 ; gain = 0.000 ; free physical = 21315 ; free virtual = 34292 
+// Tcl Message: --------------------------------------------------------------------------------- 
+// Tcl Message: --------------------------------------------------------------------------------- Start Handling Custom Attributes --------------------------------------------------------------------------------- --------------------------------------------------------------------------------- 
+// Tcl Message: Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:04 . Memory (MB): peak = 11893.562 ; gain = 0.000 ; free physical = 21315 ; free virtual = 34292 
+// Tcl Message: --------------------------------------------------------------------------------- --------------------------------------------------------------------------------- 
+// Tcl Message: Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:04 . Memory (MB): peak = 11893.562 ; gain = 0.000 ; free physical = 21315 ; free virtual = 34292 
+// Tcl Message: --------------------------------------------------------------------------------- 
+// TclEventType: FLOORPLAN_MODIFY
+// TclEventType: DESIGN_REFRESH
+// HMemoryUtils.trashcanNow. Engine heap size: 3,971 MB. GUI used memory: 181 MB. Current time: 11/5/26, 3:19:03 PM CST
+// TclEventType: HFED_INIT_ROUTE_STORAGE_COMPLETED
+// Tcl Message: Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 11893.562 ; gain = 0.000 ; free physical = 21465 ; free virtual = 34457 
+// Tcl Message: INFO: [Project 1-570] Preparing netlist for logic optimization 
+// Tcl Message:  Processing XDC Constraints Initializing timing engine Completed Processing XDC Constraints  
+// Tcl Message: refresh_design: Time (s): cpu = 00:00:12 ; elapsed = 00:00:06 . Memory (MB): peak = 11914.535 ; gain = 20.973 ; free physical = 21457 ; free virtual = 34458 
+dismissDialog("Reloading"); // bk (Reloading Progress)
+// Elapsed time: 17 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, RTL Analysis, Open Elaborated Design]", 14, true); // g (PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, Flow Navigator Tree) - Node
+// Run Command: PAResourceCommand.PACommandNames_GOTO_RTL_DESIGN
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, RTL Analysis, Open Elaborated Design, Schematic]", 18, false); // g (PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, Flow Navigator Tree)
+// Run Command: PAResourceCommand.PACommandNames_SCHEMATIC
+selectButton(PAResourceCommand.PACommandNames_ZOOM_FIT, "Schematic_zoom_fit"); // C (PAResourceCommand.PACommandNames_ZOOM_FIT, Schematic_zoom_fit)
+// Run Command: PAResourceCommand.PACommandNames_ZOOM_FIT
+// HMemoryUtils.trashcanNow. Engine heap size: 4,678 MB. GUI used memory: 206 MB. Current time: 11/5/26, 3:19:27 PM CST
+runTclCommand (PAResourceOtoP.PAViews_SCHEMATIC, "select_objects [get_pins My_SPI_slave_lite_v1_0_AXI_Interface_SPI_inst/spi_fsm_inst/cs]"); // j (PAResourceOtoP.PAViews_SCHEMATIC, PlanAheadTabSchematic)
+runTclCommand (PAResourceOtoP.PAViews_MAGNIFY, "select_objects [get_pins My_SPI_slave_lite_v1_0_AXI_Interface_SPI_inst/spi_fsm_inst/cs]"); // j (PAResourceOtoP.PAViews_MAGNIFY, PlanAheadTabMagnify)
+// HMemoryUtils.trashcanNow. Engine heap size: 3,968 MB. GUI used memory: 209 MB. Current time: 11/5/26, 3:20:07 PM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 3,968 MB. GUI used memory: 207 MB. Current time: 11/5/26, 3:20:47 PM CST
+// Elapsed time: 70 seconds
+closeView(PAResourceOtoP.PAViews_SCHEMATIC, "Schematic"); // j (PAResourceOtoP.PAViews_SCHEMATIC, PlanAheadTabSchematic)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Package IP - My_SPI", 1); // m (PlanAheadTabBaseWorkspace_JideTabbedPane)
+// [GUI Memory]: 287 MB (+329kb) [00:26:57]
+selectList(PAResourceOtoP.PackagerStepsPanel_PACKAGER_STEPS_LIST, "File Groups", 2); // S (PAResourceOtoP.PackagerStepsPanel_PACKAGER_STEPS_LIST)
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Synthesis, Run Synthesis]", 20, false); // g (PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, Flow Navigator Tree)
+// Run Command: PAResourceCommand.PACommandNames_RUN_SYNTHESIS
+// HMemoryUtils.trashcanNow. Engine heap size: 3,968 MB. GUI used memory: 208 MB. Current time: 11/5/26, 3:20:57 PM CST
+// TclEventType: PAUSE_COMPOSITE_FILE_CHANGE_GUI
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: PAUSE_COMPOSITE_FILE_CHANGE_GUI
+// Tcl Message: launch_runs synth_1 -jobs 8 
+// Tcl Message: [Thu Nov  5 15:20:57 2026] Launched synth_1... Run output will be captured here: /home/rps/fpga/gpio_project/gpio_project.tmp/My_SPI_v1_0_project/My_SPI_v1_0_project.runs/synth_1/runme.log 
+dismissDialog("Starting Design Runs"); // bk (Starting Design Runs Progress)
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// HMemoryUtils.trashcanNow. Engine heap size: 4,715 MB. GUI used memory: 209 MB. Current time: 11/5/26, 3:21:27 PM CST
+// Elapsed time: 55 seconds
+selectButton(PAResourceItoN.MessageBanner_CHANGES_DETECTED_IN_VIVADO_PROJECT_THAT, "Merge changes from File Groups Wizard"); // h (PAResourceItoN.MessageBanner_CHANGES_DETECTED_IN_VIVADO_PROJECT_THAT)
+// TclEventType: PACKAGER_COMPONENT_RESET
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_MESSAGE_UPDATE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_OBJECT_CHANGE
+// Tcl Message: ipx::merge_project_changes files [ipx::current_core] 
+selectList(PAResourceOtoP.PackagerStepsPanel_PACKAGER_STEPS_LIST, "Ports and Interfaces", 4); // S (PAResourceOtoP.PackagerStepsPanel_PACKAGER_STEPS_LIST)
+selectButton(PAResourceItoN.MessageBanner_CHANGES_DETECTED_IN_VIVADO_PROJECT_THAT, "Merge changes from Ports and Interfaces Wizard"); // h (PAResourceItoN.MessageBanner_CHANGES_DETECTED_IN_VIVADO_PROJECT_THAT)
+// TclEventType: PACKAGER_COMPONENT_RESET
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_MESSAGE_UPDATE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_OBJECT_CHANGE
+// Tcl Message: ipx::merge_project_changes ports [ipx::current_core] 
+// Tcl Message: INFO: [IP_Flow 19-5654] Module 'My_SPI' uses SystemVerilog sources with a Verilog top file. These SystemVerilog files will not be analysed by the packager. INFO: [IP_Flow 19-3166] Bus Interface 'AXI_Interface_SPI': References existing memory map 'AXI_Interface_SPI'. 
+selectList(PAResourceOtoP.PackagerStepsPanel_PACKAGER_STEPS_LIST, "Review and Package", 7); // S (PAResourceOtoP.PackagerStepsPanel_PACKAGER_STEPS_LIST)
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_MESSAGE_UPDATE
+selectButton(PAResourceQtoS.ReviewContentPanel_RE_PACKAGE_IP, "Re-Package IP"); // a (PAResourceQtoS.ReviewContentPanel_RE_PACKAGE_IP)
+// TclEventType: PACKAGER_OBJECT_CHANGE
+// Tcl Message: set_property core_revision 38 [ipx::current_core] 
+// Tcl Message: ipx::update_source_project_archive -component [ipx::current_core] 
+// Tcl Message: ipx::create_xgui_files [ipx::current_core] 
+// Tcl Message: ipx::update_checksums [ipx::current_core] 
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_MESSAGE_UPDATE
+// Tcl Message: ipx::check_integrity [ipx::current_core] 
+// Tcl Message: INFO: [IP_Flow 19-2181] Payment is not required for this core. 
+// Tcl Message: INFO: [Ipptcl 7-1486] check_integrity: Integrity check passed. 
+// Tcl Message: ipx::save_core [ipx::current_core] 
+// TclEventType: FILE_SET_CHANGE
+selectButton("YES", "Yes", "Close Project"); // JButton (YES)
+// Tcl Message: ipx::move_temp_component_back -component [ipx::current_core] 
+// TclEventType: PROJECT_CLOSE
+// HMemoryUtils.trashcanNow. Engine heap size: 4,430 MB. GUI used memory: 215 MB. Current time: 11/5/26, 3:22:03 PM CST
+// Engine heap size: 4,421 MB. GUI used memory: 217 MB. Current time: 11/5/26, 3:22:03 PM CST
+// Tcl Message: close_project -delete 
+dismissDialog("Package IP"); // bk (Package IP Progress)
+// TclEventType: DESIGN_CLOSE
+// TclEventType: CREATE_IP_CATALOG
+// TclEventType: IP_LOCK_CHANGE
+// TclEventType: BDCELL_LOCK_CHANGE
+// TclEventType: RSB_LOCK_CHANGE
+// TclEventType: IP_LOCK_CHANGE
+// TclEventType: BDCELL_LOCK_CHANGE
+// TclEventType: CREATE_IP_CATALOG
+// Tcl Message: update_ip_catalog -rebuild -repo_path /home/rps/fpga/ip_repo/My_SPI_1_0 
+// Tcl Message: INFO: [IP_Flow 19-725] Reloaded user IP repository '/home/rps/fpga/ip_repo/My_SPI_1_0' 
+// HMemoryUtils.trashcanNow. Engine heap size: 3,766 MB. GUI used memory: 190 MB. Current time: 11/5/26, 3:22:07 PM CST
+// Elapsed time: 30 seconds
+selectButton(PAResourceQtoS.SystemTab_SHOW_IP_STATUS, "Show IP Status"); // h (PAResourceQtoS.SystemTab_SHOW_IP_STATUS)
+selectButton(RDIResource.BaseReportTab_RERUN, "Rerun"); // h (RDIResource.BaseReportTab_RERUN)
+// Tcl Command: 'report_ip_status -name ip_status '
+// TclEventType: PAUSE_COMPOSITE_FILE_CHANGE_GUI
+// TclEventType: IP_SUMMARY_RESULTS
+// TclEventType: PAUSE_COMPOSITE_FILE_CHANGE_GUI
+// Tcl Message: report_ip_status -name ip_status  
+selectButton(PAResourceItoN.IPStatusSectionPanel_UPGRADE_SELECTED, "Upgrade Selected"); // a (PAResourceItoN.IPStatusSectionPanel_UPGRADE_SELECTED)
+// Run Command: PAResourceCommand.PACommandNames_UPGRADE_IP
+// TclEventType: PAUSE_COMPOSITE_FILE_CHANGE_GUI
+// TclEventType: RSB_OPEN_DIAGRAM
+// TclEventType: RUN_DELETE_COLLECTION
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_RESET
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_DELETE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: FILE_SET_DELETE
+// TclEventType: RUN_DELETE_COLLECTION
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: COMPOSITE_FILE_CHANGE
+// Tcl Message: upgrade_ip -vlnv user.org:user:My_SPI:1.0 [get_ips  system_My_SPI_0_4] -log ip_upgrade.log 
+// Tcl Message: Upgrading '/home/rps/fpga/gpio_project/gpio_project.srcs/sources_1/bd/system/system.bd' 
+// TclEventType: RSB_SAVE_DIAGRAM
+// Tcl Message: INFO: [IP_Flow 19-3422] Upgraded system_My_SPI_0_4 (My_SPI_v1.0 1.0) from revision 37 to revision 38 
+// TclEventType: RSB_SAVE_DIAGRAM
+// TclEventType: COMPOSITE_FILE_CHANGE
+// TclEventType: RSB_SAVE_DIAGRAM
+// TclEventType: FILESET_UPDATE_IP
+// TclEventType: IP_UPGRADE_COMPLETE
+// TclEventType: PAUSE_COMPOSITE_FILE_CHANGE_GUI
+// Tcl Message: Wrote  : </home/rps/fpga/gpio_project/gpio_project.srcs/sources_1/bd/system/system.bd>  
+// Tcl Message: INFO: [Coretcl 2-1525] Wrote upgrade log to '/home/rps/fpga/gpio_project/ip_upgrade.log'. 
+// Tcl Message: export_ip_user_files -of_objects [get_ips system_My_SPI_0_4] -no_script -sync -force -quiet 
+selectButton("OK", "OK", "Upgrade IP"); // JButton (OK)
+// TclEventType: DG_GRAPH_GENERATED
+// Elapsed Time for: 'PAResourceItoN.MsgLongTask_MESSAGE_LONG_TASK/M.f': 28m:28s
+selectButton(PAResourceQtoS.SimpleOutputProductDialog_CLOSE_DIALOG_UNSAVED_CHANGES_WILL, "Skip", "Generate Output Products"); // f (PAResourceQtoS.SimpleOutputProductDialog_CLOSE_DIALOG_UNSAVED_CHANGES_WILL)
+dismissDialog("Generate Output Products"); // Y (dialog5)
+// Elapsed Time for: 'PAResourceItoN.MsgLongTask_MESSAGE_LONG_TASK/M.f': 28m:30s
+// HMemoryUtils.trashcanNow. Engine heap size: 4,091 MB. GUI used memory: 189 MB. Current time: 11/5/26, 3:22:47 PM CST
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Generate Bitstream]", 21, false); // g (PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, Flow Navigator Tree)
+// Run Command: PAResourceCommand.PACommandNames_RUN_BITGEN
+// TclEventType: PAUSE_COMPOSITE_FILE_CHANGE_GUI
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_RESET
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// TclEventType: PAUSE_COMPOSITE_FILE_CHANGE_GUI
+// Tcl Message: reset_run synth_1 
+// Tcl Message: INFO: [Project 1-1161] Replacing file /home/rps/fpga/gpio_project/gpio_project.srcs/utils_1/imports/synth_1/gpio_system_top.dcp with file /home/rps/fpga/gpio_project/gpio_project.runs/synth_1/the_system_top.dcp 
+// HMemoryUtils.trashcanNow. Engine heap size: 3,783 MB. GUI used memory: 189 MB. Current time: 11/5/26, 3:22:49 PM CST
+// TclEventType: FILE_SET_CHANGE
+dismissDialog("Resetting Runs"); // bk (Resetting Runs Progress)
+// TclEventType: PAUSE_COMPOSITE_FILE_CHANGE_GUI
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_CLOSE_DIAGRAM
+// TclEventType: REPORT_IP_STATUS_STALE
+// Tcl Message: launch_runs impl_1 -to_step write_bitstream -jobs 8 
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_SAVE_DIAGRAM
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: RSB_SAVE_DIAGRAM
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: COMPOSITE_FILE_CHANGE
+// Tcl Message: Wrote  : </home/rps/fpga/gpio_project/gpio_project.srcs/sources_1/bd/system/system.bd>  
+// Tcl Message: Verilog Output written to : /home/rps/fpga/gpio_project/gpio_project.gen/sources_1/bd/system/synth/system.v 
+// Tcl Message: Verilog Output written to : /home/rps/fpga/gpio_project/gpio_project.gen/sources_1/bd/system/sim/system.v Verilog Output written to : /home/rps/fpga/gpio_project/gpio_project.gen/sources_1/bd/system/hdl/system_wrapper.v 
+// TclEventType: COMPOSITE_FILE_CHANGE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: COMPOSITE_FILE_CHANGE
+// Tcl Message: Exporting to file /home/rps/fpga/gpio_project/gpio_project.gen/sources_1/bd/system/ip/system_axi_smc_0/bd_0/hw_handoff/system_axi_smc_0.hwh Generated Hardware Definition File /home/rps/fpga/gpio_project/gpio_project.gen/sources_1/bd/system/ip/system_axi_smc_0/bd_0/synth/system_axi_smc_0.hwdef 
+// Tcl Message: INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_smc . INFO: [BD 41-1029] Generation completed for the IP Integrator block My_SPI_0 . 
+// Tcl Message: Exporting to file /home/rps/fpga/gpio_project/gpio_project.gen/sources_1/bd/system/hw_handoff/system.hwh Generated Hardware Definition File /home/rps/fpga/gpio_project/gpio_project.gen/sources_1/bd/system/synth/system.hwdef 
+// Tcl Message: INFO: [BD 41-3262] Generated VHDL Instantiation Template file /home/rps/fpga/gpio_project/gpio_project.gen/sources_1/bd/system/system.vho INFO: [BD 41-3262] Generated Verilog Instantiation Template file /home/rps/fpga/gpio_project/gpio_project.gen/sources_1/bd/system/system.veo INFO: [BD 41-3262] Generated System Verilog Instantiation Template file /home/rps/fpga/gpio_project/gpio_project.gen/sources_1/bd/system/system_sv.sveo 
+// TclEventType: PROJ_DESIGN_MODE_SET
+// TclEventType: FILE_SET_NEW
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_ADD
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: RUN_LAUNCH
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_LAUNCH
+// Tcl Message: INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP system_axi_smc_0, cache-ID = 32fb8151003c696a; cache size = 27.195 MB. 
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_MODIFY
+// TclEventType: PAUSE_COMPOSITE_FILE_CHANGE_GUI
+// Tcl Message: [Thu Nov  5 15:22:56 2026] Launched system_My_SPI_0_4_synth_1, synth_1... Run output will be captured here: system_My_SPI_0_4_synth_1: /home/rps/fpga/gpio_project/gpio_project.runs/system_My_SPI_0_4_synth_1/runme.log synth_1: /home/rps/fpga/gpio_project/gpio_project.runs/synth_1/runme.log [Thu Nov  5 15:22:56 2026] Launched impl_1... Run output will be captured here: /home/rps/fpga/gpio_project/gpio_project.runs/impl_1/runme.log 
+// Tcl Message: launch_runs: Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 11914.535 ; gain = 0.000 ; free physical = 21664 ; free virtual = 34595 
+dismissDialog("Generate Bitstream"); // bk (Generate Bitstream Progress)
+// TclEventType: RUN_STATUS_CHANGE
+// Elapsed Time for: 'PAResourceItoN.MsgLongTask_MESSAGE_LONG_TASK/M.f': 28m:42s
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// HMemoryUtils.trashcanNow. Engine heap size: 3,789 MB. GUI used memory: 194 MB. Current time: 11/5/26, 3:23:29 PM CST
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// HMemoryUtils.trashcanNow. Engine heap size: 3,790 MB. GUI used memory: 194 MB. Current time: 11/5/26, 3:24:09 PM CST
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// Elapsed time: 106 seconds
+collapseTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Open Hardware Manager]", 22); // g (PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, Flow Navigator Tree)
+expandTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Open Hardware Manager]", 22); // g (PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, Flow Navigator Tree)
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Open Hardware Manager, Open Target]", 23, false); // g (PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, Flow Navigator Tree)
+// Run Command: PAResourceCommand.PACommandNames_OPEN_HW_TARGET
+selectMenuItem(PAResourceCommand.PACommandNames_AUTO_CONNECT_TARGET, "Auto Connect"); // ap (PAResourceCommand.PACommandNames_AUTO_CONNECT_TARGET, auto_connect_target_menu)
+// Run Command: PAResourceCommand.PACommandNames_OPEN_HARDWARE_MANAGER
+// Tcl (Dont Echo) Command: 'rdi::info_commands get_hw_probes'
+// Tcl (Dont Echo) Command: 'load_features labtools'
+// TclEventType: LOAD_FEATURE
+// TclEventType: HW_SESSION_OPEN
+// Tcl Message: open_hw_manager 
+closeView(PAResourceOtoP.PAViews_PROJECT_SUMMARY, "Project Summary"); // x (PAResourceOtoP.PAViews_PROJECT_SUMMARY, PlanAheadTabProject Summary)
+// Run Command: PAResourceCommand.PACommandNames_AUTO_CONNECT_TARGET
+dismissDialog("Open Hardware Manager"); // bk (Open Hardware Manager Progress)
+// TclEventType: HW_SERVER_UPDATE
+// Tcl Message: connect_hw_server -allow_non_jtag 
+// Tcl Message: INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121 INFO: [Labtools 27-2222] Launching hw_server... INFO: [Labtools 27-2221] Launch Output:  ****** Xilinx hw_server v2025.2   **** Build date : Oct 28 2025 at 16:07:00     ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.   INFO: [Labtools 27-3415] Connecting to cs_server url TCP:localhost:0 INFO: [Labtools 27-3417] Launching cs_server... 
+// TclEventType: HW_SERVER_UPDATE
+// Tcl Message: INFO: [Labtools 27-2221] Launch Output:   ******** Xilinx cs_server v2025.2.0   ****** Build date   : Nov 13 2025-17:16:52     **** Build number : 2025.2.1763075812       ** Copyright 2017-2022 Xilinx, Inc. All Rights Reserved.       ** Copyright 2022-2026 Advanced Micro Devices, Inc. All Rights Reserved.    
+// TclEventType: HW_TARGET_CHANGE
+// TclEventType: HW_TARGET_CLOSE
+// Tcl Message: open_hw_target 
+// Tcl Message: INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Xilinx/887100000190A 
+// HMemoryUtils.trashcanNow. Engine heap size: 4,011 MB. GUI used memory: 197 MB. Current time: 11/5/26, 3:24:50 PM CST
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_SYSMON_ADD
+// TclEventType: HW_TARGET_UPDATE
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: set_property PROGRAM.FILE {/home/rps/fpga/gpio_project/gpio_project.runs/impl_1/the_system_top.bit} [get_hw_devices xc7z007s_1] 
+// Tcl Message: current_hw_device [get_hw_devices xc7z007s_1] 
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_SYSMON_CHANGE
+// TclEventType: HW_DEVICE_UPDATE
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7z007s_1] 0] 
+// Tcl Message: INFO: [Labtools 27-1434] Device xc7z007s (JTAG device index = 1) is programmed with a design that has no supported soft debug core(s) in it. 
+dismissDialog("Auto Connect"); // bk (Auto Connect Progress)
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Open Hardware Manager, Program Device]", 24, false); // g (PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, Flow Navigator Tree)
+// Run Command: PAResourceCommand.PACommandNames_PROGRAM_FPGA
+selectMenuItem((HResource) null, "xc7z007s_1"); // ap (xc7z007s_1)
+// Run Command: PAResourceCommand.PACommandNames_OPEN_HARDWARE_MANAGER
+// Tcl (Dont Echo) Command: 'rdi::info_commands get_hw_probes'
+// Run Command: PAResourceCommand.PACommandNames_PROGRAM_FPGA
+selectButton(PAResourceOtoP.ProgramFpgaDialog_PROGRAM, "Program", "Program Device"); // f (PAResourceOtoP.ProgramFpgaDialog_PROGRAM, RDIResource.BaseDialog_OK)
+// TclEventType: HW_DEVICE_CHANGE
+dismissDialog("Program Device"); // aT (dialog6)
+// Tcl Message: set_property PROBES.FILE {} [get_hw_devices xc7z007s_1] 
+// Tcl Message: set_property FULL_PROBES.FILE {} [get_hw_devices xc7z007s_1] 
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: set_property PROGRAM.FILE {/home/rps/fpga/gpio_project/gpio_project.runs/impl_1/the_system_top.bit} [get_hw_devices xc7z007s_1] 
+// Tcl Message: program_hw_devices [get_hw_devices xc7z007s_1] 
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: INFO: [Labtools 27-3164] End of startup status: HIGH 
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_SYSMON_CHANGE
+// TclEventType: HW_DEVICE_UPDATE
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_DEVICE_PROBES_CHANGE
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// TclEventType: HW_DEVICE_PROBES_CHANGE
+// Tcl Message: refresh_hw_device [lindex [get_hw_devices xc7z007s_1] 0] 
+// Tcl Message: INFO: [Labtools 27-1434] Device xc7z007s (JTAG device index = 1) is programmed with a design that has no supported soft debug core(s) in it. 
+// 'D' command handler elapsed time: 5 seconds
+dismissDialog("Program Device"); // bk (Program Device Progress)
+// HMemoryUtils.trashcanNow. Engine heap size: 4,261 MB. GUI used memory: 196 MB. Current time: 11/5/26, 3:25:30 PM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 3,833 MB. GUI used memory: 196 MB. Current time: 11/5/26, 3:26:10 PM CST
+// WARNING: HEventQueue.dispatchEvent() is taking  3694255 ms.

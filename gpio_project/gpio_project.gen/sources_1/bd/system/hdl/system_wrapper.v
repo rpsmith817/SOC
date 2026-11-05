@@ -2,7 +2,7 @@
 //Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2025.2 (lin64) Build 6299465 Fri Nov 14 12:34:56 MST 2025
-//Date        : Tue Nov  3 16:42:29 2026
+//Date        : Thu Nov  5 15:22:52 2026
 //Host        : rps-ThinkPad-T16-Gen-4 running 64-bit Ubuntu 24.04.5 LTS
 //Command     : generate_target system_wrapper.bd
 //Design      : system_wrapper
@@ -33,7 +33,6 @@ module system_wrapper
     FIXED_IO_ps_porb,
     FIXED_IO_ps_srstb,
     baud_clk,
-    clr_overflow,
     cs,
     datain,
     dataout,
@@ -42,9 +41,7 @@ module system_wrapper
     gpio_data_oe,
     gpio_data_out,
     intr,
-    rd_req,
-    status,
-    wr_req);
+    status);
   inout [14:0]DDR_addr;
   inout [2:0]DDR_ba;
   inout DDR_cas_n;
@@ -67,7 +64,6 @@ module system_wrapper
   inout FIXED_IO_ps_porb;
   inout FIXED_IO_ps_srstb;
   output baud_clk;
-  input clr_overflow;
   output [3:0]cs;
   input [31:0]datain;
   output [31:0]dataout;
@@ -76,9 +72,7 @@ module system_wrapper
   output [31:0]gpio_data_oe;
   output [31:0]gpio_data_out;
   output intr;
-  input rd_req;
   output [31:0]status;
-  input wr_req;
 
   wire [14:0]DDR_addr;
   wire [2:0]DDR_ba;
@@ -102,7 +96,6 @@ module system_wrapper
   wire FIXED_IO_ps_porb;
   wire FIXED_IO_ps_srstb;
   wire baud_clk;
-  wire clr_overflow;
   wire [3:0]cs;
   wire [31:0]datain;
   wire [31:0]dataout;
@@ -111,9 +104,7 @@ module system_wrapper
   wire [31:0]gpio_data_oe;
   wire [31:0]gpio_data_out;
   wire intr;
-  wire rd_req;
   wire [31:0]status;
-  wire wr_req;
 
   system system_i
        (.DDR_addr(DDR_addr),
@@ -138,7 +129,6 @@ module system_wrapper
         .FIXED_IO_ps_porb(FIXED_IO_ps_porb),
         .FIXED_IO_ps_srstb(FIXED_IO_ps_srstb),
         .baud_clk(baud_clk),
-        .clr_overflow(clr_overflow),
         .cs(cs),
         .datain(datain),
         .dataout(dataout),
@@ -147,7 +137,5 @@ module system_wrapper
         .gpio_data_oe(gpio_data_oe),
         .gpio_data_out(gpio_data_out),
         .intr(intr),
-        .rd_req(rd_req),
-        .status(status),
-        .wr_req(wr_req));
+        .status(status));
 endmodule
