@@ -1640,3 +1640,8 @@ dismissDialog("Program Device"); // aT (dialog1)
 // Tcl Message: INFO: [Labtools 27-1434] Device xc7z007s (JTAG device index = 1) is programmed with a design that has no supported soft debug core(s) in it. 
 // 'D' command handler elapsed time: 12 seconds
 dismissDialog("Program Device"); // bk (Program Device Progress)
+// HMemoryUtils.trashcanNow. Engine heap size: 2,555 MB. GUI used memory: 173 MB. Current time: 11/7/26, 12:43:53 PM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 2,555 MB. GUI used memory: 171 MB. Current time: 11/7/26, 12:44:33 PM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 2,555 MB. GUI used memory: 171 MB. Current time: 11/7/26, 12:45:13 PM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 2,555 MB. GUI used memory: 171 MB. Current time: 11/7/26, 12:45:53 PM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 2,555 MB. GUI used memory: 171 MB. Current time: 11/7/26, 12:46:33 PM CST
