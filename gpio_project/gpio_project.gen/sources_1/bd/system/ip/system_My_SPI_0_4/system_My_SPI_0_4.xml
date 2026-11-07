@@ -594,7 +594,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:64180490</spirit:value>
+            <spirit:value>9:3591e02d</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -608,11 +608,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Sat Nov 07 00:13:12 UTC 2026</spirit:value>
+            <spirit:value>Sat Nov 07 18:35:52 UTC 2026</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:64180490</spirit:value>
+            <spirit:value>9:3591e02d</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -626,11 +626,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Sat Nov 07 00:12:50 UTC 2026</spirit:value>
+            <spirit:value>Sat Nov 07 18:35:34 UTC 2026</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:64180490</spirit:value>
+            <spirit:value>9:3591e02d</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -641,7 +641,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:64180490</spirit:value>
+            <spirit:value>9:3591e02d</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -657,11 +657,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Sat Nov 07 00:12:50 UTC 2026</spirit:value>
+            <spirit:value>Sat Nov 07 18:35:34 UTC 2026</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:92990364</spirit:value>
+            <spirit:value>9:c310e7d9</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -677,11 +677,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Sat Nov 07 00:12:50 UTC 2026</spirit:value>
+            <spirit:value>Sat Nov 07 18:35:34 UTC 2026</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:92990364</spirit:value>
+            <spirit:value>9:c310e7d9</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -697,11 +697,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Sat Nov 07 00:12:50 UTC 2026</spirit:value>
+            <spirit:value>Sat Nov 07 18:35:34 UTC 2026</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:64180490</spirit:value>
+            <spirit:value>9:3591e02d</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -717,11 +717,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Sat Nov 07 00:12:50 UTC 2026</spirit:value>
+            <spirit:value>Sat Nov 07 18:35:34 UTC 2026</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:64180490</spirit:value>
+            <spirit:value>9:3591e02d</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -1229,11 +1229,11 @@
     <spirit:fileSet>
       <spirit:name>xilinx_verilogbehavioralsimulation_view_fileset</spirit:name>
       <spirit:file>
-        <spirit:name>../../ipshared/44dd/hdl/My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v</spirit:name>
+        <spirit:name>../../ipshared/98d3/hdl/My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v</spirit:name>
         <spirit:fileType>systemVerilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/44dd/hdl/My_SPI.v</spirit:name>
+        <spirit:name>../../ipshared/98d3/hdl/My_SPI.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
     </spirit:fileSet>
@@ -1248,11 +1248,11 @@
     <spirit:fileSet>
       <spirit:name>xilinx_verilogsynthesis_view_fileset</spirit:name>
       <spirit:file>
-        <spirit:name>../../ipshared/44dd/hdl/My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v</spirit:name>
+        <spirit:name>../../ipshared/98d3/hdl/My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v</spirit:name>
         <spirit:fileType>systemVerilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/44dd/hdl/My_SPI.v</spirit:name>
+        <spirit:name>../../ipshared/98d3/hdl/My_SPI.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
     </spirit:fileSet>
@@ -1325,7 +1325,7 @@
   <spirit:vendorExtensions>
     <xilinx:coreExtensions>
       <xilinx:displayName>My_SPI_v1.0</xilinx:displayName>
-      <xilinx:coreRevision>51</xilinx:coreRevision>
+      <xilinx:coreRevision>53</xilinx:coreRevision>
       <xilinx:configElementInfos>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.AXI_INTERFACE_SPI.ADDR_WIDTH" xilinx:valueSource="auto" xilinx:valuePermission="bd"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.AXI_INTERFACE_SPI.ARUSER_WIDTH" xilinx:valueSource="constant" xilinx:valuePermission="bd"/>
@@ -1373,8 +1373,8 @@
       <xilinx:xilinxVersion>2025.2</xilinx:xilinxVersion>
       <xilinx:checksum xilinx:scope="busInterfaces" xilinx:value="1d3e5347"/>
       <xilinx:checksum xilinx:scope="memoryMaps" xilinx:value="173a8f8c"/>
-      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="cdc0d9d0"/>
-      <xilinx:checksum xilinx:scope="ports" xilinx:value="bbaf9aff"/>
+      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="37fd3886"/>
+      <xilinx:checksum xilinx:scope="ports" xilinx:value="9535c126"/>
       <xilinx:checksum xilinx:scope="hdlParameters" xilinx:value="07a22019"/>
       <xilinx:checksum xilinx:scope="parameters" xilinx:value="d20e7aab"/>
     </xilinx:packagingInfo>

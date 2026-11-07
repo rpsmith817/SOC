@@ -1,7 +1,7 @@
 {
   "design": {
     "design_info": {
-      "boundary_crc": "0x5E82AB11D822EBC5",
+      "boundary_crc": "0x275D0A9713EF2965",
       "device": "xc7z007sclg400-1",
       "gen_directory": "../../../../gpio_project.gen/sources_1/bd/system",
       "name": "system",
@@ -236,11 +236,6 @@
         "right": "0"
       },
       "dataout": {
-        "direction": "O",
-        "left": "31",
-        "right": "0"
-      },
-      "status": {
         "direction": "O",
         "left": "31",
         "right": "0"
@@ -1395,7 +1390,7 @@
       },
       "My_SPI_0": {
         "vlnv": "user.org:user:My_SPI:1.0",
-        "ip_revision": "51",
+        "ip_revision": "53",
         "xci_name": "system_My_SPI_0_4",
         "xci_path": "ip/system_My_SPI_0_4/system_My_SPI_0_4.xci",
         "inst_hier_path": "My_SPI_0",
@@ -1463,11 +1458,6 @@
         "ports": [
           "My_SPI_0/debug",
           "debug"
-        ]
-      },
-      "My_SPI_0_status": {
-        "ports": [
-          "status"
         ]
       },
       "datain_1": {

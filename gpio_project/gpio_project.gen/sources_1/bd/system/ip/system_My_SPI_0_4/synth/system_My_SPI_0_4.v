@@ -48,7 +48,7 @@
 
 
 // IP VLNV: user.org:user:My_SPI:1.0
-// IP Revision: 51
+// IP Revision: 53
 
 (* X_CORE_INFO = "My_SPI,Vivado 2025.2" *)
 (* CHECK_LICENSE_TYPE = "system_My_SPI_0_4,My_SPI,{}" *)

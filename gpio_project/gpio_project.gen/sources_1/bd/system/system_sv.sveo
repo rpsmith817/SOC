@@ -93,7 +93,6 @@ system_sv your_instance_name (
   .gpio_data_oe(gpio_data_oe), // output wire [31:0] gpio_data_oe
   .datain(datain), // input wire [31:0] datain
   .dataout(dataout), // output wire [31:0] dataout
-  .status(status), // output wire [31:0] status
   .baud_clork(baud_clork), // output wire baud_clork
   .datum(datum), // output wire datum
   .cs(cs), // output wire [3:0] cs

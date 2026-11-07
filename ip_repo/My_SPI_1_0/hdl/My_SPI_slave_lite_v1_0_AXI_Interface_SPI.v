@@ -88,8 +88,18 @@
 	wire [3:0] fifo_wr_index;
 	wire [3:0] fifo_rd_index;
 	wire [3:0] fifo_watermark;
-
-
+    wire rxfo;
+    wire rxff;
+    wire rxfe;
+    wire txfo;
+    wire txff;
+    wire txfe;
+    wire [3:0] rx_watermark;
+    wire [3:0] tx_watermark;
+    wire [17:0] debug_out;      //our debug out will be a part of status, not a part of control. Control debug will control, status debug will status.
+    
+    assign status = {debug_out, tx_watermark, rx_watermark, txfe, txff, txfo, rxfe, rxff, rxfo};    //define status.
+   
     // Register numbers
     localparam integer DATA_REG             = 3'b000;
     localparam integer STATUS_REG           = 3'b001;
@@ -229,7 +239,7 @@
 //             int_clear_request <= 32'b0;
 			//old resets commented out above, below we find SPI resets.
             data <= 32'b0;
-            ctrl <= 32'b0;
+            ctrl <= (32'b0 | (4'b1111 << 9)); //ensure CS is not accidentally asserted at reset.
             brd <= 32'b0;
             clr_overflow_req <= 1'b0;
             clr_txoverflow_req <= 1'b0;
@@ -410,12 +420,6 @@
 //     end
 //     assign gpio_data_out = latch_data;
 
-//	assign ctrl[13] = wr_req;
-//	assign ctrl[14] = rd_req;
-//	assign status[3] = clr_overflow;
-//	assign status[2] = empty;
-//	assign status[1] = full;
-//	assign status[0] = overflow;
     wire fifo_rd_req;
 
 
@@ -429,12 +433,12 @@
         .clr_overflow(clr_overflow_req | clr_txoverflow_req),   //input
         .rd_req(fifo_rd_req),       //input based on fsm
         .wr_req(fifo_wr_req),       //input piggybacks off the axiwr or an actual assert. later might rely on fsm?
-        .empty(status[5]),         //output
-        .full(status[4]),           //output
-        .overflow(status[3]),   //output
+        .empty(txfe),         //output
+        .full(txff),           //output
+        .overflow(txfo),   //output
         .wr_index(fifo_wr_index),
         .rd_index(fifo_rd_index),
-        .watermark(status[13:10])
+        .watermark(tx_watermark)
     );
 
 
@@ -469,7 +473,7 @@
             baud_clork_next <= ~baud_clork_next;
         end 
     end
-    assign baud_out = (baud_clork_next&clk_go) ^ spi_clk;
+    assign baud_clork = (baud_clork_next&clk_go) ^ spi_clk;
     
     /*
     clock stuff since we should be more transparent in code and comment better
@@ -507,13 +511,13 @@
         .brd_tick(brd_tick),    //state stepper
         .reset(axi_resetn),     //reset sig
         .en(ctrl[15]),          //enable
-        .fe(status[5]),         //fifo empty
-        .ff(status[4]),         //fifo full
+        .fe(txfe),         //fifo empty
+        .ff(txff),         //fifo full
         .word_size(ctrl[4:0]),  //bit index reset value, input [4:0]
         .auto_cs(ctrl[8:5]),    //cs3,cs2,cs1,cs0, as bits. input [3:0]
         .mode(ctrl[23:16]),     //polarity and phase of each, [7:6]cs3, [5:4]cs2, [3:2]cs1, [1:0]cs0
         .cs_select(ctrl[14:13]),//binary value is which cs we are using. input [1:0] 
-        .data(data[31:0]),      //data to push out one at a time. input [31:0] 
+        .data(fifo_rd_data),      //data to push out one at a time. input [31:0] 
         .spi_clk(spi_clk),      //outputs cpol, differentiating which spi_clk we are
         .cs_manual(ctrl[12:9]), //which cs is high if control is manual.
         .cs(cs),            //cs control output 
@@ -548,19 +552,18 @@ module spi_fsm(
     output reg rd_req,       //outputs rd_req signal for rd_idx increment and data loading
     output reg [3:0] cs_manual_r,
     output reg [3:0] cs_auto_out,
-    output reg [7:0]state_r,
-    output reg bueno
+    output reg [7:0]state_r
 );
     //go from MSB to LSB
     reg [31:0]data_reg;         //load entire register, then go through slowly one at a time.
-    reg [4:0] bit_idx;
+    reg [5:0] bit_idx;
     reg [3:0]cs_auto;
     reg [1:0]cs_select_r;
     reg [7:0]state;             //uncertain how many discrete states we need, so just oversize it with a 8bit val
     reg auto;                   //if cs is both selected and auto.
     reg cpha;                   //phase of selected cs
     reg cpol;                   //polarity of selected cs
-    reg [4:0] bit_idx_next;
+    reg [5:0] bit_idx_next;
     reg rd_req_flag;            //flag if rd_req should be high.
 //    reg [3:0] cs_manual_r;
 //    reg [3:0] cs_auto_out;
@@ -569,44 +572,44 @@ module spi_fsm(
     assign bit_idx_next = bit_idx - 1;
     assign rd_req = rd_req_flag;
     assign state_r[5:0] = state[5:0];
-    assign state_r[7] = brd_tick;
+    assign state_r[6] = brd_tick;
 
     always_comb
     begin
-        if(cs_auto[3] && (cs_select == 3))
+        if(cs_auto[3] && (cs_select_r == 3))
         begin
-            cs[3] <= cs_auto_out[3];
+            cs[3] = cs_auto_out[3];
         end
         else
         begin
-            cs[3] <= cs_manual[3];
+            cs[3] = cs_manual_r[3];
         end
         
-        if(cs_auto[2] && (cs_select == 2))
+        if(cs_auto[2] && (cs_select_r == 2))
         begin
-            cs[2] <= cs_auto_out[2];
+            cs[2] = cs_auto_out[2];
         end
         else
         begin
-            cs[2] <= cs_manual[2];
+            cs[2] = cs_manual_r[2];
         end
 
-        if(cs_auto[1] && (cs_select == 1))
+        if(cs_auto[1] && (cs_select_r == 1))
         begin
-            cs[1] <= cs_auto_out[1];
+            cs[1] = cs_auto_out[1];
         end
         else
         begin
-            cs[1] <= cs_manual[1];
+            cs[1] = cs_manual_r[1];
         end
 
-        if(cs_auto[0] && (cs_select == 0))
+        if(cs_auto[0] && (cs_select_r == 0))
         begin
-            cs[0] <= cs_auto_out[0];
+            cs[0] = cs_auto_out[0];
         end
         else
         begin
-            cs[0] <= cs_manual[0];
+            cs[0] = cs_manual_r[0];
         end
     end
 
@@ -617,7 +620,7 @@ module spi_fsm(
 //reset
         if(reset == 0)
         begin
-            bit_idx <= word_size;
+            bit_idx <= 31;
             state <= 0;
             cs_auto <= 0;
             cs_select_r <= 0;
@@ -631,163 +634,168 @@ module spi_fsm(
             cs_manual_r <= 4'b1111; //idle high
             cs_auto_out <= 4'b1111; //also idle high
             rd_req_flag <= 0;
-            state_r[7] <= 0;
+
             
         end
-        else if(brd_tick==1)    //state change time!
+        else
         begin
-            //handle some updates
-            rd_req_flag <= 0;
-            cs_manual_r <= cs_manual;
-            state_r[7]<=1;
-//state machine
-            case(state)
-            //Idle state
-                0:
-                begin
-                datum <= 0;
-                state_r[7]<=1;
+            //any non-reset tick.
+            cs_manual_r <= cs_manual;   //load cs each time.
+
+            if(!brd_tick)
+            begin
                 rd_req_flag <= 0;
-                cs_manual_r <= cs_manual;
-                    if(en) //if the fifo has something in it.
+            end
+            else if(brd_tick==1)    //state change time!
+            begin            
+    //state machine
+                case(state)
+    //Idle state
+                    0:
                     begin
-                        state <= 1; //start the machine
+                    datum <= 0;
+                    state_r[7]<=1;
+                    rd_req_flag <= 0;
+                        if(en && !fe) //if the fifo has something in it.
+                        begin
+                            state <= 1; //start the machine
+                        end
                     end
-                end
-
-            //Load state
-                1:
-                begin
-                    cs_auto <= auto_cs;
-                    cs_select_r <= cs_select;
-                    state <= 2;
-                    data_reg <= data;
-                    bit_idx <= word_size;
-                    datum <= data_reg[bit_idx];
-
-                    //from cs_select set the right polarity and phase
-                    case(cs_select)
-                        3: begin cpol <= mode[7]; cpha <= mode[6]; end
-                        2: begin cpol <= mode[5]; cpha <= mode[4]; end
-                        1: begin cpol <= mode[3]; cpha <= mode[2]; end
-                        0: begin cpol <= mode[1]; cpha <= mode[0]; end
-                    endcase
-
-                    //if the auto bit is high and matched the cs_select then auto is active, otherwise auto is not active
-                    if((auto_cs[3] & (cs_select == 2'b11)) || (auto_cs[2] & (cs_select == 2'b10)) || (auto_cs[1] & (cs_select == 2'b01)) || (auto_cs[0] & (cs_select == 2'b00)))
+    //Load state
+                    1:
                     begin
-                        auto <= 1;
-                    end
-                    else begin
-                        auto <= 0;
-                    end
-                                        
-                end
+                        cs_auto <= auto_cs;
+                        cs_select_r <= cs_select;
+                        state <= 2;
+                        data_reg <= data;
+                        bit_idx <= {1'b0,word_size};    //bit_idx[5] is done flag.
+                        
+                        rd_req_flag <= 1;           //assert rd_req, if we loaded then we are done with the previous entry and can make room for more.
 
-            //Drive clk maybe
-                2:
-                begin
-                                        
-                    //state change fork if auto or not.
-                    if(auto)
-                    begin
-                        state <= 3;
+    
+                        //from cs_select set the right polarity and phase
+                        case(cs_select)
+                            3: begin cpol <= mode[7]; cpha <= mode[6]; end
+                            2: begin cpol <= mode[5]; cpha <= mode[4]; end
+                            1: begin cpol <= mode[3]; cpha <= mode[2]; end
+                            0: begin cpol <= mode[1]; cpha <= mode[0]; end
+                        endcase
+    
+                        //if the auto bit is high and matched the cs_select then auto is active, otherwise auto is not active
+                        if((auto_cs[3] & (cs_select == 2'b11)) || (auto_cs[2] & (cs_select == 2'b10)) || (auto_cs[1] & (cs_select == 2'b01)) || (auto_cs[0] & (cs_select == 2'b00)))
+                        begin
+                            auto <= 1;
+                        end
+                        else begin
+                            auto <= 0;
+                        end
+                                            
                     end
-                    else
+    
+    //Drive clk maybe
+                    2:
                     begin
+                                            
+                        //state change fork if auto or not.
+                        if(auto)
+                        begin
+                            state <= 3;
+                        end
+                        else
+                        begin
+                            state <= 4;
+                            clk_go <= 1;
+                        end
+                        
+                        if(cpha == 0)
+                        begin
+                            datum <= data_reg[bit_idx[4:0]];
+                            bit_idx <= bit_idx_next;
+                        end
+                    end
+    
+    //Auto CS Handle
+                    3:
+                    begin
+                        //push selected cs low, push others high.
+                        case(cs_select_r)
+                            3: begin cs_auto_out[3] <= 0; cs_auto_out[2] <= 1; cs_auto_out[1] <= 1; cs_auto_out[0] <= 1; end
+                            2: begin cs_auto_out[3] <= 1; cs_auto_out[2] <= 0; cs_auto_out[1] <= 1; cs_auto_out[0] <= 1; end
+                            1: begin cs_auto_out[3] <= 1; cs_auto_out[2] <= 1; cs_auto_out[1] <= 0; cs_auto_out[0] <= 1; end
+                            0: begin cs_auto_out[3] <= 1; cs_auto_out[2] <= 1; cs_auto_out[1] <= 1; cs_auto_out[0] <= 0; end
+                        endcase
                         state <= 4;
-                        clk_go <= 1;
+                        clk_go <= 1;    //ensure in auto that clock lags cs update.
+                    end
+    
+    //Update 1 state          
+                    4:
+                    begin
+                        if(cpha == 1)   //load data
+                        begin
+                            datum <= data_reg[bit_idx[4:0]];
+                            bit_idx <= bit_idx_next;
+                        end
+                    
+                        state<=5;
+                    end
+    
+    //Update 2 state
+                    5:
+                    begin
+                        if(cpha == 0)   //load data                
+                        begin
+                            datum <= data_reg[bit_idx[4:0]];
+                            bit_idx <= bit_idx_next;
+                        end
+                                                
+                        if(bit_idx[5] == 0)         //if we aren't done then continue updating.
+                        begin
+                            state<=4;
+                        end
+                        else if(bit_idx[5] == 1)   //if the word is finished then index would wrap around and set flag high.
+                        begin
+                            clk_go <= 0;                //idle tick at least temporarily, maybe for a while
+                            
+                            if(auto == 1)               //if we are handling cs
+                            begin
+                                state <= 6;             //proceed to toggle cs
+                            end
+                            else if(~fe)                //we are not auto and have more words to output
+                            begin
+                                state <= 1;             //goto reload
+                            end
+                            else if(fe)                 //we are not auto and there are no more words to output.
+                            begin
+                                state <= 0;             //goto idle
+                            end
+                        end
                     end
                     
-                    if(cpha == 0)
+    //CS Disable state
+                    6:
                     begin
-                        datum <= data_reg[bit_idx];
-                        bit_idx <= bit_idx_next;
-                    end
-                end
-
-            //Auto CS Handle
-                3:
-                begin
-                    //push selected cs low, push others high.
-                    case(cs_select_r)
-                        3: begin cs_auto_out[3] <= 0; cs_auto_out[2] <= 1; cs_auto_out[1] <= 1; cs_auto_out[0] <= 1; end
-                        2: begin cs_auto_out[3] <= 1; cs_auto_out[2] <= 0; cs_auto_out[1] <= 1; cs_auto_out[0] <= 1; end
-                        1: begin cs_auto_out[3] <= 1; cs_auto_out[2] <= 1; cs_auto_out[1] <= 0; cs_auto_out[0] <= 1; end
-                        0: begin cs_auto_out[3] <= 1; cs_auto_out[2] <= 1; cs_auto_out[1] <= 1; cs_auto_out[0] <= 0; end
-                    endcase
-                    state <= 4;
-                end
-
-            //Update 1                
-                4:
-                begin
-                    clk_go <= 1;
-                    if(cpha == 1)   //load data
-                    begin
-                        datum <= data_reg[bit_idx];
-                        bit_idx <= bit_idx_next;
-                    end
-                
-                    state<=5;
-                end
-
-            //Update 2
-                5:
-                begin
-                    if(cpha == 0)   //load data                
-                    begin
-                        datum <= data_reg[bit_idx];
-                        bit_idx <= bit_idx_next;
-                    end
-                                            
-                    if(bit_idx < word_size)         //if we aren't done then continue updating.
-                    begin
-                        state<=4;
-                    end
-                    else if(bit_idx == 0)   //if the word is finished
-                    begin
-                        clk_go <= 0;                //idle tick at least temporarily, maybe for a while
-                        rd_req_flag <= 1;           //assert rd_req
-                        
-                        if(auto == 1)               //if we are handling cs
+                        cs_auto_out <= 4'b1111;      //deselect cs
+                        clk_go <= 0;        //let clock be polarity
+                        if(fe)              //if we are done
                         begin
-                            state <= 6;             //proceed to toggle cs
+                            state <= 0;     //be idle
                         end
-                        else if(~fe)                //we are not auto and have more words to output
+                        else
                         begin
-                            state <= 2;             //goto drive clock
-                        end
-                        else if(fe)                 //we are not auto and there are no more words to output.
-                        begin
-                            state <= 0;             //goto idle
+                            state <= 1;     //otherwise load the next data set
                         end
                     end
-                end
-                
-            //CS Disable
-                6:
-                begin
-                    cs_auto_out <= 4'b1111;      //deselect cs
-                    clk_go <= 0;        //let clock be polarity
-                    if(fe)              //if we are done
+                    
+    //Error, or undefined state
+                    default:
                     begin
-                        state <= 0;     //be idle
+                        state <= 8'b11111111;       //lock up until reset.
+                        clk_go <= 0;    //stop the clock.
+                        datum <= 0;
                     end
-                    else
-                    begin
-                        state <= 1;     //otherwise load the next data set
-                    end
-                end
-                
-            //Error, or undefined.
-                default:
-                begin
-                    state <= 8'b11111111;       //lock up until reset.
-                    clk_go <= 0;    //stop the clock.
-                    datum <= 0;
-                end
-            endcase            
+                endcase
+            end
         end    
     end
 endmodule

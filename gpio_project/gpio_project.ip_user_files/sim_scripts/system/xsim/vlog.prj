@@ -54,10 +54,10 @@ verilog xil_defaultlib -i "../../../../../../../../opt/Xilinx/2025.2/data/rsb/bu
 "../../../bd/system/ip/system_xlconcat_0_0/sim/system_xlconcat_0_0.v" \
 
 sv xil_defaultlib -i "../../../../../../../../opt/Xilinx/2025.2/data/rsb/busdef" --include "/opt/Xilinx/2025.2/data/xilinx_vip/include" --include "../../../../gpio_project.gen/sources_1/bd/system/ipshared/ec67/hdl" --include "../../../../gpio_project.gen/sources_1/bd/system/ipshared/9a25/hdl" --include "../../../../gpio_project.gen/sources_1/bd/system/ipshared/f0b6/hdl/verilog" --include "../../../../gpio_project.gen/sources_1/bd/system/ipshared/00fe/hdl/verilog" \
-"../../../bd/system/ipshared/8140/hdl/My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v" \
+"../../../bd/system/ipshared/98d3/hdl/My_SPI_slave_lite_v1_0_AXI_Interface_SPI.v" \
 
 verilog xil_defaultlib -i "../../../../../../../../opt/Xilinx/2025.2/data/rsb/busdef" --include "/opt/Xilinx/2025.2/data/xilinx_vip/include" --include "../../../../gpio_project.gen/sources_1/bd/system/ipshared/ec67/hdl" --include "../../../../gpio_project.gen/sources_1/bd/system/ipshared/9a25/hdl" --include "../../../../gpio_project.gen/sources_1/bd/system/ipshared/f0b6/hdl/verilog" --include "../../../../gpio_project.gen/sources_1/bd/system/ipshared/00fe/hdl/verilog" \
-"../../../bd/system/ipshared/8140/hdl/My_SPI.v" \
+"../../../bd/system/ipshared/98d3/hdl/My_SPI.v" \
 "../../../bd/system/ip/system_My_SPI_0_4/sim/system_My_SPI_0_4.v" \
 "../../../bd/system/sim/system.v" \
 

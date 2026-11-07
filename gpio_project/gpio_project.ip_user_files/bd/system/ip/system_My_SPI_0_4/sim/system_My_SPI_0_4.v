@@ -48,7 +48,7 @@
 
 
 // IP VLNV: user.org:user:My_SPI:1.0
-// IP Revision: 50
+// IP Revision: 53
 
 `timescale 1ns/1ps
 
@@ -56,7 +56,7 @@
 module system_My_SPI_0_4 (
   datain,
   dataout,
-  baud_clk,
+  baud_clork,
   datum,
   cs,
   debug,
@@ -85,10 +85,7 @@ module system_My_SPI_0_4 (
 
 input wire [31 : 0] datain;
 output wire [31 : 0] dataout;
-(* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 baud_clk CLK" *)
-(* X_INTERFACE_MODE = "master" *)
-(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME baud_clk, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN system_My_SPI_0_4_baud_clk, INSERT_VIP 0" *)
-output wire baud_clk;
+output wire baud_clork;
 output wire datum;
 output wire [3 : 0] cs;
 output wire [7 : 0] debug;
@@ -148,7 +145,7 @@ input wire axi_interface_spi_rready;
   ) inst (
     .datain(datain),
     .dataout(dataout),
-    .baud_clk(baud_clk),
+    .baud_clork(baud_clork),
     .datum(datum),
     .cs(cs),
     .debug(debug),

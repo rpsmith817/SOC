@@ -2,7 +2,7 @@
 //Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2025.2 (lin64) Build 6299465 Fri Nov 14 12:34:56 MST 2025
-//Date        : Fri Nov  6 18:12:48 2026
+//Date        : Sat Nov  7 12:36:37 2026
 //Host        : rps-ThinkPad-T16-Gen-4 running 64-bit Ubuntu 24.04.5 LTS
 //Command     : generate_target system_wrapper.bd
 //Design      : system_wrapper
@@ -41,8 +41,7 @@ module system_wrapper
     gpio_data_in,
     gpio_data_oe,
     gpio_data_out,
-    intr,
-    status);
+    intr);
   inout [14:0]DDR_addr;
   inout [2:0]DDR_ba;
   inout DDR_cas_n;
@@ -74,7 +73,6 @@ module system_wrapper
   output [31:0]gpio_data_oe;
   output [31:0]gpio_data_out;
   output intr;
-  output [31:0]status;
 
   wire [14:0]DDR_addr;
   wire [2:0]DDR_ba;
@@ -107,7 +105,6 @@ module system_wrapper
   wire [31:0]gpio_data_oe;
   wire [31:0]gpio_data_out;
   wire intr;
-  wire [31:0]status;
 
   system system_i
        (.DDR_addr(DDR_addr),
@@ -140,6 +137,5 @@ module system_wrapper
         .gpio_data_in(gpio_data_in),
         .gpio_data_oe(gpio_data_oe),
         .gpio_data_out(gpio_data_out),
-        .intr(intr),
-        .status(status));
+        .intr(intr));
 endmodule

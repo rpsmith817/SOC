@@ -80,7 +80,6 @@ COMPONENT system
     gpio_data_oe : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
     datain : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
     dataout : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
-    status : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
     baud_clork : OUT STD_LOGIC;
     datum : OUT STD_LOGIC;
     cs : OUT STD_LOGIC_VECTOR(3 DOWNTO 0);
@@ -122,7 +121,6 @@ your_instance_name : system
     gpio_data_oe => gpio_data_oe,
     datain => datain,
     dataout => dataout,
-    status => status,
     baud_clork => baud_clork,
     datum => datum,
     cs => cs,

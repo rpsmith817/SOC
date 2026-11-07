@@ -108,8 +108,6 @@ module system_sv (
   (* X_INTERFACE_IGNORE = "true" *)
   output wire [31:0] dataout,
   (* X_INTERFACE_IGNORE = "true" *)
-  output wire [31:0] status,
-  (* X_INTERFACE_IGNORE = "true" *)
   output wire baud_clork,
   (* X_INTERFACE_IGNORE = "true" *)
   output wire datum,
@@ -147,7 +145,6 @@ module system_sv (
     .gpio_data_oe(gpio_data_oe),
     .datain(datain),
     .dataout(dataout),
-    .status(status),
     .baud_clork(baud_clork),
     .datum(datum),
     .cs(cs),

@@ -1,6 +1,27 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2025.2 (lin64) Build 6299465 Fri Nov 14 12:34:56 MST 2025
+| Date         : Sat Nov  7 12:35:15 2026
+| Host         : rps-ThinkPad-T16-Gen-4 running 64-bit Ubuntu 24.04.5 LTS
+| Command      : upgrade_ip
+| Device       : xc7z007sclg400-1
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'system_My_SPI_0_4'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of system_My_SPI_0_4 (user.org:user:My_SPI:1.0) from (Rev. 51) to (Rev. 53)
+
+
+
+
+
+
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2025.2 (lin64) Build 6299465 Fri Nov 14 12:34:56 MST 2025
 | Date         : Fri Nov  6 18:11:20 2026
 | Host         : rps-ThinkPad-T16-Gen-4 running 64-bit Ubuntu 24.04.5 LTS
 | Command      : upgrade_ip
