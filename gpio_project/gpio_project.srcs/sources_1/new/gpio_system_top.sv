@@ -106,7 +106,8 @@ module the_system_top (
     wire [31:0] dataout;
     wire datum;
     wire [3:0] cs;
-    wire baud_clk;
+    wire baud_clork;
+    wire debug;
     
     //metastability for switches & a button
     reg [11:0] sw_last;
@@ -122,10 +123,10 @@ module the_system_top (
     end
 
     //PMODA
-    assign GPIO[0] = baud_clk;
+    assign GPIO[0] = baud_clork;
     assign GPIO[1] = datum;
     assign GPIO[5:2] = cs;
-    
+    assign LED[7:0] = debug;
 
         
 //    //sw handlin
@@ -174,7 +175,7 @@ module the_system_top (
         .FIXED_IO_ps_clk(FIXED_IO_ps_clk),
         .FIXED_IO_ps_porb(FIXED_IO_ps_porb),
         .FIXED_IO_ps_srstb(FIXED_IO_ps_srstb),
-        .baud_clk(baud_clk),
+        .baud_clork(baud_clork),
         .cs(cs),
         .datain(datain),
         .dataout(dataout),
@@ -182,7 +183,8 @@ module the_system_top (
         .gpio_data_in(gpio_data_in),
         .gpio_data_oe(gpio_data_oe),
         .gpio_data_out(gpio_data_out),
-        .intr(intr)
+        .intr(intr),
+        .debug(debug)
         );
 
 endmodule

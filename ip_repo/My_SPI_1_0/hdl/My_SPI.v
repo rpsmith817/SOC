@@ -17,9 +17,10 @@
 		// Users to add ports here
 		input wire [31:0] datain,
         output wire [31:0] dataout,
-        output wire baud_clk,
+        output wire baud_clork,
         output wire datum,
         output wire [3:0] cs,
+        output wire [7:0] debug,
         
 		// User ports ends
 		// Do not modify the ports beyond this line
@@ -54,30 +55,37 @@
 	) My_SPI_slave_lite_v1_0_AXI_Interface_SPI_inst (
 		.S_AXI_ACLK(axi_interface_spi_aclk),
 		.S_AXI_ARESETN(axi_interface_spi_aresetn),
+		
 		.S_AXI_AWADDR(axi_interface_spi_awaddr),
 		.S_AXI_AWPROT(axi_interface_spi_awprot),
 		.S_AXI_AWVALID(axi_interface_spi_awvalid),
 		.S_AXI_AWREADY(axi_interface_spi_awready),
+		
 		.S_AXI_WDATA(axi_interface_spi_wdata),
 		.S_AXI_WSTRB(axi_interface_spi_wstrb),
 		.S_AXI_WVALID(axi_interface_spi_wvalid),
 		.S_AXI_WREADY(axi_interface_spi_wready),
+		
 		.S_AXI_BRESP(axi_interface_spi_bresp),
 		.S_AXI_BVALID(axi_interface_spi_bvalid),
 		.S_AXI_BREADY(axi_interface_spi_bready),
+		
 		.S_AXI_ARADDR(axi_interface_spi_araddr),
 		.S_AXI_ARPROT(axi_interface_spi_arprot),
 		.S_AXI_ARVALID(axi_interface_spi_arvalid),
 		.S_AXI_ARREADY(axi_interface_spi_arready),
+		
 		.S_AXI_RDATA(axi_interface_spi_rdata),
 		.S_AXI_RRESP(axi_interface_spi_rresp),
 		.S_AXI_RVALID(axi_interface_spi_rvalid),
 		.S_AXI_RREADY(axi_interface_spi_rready),
+		
         .datain(datain),
         .dataout(dataout),
-        .baud_clk(baud_clk),
+        .baud_clork(baud_clork),
         .datum(datum),
-        .cs(cs)
+        .cs(cs),
+        .debug(debug)
 	);
 
 	// Add user logic here

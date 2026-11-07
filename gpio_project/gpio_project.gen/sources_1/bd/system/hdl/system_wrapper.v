@@ -2,7 +2,7 @@
 //Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2025.2 (lin64) Build 6299465 Fri Nov 14 12:34:56 MST 2025
-//Date        : Thu Nov  5 15:22:52 2026
+//Date        : Fri Nov  6 18:12:48 2026
 //Host        : rps-ThinkPad-T16-Gen-4 running 64-bit Ubuntu 24.04.5 LTS
 //Command     : generate_target system_wrapper.bd
 //Design      : system_wrapper
@@ -32,11 +32,12 @@ module system_wrapper
     FIXED_IO_ps_clk,
     FIXED_IO_ps_porb,
     FIXED_IO_ps_srstb,
-    baud_clk,
+    baud_clork,
     cs,
     datain,
     dataout,
     datum,
+    debug,
     gpio_data_in,
     gpio_data_oe,
     gpio_data_out,
@@ -63,11 +64,12 @@ module system_wrapper
   inout FIXED_IO_ps_clk;
   inout FIXED_IO_ps_porb;
   inout FIXED_IO_ps_srstb;
-  output baud_clk;
+  output baud_clork;
   output [3:0]cs;
   input [31:0]datain;
   output [31:0]dataout;
   output datum;
+  output [7:0]debug;
   input [31:0]gpio_data_in;
   output [31:0]gpio_data_oe;
   output [31:0]gpio_data_out;
@@ -95,11 +97,12 @@ module system_wrapper
   wire FIXED_IO_ps_clk;
   wire FIXED_IO_ps_porb;
   wire FIXED_IO_ps_srstb;
-  wire baud_clk;
+  wire baud_clork;
   wire [3:0]cs;
   wire [31:0]datain;
   wire [31:0]dataout;
   wire datum;
+  wire [7:0]debug;
   wire [31:0]gpio_data_in;
   wire [31:0]gpio_data_oe;
   wire [31:0]gpio_data_out;
@@ -128,11 +131,12 @@ module system_wrapper
         .FIXED_IO_ps_clk(FIXED_IO_ps_clk),
         .FIXED_IO_ps_porb(FIXED_IO_ps_porb),
         .FIXED_IO_ps_srstb(FIXED_IO_ps_srstb),
-        .baud_clk(baud_clk),
+        .baud_clork(baud_clork),
         .cs(cs),
         .datain(datain),
         .dataout(dataout),
         .datum(datum),
+        .debug(debug),
         .gpio_data_in(gpio_data_in),
         .gpio_data_oe(gpio_data_oe),
         .gpio_data_out(gpio_data_out),

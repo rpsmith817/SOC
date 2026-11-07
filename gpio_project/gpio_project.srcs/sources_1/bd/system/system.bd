@@ -1,7 +1,7 @@
 {
   "design": {
     "design_info": {
-      "boundary_crc": "0x3FACCC9C81F97BFE",
+      "boundary_crc": "0x5E82AB11D822EBC5",
       "device": "xc7z007sclg400-1",
       "gen_directory": "../../../../gpio_project.gen/sources_1/bd/system",
       "name": "system",
@@ -245,7 +245,7 @@
         "left": "31",
         "right": "0"
       },
-      "baud_clk": {
+      "baud_clork": {
         "type": "clk",
         "direction": "O",
         "parameters": {
@@ -277,6 +277,11 @@
       "cs": {
         "direction": "O",
         "left": "3",
+        "right": "0"
+      },
+      "debug": {
+        "direction": "O",
+        "left": "7",
         "right": "0"
       }
     },
@@ -1390,7 +1395,7 @@
       },
       "My_SPI_0": {
         "vlnv": "user.org:user:My_SPI:1.0",
-        "ip_revision": "38",
+        "ip_revision": "51",
         "xci_name": "system_My_SPI_0_4",
         "xci_path": "ip/system_My_SPI_0_4/system_My_SPI_0_4.xci",
         "inst_hier_path": "My_SPI_0",
@@ -1432,8 +1437,8 @@
     "nets": {
       "My_SPI_0_baud_clk": {
         "ports": [
-          "My_SPI_0/baud_clk",
-          "baud_clk"
+          "My_SPI_0/baud_clork",
+          "baud_clork"
         ]
       },
       "My_SPI_0_cs": {
@@ -1452,6 +1457,12 @@
         "ports": [
           "My_SPI_0/datum",
           "datum"
+        ]
+      },
+      "My_SPI_0_debug": {
+        "ports": [
+          "My_SPI_0/debug",
+          "debug"
         ]
       },
       "My_SPI_0_status": {

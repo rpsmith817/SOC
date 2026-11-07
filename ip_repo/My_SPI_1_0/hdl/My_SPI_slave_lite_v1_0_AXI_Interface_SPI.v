@@ -22,9 +22,10 @@
 		
 		input wire [31:0] datain,
         output wire [31:0] dataout,
-        output wire baud_clk,
+        output wire baud_clork,
         output wire datum,
         output wire [3:0] cs,
+        output wire [7:0] debug,
         
 
         // AXI clock and reset        
@@ -212,7 +213,6 @@
     // write correct bytes in 32-bit word based on byte enables (axi_wstrb)
     // int_clear_request write is only active for one clock
     wire wr = wr_add_data_valid && axi_awready && axi_wready;
-//    reg fifo_wr_req;    //indicates that this is a write to fifo.
     wire fifo_wr_req = wr && (waddr[4:2] == DATA_REG);  //fine, then a wire?
     integer byte_index;
     always_ff @ (posedge axi_clk)
@@ -426,9 +426,9 @@
         .reset(S_AXI_ARESETN),      //input
         .datain(fifo_wr_data),      //input [31:0]
         .dataout(fifo_rd_data),     //output [31:0]
-        .clr_overflow(clr_overflow_req | clr_overflow_final | clr_txoverflow_req),   //input
+        .clr_overflow(clr_overflow_req | clr_txoverflow_req),   //input
         .rd_req(fifo_rd_req),       //input based on fsm
-        .wr_req(fifo_wr_req | wr_req_final),       //input piggybacks off the axiwr or an actual assert. later might rely on fsm?
+        .wr_req(fifo_wr_req),       //input piggybacks off the axiwr or an actual assert. later might rely on fsm?
         .empty(status[5]),         //output
         .full(status[4]),           //output
         .overflow(status[3]),   //output
@@ -449,8 +449,8 @@
     .out(brd_tick)      //single clock tick of brd (each clk edge)
     );
 
-    //baud_clk
-    reg baud_clk_next;
+    //baud_clork
+    reg baud_clork_next;
     reg spi_clk;
     reg clk_go;
 
@@ -458,22 +458,22 @@
     begin
         if(axi_resetn == 0)
         begin
-            baud_clk_next <= 0;
+            baud_clork_next <= 0;
         end
         else if(clk_go == 0) //ensure that first clk is known, not variable, else we might reverse the polarity at start...
         begin
-            baud_clk_next <= 0;
+            baud_clork_next <= 0;
         end
         else if(brd_tick)
         begin
-            baud_clk_next <= ~baud_clk_next;
+            baud_clork_next <= ~baud_clork_next;
         end 
     end
-    assign baud_clk = (baud_clk_next&clk_go) ^ spi_clk;
+    assign baud_out = (baud_clork_next&clk_go) ^ spi_clk;
     
     /*
     clock stuff since we should be more transparent in code and comment better
-    |cpol   | baud_clk  |clk_go |output |
+    |cpol   | baud_clork  |clk_go |output |
     |-------|-----------|-------|-------|
     |   1   |   1       |   1   |   0   |
     |   0   |   1       |   1   |   1   |
@@ -485,20 +485,20 @@
     |   0   |   0       |   0   |   0   |
     |===================================|
     
-    this looks like (cpol ^ baud_clk) unless not enabled
+    this looks like (cpol ^ baud_clork) unless not enabled
     if(~clk_go)
     begin
         output <= cpol;
     end
     else begin
-        output <= cpol^baud_clk;
+        output <= cpol^baud_clork;
     end
     
-    ((cpol ^ baud_clk)&clk_go) | cpol; 
+    ((cpol ^ baud_clork)&clk_go) | cpol; 
     
-    cpol^ (baud_clk&clk_go);
+    cpol^ (baud_clork&clk_go);
         AKA
-    (baud_clk_next&clk_go) ^ spi_clk;
+    (baud_clork_next&clk_go) ^ spi_clk;
     */
     
     spi_fsm spi_fsm_inst
@@ -519,7 +519,10 @@
         .cs(cs),            //cs control output 
         .datum(datum),          //single bit output from data+fsm output reg    
         .clk_go(clk_go),        //outputs clock stop/go for idle state combine output reg
-        .rd_req(fifo_rd_req)    //outputs when each word is transmitted.
+        .rd_req(fifo_rd_req),    //outputs when each word is transmitted.
+        .cs_manual_r(),
+        .cs_auto_out(),
+        .state_r(debug)
     );
 
 endmodule
@@ -542,82 +545,80 @@ module spi_fsm(
     output reg [3:0] cs,    //if auto then what chip is high.
     output reg datum,       //single bit output from data+fsm   
     output reg clk_go,      //outputs clock stop/go for idle state combine
-    output reg rd_req       //outputs rd_req signal for rd_idx increment and data loading
+    output reg rd_req,       //outputs rd_req signal for rd_idx increment and data loading
+    output reg [3:0] cs_manual_r,
+    output reg [3:0] cs_auto_out,
+    output reg [7:0]state_r,
+    output reg bueno
 );
     //go from MSB to LSB
     reg [31:0]data_reg;         //load entire register, then go through slowly one at a time.
     reg [4:0] bit_idx;
     reg [3:0]cs_auto;
-    reg [7:0]spi_mode;
     reg [1:0]cs_select_r;
     reg [7:0]state;             //uncertain how many discrete states we need, so just oversize it with a 8bit val
     reg auto;                   //if cs is both selected and auto.
     reg cpha;                   //phase of selected cs
     reg cpol;                   //polarity of selected cs
     reg [4:0] bit_idx_next;
-    reg await_setup;            //await cs setup time so we stay in bounds of the chip we are targeting.
-    reg [7:0]cs_await_timer;    //counts clocks so we have cs timing OK.
     reg rd_req_flag;            //flag if rd_req should be high.
-    reg [3:0] cs_manual_r;
-    reg [3:0] cs_auto_out;
+//    reg [3:0] cs_manual_r;
+//    reg [3:0] cs_auto_out;
     
     assign spi_clk = cpol;
     assign bit_idx_next = bit_idx - 1;
     assign rd_req = rd_req_flag;
+    assign state_r[5:0] = state[5:0];
+    assign state_r[7] = brd_tick;
 
-
-    
-    always_ff @ (negedge reset, posedge clk)
+    always_comb
     begin
-        if(rd_req_flag) //if it is time, let it only be time for a single clk.
+        if(cs_auto[3] && (cs_select == 3))
         begin
-            rd_req_flag <= 0;
+            cs[3] <= cs_auto_out[3];
         end
-//handle cs output
+        else
         begin
-            if(!cs_auto[3])
-            begin
-                cs[3] <= cs_manual_r[3];
-            end
-            else
-            begin
-                cs[3] <= cs_auto_out[3];
-            end
-            
-            if(!cs_auto[2])
-            begin
-                cs[2] <= cs_manual_r[2];
-            end
-            else
-            begin
-                cs[2] <= cs_auto_out[2];
-            end
-    
-            if(!cs_auto[1])
-            begin
-                cs[1] <= cs_manual_r[1];
-            end
-            else
-            begin
-                cs[1] <= cs_auto_out[1];
-            end
-    
-            if(!cs_auto[0])
-            begin
-                cs[0] <= cs_manual_r[0];
-            end
-            else
-            begin
-                cs[0] <= cs_auto_out[0];
-            end
+            cs[3] <= cs_manual[3];
+        end
+        
+        if(cs_auto[2] && (cs_select == 2))
+        begin
+            cs[2] <= cs_auto_out[2];
+        end
+        else
+        begin
+            cs[2] <= cs_manual[2];
         end
 
+        if(cs_auto[1] && (cs_select == 1))
+        begin
+            cs[1] <= cs_auto_out[1];
+        end
+        else
+        begin
+            cs[1] <= cs_manual[1];
+        end
+
+        if(cs_auto[0] && (cs_select == 0))
+        begin
+            cs[0] <= cs_auto_out[0];
+        end
+        else
+        begin
+            cs[0] <= cs_manual[0];
+        end
+    end
+
+
+    
+    always_ff @ (posedge clk or negedge reset)
+    begin
 //reset
         if(reset == 0)
         begin
             bit_idx <= word_size;
             state <= 0;
-            spi_mode <= 0;
             cs_auto <= 0;
             cs_select_r <= 0;
             cpol <= 0;
@@ -626,21 +627,29 @@ module spi_fsm(
             clk_go <= 0;
             data_reg <= 0;
             datum <= 0;
-            await_setup <= 0;
-            cs_await_timer <= 0;
             rd_req_flag <= 0;
-            cs_manual_r <= 0;
+            cs_manual_r <= 4'b1111; //idle high
+            cs_auto_out <= 4'b1111; //also idle high
+            rd_req_flag <= 0;
+            state_r[7] <= 0;
+            
         end
-//state machine
         else if(brd_tick==1)    //state change time!
         begin
+            //handle some updates
+            rd_req_flag <= 0;
+            cs_manual_r <= cs_manual;
+            state_r[7]<=1;
+//state machine
             case(state)
-
             //Idle state
                 0:
                 begin
                 datum <= 0;
-                    if(~fe) //if the fifo has something in it.
+                state_r[7]<=1;
+                rd_req_flag <= 0;
+                cs_manual_r <= cs_manual;
+                    if(en) //if the fifo has something in it.
                     begin
                         state <= 1; //start the machine
                     end
@@ -650,7 +659,6 @@ module spi_fsm(
                 1:
                 begin
                     cs_auto <= auto_cs;
-                    spi_mode <= mode;
                     cs_select_r <= cs_select;
                     state <= 2;
                     data_reg <= data;
@@ -708,7 +716,7 @@ module spi_fsm(
                         1: begin cs_auto_out[3] <= 1; cs_auto_out[2] <= 1; cs_auto_out[1] <= 0; cs_auto_out[0] <= 1; end
                         0: begin cs_auto_out[3] <= 1; cs_auto_out[2] <= 1; cs_auto_out[1] <= 1; cs_auto_out[0] <= 0; end
                     endcase
-                                        
+                    state <= 4;
                 end
 
             //Update 1                
@@ -737,7 +745,7 @@ module spi_fsm(
                     begin
                         state<=4;
                     end
-                    else if(bit_idx == word_size)   //if the word is finished
+                    else if(bit_idx == 0)   //if the word is finished
                     begin
                         clk_go <= 0;                //idle tick at least temporarily, maybe for a while
                         rd_req_flag <= 1;           //assert rd_req
@@ -760,7 +768,7 @@ module spi_fsm(
             //CS Disable
                 6:
                 begin
-                    cs <= 4'b1111;      //deselect cs
+                    cs_auto_out <= 4'b1111;      //deselect cs
                     clk_go <= 0;        //let clock be polarity
                     if(fe)              //if we are done
                     begin
@@ -780,12 +788,7 @@ module spi_fsm(
                     datum <= 0;
                 end
             endcase            
-        end
-//if not tick then push manual setting into manual reg.
-        else
-        begin
-            cs_manual_r <= cs_manual;
-        end
+        end    
     end
 endmodule
 

@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Thu Nov  5 15:22:54 2026" VIVADOVERSION="2025.2">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Fri Nov  6 18:12:50 2026" VIVADOVERSION="2025.2">
 
   <SYSTEMINFO ARCH="zynq" DEVICE="7z007s" NAME="system" PACKAGE="clg400" SPEEDGRADE="-1"/>
 
@@ -109,9 +109,9 @@
         <CONNECTION INSTANCE="processing_system7_0" PORT="PS_SRSTB"/>
       </CONNECTIONS>
     </PORT>
-    <PORT CLKFREQUENCY="100000000" DIR="O" NAME="baud_clk" SIGIS="clk" SIGNAME="My_SPI_0_baud_clk">
+    <PORT CLKFREQUENCY="100000000" DIR="O" NAME="baud_clork" SIGIS="clk" SIGNAME="My_SPI_0_baud_clork">
       <CONNECTIONS>
-        <CONNECTION INSTANCE="My_SPI_0" PORT="baud_clk"/>
+        <CONNECTION INSTANCE="My_SPI_0" PORT="baud_clork"/>
       </CONNECTIONS>
     </PORT>
     <PORT DIR="O" LEFT="3" NAME="cs" RIGHT="0" SIGIS="undef" SIGNAME="My_SPI_0_cs">
@@ -132,6 +132,11 @@
     <PORT DIR="O" NAME="datum" SIGIS="undef" SIGNAME="My_SPI_0_datum">
       <CONNECTIONS>
         <CONNECTION INSTANCE="My_SPI_0" PORT="datum"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" LEFT="7" NAME="debug" RIGHT="0" SIGIS="undef" SIGNAME="My_SPI_0_debug">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="My_SPI_0" PORT="debug"/>
       </CONNECTIONS>
     </PORT>
     <PORT DIR="I" LEFT="31" NAME="gpio_data_in" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_gpio_data_in">
@@ -205,7 +210,7 @@
   </EXTERNALINTERFACES>
 
   <MODULES>
-    <MODULE COREREVISION="38" FULLNAME="/My_SPI_0" HWVERSION="1.0" INSTANCE="My_SPI_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="My_SPI" VLNV="user.org:user:My_SPI:1.0">
+    <MODULE COREREVISION="51" FULLNAME="/My_SPI_0" HWVERSION="1.0" INSTANCE="My_SPI_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="My_SPI" VLNV="user.org:user:My_SPI:1.0">
       <DOCUMENTS/>
       <ADDRESSBLOCKS>
         <ADDRESSBLOCK ACCESS="" INTERFACE="AXI_Interface_SPI" NAME="AXI_Interface_SPI_reg" RANGE="4096" USAGE="register"/>
@@ -324,9 +329,9 @@
             <CONNECTION INSTANCE="axi_smc" PORT="M01_AXI_wvalid"/>
           </CONNECTIONS>
         </PORT>
-        <PORT CLKFREQUENCY="100000000" DIR="O" NAME="baud_clk" SIGIS="clk" SIGNAME="My_SPI_0_baud_clk">
+        <PORT DIR="O" NAME="baud_clork" SIGIS="undef" SIGNAME="My_SPI_0_baud_clork">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="External_Ports" PORT="baud_clk"/>
+            <CONNECTION INSTANCE="External_Ports" PORT="baud_clork"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" LEFT="3" NAME="cs" RIGHT="0" SIGIS="undef" SIGNAME="My_SPI_0_cs">
@@ -347,6 +352,11 @@
         <PORT DIR="O" NAME="datum" SIGIS="undef" SIGNAME="My_SPI_0_datum">
           <CONNECTIONS>
             <CONNECTION INSTANCE="External_Ports" PORT="datum"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="7" NAME="debug" RIGHT="0" SIGIS="undef" SIGNAME="My_SPI_0_debug">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="debug"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>

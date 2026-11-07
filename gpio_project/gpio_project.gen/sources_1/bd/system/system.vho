@@ -81,9 +81,10 @@ COMPONENT system
     datain : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
     dataout : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
     status : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
-    baud_clk : OUT STD_LOGIC;
+    baud_clork : OUT STD_LOGIC;
     datum : OUT STD_LOGIC;
-    cs : OUT STD_LOGIC_VECTOR(3 DOWNTO 0)
+    cs : OUT STD_LOGIC_VECTOR(3 DOWNTO 0);
+    debug : OUT STD_LOGIC_VECTOR(7 DOWNTO 0)
   );
 END COMPONENT;
 -- COMP_TAG_END ------  End cut for COMPONENT Declaration  ------
@@ -122,9 +123,10 @@ your_instance_name : system
     datain => datain,
     dataout => dataout,
     status => status,
-    baud_clk => baud_clk,
+    baud_clork => baud_clork,
     datum => datum,
-    cs => cs
+    cs => cs,
+    debug => debug
   );
 -- INST_TAG_END ------  End cut for INSTANTIATION Template  ------
 

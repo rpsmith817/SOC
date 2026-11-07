@@ -1,50 +1,51 @@
 {
    "ActiveEmotionalView":"Default View",
-   "Default View_ScaleFactor":"0.600404",
-   "Default View_TopLeft":"296,-12",
+   "Default View_ScaleFactor":"0.392725",
+   "Default View_TopLeft":"-171,-486",
    "ExpandedHierarchyInLayout":"",
    "PinnedBlocks":"",
    "guistr":"# # String gsaved with Nlview 7.8.0 2024-04-26 e1825d835c VDI=44 GEI=38 GUI=JA:21.0 TLS
 #  -string -flagsOSRD
-preplace port DDR -pg 1 -lvl 5 -x 1560 -y 210 -defaultsOSRD
-preplace port FIXED_IO -pg 1 -lvl 5 -x 1560 -y 240 -defaultsOSRD
-preplace port port-id_intr -pg 1 -lvl 5 -x 1560 -y 390 -defaultsOSRD
-preplace port port-id_baud_clk -pg 1 -lvl 5 -x 1560 -y 570 -defaultsOSRD
-preplace port port-id_datum -pg 1 -lvl 5 -x 1560 -y 600 -defaultsOSRD
-preplace portBus gpio_data_in -pg 1 -lvl 0 -x -70 -y 260 -defaultsOSRD
-preplace portBus gpio_data_out -pg 1 -lvl 5 -x 1560 -y 330 -defaultsOSRD
-preplace portBus gpio_data_oe -pg 1 -lvl 5 -x 1560 -y 360 -defaultsOSRD
-preplace portBus datain -pg 1 -lvl 0 -x -70 -y 510 -defaultsOSRD
-preplace portBus dataout -pg 1 -lvl 5 -x 1560 -y 510 -defaultsOSRD
-preplace portBus status -pg 1 -lvl 5 -x 1560 -y 540 -defaultsOSRD
-preplace portBus cs -pg 1 -lvl 5 -x 1560 -y 630 -defaultsOSRD
-preplace inst processing_system7_0 -pg 1 -lvl 2 -x 510 -y 500 -defaultsOSRD
-preplace inst proc_sys_reset_0 -pg 1 -lvl 2 -x 510 -y 740 -defaultsOSRD
-preplace inst gpio_0 -pg 1 -lvl 4 -x 1340 -y 330 -defaultsOSRD
-preplace inst axi_smc -pg 1 -lvl 3 -x 960 -y 440 -defaultsOSRD
-preplace inst xlconcat_0 -pg 1 -lvl 1 -x 100 -y 660 -defaultsOSRD
-preplace inst My_SPI_0 -pg 1 -lvl 4 -x 1340 -y 570 -defaultsOSRD
-preplace netloc My_SPI_0_baud_clk 1 4 1 1500 560n
-preplace netloc My_SPI_0_cs 1 4 1 1500 600n
-preplace netloc My_SPI_0_dataout 1 4 1 1520 510n
-preplace netloc My_SPI_0_datum 1 4 1 1520 580n
-preplace netloc My_SPI_0_status 1 4 1 1500 540n
-preplace netloc datain_1 1 0 4 NJ 510 200 620 N 620 1180
-preplace netloc gpio_0_gpio_data_oe 1 4 1 1510J 330n
-preplace netloc gpio_0_gpio_data_out 1 4 1 1520J 310n
-preplace netloc gpio_0_intr 1 0 5 0 350 NJ 350 NJ 350 1110J 420 1500
-preplace netloc gpio_data_in_0_1 1 0 4 NJ 260 NJ 260 NJ 260 1110J
-preplace netloc proc_sys_reset_0_peripheral_aresetn 1 2 2 820 520 1170
-preplace netloc processing_system7_0_FCLK_CLK0 1 1 3 320 630 720 360 1160
-preplace netloc processing_system7_0_FCLK_RESET0_N 1 1 2 310 640 700
-preplace netloc xlconcat_0_dout 1 1 1 210J 510n
-preplace netloc axi_smc_M00_AXI 1 3 1 1100 300n
-preplace netloc axi_smc_M01_AXI 1 3 1 1100 450n
-preplace netloc processing_system7_0_DDR 1 2 3 700J 210 NJ 210 NJ
-preplace netloc processing_system7_0_FIXED_IO 1 2 3 710J 240 NJ 240 NJ
-preplace netloc processing_system7_0_M_AXI_GP0 1 2 1 730 420n
-levelinfo -pg 1 -70 100 510 960 1340 1560
-pagesize -pg 1 -db -bbox -sgen -250 -180 1780 1500
+preplace port DDR -pg 1 -lvl 5 -x 1270 -y 60 -defaultsOSRD
+preplace port FIXED_IO -pg 1 -lvl 5 -x 1270 -y 90 -defaultsOSRD
+preplace port port-id_intr -pg 1 -lvl 5 -x 1270 -y 560 -defaultsOSRD
+preplace port port-id_baud_clork -pg 1 -lvl 5 -x 1270 -y 330 -defaultsOSRD
+preplace port port-id_datum -pg 1 -lvl 5 -x 1270 -y 360 -defaultsOSRD
+preplace portBus gpio_data_in -pg 1 -lvl 0 -x 0 -y 520 -defaultsOSRD
+preplace portBus gpio_data_out -pg 1 -lvl 5 -x 1270 -y 500 -defaultsOSRD
+preplace portBus gpio_data_oe -pg 1 -lvl 5 -x 1270 -y 530 -defaultsOSRD
+preplace portBus datain -pg 1 -lvl 0 -x 0 -y 240 -defaultsOSRD
+preplace portBus dataout -pg 1 -lvl 5 -x 1270 -y 300 -defaultsOSRD
+preplace portBus status -pg 1 -lvl 5 -x 1270 -y 20 -defaultsOSRD
+preplace portBus cs -pg 1 -lvl 5 -x 1270 -y 390 -defaultsOSRD
+preplace portBus debug -pg 1 -lvl 5 -x 1270 -y 420 -defaultsOSRD
+preplace inst processing_system7_0 -pg 1 -lvl 2 -x 420 -y 120 -defaultsOSRD
+preplace inst proc_sys_reset_0 -pg 1 -lvl 2 -x 420 -y 360 -defaultsOSRD
+preplace inst gpio_0 -pg 1 -lvl 4 -x 1090 -y 530 -defaultsOSRD
+preplace inst axi_smc -pg 1 -lvl 3 -x 770 -y 320 -defaultsOSRD
+preplace inst xlconcat_0 -pg 1 -lvl 1 -x 120 -y 130 -defaultsOSRD
+preplace inst My_SPI_0 -pg 1 -lvl 4 -x 1090 -y 360 -defaultsOSRD
+preplace netloc My_SPI_0_baud_clk 1 4 1 1250J 330n
+preplace netloc My_SPI_0_cs 1 4 1 1250J 380n
+preplace netloc My_SPI_0_dataout 1 4 1 1250J 300n
+preplace netloc My_SPI_0_datum 1 4 1 NJ 360
+preplace netloc datain_1 1 0 4 NJ 240 NJ 240 NJ 240 930J
+preplace netloc gpio_0_gpio_data_oe 1 4 1 NJ 530
+preplace netloc gpio_0_gpio_data_out 1 4 1 1250J 500n
+preplace netloc gpio_0_intr 1 0 5 20 620 NJ 620 NJ 620 NJ 620 1250
+preplace netloc gpio_data_in_0_1 1 0 4 NJ 520 NJ 520 NJ 520 NJ
+preplace netloc proc_sys_reset_0_peripheral_aresetn 1 2 2 610 410 930
+preplace netloc processing_system7_0_FCLK_CLK0 1 1 3 220 250 620 400 920
+preplace netloc processing_system7_0_FCLK_RESET0_N 1 1 2 230 260 610
+preplace netloc xlconcat_0_dout 1 1 1 NJ 130
+preplace netloc My_SPI_0_debug 1 4 1 1250J 400n
+preplace netloc axi_smc_M00_AXI 1 3 1 910 310n
+preplace netloc axi_smc_M01_AXI 1 3 1 N 330
+preplace netloc processing_system7_0_DDR 1 2 3 NJ 60 NJ 60 NJ
+preplace netloc processing_system7_0_FIXED_IO 1 2 3 NJ 80 910J 90 NJ
+preplace netloc processing_system7_0_M_AXI_GP0 1 2 1 630 120n
+levelinfo -pg 1 0 120 420 770 1090 1270
+pagesize -pg 1 -db -bbox -sgen -170 0 1450 630
 "
 }
 {

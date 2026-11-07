@@ -110,11 +110,13 @@ module system_sv (
   (* X_INTERFACE_IGNORE = "true" *)
   output wire [31:0] status,
   (* X_INTERFACE_IGNORE = "true" *)
-  output wire baud_clk,
+  output wire baud_clork,
   (* X_INTERFACE_IGNORE = "true" *)
   output wire datum,
   (* X_INTERFACE_IGNORE = "true" *)
-  output wire [3:0] cs
+  output wire [3:0] cs,
+  (* X_INTERFACE_IGNORE = "true" *)
+  output wire [7:0] debug
 );
 
   system inst (
@@ -146,9 +148,10 @@ module system_sv (
     .datain(datain),
     .dataout(dataout),
     .status(status),
-    .baud_clk(baud_clk),
+    .baud_clork(baud_clork),
     .datum(datum),
-    .cs(cs)
+    .cs(cs),
+    .debug(debug)
   );
 
 endmodule

@@ -82,9 +82,10 @@ system your_instance_name (
   .datain(datain), // input wire [31:0] datain
   .dataout(dataout), // output wire [31:0] dataout
   .status(status), // output wire [31:0] status
-  .baud_clk(baud_clk), // output wire baud_clk
+  .baud_clork(baud_clork), // output wire baud_clork
   .datum(datum), // output wire datum
-  .cs(cs) // output wire [3:0] cs
+  .cs(cs), // output wire [3:0] cs
+  .debug(debug) // output wire [7:0] debug
 );
 // INST_TAG_END ------  End cut for INSTANTIATION Template  ------
 

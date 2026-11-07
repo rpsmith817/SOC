@@ -2,7 +2,7 @@
 -- Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2025.2 (lin64) Build 6299465 Fri Nov 14 12:34:56 MST 2025
--- Date        : Thu Nov  5 15:23:16 2026
+-- Date        : Fri Nov  6 18:13:11 2026
 -- Host        : rps-ThinkPad-T16-Gen-4 running 64-bit Ubuntu 24.04.5 LTS
 -- Command     : write_vhdl -force -mode synth_stub
 --               /home/rps/fpga/gpio_project/gpio_project.gen/sources_1/bd/system/ip/system_My_SPI_0_4/system_My_SPI_0_4_stub.vhdl
@@ -17,9 +17,10 @@ entity system_My_SPI_0_4 is
   Port ( 
     datain : in STD_LOGIC_VECTOR ( 31 downto 0 );
     dataout : out STD_LOGIC_VECTOR ( 31 downto 0 );
-    baud_clk : out STD_LOGIC;
+    baud_clork : out STD_LOGIC;
     datum : out STD_LOGIC;
     cs : out STD_LOGIC_VECTOR ( 3 downto 0 );
+    debug : out STD_LOGIC_VECTOR ( 7 downto 0 );
     axi_interface_spi_aclk : in STD_LOGIC;
     axi_interface_spi_aresetn : in STD_LOGIC;
     axi_interface_spi_awaddr : in STD_LOGIC_VECTOR ( 7 downto 0 );
@@ -53,15 +54,12 @@ architecture stub of system_My_SPI_0_4 is
   attribute syn_black_box : boolean;
   attribute black_box_pad_pin : string;
   attribute syn_black_box of stub : architecture is true;
-  attribute black_box_pad_pin of stub : architecture is "datain[31:0],dataout[31:0],baud_clk,datum,cs[3:0],axi_interface_spi_aclk,axi_interface_spi_aresetn,axi_interface_spi_awaddr[7:0],axi_interface_spi_awprot[2:0],axi_interface_spi_awvalid,axi_interface_spi_awready,axi_interface_spi_wdata[31:0],axi_interface_spi_wstrb[3:0],axi_interface_spi_wvalid,axi_interface_spi_wready,axi_interface_spi_bresp[1:0],axi_interface_spi_bvalid,axi_interface_spi_bready,axi_interface_spi_araddr[7:0],axi_interface_spi_arprot[2:0],axi_interface_spi_arvalid,axi_interface_spi_arready,axi_interface_spi_rdata[31:0],axi_interface_spi_rresp[1:0],axi_interface_spi_rvalid,axi_interface_spi_rready";
+  attribute black_box_pad_pin of stub : architecture is "datain[31:0],dataout[31:0],baud_clork,datum,cs[3:0],debug[7:0],axi_interface_spi_aclk,axi_interface_spi_aresetn,axi_interface_spi_awaddr[7:0],axi_interface_spi_awprot[2:0],axi_interface_spi_awvalid,axi_interface_spi_awready,axi_interface_spi_wdata[31:0],axi_interface_spi_wstrb[3:0],axi_interface_spi_wvalid,axi_interface_spi_wready,axi_interface_spi_bresp[1:0],axi_interface_spi_bvalid,axi_interface_spi_bready,axi_interface_spi_araddr[7:0],axi_interface_spi_arprot[2:0],axi_interface_spi_arvalid,axi_interface_spi_arready,axi_interface_spi_rdata[31:0],axi_interface_spi_rresp[1:0],axi_interface_spi_rvalid,axi_interface_spi_rready";
   attribute X_INTERFACE_INFO : string;
-  attribute X_INTERFACE_INFO of baud_clk : signal is "xilinx.com:signal:clock:1.0 baud_clk CLK";
-  attribute X_INTERFACE_MODE : string;
-  attribute X_INTERFACE_MODE of baud_clk : signal is "master";
-  attribute X_INTERFACE_PARAMETER : string;
-  attribute X_INTERFACE_PARAMETER of baud_clk : signal is "XIL_INTERFACENAME baud_clk, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN system_My_SPI_0_4_baud_clk, INSERT_VIP 0";
   attribute X_INTERFACE_INFO of axi_interface_spi_aclk : signal is "xilinx.com:signal:clock:1.0 AXI_Interface_SPI_CLK CLK";
+  attribute X_INTERFACE_MODE : string;
   attribute X_INTERFACE_MODE of axi_interface_spi_aclk : signal is "slave";
+  attribute X_INTERFACE_PARAMETER : string;
   attribute X_INTERFACE_PARAMETER of axi_interface_spi_aclk : signal is "XIL_INTERFACENAME AXI_Interface_SPI_CLK, ASSOCIATED_BUSIF AXI_Interface_SPI, ASSOCIATED_RESET axi_interface_spi_aresetn, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN system_processing_system7_0_0_FCLK_CLK0, INSERT_VIP 0";
   attribute X_INTERFACE_INFO of axi_interface_spi_aresetn : signal is "xilinx.com:signal:reset:1.0 AXI_Interface_SPI_RST RST";
   attribute X_INTERFACE_MODE of axi_interface_spi_aresetn : signal is "slave";

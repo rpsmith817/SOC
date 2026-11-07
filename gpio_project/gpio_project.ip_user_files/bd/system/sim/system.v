@@ -2,7 +2,7 @@
 //Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2025.2 (lin64) Build 6299465 Fri Nov 14 12:34:56 MST 2025
-//Date        : Thu Nov  5 15:03:22 2026
+//Date        : Fri Nov  6 17:59:11 2026
 //Host        : rps-ThinkPad-T16-Gen-4 running 64-bit Ubuntu 24.04.5 LTS
 //Command     : generate_target system.bd
 //Design      : system
@@ -38,6 +38,7 @@ module system
     datain,
     dataout,
     datum,
+    debug,
     gpio_data_in,
     gpio_data_oe,
     gpio_data_out,
@@ -69,6 +70,7 @@ module system
   input [31:0]datain;
   output [31:0]dataout;
   output datum;
+  output [7:0]debug;
   input [31:0]gpio_data_in;
   output [31:0]gpio_data_oe;
   output [31:0]gpio_data_out;
@@ -139,6 +141,7 @@ module system
   wire [31:0]datain;
   wire [31:0]dataout;
   wire datum;
+  wire [7:0]debug;
   wire [31:0]gpio_data_in;
   wire [31:0]gpio_data_oe;
   wire [31:0]gpio_data_out;
@@ -212,7 +215,8 @@ module system
         .cs(cs),
         .datain(datain),
         .dataout(dataout),
-        .datum(datum));
+        .datum(datum),
+        .debug(debug));
   system_axi_smc_0 axi_smc
        (.M00_AXI_araddr(axi_smc_M00_AXI_ARADDR),
         .M00_AXI_arprot(axi_smc_M00_AXI_ARPROT),

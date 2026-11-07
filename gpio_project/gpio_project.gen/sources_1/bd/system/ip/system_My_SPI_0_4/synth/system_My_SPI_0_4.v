@@ -48,7 +48,7 @@
 
 
 // IP VLNV: user.org:user:My_SPI:1.0
-// IP Revision: 38
+// IP Revision: 51
 
 (* X_CORE_INFO = "My_SPI,Vivado 2025.2" *)
 (* CHECK_LICENSE_TYPE = "system_My_SPI_0_4,My_SPI,{}" *)
@@ -56,9 +56,10 @@
 module system_My_SPI_0_4 (
   datain,
   dataout,
-  baud_clk,
+  baud_clork,
   datum,
   cs,
+  debug,
   axi_interface_spi_aclk,
   axi_interface_spi_aresetn,
   axi_interface_spi_awaddr,
@@ -84,12 +85,10 @@ module system_My_SPI_0_4 (
 
 input wire [31 : 0] datain;
 output wire [31 : 0] dataout;
-(* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 baud_clk CLK" *)
-(* X_INTERFACE_MODE = "master" *)
-(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME baud_clk, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN system_My_SPI_0_4_baud_clk, INSERT_VIP 0" *)
-output wire baud_clk;
+output wire baud_clork;
 output wire datum;
 output wire [3 : 0] cs;
+output wire [7 : 0] debug;
 (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 AXI_Interface_SPI_CLK CLK" *)
 (* X_INTERFACE_MODE = "slave" *)
 (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME AXI_Interface_SPI_CLK, ASSOCIATED_BUSIF AXI_Interface_SPI, ASSOCIATED_RESET axi_interface_spi_aresetn, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN system_processing_system7_0_0_FCLK_CLK0, INSERT_VIP 0" *)
@@ -146,9 +145,10 @@ input wire axi_interface_spi_rready;
   ) inst (
     .datain(datain),
     .dataout(dataout),
-    .baud_clk(baud_clk),
+    .baud_clork(baud_clork),
     .datum(datum),
     .cs(cs),
+    .debug(debug),
     .axi_interface_spi_aclk(axi_interface_spi_aclk),
     .axi_interface_spi_aresetn(axi_interface_spi_aresetn),
     .axi_interface_spi_awaddr(axi_interface_spi_awaddr),

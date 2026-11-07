@@ -48,7 +48,7 @@
 
 
 // IP VLNV: user.org:user:My_SPI:1.0
-// IP Revision: 37
+// IP Revision: 50
 
 `timescale 1ns/1ps
 
@@ -59,6 +59,7 @@ module system_My_SPI_0_4 (
   baud_clk,
   datum,
   cs,
+  debug,
   axi_interface_spi_aclk,
   axi_interface_spi_aresetn,
   axi_interface_spi_awaddr,
@@ -90,6 +91,7 @@ output wire [31 : 0] dataout;
 output wire baud_clk;
 output wire datum;
 output wire [3 : 0] cs;
+output wire [7 : 0] debug;
 (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 AXI_Interface_SPI_CLK CLK" *)
 (* X_INTERFACE_MODE = "slave" *)
 (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME AXI_Interface_SPI_CLK, ASSOCIATED_BUSIF AXI_Interface_SPI, ASSOCIATED_RESET axi_interface_spi_aresetn, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN system_processing_system7_0_0_FCLK_CLK0, INSERT_VIP 0" *)
@@ -149,6 +151,7 @@ input wire axi_interface_spi_rready;
     .baud_clk(baud_clk),
     .datum(datum),
     .cs(cs),
+    .debug(debug),
     .axi_interface_spi_aclk(axi_interface_spi_aclk),
     .axi_interface_spi_aresetn(axi_interface_spi_aresetn),
     .axi_interface_spi_awaddr(axi_interface_spi_awaddr),

@@ -4,7 +4,7 @@
     "xci_name": "system_My_SPI_0_4",
     "cell_name": "My_SPI_0",
     "component_reference": "user.org:user:My_SPI:1.0",
-    "ip_revision": "38",
+    "ip_revision": "51",
     "gen_directory": "../../../../../../gpio_project.gen/sources_1/bd/system/ip/system_My_SPI_0_4",
     "parameters": {
       "component_parameters": {
@@ -33,7 +33,7 @@
       },
       "runtime_parameters": {
         "IPCONTEXT": [ { "value": "IP_Integrator" } ],
-        "IPREVISION": [ { "value": "38" } ],
+        "IPREVISION": [ { "value": "51" } ],
         "MANAGED": [ { "value": "TRUE" } ],
         "OUTPUTDIR": [ { "value": "../../../../../../gpio_project.gen/sources_1/bd/system/ip/system_My_SPI_0_4" } ],
         "SELECTEDSIMMODEL": [ { "value": "" } ],
@@ -46,9 +46,10 @@
       "ports": {
         "datain": [ { "direction": "in", "size_left": "31", "size_right": "0" } ],
         "dataout": [ { "direction": "out", "size_left": "31", "size_right": "0" } ],
-        "baud_clk": [ { "direction": "out" } ],
+        "baud_clork": [ { "direction": "out" } ],
         "datum": [ { "direction": "out" } ],
         "cs": [ { "direction": "out", "size_left": "3", "size_right": "0" } ],
+        "debug": [ { "direction": "out", "size_left": "7", "size_right": "0" } ],
         "axi_interface_spi_aclk": [ { "direction": "in" } ],
         "axi_interface_spi_aresetn": [ { "direction": "in" } ],
         "axi_interface_spi_awaddr": [ { "direction": "in", "size_left": "7", "size_right": "0" } ],
@@ -163,24 +164,6 @@
           "port_maps": {
             "CLK": [ { "physical_name": "axi_interface_spi_aclk" } ]
           }
-        },
-        "baud_clk": {
-          "vlnv": "xilinx.com:signal:clock:1.0",
-          "abstraction_type": "xilinx.com:signal:clock_rtl:1.0",
-          "mode": "master",
-          "parameters": {
-            "FREQ_HZ": [ { "value": "100000000", "value_permission": "bd", "resolve_type": "generated", "format": "long", "is_ips_inferred": true, "is_static_object": false } ],
-            "FREQ_TOLERANCE_HZ": [ { "value": "0", "value_permission": "bd", "resolve_type": "generated", "format": "long", "is_ips_inferred": true, "is_static_object": false } ],
-            "PHASE": [ { "value": "0.0", "value_permission": "bd", "resolve_type": "generated", "format": "float", "is_ips_inferred": true, "is_static_object": false } ],
-            "CLK_DOMAIN": [ { "value": "system_My_SPI_0_4_baud_clk", "value_permission": "bd", "resolve_type": "generated", "is_ips_inferred": true, "is_static_object": false } ],
-            "ASSOCIATED_BUSIF": [ { "value": "", "value_permission": "bd", "resolve_type": "generated", "is_ips_inferred": true, "is_static_object": false } ],
-            "ASSOCIATED_PORT": [ { "value": "", "value_permission": "bd", "resolve_type": "generated", "is_ips_inferred": true, "is_static_object": false } ],
-            "ASSOCIATED_RESET": [ { "value": "", "value_permission": "bd", "resolve_type": "generated", "is_ips_inferred": true, "is_static_object": false } ],
-            "INSERT_VIP": [ { "value": "0", "resolve_type": "user", "format": "long", "usage": "simulation.rtl", "is_ips_inferred": true, "is_static_object": false } ]
-          },
-          "port_maps": {
-            "CLK": [ { "physical_name": "baud_clk" } ]
-          }
         }
       },
       "memory_maps": {
@@ -200,5 +183,5 @@
       }
     }
   },
-  "checksum": "7ce6af4b"
+  "checksum": "20ac8981"
 }
