@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2025.2 (lin64) Build 6299465 Fri Nov 14 12:34:56 MST 2025
-| Date             : Sat Nov  7 12:41:16 2026
+| Date             : Sat Nov  7 13:51:04 2026
 | Host             : rps-ThinkPad-T16-Gen-4 running 64-bit Ubuntu 24.04.5 LTS
 | Command          : report_power -file the_system_top_power_routed.rpt -pb the_system_top_power_summary_routed.pb -rpx the_system_top_power_routed.rpx
 | Design           : the_system_top
@@ -30,10 +30,10 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 1.310        |
+| Total On-Chip Power (W)  | 1.309        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 1.192        |
+| Dynamic (W)              | 1.191        |
 | Device Static (W)        | 0.118        |
 | Effective TJA (C/W)      | 11.5         |
 | Max Ambient (C)          | 69.9         |
@@ -53,18 +53,18 @@ Table of Contents
 | On-Chip                 | Power (W) | Used     | Available | Utilization (%) |
 +-------------------------+-----------+----------+-----------+-----------------+
 | Clocks                  |     0.006 |        5 |       --- |             --- |
-| Slice Logic             |     0.003 |     3732 |       --- |             --- |
-|   LUT as Logic          |     0.002 |     1120 |     14400 |            7.78 |
+| Slice Logic             |     0.003 |     3734 |       --- |             --- |
+|   LUT as Logic          |     0.002 |     1121 |     14400 |            7.78 |
 |   Register              |    <0.001 |     1823 |     28800 |            6.33 |
 |   CARRY4                |    <0.001 |       25 |      4400 |            0.57 |
 |   F7/F8 Muxes           |    <0.001 |      134 |     17600 |            0.76 |
-|   Others                |     0.000 |      342 |       --- |             --- |
+|   Others                |     0.000 |      343 |       --- |             --- |
 |   LUT as Shift Register |     0.000 |        2 |      6000 |            0.03 |
-| Signals                 |     0.002 |     2668 |       --- |             --- |
+| Signals                 |     0.002 |     2665 |       --- |             --- |
 | I/O                     |     0.006 |       46 |       100 |           46.00 |
 | PS7                     |     1.174 |        1 |       --- |             --- |
 | Static Power            |     0.118 |          |           |                 |
-| Total                   |     1.310 |          |           |                 |
+| Total                   |     1.309 |          |           |                 |
 +-------------------------+-----------+----------+-----------+-----------------+
 
 
@@ -151,8 +151,8 @@ Table of Contents
 | Name                       | Power (W) |
 +----------------------------+-----------+
 | the_system_top             |     1.191 |
-|   system                   |     1.186 |
-|     system_i               |     1.186 |
+|   system                   |     1.185 |
+|     system_i               |     1.185 |
 |       My_SPI_0             |     0.003 |
 |       axi_smc              |     0.006 |
 |       gpio_0               |     0.001 |

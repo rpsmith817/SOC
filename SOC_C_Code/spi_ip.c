@@ -8,7 +8,7 @@
 // Target Platform: Xilinx XUP Blackboard
 
 // AXI4-Lite interface: 
-//   Mapped to offset of 0x20000
+//   Mapped to offset of 0x2.0000
 //
 //
 
@@ -131,14 +131,14 @@ void set_brd(uint32_t val)
 void cs_low()
 {
 	uint32_t val = get_control();	//get the current setting
-	set_control(val&~(1<<9));		//push bit 9 low
+	set_control( val & (!(1<<9)) );		//push bit 9 low
 }
 
 //sets cs0 high
 void cs_high()
 {
 	uint32_t val = get_control();	//get the current setting
-	set_control(val&(1<<9));		//push bit 9 low
+	set_control( val | (1<<9) );		//push bit 9 low
 }
 
 

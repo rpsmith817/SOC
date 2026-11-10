@@ -550,6 +550,7 @@ module spi_fsm(
     output reg datum,       //single bit output from data+fsm   
     output reg clk_go,      //outputs clock stop/go for idle state combine
     output reg rd_req,       //outputs rd_req signal for rd_idx increment and data loading
+    output reg sample_now,
     output reg [3:0] cs_manual_r,
     output reg [3:0] cs_auto_out,
     output reg [7:0]state_r
@@ -634,13 +635,13 @@ module spi_fsm(
             cs_manual_r <= 4'b1111; //idle high
             cs_auto_out <= 4'b1111; //also idle high
             rd_req_flag <= 0;
-
-            
+            sample_now <= 0;            
         end
         else
         begin
             //any non-reset tick.
             cs_manual_r <= cs_manual;   //load cs each time.
+            sample_now <= 0;            //don't sample when it is not time to do so.
 
             if(!brd_tick)
             begin
@@ -736,7 +737,10 @@ module spi_fsm(
                             datum <= data_reg[bit_idx[4:0]];
                             bit_idx <= bit_idx_next;
                         end
-                    
+                        if(cpha == 0)
+                        begin
+                            sample_now <= 1;
+                        end
                         state<=5;
                     end
     
@@ -747,6 +751,10 @@ module spi_fsm(
                         begin
                             datum <= data_reg[bit_idx[4:0]];
                             bit_idx <= bit_idx_next;
+                        end
+                        if(cpha == 1)
+                        begin
+                            sample_now <= 1;
                         end
                                                 
                         if(bit_idx[5] == 0)         //if we aren't done then continue updating.
@@ -1010,4 +1018,55 @@ module the_brd
             acc_add <= acc_frac+fbrd_half;        //and add frac to acc (otherwise vivado yells clock stuff at us)
         end
     end
+endmodule
+
+
+module serializer
+(
+    input clk,
+    input tick,
+    input reset,
+    input rx_in,
+    input [4:0]word_size,
+    input sample_now,
+    output reg [31:0] data,
+    output reg wr_req
+);
+
+    reg bit_idx;
+    reg bit_idx_next;
+    reg rx_r;
+    
+    
+    assign bit_idx_next = bit_idx - 1;
+    
+    
+    always_ff @ (posedge clk or negedge reset)
+    begin
+        if(reset==0)
+        begin
+            bit_idx<=word_size;
+            data<= 32'b0;
+        end
+        else
+        begin
+            if(sample_now==1)       //sample_now is a single clk behind brd_tick, but the reg is a clk ahead of that, so we end up at the same as brd_tick AKA clock edge & phase==cpha
+            begin
+                bit_idx <= bit_idx_next;
+                data[bit_idx] <= rx_r;
+
+                if(bit_idx == 0)  //if we are about to be done output the wr_req so next clk the read will be handled.
+                begin
+                    wr_req<=1;
+                    bit_idx <= word_size;
+                end
+            end
+            else
+            begin
+                rx_r <= rx_in;  //catch at each clk. push on demand.
+
+
+            end
+        end
+    end    
 endmodule

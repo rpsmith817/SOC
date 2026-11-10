@@ -45,4 +45,7 @@ void set_control(uint32_t val);
 uint32_t get_brd(void);
 void set_brd(uint32_t val);
 
+void cs_low(void);
+void cs_high(void);
+
 #endif

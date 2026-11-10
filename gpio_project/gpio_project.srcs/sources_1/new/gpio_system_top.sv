@@ -107,7 +107,7 @@ module the_system_top (
     wire datum;
     wire [3:0] cs;
     wire baud_clork;
-    wire debug;
+    wire [7:0] debug;
     
     //metastability for switches & a button
     reg [11:0] sw_last;

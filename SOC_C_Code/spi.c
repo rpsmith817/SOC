@@ -40,6 +40,11 @@
 #define SPI_WRITE	0x40
 #define SPI_READ	0x41
 
+void write_reg(unsigned char reg, unsigned char val);
+
+
+
+
 //convert from an integer into an ascii output.
 void intToAlpha(uint32_t in, char* buf)
 {
@@ -180,20 +185,13 @@ void setup_blinky() {
 //write a byte to a MCP23S08 register
 void write_reg(unsigned char reg, unsigned char val) 
 {
-	unsigned char len = 0;
-	unsigned char idx = 0;
-	buffer[len++] = SPI_WRITE;		//set to write - put opcode in
-	buffer[len++] = reg;			//put in the register to write to
-	buffer[len++] = val;			//put in the value to write to that register
-	cs_low();						//start frame
-	push_data(buffer);				//yell down the line.
-	cs_high();						//end frame
+	push_data((SPI_WRITE << 16) | (reg << 8) | (val << 0));				//yell down the line.
 }
 
 
 void init_spi_cs_man(uint8_t mode)
 {
-	uint32_t val = 0x17 | (1<<9) | (mode<<15);		//set word size 24, assert cs for idle, assert enable spi
+	uint32_t val = 0x17 | (1<<5) | (1<<9) | (1<<15) | (mode<<16);		//set word size 24, assert cs for idle, assert enable spi, set mode for dev0 (0-3), assert auto cs
 	set_control(val);
 }
 
@@ -207,6 +205,14 @@ void init_spi_cs_man(uint8_t mode)
 
 int main(int argc, char* argv[])	//reads in how many arguments and what they are, which we don't usually care about but maybe we will later so lets preserve the form for now.
 {
+//use arg vars so we don't get random errors. This code should do very little but waste a little time at start.
+	char waste;
+	if(argc)
+	{
+		waste = argv[0][0];
+		waste++;
+	}
+
 //setup the maps for use
 	uint8_t check =0;
 	check = spiOpen();
@@ -215,22 +221,9 @@ int main(int argc, char* argv[])	//reads in how many arguments and what they are
 		printf("ERROR:Failed to open map");
 		return EXIT_SUCCESS;
 	}
-// 	else if(check == 1)
-// 	{		
-// 		printf("ERROR: Failed to open gpio map");
-// 		getchar();
-// 		return EXIT_SUCCESS;
-// 	}
-// 	else if(check == 2)
-// 	{
-// 		printf("ERROR: Failed to open spi map");
-// 		getchar();
-// 		return EXIT_SUCCESS;
-// 	}
-
 	
-	char buf[256];
-	uint32_t val;
+// 	char buf[256];
+// 	uint32_t val;
 	
 	
 	//setup time struct for sleeping 1/2 sec
@@ -238,55 +231,59 @@ int main(int argc, char* argv[])	//reads in how many arguments and what they are
 	timetime.tv_sec	=0;
 	timetime.tv_nsec=500000000;
 	
-	uint8_t val=0;
-	
-	init_spi_cs_man(0);	//setup spi for manual operation in mode 0
-	setup_blinky();		//push settings to spi for LED as output
+	uint8_t byte_val=0;
+	uint8_t i=0;
+	setClockRate(1000000);	//set baud so it can hear us.
+
 	
 	
 	while(1)
 	{
-		printf("Enter the clockrate: ");
-		if (fgets(buf, sizeof(buf), stdin) != NULL) {	//read line
-			buf[strcspn(buf, "\r\n")] = '\0';				//sanitize input
-		} else {
-			printf("Error reading input.\r\n");
-			return EXIT_SUCCESS;
-		}
-		val=strto32_t(buf);								//pull entered value into int
-		if(!val)										//if NULL then something went wrong
-		{
-			printf("Input error...\r\n");
-			return EXIT_SUCCESS;
-		}
-		else if(val > BRDCLKMAX || val < BRDCLKMIN)
-		{
-			printf("Input out of bounds.\r\n");
-			return EXIT_SUCCESS;
-		}
+// 		printf("Enter the clockrate: ");
+// 		if (fgets(buf, sizeof(buf), stdin) != NULL) {	//read line
+// 			buf[strcspn(buf, "\r\n")] = '\0';				//sanitize input
+// 		} else {
+// 			printf("Error reading input.\r\n");
+// 			return EXIT_SUCCESS;
+// 		}
+// 		val=strto32_t(buf);								//pull entered value into int
+// 		if(!val)										//if NULL then something went wrong
+// 		{
+// 			printf("Input error...\r\n");
+// 			return EXIT_SUCCESS;
+// 		}
+// 		else if(val > BRDCLKMAX || val < 1)
+// 		{
+// 			printf("Input out of bounds.\r\n");
+// 			return EXIT_SUCCESS;
+// 		}
+// 		
+// 		
+// 		setClockRate(val);
+// 		intToAlpha(val,buf);
+// 		printf("Clock rate set to input value of:");
+// 		printf(buf);
+// 		printf("\r\n");
+// 		
+// 		val=get_brd();
+// 		printf("BRD register set to: ");
+// 		intToAlpha(val, buf);
+// 		printf(buf);
+// 		printf("\r\n");
+		init_spi_cs_man(0);	//setup spi for manual operation in mode 0
+		setup_blinky();		//push settings to spi for LED as output
+ 		printf("manual operation in mode 0\r\n");
 		
-		
-		setClockRate(val);
-		intToAlpha(val,buf);
-		printf("Clock rate set to input value of:");
-		printf(buf);
-		printf("\r\n");
-		
-		val=get_brd();
-		printf("BRD register set to: ");
-		intToAlpha(val, buf);
-		printf(buf);
-		printf("\r\n");
-		printf("manual operation in mode 0");
+
 		for(i=0;i<30;i++)
 		{
 			if(nanosleep(&timetime,0) == 0)
 			{
 				//half a second has elapsed. toggle
-				val = ~val;
-				if(val)
+				byte_val = ~byte_val;
+				if(byte_val)
 				{
-					write_reg(SPI_OLAT,0x02);
+					write_reg(SPI_OLAT,0xFF);	//turn them all on maybe?
 				}
 				else
 				{
@@ -294,6 +291,27 @@ int main(int argc, char* argv[])	//reads in how many arguments and what they are
 				}
 			}
 		}
+
+		printf("manual operation in mode 3\r\n");
+		init_spi_cs_man(3);	//setup spi for manual operation in mode 3
+		setup_blinky();		//push settings to spi for LED as output
+				for(i=0;i<30;i++)
+		{
+			if(nanosleep(&timetime,0) == 0)
+			{
+				//half a second has elapsed. toggle
+				byte_val = ~byte_val;
+				if(byte_val)
+				{
+					write_reg(SPI_OLAT,0xFF);	//turn them all on maybe?
+				}
+				else
+				{
+					write_reg(SPI_OLAT,0x00);
+				}
+			}
+		}
+		
 	}
 	
 	
